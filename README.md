@@ -1,7 +1,7 @@
 
 # Wirecard ePOS SDK
 
-<img src="https://raw.githubusercontent.com/WirecardMobileServices/Wirecard-ePOS-iOS/master/docs/logo.png" alt="Wirecard-ePOS-iOS" width=240 height=95>
+<img src="https://raw.githubusercontent.com/WirecardMobileServices/Wirecard-ePOS-iOS/master/docs/logo.png" alt="Wirecard-ePOS-iOS" width=400 height=64>
 
 [![CI Status](http://img.shields.io/travis/WirecardMobileServices/Wirecard-ePOS-iOS.svg?style=flat)](https://travis-ci.org/WirecardMobileServices/Wirecard-ePOS-iOS)
 [![Version](https://img.shields.io/cocoapods/v/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
