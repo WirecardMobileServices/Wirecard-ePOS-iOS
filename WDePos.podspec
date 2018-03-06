@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "WDePos"
+  s.name             = "WDePOS"
   s.version          = "2.3.0"
   s.summary          = "Wirecard epos - Accept Card, Cash, Alipay, Giftcard payments"
   s.description      = <<-DESC
@@ -44,8 +44,8 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   
   s.subspec 'Core' do |ss|
-    ss.vendored_frameworks  = ['Pod/Classes/frameworks/WDePos.framework']
-    ss.resource = ['Pod/Assets/*.*', 'Pod/Classes/frameworks/WDePosResources.bundle']
+    ss.vendored_frameworks  = ['Pod/Classes/frameworks/WDePOS.framework']
+    ss.resource = ['Pod/Assets/*.*', 'Pod/Classes/frameworks/WDePOSResources.bundle']
     ss.dependency 'ZipArchive', '~> 1.4'
     ss.dependency 'Overcoat', '~> 4.0.0-beta.1'
     ss.dependency 'Lockbox' 
@@ -56,44 +56,44 @@ Pod::Spec.new do |s|
   end  
    
   s.subspec 'UI' do |ss|
-    ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDePosUI.framework'
-    ss.resource = ['Pod/Classes/frameworks/WDePosUIResources.bundle']
-    ss.dependency     'WDePos/Core'
+    ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDePOSUI.framework'
+    ss.resource = ['Pod/Classes/frameworks/WDePOSUIResources.bundle']
+    ss.dependency     'WDePOS/Core'
   end
   
   s.subspec 'BBPOS' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/BBPOS_SDK.framework'
-    ss.dependency     'WDePos/Core'    
+    ss.dependency     'WDePOS/Core'    
   end  
 
   s.subspec 'Spire' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/Spire_SDK.framework'
-    ss.dependency     'WDePos/Core'    
+    ss.dependency     'WDePOS/Core'    
   end  
 
   s.subspec 'Datecs' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/Datecs_SDK.framework'
-    ss.dependency     'WDePos/Core' 
+    ss.dependency     'WDePOS/Core' 
   end  
   
   s.subspec 'Stario' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/Stario_SDK.framework'
-    ss.dependency     'WDePos/Core' 
+    ss.dependency     'WDePOS/Core' 
   end    
 
   s.subspec 'Socket' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/Socket_SDK.framework'
-    ss.dependency     'WDePos/Core' 
+    ss.dependency     'WDePOS/Core' 
   end   
   
   s.subspec 'All' do |ss|
-    ss.dependency     'WDePos/Core' 
-	ss.dependency     'WDePos/UI'
-	ss.dependency     'WDePos/BBPOS' 
-	ss.dependency     'WDePos/Spire' 	
-	ss.dependency     'WDePos/Datecs' 	
-	ss.dependency     'WDePos/Stario' 		
-	ss.dependency     'WDePos/Socket' 		
+    ss.dependency     'WDePOS/Core' 
+	ss.dependency     'WDePOS/UI'
+	ss.dependency     'WDePOS/BBPOS' 
+	ss.dependency     'WDePOS/Spire' 	
+	ss.dependency     'WDePOS/Datecs' 	
+	ss.dependency     'WDePOS/Stario' 		
+	ss.dependency     'WDePOS/Socket' 		
   end   
   
 end

@@ -1,0 +1,10 @@
+{
+    "backends": [
+        {
+        "url": "https://switch-test.wirecard.com"
+        },
+        {
+        "url": "https://switch.wirecard.com"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vq5-PX-pZm">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="NdJ-OQ-phY">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="vq5-PX-pZm" customClass="StartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6bT-JE-orX"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ck-aS-aGV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hc5-Pz-1YT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundFull" translatesAutoresizingMaskIntoConstraints="NO" id="ZlM-P4-I3d">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-X5-rlb">
+                                <rect key="frame" x="42" y="20" width="941" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4gS-7T-4fM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2018 Wirecard GmbH. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-t5-1Fi">
+                                <rect key="frame" x="29" y="743" width="971" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2wq-PA-8pb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ePOS Demo" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="K1t-55-vdZ">
+                                <rect key="frame" x="54" y="116" width="922" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="TDl-WY-kUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug6-ch-AUk">
+                                <rect key="frame" x="9" y="183" width="1005" height="419"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CH3-X5-rlb" firstAttribute="top" secondItem="6bT-JE-orX" secondAttribute="bottom" id="2V7-Jx-7ew"/>
+                            <constraint firstItem="K1t-55-vdZ" firstAttribute="top" secondItem="CH3-X5-rlb" secondAttribute="bottom" constant="36" id="3eB-IA-YeJ"/>
+                            <constraint firstItem="6ck-aS-aGV" firstAttribute="top" secondItem="ZlM-P4-I3d" secondAttribute="bottom" id="4sx-OO-zgI"/>
+                            <constraint firstItem="K1t-55-vdZ" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leadingMargin" constant="34" id="Af4-Kl-sZu"/>
+                            <constraint firstItem="ZlM-P4-I3d" firstAttribute="top" secondItem="hc5-Pz-1YT" secondAttribute="top" id="EhZ-Xt-wLd"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlM-P4-I3d" secondAttribute="trailing" id="NOa-r2-tcH"/>
+                            <constraint firstItem="ZI6-t5-1Fi" firstAttribute="top" secondItem="Ug6-ch-AUk" secondAttribute="bottom" constant="141" id="TwN-hF-Vg7"/>
+                            <constraint firstItem="CH3-X5-rlb" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leadingMargin" constant="22" id="Xn1-Vs-Srf"/>
+                            <constraint firstItem="6ck-aS-aGV" firstAttribute="top" secondItem="ZlM-P4-I3d" secondAttribute="bottom" id="YsY-wa-0ll"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlM-P4-I3d" secondAttribute="trailing" id="dMf-0p-myb"/>
+                            <constraint firstItem="6ck-aS-aGV" firstAttribute="top" secondItem="ZI6-t5-1Fi" secondAttribute="bottom" constant="4" id="eDW-n3-gdb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K1t-55-vdZ" secondAttribute="trailing" constant="28" id="fRq-Ka-RCv"/>
+                            <constraint firstItem="Ug6-ch-AUk" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leading" constant="9" id="fZS-zi-nY6"/>
+                            <constraint firstItem="Ug6-ch-AUk" firstAttribute="top" secondItem="K1t-55-vdZ" secondAttribute="bottom" constant="24" id="gmF-Ec-P7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZI6-t5-1Fi" secondAttribute="trailing" constant="4" id="gzP-Kz-lmp"/>
+                            <constraint firstItem="ZlM-P4-I3d" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leading" id="h93-ct-0zk"/>
+                            <constraint firstAttribute="trailing" secondItem="Ug6-ch-AUk" secondAttribute="trailing" constant="10" id="ldE-B1-6I8"/>
+                            <constraint firstItem="ZI6-t5-1Fi" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leadingMargin" constant="9" id="mbv-Ah-jzB"/>
+                            <constraint firstItem="ZlM-P4-I3d" firstAttribute="top" secondItem="hc5-Pz-1YT" secondAttribute="top" id="rRY-QD-mpQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CH3-X5-rlb" secondAttribute="trailing" constant="21" id="tvu-Xr-AWA"/>
+                            <constraint firstItem="ZlM-P4-I3d" firstAttribute="leading" secondItem="hc5-Pz-1YT" secondAttribute="leading" id="wkb-MS-T7I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Ug6-ch-AUk" id="du5-Op-u9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuZ-js-1ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658.59375" y="-173.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundFull" width="16" height="16"/>
+        <image name="logo.png" width="567" height="114"/>
+    </resources>
+</document>

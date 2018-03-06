@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+.divTable{
+    display: table;
+    width: 100%;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+
+.inline {
+    display:inline-block;
+}
+
+.width80{
+    width:80%;
+}
+.width40{
+    width:40%;
+}
+.width20{
+    width:20%;
+}
+.smallerFont{
+    font-size:smaller;
+}
+.largerFont{
+    font-size:larger;
+}
+
+
+.leftAlign {
+    float:left;
+    display:inline-block;
+}
+.rightAlign {
+    float:right;
+    display:inline-block;
+}
+.centerAlign {
+    display:table;
+    margin:0 auto;
+}
+
+.topPadding10{
+    padding-top:10px;
+}
+.topPaddingS25{
+    padding-top:25px;
+}
+.bottomPaddingS5{
+    padding-bottom:5px;
+}
+.bottomPaddingS10{
+    padding-bottom:10px;
+}
+.topPaddingS20{
+    padding-top:20px;
+}
+.leftPaddingS30{
+    padding-left:30px;
+}
+.topPaddingS15{
+    padding-top:15px;
+}
+
+@media all and  (max-width: 590px) {
+    body {
+        font-size: 20px;
+        margin: 1% 1% 0% 1%;
+    }
+    .divLogo{
+        display: table;
+        width: 100%;
+        border:none;
+        <!--        1px solid  black;-->
+    }
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockShiftDate{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockDate{
+        display: block;
+        clear:both;
+    }
+    .sectionAlign{
+        display:table;
+        margin:0 auto;
+    }
+    .addressAlign{
+        display:table;
+        margin:0 auto;
+        text-align: center;
+    }
+    .dateAlign {
+        float:left;
+        display:inline-block;
+    }
+    .solid{
+        display:none;
+    }
+    .double{
+        display:none;
+    }
+    .shiftDate{
+        display:none;
+    }
+    .widePrint{
+        display:none;
+    }
+    .normalSection{
+        font-weight:normal;
+    }
+    .boldSection{
+        font-weight:bold;
+    }
+    .uppercaseCategoryName {
+        text-transform: uppercase;
+    }
+    .dotted {
+        border-bottom: 1px dashed black;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    
+    .imgLogo{
+        display: table;
+        margin:0 auto;
+        width:250px;
+        height:100px;
+    }
+}
+
+@media all and  (min-width: 591px) and (max-width:890px) {
+    body {
+        font-size: 10px;
+    }
+    .divLogo{
+        display: table;
+        width: 30%;
+        margin-top:10px;
+    }
+    
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: table-cell;
+        width:25%;
+    }
+    .divBlockTable{
+        display: table;
+        width:100%;
+    }
+    
+    .divBlockDate{
+        display: inline-block;
+        clear: both;
+        float: right
+    }
+    .sectionAlign{
+        float:left;
+        margin:0 auto;
+    }
+    .addressAlign{
+        float:left;
+        margin:0 auto;
+    }
+    .dateAlign {
+        float:right;
+        display:table;
+        padding-right:5px;
+    }
+    .dotted{
+        padding-top: 5px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .dotted2 {
+        border-bottom: 1px dashed black;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    .solid{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid silver;
+    }
+    .double{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: double;
+        border-left-style: none;
+    }
+    .sectionName{
+        display:none;
+    }
+    .cashRegister{
+        display:inline-block;
+    }
+    .shiftDate{
+        display:block;
+    }
+    
+    .divBlockShiftDate{
+        display:none;
+    }
+    .narrowPrint{
+        display:none;
+    }
+    .silver{
+        color: silver;
+    }
+    .gray{
+        color: gray;
+    }
+    .imgLogo{
+        display: table;
+        margin:0 auto;
+        width:250px;
+        height:100px;
+    }
+}
+
+<--!  FOR HIGH RES PRINT -->
+
+@media all and  (min-width: 1537px) {
+    body {
+        font-size: 80px;
+        margin: 1% 1% 0% 1%;
+    }
+    .divLogo{
+        display: table;
+        width: 100%;
+        border:none;
+        <!--        1px solid  black;-->
+    }
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockShiftDate{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockDate{
+        display: block;
+        clear:both;
+    }
+    .sectionAlign{
+        display:table;
+        margin:0 auto;
+    }
+    .addressAlign{
+        display:table;
+        margin:0 auto;
+        text-align: center;
+    }
+    .dateAlign {
+        float:left;
+        display:inline-block;
+    }
+    .solid{
+        display:none;
+    }
+    .double{
+        display:none;
+    }
+    .shiftDate{
+        display:none;
+    }
+    .widePrint{
+        display:none;
+    }
+    .normalSection{
+        font-weight:normal;
+    }
+    .boldSection{
+        font-weight:bold;
+    }
+    .uppercaseCategoryName {
+        text-transform: uppercase;
+    }
+    .divTableCell, .divTableHead {
+        border: 4px solid #999999;
+        display: table-cell;
+        padding: 12px 40px;
+    }
+    .dotted {
+        border-bottom: 4px dashed black;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    .dotted2{
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .topPadding10{
+        padding-top:40px;
+    }
+    .topPaddingS25{
+        padding-top:100px;
+    }
+    .bottomPaddingS5{
+        padding-bottom:20px;
+    }
+    .bottomPaddingS10{
+        padding-bottom:40px;
+    }
+    .topPaddingS20{
+        padding-top:80px;
+    }
+    .leftPaddingS30{
+        padding-left:120px;
+    }
+    .topPaddingS15{
+        padding-top:60px;
+    }
+    .imgLogo{
+        display: table;
+        margin:0 auto;
+        width:740px;
+        height:280px;
+    }
+    
+}
+
+@media all and (min-width:890px) and (max-width: 1536px) {
+    body {
+        font-size: 80px;
+        margin: 1% 1% 0% 1%;
+    }
+    .divLogo{
+        display: table;
+        width: 100%;
+        border:none;
+        <!--        1px solid  black;-->
+    }
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockShiftDate{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockDate{
+        display: block;
+        clear:both;
+    }
+    .sectionAlign{
+        display:table;
+        margin:0 auto;
+    }
+    .addressAlign{
+        display:table;
+        margin:0 auto;
+        text-align: center;
+    }
+    .dateAlign {
+        float:left;
+        display:inline-block;
+    }
+    .solid{
+        display:none;
+    }
+    .double{
+        display:none;
+    }
+    .shiftDate{
+        display:none;
+    }
+    .widePrint{
+        display:none;
+    }
+    .normalSection{
+        font-weight:normal;
+    }
+    .boldSection{
+        font-weight:bold;
+    }
+    .uppercaseCategoryName {
+        text-transform: uppercase;
+    }
+    .divTableCell, .divTableHead {
+        border: 4px solid #999999;
+        display: table-cell;
+        padding: 12px 40px;
+    }
+    .dotted {
+        border-bottom: 4px dashed black;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    .dotted2{
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .topPadding10{
+        padding-top:40px;
+    }
+    .topPaddingS25{
+        padding-top:100px;
+    }
+    .bottomPaddingS5{
+        padding-bottom:20px;
+    }
+    .bottomPaddingS10{
+        padding-bottom:40px;
+    }
+    .topPaddingS20{
+        padding-top:80px;
+    }
+    .leftPaddingS30{
+        padding-left:120px;
+    }
+    .topPaddingS15{
+        padding-top:60px;
+    }
+    
+    .imgLogo{
+        display: table;
+        margin:0 auto;
+        width:740px;
+        height:280px;
+    }
+}
+
+@media all and  (min-width: 1537px) and (max-width: 2359px) {
+    body {
+        font-size: 80px;
+        margin: 1% 1% 0% 1%;
+    }
+    .divLogo{
+        display: table;
+        width: 100%;
+        border:none;
+        <!--        4px solid  black;-->
+    }
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockShiftDate{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockDate{
+        display: block;
+        clear:both;
+    }
+    .sectionAlign{
+        display:table;
+        margin:0 auto;
+    }
+    .addressAlign{
+        display:table;
+        margin:0 auto;
+        text-align: center;
+    }
+    .dateAlign {
+        float:left;
+        display:inline-block;
+    }
+    .solid{
+        display:none;
+    }
+    .double{
+        display:none;
+    }
+    .shiftDate{
+        display:none;
+    }
+    .widePrint{
+        display:none;
+    }
+    .normalSection{
+        font-weight:normal;
+    }
+    .boldSection{
+        font-weight:bold;
+    }
+    .uppercaseCategoryName {
+        text-transform: uppercase;
+    }
+    .imgLogo{
+        display: table;
+        margin:0 auto;
+        width:740px;
+        height:280px;
+    }
+}
+
+@media all and  (min-width: 2360px) {
+    body {
+        font-size: 40px;
+    }
+    .divLogo{
+        display: table;
+        width: 30%;
+        margin-top:40px;
+    }
+    
+    .divBlock{
+        display: block;
+        clear:both;
+        width:100%;
+    }
+    .divBlockCell{
+        display: table-cell;
+        width:25%;
+    }
+    .divBlockTable{
+        display: table;
+        width:100%;
+    }
+    
+    .divBlockDate{
+        display: inline-block;
+        clear: both;
+        float: right
+    }
+    .sectionAlign{
+        float:left;
+        margin:0 auto;
+    }
+    .addressAlign{
+        float:left;
+        margin:0 auto;
+    }
+    .dateAlign {
+        float:right;
+        display:table;
+        padding-right:20px;
+    }
+    .dotted{
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .dotted2 {
+        border-bottom: 4px dashed black;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    .solid{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 4px solid silver;
+    }
+    .double{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: double;
+        border-left-style: none;
+    }
+    .sectionName{
+        display:none;
+    }
+    .cashRegister{
+        display:inline-block;
+    }
+    .shiftDate{
+        display:block;
+    }
+    
+    .divBlockShiftDate{
+        display:none;
+    }
+    .narrowPrint{
+        display:none;
+    }
+    .silver{
+        color: silver;
+    }
+    .gray{
+        color: gray;
+    }
+    .imgLogo{
+        width:740px;
+        height:280px;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="receiptBody ">
+    <!-- Logo -->
+	<div class="divLogo" ##merchantLogoDisplay## id="logo"><img class="imgLogo" src="data:image/png;base64,##merchantLogo##"></div>
+    <!-- Date Time -->
+	<div class="divBlockDate topPaddingS25" id="dateElement">
+        <div class="rightAlign" id="time">(##currentTime##)</div>
+        <div class="dateAlign" id="date">##dateLabel##: ##currentDate##</div>
+		<div class="divBlock centerAlign solid bottomPaddingS5"></div>
+        <div class="divBlock widePrint" style="display:none" id="userName"><span class="rightAlign">##currentUserName##</span></div>
+        <div class="divBlock widePrint"><span class="rightAlign gray" id="zReportId">##ZReportIdLabel##:&nbsp;<div class="inline bold">##ZReportId##</div></span></div>
+	</div>
+    <!-- Merchant address -->
+    <div class="divBlock topPaddingS20 bottomPaddingS10"><span class="bold addressAlign uppercaseCategoryName" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;" id="merchantName">##merchantName##</span></div>
+    <div class="divBlock"><span class="addressAlign gray" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;" id="merchantAddress">##address##</span></div>
+    <!--	<div class="divBlock"><span class="sectionAlign">Postcode &amp; City</span></div>-->
+    <!--	<div class="divBlock"><span class="sectionAlign">Country</span></div>-->
+    <div class="divBlock"><span class="addressAlign gray" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;" id="merchantTaxNumber">##merchantTaxNumber##</span></div>
+	<div class="divBlock centerAlign dotted width80"></div>
+    <!-- Merchant Shop Address -->
+    <div ##shopAddressDisplay## id="shopAddressElement"> <!-- can be "display:none" to hide it-->
+        <div class="divBlock topPadding10 bottomPaddingS10"><span class="bold addressAlign uppercaseCategoryName" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;" id="shopId">##shopId##</span></div>
+        <div class="divBlock"><span class="addressAlign" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;"  id="shopId2">##shopId2##</span></div>
+        <div class="divBlock"><span class="addressAlign gray" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;"  id="shopAddress">##shopAddress##</span></div>
+        <!--		<div class="divBlock"><span class="sectionAlign">Postcode &amp; City</span></div>-->
+        <!--		<div class="divBlock"><span class="sectionAlign">Country</span></div>-->
+		<div class="divBlock centerAlign dotted width80"></div>
+	</div>
+    <!-- Merchant Cash Register -->
+	<div class="cashRegister" style="display:block;" id="cashRegisterElement"> <!-- can be "display:none" to hide it-->
+        <div class="divBlock topPadding10 bottomPaddingS10"><span class="bold sectionAlign sectionName uppercaseCategoryName" id="cashRegisterLabel">##cashRegisterLabel##</span></div>
+		<div class="divBlock narrowPrint"><span class="sectionAlign"  id="zReportLabel">##ZReportIdLabel##:&nbsp;<div class="inline bold"  id="zReportId"">##ZReportId##</div></span></div>
+		<div class="divBlock"><span class="addressAlign gray" style="text-overflow: ellipsis; overflow: hidden; display: block; max-width: 100%;" id="cashRegisterName">##cashRegisterNameLabel##:&nbsp;<b>##cashRegisterName##</b></span></div>
+        <div class="divBlock" ##cashRegisterIdDisplay##><span class="sectionAlign gray" id="cashRegisterIdLabel">##cashRegisterIdLabel##:&nbsp;<div class="inline bold gray"  id="cashRegisterId">##cashRegisterId##</div></span></div>
+        <div class="divBlock centerAlign solid"></div>
+		<div class="divBlock centerAlign dotted"></div>
+	</div>
+    <div ##reportDataVisibility##>
+        <!-- SHIFT DATA -->
+        <div style="display:block;"> <!-- can be "display:none" to hide it-->
+            <div class="shiftDate">
+                <div class="divBlock"><span class="sectionAlign">##shiftFromLabel##&nbsp;<div class="inline bold" id="shiftFrom">##shiftFrom##</div></span></div>
+                <div class="divBlock"><span class="sectionAlign" id="openedBy"><div class="inline bold">##openedByLabel##:&nbsp;</div>##openedBy##</span></div>
+                <div class="divBlock"><span class="sectionAlign" id="closedBy"><div class="inline bold">##closedByLabel##:&nbsp;</div>##closedBy##</span></div>
+            </div>
+            <div class="divBlock topPadding10 bottomPaddingS10"><span class="bold sectionAlign uppercaseCategoryName" id="shiftDataLabel">##shiftDataLabel##</span></div>
+            <div class="divBlock centerAlign solid"></div>
+            <div class="divBlockShiftDate"><span class="leftAlign">##openTimeLabel##:</span><span class="rightAlign bold" id="shiftDataOpenedBy">##openTime##</span></div>
+            <div class="divBlockShiftDate"><span class="leftAlign">##openedByLabel##:</span><span class="rightAlign bold" id="shiftDataOpenedBy">##openedBy##</span></div>
+            <div class="divBlockShiftDate"><span class="leftAlign">##closeTimeLabel##:</span><span class="rightAlign bold" id="shiftDataCloseTime">##closeTime##</span></div>
+            <div class="divBlockShiftDate"><span class="leftAlign">##closedByLabel##:</span><span class="rightAlign bold" id="shiftDataClosedBy">##closedBy##</span></div>
+            <div class="divBlock"><span class="leftAlign">##openingAmountLabel##:</span><span class="rightAlign boldSection" id="shiftDataOpeningAmount">##openingAmount##</span></div>
+            <div class="divBlock"><span class="leftAlign">##cashPurchasesLabel##:</span><span class="rightAlign boldSection"id="shiftDataCashPurchases">##cashPurchases##</span></div>
+            <div class="divBlock"><span class="leftAlign">##cashRefundsLabel##:</span><span class="rightAlign boldSection" id="shiftDataCashRefunds">##cashRefunds##</span></div>
+            <div class="divBlock"><span class="leftAlign">##cashOperationsBalanceLabel##:</span><span class="rightAlign boldSection" id="shiftDataCashOperationsBalance">##cashOperationsBalance##</span></div>
+            <div class="divBlock"><span class="leftAlign smallerFont leftPaddingS30">##cashOperationsBalanceLine2Label##</span></div>
+            <div class="divBlock"><span class="leftAlign">##closingCashBalanceLabel##:</span><span class="rightAlign boldSection" id="shiftDataClosingCashBalance">##closingCashBalance##</span></div>
+            <div class="divBlock"><span class="leftAlign smallerFont leftPaddingS30">##closingCashBalanceLine2Label##</span></div>
+            <div class="divBlock"><span class="leftAlign">##closingActualAmountLabel##:</span><span class="rightAlign boldSection" id="shiftDataClosingActualAmount">##closingActualAmount##</span></div>
+            <div class="divBlock"><span class="leftAlign">##overShortLabel##:</span><span class="rightAlign boldSection" id="shiftDataOverShort">##overShort##</span></div>
+            <div class="divBlock centerAlign dotted"></div>
+        </div>
+        <!-- Categries -->
+        <div style="display:block;"> <!-- can be "display:none" to hide it-->
+            ##categories@wd-z-report-categories##
+        </div>
+        <div class="divBlock">
+<!--            <div class="inline leftAlign dotted width40"></div>-->
+<!--            <div class="inline width20"><span class="centerAlign bold smallerFont">##ends##</span></div>-->
+            <div class="divBlock centerAlign solid"></div>
+            <div class="centerAlign topPaddingS15"><span class="centerAlign bold uppercaseCategoryName" id="zReportEnd">##ends##</span></div>
+<!--            <div class="inline rightAlign dotted width40"></div>						-->
+        </div>
+    </div>
+    <div ##reportNoDataVisibility##>
+        <div class="divBlock largerFont bold topPaddingS20"><span class="bold centerAlign" id="noDataAvailable">##NoDataAvailable##</span></div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

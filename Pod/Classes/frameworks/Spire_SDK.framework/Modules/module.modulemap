@@ -1,0 +1,6 @@
+framework module Spire_SDK {
+  umbrella header "Spire_SDK.h"
+
+  export *
+  module * { export * }
+}

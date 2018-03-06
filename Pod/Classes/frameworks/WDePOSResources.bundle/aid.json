@@ -1,0 +1,219 @@
+[
+  {
+    "A000000003101001": {
+      "issuer": "VISA", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A000000003101002": {
+      "issuer": "VISA", 
+      "name": "", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000032010": {
+      "issuer": "VISA", 
+      "name": "Electron", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000031010": {
+      "issuer": "VISA", 
+      "name": "VISA Classic", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000032020": {
+      "issuer": "VISA", 
+      "name": "V Pay", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000033010": {
+      "issuer": "VISA", 
+      "name": "Interlink", 
+      "type": "EFT"
+    }
+  }, 
+  {
+    "A0000000034010": {
+      "issuer": "VISA", 
+      "name": "Specific", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000035010": {
+      "issuer": "VISA", 
+      "name": "Specific", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000038010": {
+      "issuer": "VISA", 
+      "name": "Plus", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000039010": {
+      "issuer": "VISA", 
+      "name": "Loyalty", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000041010": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000043060": {
+      "issuer": "MasterCard", 
+      "name": "Maestro", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000000042010": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000042203": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000043010": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000044010": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000000045010": {
+      "issuer": "MasterCard", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "325041592E5359532E4444463031": {
+      "issuer": "VISA", 
+      "name": "payWave", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A000000025": {
+      "issuer": "American Express", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000005241010": {
+      "issuer": "RuPay", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A000000333010101": {
+      "issuer": "UnionPay", 
+      "name": "", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A000000333010102": {
+      "issuer": "UnionPay", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A000000333010103": {
+      "issuer": "UnionPay", 
+      "name": "Quasi", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A000000333010106": {
+      "issuer": "UnionPay", 
+      "name": "Electronic Cash", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A000000333010106": {
+      "issuer": "JSB", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A00000005945430100": {
+      "issuer": "ZKA", 
+      "name": "Girocard", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "D276000025": {
+      "issuer": "ZKA", 
+      "name": "Girocard", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A000000098": {
+      "issuer": "VISA", 
+      "name": "USA", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "A0000001523010": {
+      "issuer": "Diners Club", 
+      "name": "Discover", 
+      "type": "CREDIT"
+    }
+  }, 
+  {
+    "A0000001524010": {
+      "issuer": "Diners Club", 
+      "name": "Discover", 
+      "type": "DEBIT"
+    }
+  }, 
+  {
+    "F0000000030001": {
+      "issuer": "BREADESCO", 
+      "name": "", 
+      "type": "CREDIT"
+    }
+  }
+]

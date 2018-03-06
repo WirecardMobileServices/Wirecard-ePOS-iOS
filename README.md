@@ -77,14 +77,14 @@ it, simply add the following line to your Podfile:
 
 ```
 use_frameworks!
-pod "WDePos"
+pod "WDePOS"
 ```
 It is possible to use Wirecard ePOS with core functionality and one of supported terminal extension.
 E.g. to use Wirecard ePOS and Spire SPm2 smart terminal please modify your podfile as follows:
 
 ```
 use_frameworks!
-pod "WDePos/Spire"
+pod "WDePOS/Spire"
 ```
 
 Visit our [Wirecard ePOS Developer Portal](https://wirecardmobileservices.github.io/Wirecard-ePOS-Developer "Developer Portal") for more information on how to integrate the Wirecard ePOS SDK into your application 

@@ -1,0 +1,11 @@
+framework module WDePOS {
+  umbrella header "WDePOS.h"
+
+  export *
+  module * { export * }
+}
+
+module WDePOS.Swift {
+    header "WDePOS-Swift.h"
+    requires objc
+}

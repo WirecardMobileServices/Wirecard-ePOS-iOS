@@ -1,0 +1,11 @@
+framework module WDePOSUI {
+  umbrella header "WDePOSUI.h"
+
+  export *
+  module * { export * }
+}
+
+module WDePOSUI.Swift {
+    header "WDePOSUI-Swift.h"
+    requires objc
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundFull" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-9L-Q0Q">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2017 Wirecard GmbH. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="28" y="614" width="319" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="JDm-cm-gi4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wirecard ePOS Demo" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                    <rect key="frame" x="9" y="282" width="360" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="5Vw-UX-rDJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="H47-b0-DCd">
+                    <rect key="frame" x="51" y="93" width="281" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="EW3-Lq-hvg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OO7-9L-Q0Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NWS-n7-czg"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="UUX-7b-pnx"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="H47-b0-DCd" secondAttribute="bottom" constant="131" id="Yfw-RQ-crR"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="32" id="gdb-bf-1up"/>
+                <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="6" id="mXe-6F-uDJ"/>
+                <constraint firstAttribute="trailing" secondItem="OO7-9L-Q0Q" secondAttribute="trailing" id="mye-z9-pJ8"/>
+                <constraint firstAttribute="trailing" secondItem="H47-b0-DCd" secondAttribute="trailing" constant="43" id="qMf-Eu-pH0"/>
+                <constraint firstItem="OO7-9L-Q0Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qQk-CY-6mp"/>
+                <constraint firstItem="H47-b0-DCd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="93" id="raR-Pf-aMY"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sIE-nI-7U6"/>
+                <constraint firstItem="H47-b0-DCd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="51" id="tRw-py-kd6"/>
+                <constraint firstAttribute="bottom" secondItem="OO7-9L-Q0Q" secondAttribute="bottom" id="uV6-1K-k1v"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="wyV-zs-uxh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="90.5" y="82.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundFull" width="16" height="16"/>
+        <image name="logo.png" width="567" height="114"/>
+    </resources>
+</document>
