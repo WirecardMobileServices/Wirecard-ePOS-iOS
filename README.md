@@ -4,9 +4,9 @@
 <img src="https://raw.githubusercontent.com/WirecardMobileServices/Wirecard-ePOS-iOS/master/docs/logo.png" alt="Wirecard-ePOS-iOS" width=400 height=64>
 
 [![CI Status](http://img.shields.io/travis/WirecardMobileServices/Wirecard-ePOS-iOS.svg?style=flat)](https://travis-ci.org/WirecardMobileServices/Wirecard-ePOS-iOS)
-[![Version](https://img.shields.io/cocoapods/v/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
-[![License](https://img.shields.io/cocoapods/l/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
-[![Platform](https://img.shields.io/cocoapods/p/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
+[![Version](https://img.shields.io/cocoapods/v/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
+[![License](https://img.shields.io/cocoapods/l/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
+[![Platform](https://img.shields.io/cocoapods/p/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
 
 ## Overview
 The library enables cashless payment processing with selected mPOS terminals (magStripe and Chip and PIN) via the fully-licensed Wirecard Bank, Wirecard Retail Services which allows acceptance of many different cards, including Visa, MasterCard and American Express. In addition alternative payment method Alipay is also available.
