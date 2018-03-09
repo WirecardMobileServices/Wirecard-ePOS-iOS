@@ -3,7 +3,7 @@
 //  iCashier
 //
 //  Created by Radoslav Danko on 07/02/2014.
-//  Copyright (c) 2016 Wirecard. All rights reserved.
+//  Copyright (c) 2018 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

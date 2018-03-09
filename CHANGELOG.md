@@ -1,6 +1,20 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.3.1] - 2018-03-09 
+### Fixed
+- Magstripe fallback requires PIN based on service code
+- Authorization response code for Amex terminated transactions
+
+## [2.3.0] - 2018-03-07 
+### Changed
+- SDK product name
+
+### Fixed
+- Signature confirmation fix
+- Flat discount removal
+- PosMate configuration update
+
 ## [2.2.3] - 2018-02-15 
 ### Fixed
 - Language Change for default receipt

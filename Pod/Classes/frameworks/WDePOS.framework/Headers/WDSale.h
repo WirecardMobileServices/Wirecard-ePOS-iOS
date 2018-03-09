@@ -3,7 +3,7 @@
 //   WDePOS
 //
 //  Created by Danko, Radoslav on 16/02/16.
-//  Copyright © 2016 Wirecard. All rights reserved.
+//  Copyright © 2018 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -290,7 +290,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @brief Add sale item to the sale
  *  @param unitPrice Unit price
- *  @param discountRate Item's Discount  (percentage e.g. discount rate of 5% = 5.0)
+ *  @param discountRate Item's Discount (percentage e.g. discount rate of 5% = 5.0, in range: 0.0 - 100.0)
  *  @param taxRate tax rate of the sale item (percentage e.g. tax rate of 10% = 10.0)
  *  @param itemDescription sale item description
  *  @param productId Sale item (a product) has a unique identifier in the inventory

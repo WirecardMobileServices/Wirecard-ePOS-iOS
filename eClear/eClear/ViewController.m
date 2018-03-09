@@ -3,7 +3,7 @@
 //  eClear
 //
 //  Created by Danko, Radoslav on 15/12/2017.
-//  Copyright © 2017 Wirecard. All rights reserved.
+//  Copyright © 2018 Wirecard. All rights reserved.
 //
 
 #import "ViewController.h"

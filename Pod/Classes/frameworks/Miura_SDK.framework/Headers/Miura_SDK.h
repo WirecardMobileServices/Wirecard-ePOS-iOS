@@ -3,7 +3,7 @@
 //  Miura_SDK
 //
 //  Created by Danko, Radoslav on 03/04/2017.
-//  Copyright © 2017 Wirecard. All rights reserved.
+//  Copyright © 2018 Wirecard. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

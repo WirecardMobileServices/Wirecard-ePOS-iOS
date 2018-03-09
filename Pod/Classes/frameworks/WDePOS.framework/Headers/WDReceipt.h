@@ -1,5 +1,5 @@
 //
-//  WdAcceptReceipt.h
+//  WDReceipt.h
 //  Pods
 //
 //  Created by Danko, Radoslav on 8/7/14.

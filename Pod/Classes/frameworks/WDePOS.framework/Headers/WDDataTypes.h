@@ -3,7 +3,7 @@
 //   WDePOS
 //
 //  Created by Danko, Radoslav on 22/10/15.
-//  Copyright © 2015 Wirecard. All rights reserved.
+//  Copyright © 2018 Wirecard. All rights reserved.
 //
 
 #ifndef WDA_DATA_TYPES

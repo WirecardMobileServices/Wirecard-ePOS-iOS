@@ -3,7 +3,7 @@
 //   WDePOS
 //
 //  Created by Danko, Radoslav on 23/10/15.
-//  Copyright © 2015 Wirecard. All rights reserved.
+//  Copyright © 2018 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -18,7 +18,7 @@
 @interface WDPaymentDetail : WDObject<NSCoding>
 /**
  */
-@property (nonatomic) WDPaymentMethod paymentMethod;
+@property (nonatomic, readonly) WDPaymentMethod paymentMethod;
 /**
  */
 @property (nonatomic) WDTransactionType transactionType;
@@ -58,6 +58,15 @@
 /**
  */
 @property (nullable, nonatomic, strong) NSArray * autoResolvePayments;
+/**
+ */
+-(nonnull instancetype)init __attribute__((unavailable("use initWithPaymentMethod:paymentMethod:")));
+/**
+ */
++(nonnull instancetype)new __attribute__((unavailable("use initWithPaymentMethod:paymentMethod:")));
+/**
+ */
+- (nonnull instancetype)initWithPaymentMethod:(WDPaymentMethod)paymentMethod;
 /**
  */
 -(NSString *_Nullable)statusDescription;
