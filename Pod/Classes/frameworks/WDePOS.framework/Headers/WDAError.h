@@ -12,7 +12,7 @@
  *  @discussion Enumerator of acceptSDK errors
  **/
 typedef NS_ENUM(NSInteger, WDError) {
-    WDErrorBackendReturnedJSONDoesNotMatchMappedClass,
+    WDErrorBackendReturnedJSONDoesNotMatchMappedClass = 0,
     WDErrorUnauthorizedUser,
     WDErrorUserPasswordExpired,
     WDErrorUserPasswordChangeRequired,
@@ -39,11 +39,10 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorConnection,
     WDErrorSignatureRequired,
     WDErrorCantLoadTerminalConfiguration,
-    WDErrorCantLoadSwiperTerminalConfiguration,
     WDErrorTerminalDamaged,
     WDErrorNoDUKPT,
-    WDErrorFailedToStartEMV,//30
-    WDErrorFailedToSendOfflineEMV,
+    WDErrorFailedToStartEMV,
+    WDErrorFailedToSendOfflineEMV,//30
     WDErrorFailedToSendOnlineEMV,
     WDErrorTerminalNotSetInMerchant,
     WDErrorResponseLost,
@@ -52,8 +51,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorTransactionFailure,
     WDErrorBlockedCardType,
     WDErrorFailedBluetoothConnection,
-    WDErrorFailedPrinterBluetoothConnection,//40
-    WDErrorFailedTerminalBluetoothConnection,
+    WDErrorFailedPrinterBluetoothConnection,
+    WDErrorFailedTerminalBluetoothConnection,//40
     WDErrorFailedDrawerBluetoothConnection,
     WDErrorFailedPistolBluetoothConnection,
     
@@ -63,9 +62,10 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorTerminalFailedToGetICCApplicationsList,
     WDErrorTerminalFailedToTerminateCurrentTerminalPaymentFlow,
     WDErrorLowPowerInAudioJack,
-    WDErrorMonoAudioEnabled,//50
-    WDErrorTerminalCommandTimeOut,
+    WDErrorMonoAudioEnabled,
+    WDErrorTerminalCommandTimeOut,//50
     WDErrorTerminalTimeOut,
+    WDErrorTerminalWaitingUserTimeOut,
     WDErrorTerminalCancelledFileUpload,
 
     WDErrorWrongUserNameOrPassword,
@@ -74,9 +74,9 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorExternalIdNotFound,                   // there is no user/merchant with given external id. ( HTTP 422 )
     WDErrorChangePasswordCriteriaNotMet,                  //password change criteria not met
     WDErrorQueryStatsTokenExpired,
-    WDErrorForgotExternalIdNotFound,    //60         // there is no user/merchant with given email address. ( HTTP 422 )
+    WDErrorForgotExternalIdNotFound,             // there is no user/merchant with given email address. ( HTTP 422 )
     
-    WDErrorConfigFilesInfoTimeout,
+    WDErrorConfigFilesInfoTimeout,//60
     WDErrorConfigFilesZipDownload,
     WDErrorTerminalDisconnected,
     WDErrorConfigFilesTerminalMayNotBeSet,
@@ -85,8 +85,10 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorConfigFilesDevelopmentFirmwareOnProductionTerminal,
     WDErrorConfigFilesTerminalUnsupported,
     WDErrorConfigFilesTokenExpired,
-    WDErrorInventoryNoData,//70
-    WDErrorConfigFilesTerminalFirmwareDoesNotExist,
+    WDErrorInventoryNoData,
+    WDErrorTerminalFirmwareDoesNotExist,//70
+    WDErrorTerminalConfigDoesNotExist,
+    
     WDErrorConfigFilesReading,
     
     WDErrorPrinterTimeout,
@@ -95,8 +97,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorPrinterNotConnected,
     WDErrorPrinterOperation,
     WDErrorPrinterUnsupportedDevice,
-    WDErrorDeviceDoesNotSupportPrinting,
-    WDErrorPrinterPaperLow,//80
+    WDErrorDeviceDoesNotSupportPrinting,//80
+    WDErrorPrinterPaperLow,
     
     WDErrorSignatureRejectedFromTerminal,
     WDErrorInvalidPaymentConfiguration,
@@ -109,8 +111,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     
     WDErrorExtensionClassDoesNotExist,
     WDErrorExtensionDoesNotSupportMethod,
-    WDErrorInvalidParameter,
-    WDErrorDeviceRooted,// 91
+    WDErrorInvalidParameter,// 90
+    WDErrorDeviceRooted,
     
     WDErrorActiveTerminalNotSet,
     WDErrorActiveScanPistolNotSet,
@@ -121,7 +123,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorServerSSLCertificateExpired,
     WDErrorFailedTerminalBluetoothConnectionNotInPayment,
     
-    WDErrorMissingMerchant //This happens when a System Admin, Partner or any role without merchant tries to log in
+    WDErrorMissingMerchant, //100//This happens when a System Admin, Partner or any role without merchant tries to log in
+    WDErrorAnotherTransactionIsInProgress
 };
 
 

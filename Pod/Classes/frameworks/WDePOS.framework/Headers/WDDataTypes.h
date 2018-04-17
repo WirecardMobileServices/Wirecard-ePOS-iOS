@@ -166,8 +166,9 @@ typedef NS_ENUM(NSInteger, WDReversalReason)
     WDReversalReasonTerminalTerminated=7,
     WDReversalReasonSignatureVerificationTimeout = 10,
     WDReversalReasonOfflineDeclined = 11,
-    WDReversalReasonUserCanceled = 12
-//    WDReversalReasonGatewayDeclined = 13
+    WDReversalReasonUserCanceled = 12,
+    WDReversalReasonSignatureEnterTimeout = 13,
+//    WDReversalReasonGatewayDeclined = 14
 };
 
 /**
@@ -231,18 +232,6 @@ typedef NS_ENUM(NSInteger, WDUpdateConfigurationStatus) {
 } ;
 
 /**
- *  @typedef WDSignatureVerificationResult
- *  @brief Enumerator with the result of the merchant verification
- **/
-typedef NS_ENUM(NSInteger, WDSignatureVerificationResult)
-{
-    WDSignatureVerificationResultNotDefined = 0,
-    WDSignatureVerificationResultApproved = 1,
-    WDSignatureVerificationResultRejected = 2
-};
-
-
-/**
  *  @typedef WDPaymentConfirmationType
  *  @brief Enumerator with the type of the merchant payment confirmation
  **/
@@ -260,8 +249,8 @@ typedef NS_ENUM(NSInteger, WDPaymentConfirmationType)
 typedef NS_ENUM(NSInteger, WDPaymentConfirmationResult)
 {
     WDPaymentConfirmationResultRejected = 0,
-    WDPaymentConfirmationResultApproved = 1
-    
+    WDPaymentConfirmationResultApproved,
+    WDPaymentConfirmationResultUnconfirmed
 };
 
 
@@ -1066,6 +1055,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, retain) NSNumber *minUpperCase;
 @property (nullable, nonatomic, retain) NSString *specialCharacters;
 @property (nullable, nonatomic, retain) NSNumber *whitespaceAllowed;
+@property (nullable, nonatomic, retain) NSNumber *passwordHistory;
 @end
 
 /**
@@ -1646,52 +1636,6 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @end
 
 /**
- *  @class WDExtendedProcessingInfo
- *  @brief Extented processing info class. Content needed for some Chip transactions with online PIN verification and/or CVM methods
- **/
-@interface WDExtendedProcessingInfo : NSObject
-/**
- */
-@property (nonatomic, strong) NSNumber *gratuityAmount;
-/**
- */
-@property (nonatomic, strong) NSString * _Nullable applicationId;
-/**
- */
-@property (nonatomic, strong) NSString *  _Nullable merchantId;
-/**
- */
-@property (nonatomic, strong) NSString *  _Nullable encryptedPIN;
-/**
- */
-@property (nonatomic) BOOL reversalIsRequired;
-/**
- */
-@property (nonatomic) int reversalReason;
-/**
- */
-@property (nonatomic) BOOL signatureCheckIsRequired;
-/**
- */
-@property (nonatomic) NSArray *confirmationsRequired;
-/**
- */
-@property (nonatomic) NSString * _Nullable applicationCryptogram;
-/**
- */
-@property (nonatomic) BOOL onlineAuthentication;
-/**
- */
-@property (nonatomic) BOOL isCaptureRequired;
-/**
- */
-@property (nonatomic) BOOL contaclessOnlinePinWrong;
-/**
- */
-@property (nonatomic) UIImage *signatureImage;
-@end
-
-/**
  *  @class WDEncryptionParameters
  *  @brief Encryption parameters
  **/
@@ -1844,14 +1788,6 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 typedef void (^PaymentProgress)(WDStateUpdate paymentProgress);
 
 /**
- *  @typedef PaymentSignature
- *  @brief Used by the extension to notify the Payment Flow to require the collection of customer's signature
- *  @param signatureRequest Details of the signature request (card holder details as supplied by extension)
- *  @see WDSignatureRequest
- **/
-typedef void (^PaymentSignature)(WDSignatureRequest * _Nullable signatureRequest);
-
-/**
  *  @typedef PaymentCardApplicationSelection
  *  @brief Used by extension to notify the Payment Flow to ask for the Card application selection
  *  @param appSelectionRequest  WDAppSelectionRequest to be sent to the client application
@@ -1905,13 +1841,6 @@ typedef void (^UpdateTerminalCompletion)(WDUpdateConfigurationStatus updateStatu
 typedef void (^TerminalUpdatesCompletion)(WDTerminalUpdates *_Nullable availableUpdates, NSError* _Nullable availableUpdatesError);
 
 /**
- *  @typedef SignatureVerificationResultCallback
- *  @brief The callback to pass to startPay function with the result of Customer signature verification
- *  @param signatureVerificationResult the result of the Merchant veryfying the customer signature
- **/
-typedef void (^SignatureVerificationResult)(WDSignatureVerificationResult signatureVerificationResult);
-
-/**
  *  @typedef PaymentConfirmationResult
  *  @brief The callback to pass to startPay function with the result of Customer confirmation - either Signature confirmation or Password entry completed confirmation (In the case of WeChat)
  *  @param paymentConfirmationResult the result of the Merchant veryfying the customer signature or confirming Password was entered by customer (WeChat customer)
@@ -1924,14 +1853,6 @@ typedef void (^PaymentConfirmationResult)(WDPaymentConfirmationResult paymentCon
  *  @param signatureRequest signature request block
  **/
 typedef void (^SignatureRequiredRequest)(WDSignatureRequest* _Nonnull signatureRequest);
-
-/**
- *  @typedef SignatureVerificationRequest
- *  @brief The callback to pass to startPay function with the result of Customer signature verification
- *  @param signatureVerificationResult the result of the Merchant veryfying the customer signature // if returned as nil from the sdk then Merchant WDs/rejects signature on the terminal and not within the app
- **/
-typedef void (^SignatureVerificationRequest)(SignatureVerificationResult _Nullable signatureVerificationResult, NSError* _Nullable signatureVerificationError);
-
 
 /**
  *  @typedef MerchantDetailCompletion

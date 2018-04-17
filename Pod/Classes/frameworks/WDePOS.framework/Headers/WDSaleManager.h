@@ -17,24 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @brief Sale Management
  */
 @interface WDSaleManager : NSObject
-/**
- *  @brief Start the payment process
- *  @param saleConfiguration Configuration to be used to perform this payment
- *  @param progress Block bearing the information about the payment process progress
- *  @param collectSignature Block that needs to execute the option to capture a signature and return the signature data
- *  @param verifySignature Block that informs that a signature needs to be verified. This is done after the transaction has been already send to background, but the final approval depends on the merchant. Only
- * terminals with signature verification built it (i.e. Spire Posmate) requires actions here. And signatureVerification block can be handled in the same way as the completion block, as indicates a completion itself
- * (just lacking the second generate AC)
- *  @param cardApplication Block informs that an application selection is needed with the chip card inserted.
- *  @param completion Block that will be called at the very end of payment flow. It provides an Saleobject (that may be nil if unauthorised) or a descriptive error
- **/
-- (void)pay:(WDPaymentConfig* )saleConfiguration
-   progress:(PaymentProgress )progress
-collectSignature:(SignatureRequiredRequest )collectSignature
-verifySignature:(SignatureVerificationRequest )verifySignature
-cardApplication:(PaymentCardApplicationSelectionRequest )cardApplication
- completion:(SaleCompletion )completion  DEPRECATED_MSG_ATTRIBUTE("Use pay:delegate:");
-
 
 /**
  @brief Start the payment process

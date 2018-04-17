@@ -155,10 +155,10 @@
                        showReturns:NO //Should the receipt contain returns ?
                             format:WDPrintFormatUIImage //The receipt format is UIImage object for StarIO or mPOP
                                dpi:WDPrintDpiStarMicronics //The dots per width is set to StarMicronics
-                        completion:^(id  _Nullable receipt, NSError * _Nullable error) {
+                        completion:^(NSArray* _Nullable receipts, NSError* _Nullable error) {
                             //Receipt as per format specified HTML | PDF | UIImage | WDReceipt object
                             returnedErr = error;
-                            printerConfig.printJobs = @[receipt];
+                            printerConfig.printJobs = receipts;
                             [sdk.printerManager print:printerConfig
                                              progress:progress
                                            completion:completion];

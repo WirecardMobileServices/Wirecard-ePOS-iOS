@@ -357,6 +357,9 @@
 @property (nullable,nonatomic,strong) UIImage *headerLogo;
 /**
  */
+@property (nullable,nonatomic,strong) NSString *signatureImageAsString;
+/**
+ */
 @property (nullable,nonatomic, strong) WDReceiptAlipayDetails *alipayDetails;
 /**
  */

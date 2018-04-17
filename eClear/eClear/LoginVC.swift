@@ -15,7 +15,7 @@ class LoginVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var tPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     
-    let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()

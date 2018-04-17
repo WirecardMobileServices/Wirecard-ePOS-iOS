@@ -10,17 +10,17 @@
 
 @interface NSString (WDExtras)
 
--(NSData*)convertHexToData;
+- (NSData *)convertHexToData;
 - (NSString *)stringByRemovingControlCharacters;
--(NSInteger)instr:(NSString*)substring;
--(NSString *) leftPadStringWithPadding:(NSString *)padding;
--(NSString *) leftPadStringToLength:(int)toLength;
-- (NSString*)stringByEncodingHTMLEntities ;
+- (NSInteger)instr:(NSString*)substring;
+- (NSString *)leftPadStringWithPadding:(NSString *)padding;
+- (NSString *)leftPadStringToLength:(int)toLength;
+- (NSString *)stringByEncodingHTMLEntities ;
 - (BOOL)contains:(NSString*)string;
 
-+ (NSString*)hexFromStr:(NSString*)str;
++ (NSString *)hexFromStr:(NSString*)str;
 + (NSString *)hexToString:(NSString *)string;
-+(NSString *) hexToASCII:(NSString *)hexString;
++ (NSString *)hexToASCII:(NSString *)hexString;
 + (NSString *)getMaskedPANForReceipt:(NSString *)PAN;
 
 -(NSString *)wrapByLength:(NSUInteger)length;

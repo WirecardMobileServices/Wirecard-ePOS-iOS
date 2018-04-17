@@ -94,12 +94,14 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
     
     func openCashDrawer()
     {
-        sdk.cashDrawerManager.openCashDrawer(self.selectedDevice!,
-                                             completion: {[weak self](success : Bool?, error : Error?) in
-                self?.openingDrawerSuccess = success
-                self?.returnedErr = error
-                self?.expectation.fulfill()
-        })
+        if let selectedDevice = self.selectedDevice {
+            sdk.cashDrawerManager.openCashDrawer(selectedDevice,
+                                                 completion: {[weak self](success : Bool?, error : Error?) in
+                                                    self?.openingDrawerSuccess = success
+                                                    self?.returnedErr = error
+                                                    self?.expectation.fulfill()
+            })
+        }
     }
     
     func gettingSale()
@@ -128,6 +130,7 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
             self.expectation.fulfill()
             return
         }
+        
         let printProgress : PrinterStateUpdate = {(update : WDPrinterStateUpdate) in
             print("Print progress is \(update.rawValue)")
         }
@@ -137,9 +140,15 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
             self?.returnedErr = error
             self?.expectation.fulfill()
         }
+        
+        guard let selectedDevice = self.selectedDevice else {
+            XCTFail("No selected device to print - printReceipt")
+            self.expectation.fulfill()
+            return
+        }
 
-        let printerConfig : WDPrinterConfig = WDPrinterConfig.init(printer:self.selectedDevice!,
-                                                                               printJobs:[UIImage].init(arrayLiteral: receiptImage))
+        let printerConfig : WDPrinterConfig = WDPrinterConfig.init(printer: selectedDevice,
+                                                                               printJobs: [UIImage].init(arrayLiteral: receiptImage))
         /*Note that the printer adds borders to the image and it cannot be avoided. Try  not to include
         borders in the picture -- otherwise the image will be scaled down.
         If you wish to use the Default Design receipt you can obtain the SaleResponse from
@@ -152,21 +161,21 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
         self.saleResponse?.receipt(true,
                               showReturns: false,
                               format: .uiImage,
-            dpi: .starMicronics,
-            completion: {[weak self](receipt : Any?, error : Error?) in
-                self?.returnedErr = error
-                //Receipt as per format specified HTML | PDF | UIImage | WDReceipt object
-                if (receipt != nil)
-                {
-                    printerConfig.printJobs = [Any].init(arrayLiteral: receipt!)
-                    self?.sdk.printerManager.print(printerConfig,
-                                                   progress: printProgress,
-                                                   completion: printCompletion)
-                }
-                else
-                {
-                    self?.expectation.fulfill()
-                }
+                              dpi: .starMicronics,
+                              completion: {[weak self](receipts : [Any]?, error : Error?) in
+            self?.returnedErr = error
+            //Receipt as per format specified HTML | PDF | UIImage | WDReceipt object
+            if let receipts = receipts
+            {
+                printerConfig.printJobs = receipts
+                self?.sdk.printerManager.print(printerConfig,
+                                               progress: printProgress,
+                                               completion: printCompletion)
+            }
+            else
+            {
+                self?.expectation.fulfill()
+            }
         })
     }
     

@@ -11,11 +11,10 @@ import WebKit
 
 @objc class ReceiptVC: UIViewController {
 
-    var sale:WDSaleResponse? = nil
-    let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    @objc weak var sale: WDSaleResponse? = nil
+    let app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var webView: WKWebView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +42,11 @@ import WebKit
         }
         
         if let sale = sale {
-            sale.receipt(true, showReturns: true, format: WDPrintFormat.HTML, dpi: WDPrintDpi.default, language:(UIApplication.shared.delegate as? AppDelegate)?.language ?? "en", completion: { ( receipts:[Any]?, error:Error?) in
+            sale.receipt(true, showReturns: true, format: WDPrintFormat.HTML, dpi: WDPrintDpi.default, language:(UIApplication.shared.delegate as? AppDelegate)?.language ?? "en", completion: { [weak self] ( receipts: [Any]?, error: Error?) in
                 
-                if error != nil{
-                    self.navigationController?.popViewController(animated: true)
-                    self.app.showError("Receipt", text: error?.localizedDescription)
+                if error != nil {
+                    self?.navigationController?.popViewController(animated: true)
+                    self?.app.showError("Receipt", text: error?.localizedDescription)
                     return
                 }
                 
@@ -59,18 +58,16 @@ import WebKit
                         let path = Bundle.main.bundlePath
                         let baseUrl = NSURL.fileURL(withPath: path)
                         
-                        self.webView.loadHTMLString(html as String, baseURL: baseUrl)
+                        self?.webView.loadHTMLString(html as String, baseURL: baseUrl)
                     }
-                    else{
-                        self.navigationController?.popViewController(animated: true)
-                        self.app.showError("Receipt", text: "Failed to generate the HTML receipt.")
-
+                    else {
+                        self?.navigationController?.popViewController(animated: true)
+                        self?.app.showError("Receipt", text: "Failed to generate the HTML receipt.")
                     }
-                    
                 }
-                else{
-                    self.navigationController?.popViewController(animated: true)
-                    self.app.showError("Receipt", text: "Failed to generate the receipt.")
+                else {
+                    self?.navigationController?.popViewController(animated: true)
+                    self?.app.showError("Receipt", text: "Failed to generate the receipt.")
                 }
             })
         }

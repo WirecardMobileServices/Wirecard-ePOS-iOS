@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WDObject.h"
 NS_ASSUME_NONNULL_BEGIN
 /**
  *  @brief WDPaymentMethod

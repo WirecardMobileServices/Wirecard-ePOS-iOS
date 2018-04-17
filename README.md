@@ -4,9 +4,9 @@
 <img src="https://raw.githubusercontent.com/WirecardMobileServices/Wirecard-ePOS-iOS/master/docs/logo.png" alt="Wirecard-ePOS-iOS" width=400 height=64>
 
 [![CI Status](http://img.shields.io/travis/WirecardMobileServices/Wirecard-ePOS-iOS.svg?style=flat)](https://travis-ci.org/WirecardMobileServices/Wirecard-ePOS-iOS)
-[![Version](https://img.shields.io/cocoapods/v/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
-[![License](https://img.shields.io/cocoapods/l/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
-[![Platform](https://img.shields.io/cocoapods/p/WDePOS.svg?style=flat)](http://cocoapods.org/pods/WDePOS)
+[![Version](https://img.shields.io/cocoapods/v/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
+[![License](https://img.shields.io/cocoapods/l/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
+[![Platform](https://img.shields.io/cocoapods/p/Wirecard-ePOS.svg?style=flat)](http://cocoapods.org/pods/Wirecard-ePOS)
 
 ## Overview
 The library enables cashless payment processing with selected mPOS terminals (magStripe and Chip and PIN) via the fully-licensed Wirecard Bank, Wirecard Retail Services which allows acceptance of many different cards, including Visa, MasterCard and American Express. In addition alternative payment method Alipay is also available.
@@ -76,15 +76,21 @@ There are two ways how to install the SDK.
 it, simply add the following line to your Podfile:
 
 ```
+platform :ios, '9.0'
 use_frameworks!
-pod "WDePOS"
+target 'YourTarget' do
+    pod 'WDePOS/All'
+end
 ```
 It is possible to use Wirecard ePOS with core functionality and one of supported terminal extension.
 E.g. to use Wirecard ePOS and Spire SPm2 smart terminal please modify your podfile as follows:
 
 ```
+platform :ios, '9.0'
 use_frameworks!
-pod "WDePOS/Spire"
+target 'YourTarget' do
+    pod 'WDePOS/Spire'
+end
 ```
 
 Visit our [Wirecard ePOS Developer Portal](https://wirecardmobileservices.github.io/Wirecard-ePOS-Developer "Developer Portal") for more information on how to integrate the Wirecard ePOS SDK into your application 
@@ -109,12 +115,9 @@ The Switch ePOS backend documentation:
 ## Requirements
 
 * Computer running OSX
-* XCode > 8.0
+* XCode 9
 * Device running iOS > 9.0
 * One of Wirecard approved terminals, printers, cash drawers, barcode scanners
-	* IDTech [Unimag Pro](http://www.idtechproducts.com/products/mobile-readers/126.html "Unimag Pro")
-	* BBPOS [WisePad 2](https://bbpos.com/wisepad-2/ "WisePad 2")
-	* BBPOS [WisePad 2 Plus](https://bbpos.com/wisepad-2-plus/ "WisePad 2 Plus")
 	* Spire [PosMate](http://www.spirepayments.com/product/posmate/ "PosMate")
 	* Spire [SPm2](http://www.spirepayments.com/product/spm2/ "SPm2")
 	* Datecs printer [DPP-250](http://www.datecs.bg/en/products/DPP-250/2/175 "DPP-250")

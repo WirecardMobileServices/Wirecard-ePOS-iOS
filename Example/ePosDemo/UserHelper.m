@@ -52,19 +52,19 @@ static UserHelper *sharedInstance = nil;
 -(NSDecimalNumber*)tipTax
 {
     //You are free to select
-    return [NSDecimalNumber decimalNumberWithString: [[currentUser.merchant tipTaxRate] stringValue]];
+    return [NSDecimalNumber decimalNumberWithString: [[currentUser.merchant tipTaxRate] stringValue] ?: @"0"];
 }
 
--(NSDecimalNumber*)serviceChargeRate
+-(NSDecimalNumber*)serviceChargeRate 
 {
     //You are free to select
-    return [NSDecimalNumber decimalNumberWithString: [[currentUser.merchant serviceChargeRate] stringValue]];
+    return [NSDecimalNumber decimalNumberWithString: [[currentUser.merchant serviceChargeRate] stringValue] ?: @"0"];
 }
 
 -(NSDecimalNumber*)serviceChargeTax
 {
     //You are free to select
-    return [NSDecimalNumber decimalNumberWithString:  [[currentUser.merchant serviceChargeTaxRate] stringValue]];
+    return [NSDecimalNumber decimalNumberWithString:  [[currentUser.merchant serviceChargeTaxRate] stringValue] ?: @"0"];
 }
 
 -(void)storeOpenShiftId:(NSString*)shiftId

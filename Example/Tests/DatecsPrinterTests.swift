@@ -35,7 +35,7 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
         expectation = self.expectation(description: "Requesting User Data")
         self.loginAndGetUserData()
         self.waitForExpectations(timeout: 100, handler: nil)
-        if (loggedUser == nil || (loggedUser?.isKind(of: WDMerchantUser.self)) == false)
+        if (self.loggedUser == nil || (self.loggedUser?.isKind(of: WDMerchantUser.self)) == false)
         {
             XCTFail("Error, did not return Merchant User. Are your credentials correct? Try login into the backend through internet browser.")
         }
@@ -56,14 +56,13 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
         self.discoverDevices(.WDDatecsPrinterExtensionUUID)
         self.waitForExpectations(timeout: 100,
                                  handler: nil)
-        if (selectedDevice == nil)
+        if let selectedDevice = self.selectedDevice
         {
-            XCTFail("Error detecting printer. Make sure is charger, switched on and properly paired in your iOS device settings");
+            sdk.printerManager.add(self, forDevice: selectedDevice)
         }
         else
         {
-            sdk.printerManager.add(self,
-                                   forDevice: selectedDevice!)
+            XCTFail("Error detecting printer. Make sure is charger, switched on and properly paired in your iOS device settings")
         }
         
         //PART 4: We print the receipt date
@@ -82,8 +81,7 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
     {
         let query : WDSalesQuery = WDSalesQuery.init()
         query.saleId = SaleHelper.sharedInstance().saleIdSaved()
-        sdk.saleManager.querySales(query,
-                                   completion: {[weak self](arr : [WDSaleResponse]?, error: Error?) in
+        sdk.saleManager.querySales(query, completion: {[weak self](arr : [WDSaleResponse]?, error: Error?) in
             self?.saleResponse = arr?.first
             if ((arr?.first) != nil)
             {
@@ -93,8 +91,8 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
                                             showReturns: false,
                                             format: .datecs,
                                             dpi: WDPrintDpi.default,
-                                            completion: {(receipt : Any?, error : Error?) in
-                    self?.datecsReceipt = receipt as? WDReceipt
+                                            completion: {(receipts : [Any]?, error : Error?) in
+                    self?.datecsReceipt = receipts?.first as? WDReceipt
                     self?.expectation.fulfill()
                 })
             }
@@ -119,8 +117,14 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
         }
         //You can just send an image to the printer using printerConfig, but due to paper size and capabilities of Datecs printer, is always faster and more efficient to send receipt data and let the SDK build a text receipt. Image receipt are slow and even consume resources for the blank areas.
         
-        let printerConfig : WDPrinterConfig = WDPrinterConfig.init(printer: self.selectedDevice!,
-                                                                               printJobs: [self.datecsReceipt!])
+        guard let selectedDevice = self.selectedDevice, let datecsReceipt = self.datecsReceipt else {
+            XCTFail("Printing receipt error - no selected device or no recepit.")
+            self.expectation.fulfill()
+            return
+        }
+        
+        let printerConfig : WDPrinterConfig = WDPrinterConfig.init(printer: selectedDevice,
+                                                                   printJobs: [datecsReceipt])
         
         //Alternatively, you can print a sales report, with catalogue categories, category items, and statistics on discounts, taxes and more, filling the parameters you need in:
         //printerConfig.report = ...

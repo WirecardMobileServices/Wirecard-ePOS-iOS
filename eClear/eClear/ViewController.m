@@ -34,7 +34,6 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     self.btnPayCashCard.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,20 +44,24 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     if (!self.app.sdk) {
         [self showLogin];
     }
+    self.sale = nil;
 }
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+
 #pragma mark - Custom Methods
--(void)showLogin{
+
+-(void)showLogin {
    LoginVC *loginVC = (LoginVC*)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginVC"];
     [self.navigationController presentViewController:loginVC animated:YES completion:nil];
 }
 
--(void)pay:(NSDecimalNumber *)amount paymentMethod:(WDPaymentMethodMask)paymentMethod{
+-(void)pay:(NSDecimalNumber *)amount paymentMethod:(WDPaymentMethodMask)paymentMethod {
     
-    WDSaleManagerUI *ui = [WDSaleManagerUI sharedInstance] ;
+    WDSaleManagerUI *ui = [WDSaleManagerUI sharedInstance];
     
     WDSaleConfiguration *config = [[WDSaleConfiguration alloc]
                                          initWithAmount:amount
@@ -69,15 +72,14 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     //set the Localisation for the UI component [en, de, es] defaults to en if not set
     config.language = ((AppDelegate *)[UIApplication sharedApplication].delegate).language;
     
-    [ui pay:config
-   progress:^(WDStateUpdate paymentProgress) {
-       NSLog(@"progress =%ld",(long)paymentProgress);
-   } completion:^(WDSaleResponse * _Nullable saleResponse, NSError * _Nullable saleResponseError) {
-       if (saleResponseError) {
+    [ui pay:config progress:^(WDStateUpdate paymentProgress) {
+       NSLog(@"progress =%ld", (long)paymentProgress);
+    } completion:^(WDSaleResponse * _Nullable saleResponse, NSError * _Nullable saleResponseError) {
+        if (saleResponseError) {
            NSLog(@"saleResponseError:%@",saleResponseError);
            [self.app showError:@"Sale" text:saleResponseError.localizedDescription];
-       }
-       else{
+        }
+        else {
            if ([saleResponse allPaymentsApproved]) {
                [self.app showSuccess:@"Sale" text:@"Payment processed successfully"];
            }
@@ -85,9 +87,9 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
                [self.app showInfo:@"Sale" text:@"Payment failed" ] ;
            }
            [self showReceipt:saleResponse];
-       }
-       NSLog(@"saleResponse:%@",saleResponse);
-   }];
+        }
+        NSLog(@"saleResponse:%@",saleResponse);
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -95,7 +97,7 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     receiptVC.sale = self.sale;
 }
 
--(void)showReceipt:(WDSaleResponse *)sale{
+-(void)showReceipt:(WDSaleResponse *)sale {
     self.sale = sale;
 //    ReceiptVC *receiptVC = (ReceiptVC*)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ReceiptVC"];
 //    receiptVC.sale = sale;
@@ -112,10 +114,9 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     if ([sender isKindOfClass:[UITapGestureRecognizer class]]) {
         tag = [[sender view] tag];
     }
-    else{
+    else {
         UIButton *btn = (UIButton *) sender;
         tag = btn.tag;
-        
     }
     switch (tag) {
         case PaymentTypeAmountCash:

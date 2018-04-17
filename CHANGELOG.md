@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.3.3] - 2018-04-17 
+### Fixed
+- Mastercard contactless with online PIN
+- Receipt texts
+- Cash register handling
+- Enter signature timeout
+- Payment confirmation timeout
+- Swift 4.1 migration
+
 ## [2.3.1] - 2018-03-09 
 ### Fixed
 - Magstripe fallback requires PIN based on service code

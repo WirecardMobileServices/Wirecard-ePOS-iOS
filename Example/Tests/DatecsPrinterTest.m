@@ -96,9 +96,9 @@
                        showReturns:NO //Should the receipt contain returns ?
                             format:WDPrintFormatDatecs //The receipt format is WDReceipt object for Datecs
                                dpi:WDPrintDpiDefault //The dots per width is set to Default - valid for Datecs or AirPrint
-                        completion:^(id  _Nullable receipt, NSError * _Nullable error) {
+                        completion:^(NSArray* _Nullable receipts, NSError * _Nullable error) {
                             //Receipt as per format specified HTML | PDF | UIImage | WDReceipt object
-                            datecsReceipt = receipt;
+                            datecsReceipt = [receipts firstObject];
                              [expectation fulfill];
                         }];
          }
