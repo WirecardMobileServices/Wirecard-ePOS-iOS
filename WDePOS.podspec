@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WDePOS"
-  s.version          = "2.3.3"
+  s.version          = "2.4.0"
   s.summary          = "Wirecard epos - Accept Card, Cash, Alipay, Giftcard payments"
   s.description      = <<-DESC
                        The library extends the Point of Sale and alternative payment methods to modern mobile environment.
@@ -45,11 +45,11 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks  = ['Pod/Classes/frameworks/WDePOS.framework']
     ss.resource = ['Pod/Assets/*.*', 'Pod/Classes/frameworks/WDePOSResources.bundle']
     ss.dependency 'ZipArchive', '~> 1.4'
-    ss.dependency 'Overcoat', '~> 4.0.0-beta.1'
+    ss.dependency 'Overcoat', '~> 4.0.0-beta.2'
     ss.dependency 'Lockbox'
 	ss.dependency 'libextobjc/EXTScope', '~> 0.4'
 	ss.dependency 'BerTlv'
-	ss.dependency 'CocoaLumberjack'
+	ss.dependency 'CocoaLumberjack', '~> 3.2.1'
 	ss.xcconfig = { 'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'YES' }
   end
 

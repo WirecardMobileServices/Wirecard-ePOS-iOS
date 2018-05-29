@@ -75,9 +75,6 @@
 @property (nonnull, nonatomic, strong) NSString *wechatDeviceInfo;
 /**
  */
-@property (nonnull, nonatomic, strong) NSString *wechatCashFee;
-/**
- */
 @property (nonnull, nonatomic, strong) NSString *wechatSubMchId;
 /**
  */

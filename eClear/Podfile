@@ -6,7 +6,7 @@ project 'eClear.xcodeproj'
 
 def shared_dependencies
      pod 'WDePOS/All', :path => '../'
-     pod 'NotificationBannerSwift', '~> 1.4.5'
+     pod 'NotificationBannerSwift', '~> 1.6.2'
 	 pod 'TWMessageBarManager'
 end
 

@@ -4,6 +4,15 @@
         "url": "https://switch-test.wirecard.com"
         },
         {
+        "url": "https://d-switch-stk01.wirecard.sys"
+        },
+        {
+        "url": "https://q-switch-stk04.wirecard.sys"
+        },
+        {
+        "url": "https://switchwd-qa.wirecard.sys"
+        },
+        {
         "url": "https://switch.wirecard.com"
         }
     ]

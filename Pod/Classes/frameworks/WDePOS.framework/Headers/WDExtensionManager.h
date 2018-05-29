@@ -99,27 +99,26 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Obtain the Remote Key Injection details for the terminal
  *  @param completion Provides obtained terminal RKI - if the supplied RKI request contains all necessary information
  **/
--(void)terminalRKI:(WDTerminalRKIRequest*)rkiRequest
+- (void)terminalRKI:(WDTerminalRKIRequest*)rkiRequest
         completion:(WDTerminalRKICompletion)completion;
 
+/**
+ *  @brief Check the available updates for the terminal
+ *  @param completion Block that receives the inforation about available updates for the terminal
+ **/
+- (void)availableUpdates:(TerminalUpdatesCompletion)completion;
+
+/**
+ *  @brief Clean the info about previous updates on all terminals. Function useful only in case the naming between terminal updates is not consistent during development. Not needed in production.
+ **/
+- (void)resetTerminalsCache;
 @end
 
 /**
  *  @class WDTerminalManager
  *  @brief Terminal Manager
  */
-@interface WDTerminalManager : WDUpdateableExtensionManager 
-
-/**
- *  @brief Check the available updates for the terminal
- *  @param completion Block that receives the inforation about available updates for the terminal
- **/
--(void) availableUpdates:(TerminalUpdatesCompletion)completion;
-
-/**
- *  @brief Clean the info about previous updates on all terminals. Function useful only in case the naming between terminal updates is not consistent during development. Not needed in production.
- **/
-- (void)resetTerminalsCache;
+@interface WDTerminalManager : WDUpdateableExtensionManager
 @end
 
 #pragma mark - Print manager
