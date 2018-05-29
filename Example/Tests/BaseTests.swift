@@ -89,27 +89,37 @@ class BaseTestsSwift: XCTestCase, WDePOSDelegate
     {
         super.setUp()
         self.continueAfterFailure = false
-        sdk = WDePOS.sharedInstance()
-        expectation = self.expectation(description: "Setup")
+        if(sdk == nil){
+            sdk = WDePOS.sharedInstance()
+            self.loggedUser = sdk.authenticatedUser
+        }
+        if (self.loggedUser == nil){
         
-        sdk.setup(with: .publicTest,
-                  username: KUSERNAME,
-                  password: KPASSWORD,
-                  completion:{[weak self]( currentUser:WDMerchantUser? , cashier:WDMerchantCashier?, error:Error?) in
+            expectation = self.expectation(description: "Setup")
             
-            self?.sdk.add(self!)
-            self?.sdk.setDevMode(true) //Setting dev mode as enabled will write logs in your app's document folder and fill the console log with debug messages - Do not forget to disable it before releasing your app to the public!!
-            WDePOS.ddSetLogLevel(DDLogLevel.info.rawValue)
-            self?.expectation.fulfill()
-        })
+            sdk.setup(with: .publicTest,
+                      username: KUSERNAME,
+                      password: KPASSWORD,
+                      completion:{[weak self]( currentUser:WDMerchantUser? , cashier:WDMerchantCashier?, error:Error?) in
+                
+                self?.sdk.add(self!)
+                self?.sdk.setDevMode(true) //Setting dev mode as enabled will write logs in your app's document folder and fill the console log with debug messages - Do not forget to disable it before releasing your app to the public!!
+                WDePOS.ddSetLogLevel(DDLogLevel.info.rawValue)
+                        self?.loggedUser = currentUser
+                        self?.returnedErr = error
+                self?.expectation.fulfill()
+            })
+            
+            self.waitForExpectations(timeout: 25, handler: nil)
+        }
         
-        self.waitForExpectations(timeout: 25, handler: nil)
-
-        self.paymentHandler = PaymentHandler(completion: { (transaction: WDSaleResponse?, error: Error?) in
-            self.saleResponse = transaction
-            self.returnedErr = error
-            self.expectation.fulfill()
-        })
+        if(self.paymentHandler == nil){
+            self.paymentHandler = PaymentHandler(completion: { (transaction: WDSaleResponse?, error: Error?) in
+                self.saleResponse = transaction
+                self.returnedErr = error
+                self.expectation.fulfill()
+            })
+        }
     }
     
     override func tearDown()
@@ -117,16 +127,5 @@ class BaseTestsSwift: XCTestCase, WDePOSDelegate
         super.tearDown()
     }
   
-    
-    func loginAndGetUserData()
-    {
-        loggedUser = nil
-        sdk.userManager.currentUser({[weak self](merchantUser : WDMerchantUser?, error: Error?) in
-            NSLog("err:%@",[error])
-            self?.loggedUser = merchantUser
-            self?.returnedErr = error
-            self?.expectation.fulfill()
-        })
-    }
 
 }

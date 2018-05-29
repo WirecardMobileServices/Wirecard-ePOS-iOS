@@ -30,9 +30,8 @@
 {
     //PART 1: We log-in and request user data
     //--------------------------------------
-    expectation = [self expectationWithDescription:@"Requesting User Data"];
-    [self loginAndGetUserData];
-    [self waitForExpectationsWithTimeout:100 handler:nil];
+    
+
     if (!loggedUser || ![loggedUser isKindOfClass:[WDMerchantUser class]])
     {
         XCTFail(@"Error, did not return Merchant User. Are your credentials correct? Try login into the backend through internet browser.");

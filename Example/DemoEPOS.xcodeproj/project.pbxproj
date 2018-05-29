@@ -449,7 +449,6 @@
 				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/BBPOS_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
@@ -468,7 +467,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BBPOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
@@ -533,7 +531,6 @@
 				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/BBPOS_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
@@ -552,7 +549,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BBPOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
@@ -574,13 +570,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSResources.bundle",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUIResources.bundle",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePosResources.bundle",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePosUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePOSResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePOSUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePosResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePosUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -594,13 +590,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ePosDemo/Pods-ePosDemo-resources.sh",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSResources.bundle",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUIResources.bundle",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePosResources.bundle",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePosUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePOSResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePOSUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePosResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WDePosUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

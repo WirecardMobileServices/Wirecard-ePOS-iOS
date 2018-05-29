@@ -49,7 +49,7 @@
     
     //PART 1: We log-in and request user data
     //--------------------------------------
-    expectation = [self expectationWithDescription:@"Requesting User Data"];
+    
     [self loginAndGetUserData];
     [self waitForExpectationsWithTimeout:300 handler:nil];
     if (!loggedUser || ![loggedUser isKindOfClass:[WDMerchantUser class]])

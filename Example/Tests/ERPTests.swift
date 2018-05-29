@@ -39,9 +39,8 @@ class ERPTestsSwift: BaseTestsSwift
     {
         //PART 1: We log-in and request user data
         //--------------------------------------
-        expectation = self.expectation(description: "Requesting User Data")
-        self.loginAndGetUserData()
-        self.waitForExpectations(timeout: 100, handler: nil)
+        
+
         if (loggedUser == nil || (loggedUser?.isKind(of: WDMerchantUser.self)) == false)
         {
             XCTFail("Error, did not return Merchant User. Are your credentials correct? Try login into the backend through internet browser.")

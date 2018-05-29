@@ -1,6 +1,23 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.4.0] - 2018-05-29 
+### Added
+- Carthage support
+- Spire configuration archive validation 
+- Automatic Terminal registration - if free TID/MID record available
+
+### Changed
+- Z-Report improvements
+- SSL certificates
+
+### Fixed
+- Resume printing - Datecs 250
+- PIN verified flag present on Datecs receipt
+- ContactLess cases - signature request and confirmation
+- WeChat CNY amount
+- Alipay long business name
+
 ## [2.3.3] - 2018-04-17 
 ### Fixed
 - Mastercard contactless with online PIN

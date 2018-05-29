@@ -20,7 +20,7 @@
 @property (nonnull, nonatomic, strong) NSString *wechatTimeEnd;
 @property (nonnull, nonatomic, strong) NSDecimalNumber *wechatRate;
 @property (nonnull, nonatomic, strong) NSString *wechatDeviceInfo;
-@property (nonnull, nonatomic, strong) NSDecimalNumber *wechatCashFee;
+@property (nonnull, nonatomic, strong) NSDecimalNumber *transactionAmountCny;
 @property (nonnull, nonatomic, strong) NSString *wechatSubMchId;
 -(id _Nullable )castTo:(Class _Nonnull )targetClass;
 @end

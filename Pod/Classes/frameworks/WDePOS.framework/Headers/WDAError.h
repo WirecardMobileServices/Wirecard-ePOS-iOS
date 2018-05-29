@@ -74,9 +74,9 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorExternalIdNotFound,                   // there is no user/merchant with given external id. ( HTTP 422 )
     WDErrorChangePasswordCriteriaNotMet,                  //password change criteria not met
     WDErrorQueryStatsTokenExpired,
-    WDErrorForgotExternalIdNotFound,             // there is no user/merchant with given email address. ( HTTP 422 )
+    WDErrorForgotExternalIdNotFound, //60            // there is no user/merchant with given email address. ( HTTP 422 )
     
-    WDErrorConfigFilesInfoTimeout,//60
+    WDErrorConfigFilesInfoTimeout,
     WDErrorConfigFilesZipDownload,
     WDErrorTerminalDisconnected,
     WDErrorConfigFilesTerminalMayNotBeSet,
@@ -85,8 +85,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorConfigFilesDevelopmentFirmwareOnProductionTerminal,
     WDErrorConfigFilesTerminalUnsupported,
     WDErrorConfigFilesTokenExpired,
-    WDErrorInventoryNoData,
-    WDErrorTerminalFirmwareDoesNotExist,//70
+    WDErrorInventoryNoData,//70
+    WDErrorTerminalFirmwareDoesNotExist,
     WDErrorTerminalConfigDoesNotExist,
     
     WDErrorConfigFilesReading,
@@ -110,8 +110,8 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorTransactionUpdateFailed,
     
     WDErrorExtensionClassDoesNotExist,
-    WDErrorExtensionDoesNotSupportMethod,
-    WDErrorInvalidParameter,// 90
+    WDErrorExtensionDoesNotSupportMethod,// 90
+    WDErrorInvalidParameter,
     WDErrorDeviceRooted,
     
     WDErrorActiveTerminalNotSet,
@@ -121,10 +121,11 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorPinInvalid,
     WDErrorGeneral,
     WDErrorServerSSLCertificateExpired,
-    WDErrorFailedTerminalBluetoothConnectionNotInPayment,
+    WDErrorFailedTerminalBluetoothConnectionNotInPayment,//100
     
-    WDErrorMissingMerchant, //100//This happens when a System Admin, Partner or any role without merchant tries to log in
-    WDErrorAnotherTransactionIsInProgress
+    WDErrorMissingMerchant, //This happens when a System Admin, Partner or any role without merchant tries to log in
+    WDErrorAnotherTransactionIsInProgress,
+    WDErrorTerminalApplicationDoesNotExist
 };
 
 

@@ -17,6 +17,7 @@
 -(nonnull instancetype)init __attribute__((unavailable("use initWithAmount")));
 
 -(nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount paymentMethod:(WDPaymentMethod)paymentMethod transactionType:(WDTransactionType)transactionType __attribute__((unavailable("use initWithAmount:transactionType:internalId:externalId:")));
 -(nullable instancetype)initWithAmount:(NSDecimalNumber * __nonnull)amount
                        transactionType:(WDTransactionType)transactionType
                               internalId:(NSString *__nonnull)internalId

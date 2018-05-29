@@ -227,7 +227,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Default NSObject init is unavailable
 -( instancetype)init __attribute__((unavailable("use initWithUniqueId")));
 ///
-- ( instancetype)initWithCoder:(NSCoder *)coder;
+- ( instancetype)initWithCoder:(NSCoder *)coder NS_DESIGNATED_INITIALIZER;
 
 /**
  *  @brief Create new Sale
@@ -376,7 +376,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @brief Remove the specified item formthe items list - Sale recalculation will be performed automatically
  *  @param itemToRemove item to remove
  **/
--(void)removeItem:(WDSaleItem *)itemToRemove;
+-(void)removeItem:(WDSaleItemCore *)itemToRemove;
 /**
  *  @brief Remove all Items - Sale recalculation will be performed after item(s) are added again using add*Item
  **/

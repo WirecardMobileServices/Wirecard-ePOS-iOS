@@ -4,8 +4,3 @@ framework module WDePOS {
   export *
   module * { export * }
 }
-
-module WDePOS.Swift {
-    header "WDePOS-Swift.h"
-    requires objc
-}

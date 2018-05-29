@@ -1,0 +1,6 @@
+binary "./WDePOS.json"
+binary "./WDePOSUI.json"
+binary "./Datecs_SDK.json"
+binary "./Socket_SDK.json"
+binary "./Spire_SDK.json"
+binary "./Stario_SDK.json"

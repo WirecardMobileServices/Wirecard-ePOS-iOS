@@ -90,45 +90,47 @@
 {
     [super setUp];
     self.continueAfterFailure = NO;
-    sdk = [WDePOS sharedInstance];
-    saleHelper = [SaleHelper sharedInstance];
-    userHelper = [UserHelper sharedInstance];
-    expectation = [self expectationWithDescription:@"Setup"];
     
-    [sdk setupWithEnvironment:WDEnvironmentPublicTest username:KUSERNAME password:KPASSWORD completion:^(WDMerchantUser * _Nullable currentUser, WDMerchantCashier * _Nullable cashier, NSError * _Nullable error) {
-        [sdk addDelegate:self];
-        [sdk setDevMode:YES]; //Setting dev mode as enabled will write logs in your app's document folder and fill the console log with debug messages - do not forget to disable it
-                              //before releasing your app to the public!!
-        [WDePOS ddSetLogLevel:DDLogLevelInfo];
-        [expectation fulfill];
-    }];
+    if(sdk == nil){
+        sdk = [WDePOS sharedInstance];
+        loggedUser = sdk.authenticatedUser;
+        saleHelper = [SaleHelper sharedInstance];
+        userHelper = [UserHelper sharedInstance];
+    }
     
-    [self waitForExpectationsWithTimeout:25 handler:nil];
+    if(!loggedUser){
 
-    _paymentHandler = [[PaymentHandler alloc] initWithCompletionBlock:^(WDSaleResponse *transaction, NSError *error) {
-        NSLog(@"Payment Completion Error:%@",error);
-        saleResponse = transaction;
-        returnedErr = error;
-        [expectation fulfill];
-    }];
+        expectation = [self expectationWithDescription:@"Setup"];
+        
+        [sdk setupWithEnvironment:WDEnvironmentPublicTest username:KUSERNAME password:KPASSWORD completion:^(WDMerchantUser * _Nullable currentUser, WDMerchantCashier * _Nullable cashier, NSError * _Nullable error) {
+            [sdk addDelegate:self];
+            [sdk setDevMode:YES]; //Setting dev mode as enabled will write logs in your app's document folder and fill the console log with debug messages - do not forget to disable it
+                                  //before releasing your app to the public!!
+            [WDePOS ddSetLogLevel:DDLogLevelInfo];
+            loggedUser = currentUser;
+            returnedErr = error;
+            [expectation fulfill];
+        }];
+        
+        [self waitForExpectationsWithTimeout:25 handler:nil];
+
+
+    }
+    
+    if(!_paymentHandler){
+        _paymentHandler = [[PaymentHandler alloc] initWithCompletionBlock:^(WDSaleResponse *transaction, NSError *error) {
+            NSLog(@"Payment Completion Error:%@",error);
+            saleResponse = transaction;
+            returnedErr = error;
+            [expectation fulfill];
+        }];
+    }
     XCTAssert(true,@"Setup success");
 }
 
 - (void)tearDown
 {
     [super tearDown];
-}
-
--(void)loginAndGetUserData
-{
-    MerchantDetailCompletion completion = ^(WDMerchantUser *merchantUser, NSError *err)
-    {
-        loggedUser = merchantUser;
-        returnedErr = err;
-        [expectation fulfill];
-    };
-    loggedUser = nil;
-    [[sdk userManager] currentUser:completion];
 }
 
 
