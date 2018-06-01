@@ -1436,7 +1436,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, strong) NSString *vendor;
 /**
  */
-@property (nullable, nonatomic, strong) NSNumber *model;
+@property (nullable, nonatomic, strong) NSString *model;
 @end
 
 /**

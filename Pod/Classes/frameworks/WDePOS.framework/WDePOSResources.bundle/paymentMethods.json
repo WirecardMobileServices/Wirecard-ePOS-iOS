@@ -14,7 +14,7 @@
     "WDWisepadExtensionUUID":{
         "name":"BBPOS",
         "displayName":{"en":"BBPOS-w"},
-        "enabled":true,
+        "enabled":false,
         "devices":{
             "Wisepad":{
                 "displayName":{"en":"Wisepad"},
@@ -74,7 +74,7 @@
     "WDMiuraExtensionUUID":{
         "name":"Miurasystems",
         "displayName":{"en":"Miura"},
-        "enabled":true,
+        "enabled":false,
         "devices":{
             "M010":{
                 "displayName":{"en":"Miura M010"},

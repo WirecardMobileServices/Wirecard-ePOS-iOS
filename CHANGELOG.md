@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.4.1] - 2018-06-01 
+### Fixed
+- Cash register update
+
 ## [2.4.0] - 2018-05-29 
 ### Added
 - Carthage support
