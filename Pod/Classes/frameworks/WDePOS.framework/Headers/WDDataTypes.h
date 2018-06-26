@@ -426,6 +426,7 @@ typedef NS_ENUM(NSUInteger, WDSaleState) {
     WDSaleStateUnconfirmed,
     WDSaleStateCompleted,
     WDSaleStateReturned,
+    WDSaleStatePartiallyReturned,
     WDSaleStateCanceled,
     WDSaleStateFailed,
     WDSaleStateFailedIntervene,

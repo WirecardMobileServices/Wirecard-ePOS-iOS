@@ -68,6 +68,7 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
     WDPaymentStateCaptured,
     WDPaymentStateReversed,
     WDPaymentStateRefunded,
+    WDPaymentStatePartiallyRefunded,
     WDPaymentStateInitialized,
     WDPaymentStateIncomplete,
     WDPaymentStateDeclined,
