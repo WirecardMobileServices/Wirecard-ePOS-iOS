@@ -144,7 +144,7 @@ class CashTestsSwift: BaseTestsSwift
         expectation = self.expectation(description: "Do a sale refund")
         self.refundTransaction()
         self.waitForExpectations(timeout: 100, handler: nil)
-        if self.saleResponse == nil || self.saleResponse?.status != .returned
+        if self.saleResponse == nil || self.saleResponse?.status != .partiallyReturned
         {
              XCTFail("There was an error when doing a cash transaction. Please debug and keep track of any returned error.")
         }

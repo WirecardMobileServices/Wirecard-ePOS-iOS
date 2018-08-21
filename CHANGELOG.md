@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.4.3] - 2018-08-07 
+### Fixed
+- Change password
+- Partial refund
+
 ## [2.4.2] - 2018-06-26 
 ### Added
 - New sale state: Partially Refunded

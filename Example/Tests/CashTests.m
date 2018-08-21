@@ -158,7 +158,7 @@
     expectation = [self expectationWithDescription:@"Do a sale refund"];
     [self refundTransaction];
     [self waitForExpectationsWithTimeout:100 handler:nil];
-    if (!saleResponse || saleResponse.status != WDSaleStateReturned)
+    if (!saleResponse || saleResponse.status != WDSaleStatePartiallyReturned)
     {
         XCTFail(@"There was an error when doing a cash transaction. Please debug and keep track of any returned error.");
     }

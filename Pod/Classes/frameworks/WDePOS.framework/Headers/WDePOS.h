@@ -48,6 +48,5 @@ FOUNDATION_EXPORT const unsigned char WDePOSVersionString[];
 #import <WDePOS/WDExtensionManager.h>
 #import <WDePOS/WDUtils.h>
 #import <WDePOS/NSDate+Utils.h>
-#import <WDePOS/WDSSessionManagerCredentials.h>
 #import <WDePOS/WDConstants.h>
 #import <WDePOS/WDLocalizationManager.h>

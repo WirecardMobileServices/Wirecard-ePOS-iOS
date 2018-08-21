@@ -131,10 +131,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDictionary*)getVersions;
 
 #pragma mark - Current User
+
 /// User whos credentials were used to setup the environment
 @property (nonatomic,readonly,nullable) WDMerchantUser *authenticatedUser;
 /// Cashier details for the authenticated user
 @property (nonatomic,readonly,nullable) WDMerchantCashier *cashier;
+/// Logout
+- (void)logout;
 
 #pragma mark - Device management
 /**
