@@ -27,9 +27,6 @@ FOUNDATION_EXPORT const unsigned char WDePOSVersionString[];
 #import <WDePOS/WDObject.h>
 #import <WDePOS/WDProductCatalogue.h>
 #import <WDePOS/WDProductCatalogueManager.h>
-#import <WDePOS/WDReceipt.h>
-#import <WDePOS/WDReceiptData.h>
-#import <WDePOS/WDReceiptItem.h>
 #import <WDePOS/WDSale.h>
 #import <WDePOS/WDSaleItem.h>
 #import <WDePOS/WDSaleManager.h>
@@ -50,3 +47,5 @@ FOUNDATION_EXPORT const unsigned char WDePOSVersionString[];
 #import <WDePOS/NSDate+Utils.h>
 #import <WDePOS/WDConstants.h>
 #import <WDePOS/WDLocalizationManager.h>
+#import <WDePOS/WDHtmlReceipt.h>
+#import <WDePOS/WDHtmlZReport.h>

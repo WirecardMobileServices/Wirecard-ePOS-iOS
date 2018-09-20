@@ -51,6 +51,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)cashRegisters:(NSString* _Nonnull)merchantId shopId:(NSString * _Nullable)shopId cashDrawerVendor:(nullable NSString*)vendor completion:(CashRegisterCompletion)completion;
 
 /**
+ *  @brief Get cash register given by register ID
+ *  @param cashRegisterInternalId NSString id of the cash register we are requesting
+ *  @param completion Block executed at the end of the get cash register details method
+ */
+-(void)cashRegisterDetails:(nonnull NSString*)cashRegisterInternalId completion:(nonnull CashRegisterDetailsCompletion)completion;
+
+/**
  *  @brief Get cash registers shifts for a merchant
  *  @param cashRegisterInternalId NSString id of the cash register we are requesting shifts
  *  @param query params for the request, including page, page size, sorting, order, etc

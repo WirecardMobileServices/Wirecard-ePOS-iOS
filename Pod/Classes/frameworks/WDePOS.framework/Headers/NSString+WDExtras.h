@@ -24,4 +24,5 @@
 + (NSString *)getMaskedPANForReceipt:(NSString *)PAN;
 
 -(NSString *)wrapByLength:(NSUInteger)length;
+-(NSArray *)splitByLength:(int)length;
 @end

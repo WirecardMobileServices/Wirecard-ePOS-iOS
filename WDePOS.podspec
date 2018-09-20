@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WDePOS"
-  s.version          = "2.4.3"
+  s.version          = "2.4.4"
   s.summary          = "Wirecard epos - Accept Card, Cash, Alipay, Giftcard payments"
   s.description      = <<-DESC
                        The library extends the Point of Sale and alternative payment methods to modern mobile environment.
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/WirecardMobileServices/Wirecard-ePOS-iOS.git", :tag => s.version.to_s }
   s.platform     = :ios, '9.0'
   s.requires_arc = true
-  s.libraries = 'stdc++.6', 'z.1', 'xml2'
+  s.libraries = 'c++', 'z.1', 'xml2'
   s.frameworks    = 'Foundation', 'SystemConfiguration', 'MediaPlayer', 'AVFoundation', 'AudioToolbox', 'CoreAudio', 'ExternalAccessory'
   s.default_subspec = 'Core'
 
@@ -49,12 +49,18 @@ Pod::Spec.new do |s|
 	ss.dependency 'libextobjc/EXTScope', '~> 0.4'
 	ss.dependency 'BerTlv'
 	ss.dependency 'CocoaLumberjack', '~> 3.2.1'
+    ss.dependency 'GRMustache', '~> 7.3.2'
 	ss.xcconfig = { 'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'YES' }
   end
 
   s.subspec 'UI' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDePOSUI.framework'
     ss.dependency     'WDePOS/Core'
+    ss.dependency     'WDePOS/WDBrand'
+  end
+
+  s.subspec 'WDBrand' do |ss|
+    ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDBrand.framework'
   end
 
   s.subspec 'Spire' do |ss|

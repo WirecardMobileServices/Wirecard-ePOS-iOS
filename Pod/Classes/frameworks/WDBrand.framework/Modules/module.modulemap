@@ -1,0 +1,11 @@
+framework module WDBrand {
+  umbrella header "WDBrand.h"
+
+  export *
+  module * { export * }
+}
+
+module WDBrand.Swift {
+    header "WDBrand-Swift.h"
+    requires objc
+}

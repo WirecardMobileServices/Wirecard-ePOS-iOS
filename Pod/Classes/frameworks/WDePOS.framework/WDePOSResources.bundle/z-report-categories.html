@@ -1,0 +1,11 @@
+{{#categories}}
+<div class="divBlockTable">
+    <div class="divBlock topPaddingS25"><span class="bold sectionAlign uppercaseCategoryName">{{#title}}{{.}}{{/title}}</span></div>
+    <div class="divBlockCell widePrint wideOnly"><span class="rightAlign gray" >{{#netAmountLabel}}{{.}}{{/netAmountLabel}}</span></div>
+    {{#taxAmountLabel}}<div class="divBlockCell widePrint"><span class="rightAlign gray" >{{.}}</span></div>{{/taxAmountLabel}}
+    {{#grossAmountLabel}}<div class="divBlockCell widePrint"><span class="rightAlign gray" >{{.}}</span></div>{{/grossAmountLabel}}
+</div>
+<div class="divBlock centerAlign solid"></div>
+{{>z-report-categoryItems}}
+<div class="divBlock centerAlign dotted narrowPrint"></div>
+{{/categories}}

@@ -44,5 +44,6 @@ typedef NS_ENUM(NSUInteger, TimeUnitsEnum) {
 +(NSDate*)displaceDateInTimeUnits:(NSDate*)aDate amount:(NSInteger)amount timeUnit:(NSInteger)units;
 + (NSDate *)dateWithDate:(NSDate *)date Hour:(NSInteger)hour Minute:(NSInteger)minute Second:(NSInteger)second;
 -(NSString *)asStringWithFormat:(NSString *)format;
+-(NSInteger)daysAgo;
 
 @end

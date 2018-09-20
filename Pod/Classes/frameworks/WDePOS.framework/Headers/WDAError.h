@@ -125,7 +125,9 @@ typedef NS_ENUM(NSInteger, WDError) {
     
     WDErrorMissingMerchant, //This happens when a System Admin, Partner or any role without merchant tries to log in
     WDErrorAnotherTransactionIsInProgress,
-    WDErrorTerminalApplicationDoesNotExist
+    WDErrorTerminalApplicationDoesNotExist,
+    // Keep it the last:
+    WDErrorCounter
 };
 
 

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WDProductCatalogueCore : WDObject <NSCoding>
 @property (nullable, nonatomic, strong) NSString *productCatalogueId;
 @property (nullable, nonatomic, strong) NSString *name;
-@property (nullable, nonatomic, strong) NSDecimalNumber *discount;
+@property (nullable, nonatomic, strong) NSString *discount;
 @property (nullable, nonatomic, strong) NSNumber *version;
 @end
 
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initWithMerchantId:(NSString *)merchantId
                              name:(NSString *)name
                       description:(nullable NSString *)description
-                         discount:(nullable NSDecimalNumber *)discount;
+                         discount:(nullable NSString *)discount;
 @end
 
 /**
@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 -(instancetype)initWithParentCategoryId:(nullable NSString *)parentId
                                    name:(NSString *)name
-                               discount:(nullable NSDecimalNumber *)discount
+                               discount:(nullable NSString *)discount
                            displayOrder:(NSNumber *)displayOrder;
 
 @property (nullable, nonatomic, strong) NSString *categoryId;
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @class WDProductCatalogueProduct
  *  @brief Product details
  **/
-@interface WDProductCatalogueProduct: WDObject <NSCoding>
+@interface WDProductCatalogueProduct: WDProductCatalogueCore <NSCoding>
 /**
  *  @brief Create Product
  *  @param name Product Name
@@ -163,19 +163,17 @@ NS_ASSUME_NONNULL_BEGIN
                        taxCategory:(WDTaxCategory*)taxCategory
                  productCategories:(NSArray <WDProductCatalogueCategory*> *)productCategories
                         externalId:(NSString*)externalId
-                          discount:(nullable NSDecimalNumber *)discount;
+                          discount:(nullable NSString *)discount;
 
 @property (nullable, nonatomic, strong) WDBarCodeType *barCodeType;
 @property (nullable, nonatomic, strong) NSString *barCodeValue;
 @property (nullable, nonatomic, strong) NSString *externalId;
-@property (nullable, nonatomic, strong) NSDecimalNumber *discount;
 @property (nullable, nonatomic, strong) NSString *imageId;
 @property (nullable, nonatomic, strong) NSString *productId;
-@property (nullable, nonatomic, strong) NSString *productName;
+@property (nullable, nonatomic, strong) NSString *productName DEPRECATED_ATTRIBUTE;
 @property (nullable, nonatomic, strong) NSArray <WDProductCatalogueCategory*> *productCategories;
 @property (nonatomic, strong) NSArray <WDUnitPrice*> *productUnitPrices;
 @property (nonatomic, strong) WDTaxCategory *taxCategory;
-@property (nonatomic, strong) NSNumber *version;
 @end
 
 /**

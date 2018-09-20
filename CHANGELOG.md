@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.4.4] - 2018-09-20 
+### Fixed
+- Fixes for Xcode 10
+- Added UI and WDBrand content
+
 ## [2.4.3] - 2018-08-07 
 ### Fixed
 - Change password

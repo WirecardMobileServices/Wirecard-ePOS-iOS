@@ -322,8 +322,7 @@
     [aSale addGratuity:[NSDecimalNumber decimalNumberWithString:@"1"]
                taxRate:[[UserHelper sharedInstance] tipTax]];
     //You can add a discount for the whole basket when productId is nil, or per productId otherwise
-    [aSale addDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]
-             productId:nil];
+    [aSale addFlatDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]];
     paymentConfiguration.sale = aSale;
     paymentConfiguration.sale.cashRegisterId = cashRegister? cashRegister.internalId : nil;
     paymentConfiguration.sale.shiftId = lastShift? lastShift.internalId : @"";

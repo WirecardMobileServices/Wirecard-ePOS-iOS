@@ -1,0 +1,93 @@
+PODS:
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - BerTlv (0.2.2)
+  - CocoaLumberjack (3.4.1):
+    - CocoaLumberjack/Default (= 3.4.1)
+    - CocoaLumberjack/Extensions (= 3.4.1)
+  - CocoaLumberjack/Default (3.4.1)
+  - CocoaLumberjack/Extensions (3.4.1):
+    - CocoaLumberjack/Default
+  - libextobjc/EXTScope (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4.1)
+  - Lockbox (3.0.6)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - MarqueeLabel/Swift (3.1.4)
+  - NotificationBannerSwift (1.6.2):
+    - MarqueeLabel/Swift
+    - SnapKit (~> 4.0)
+  - Overcoat (4.0.0-beta.2):
+    - AFNetworking/NSURLSession (~> 3.0)
+    - AFNetworking/Serialization (~> 3.0)
+    - Mantle (~> 2.0)
+  - SnapKit (4.0.0)
+  - TWMessageBarManager (1.8.1)
+  - WDePOS/All (2.3.1):
+    - WDePOS/BBPOS
+    - WDePOS/Core
+    - WDePOS/MIURA
+    - WDePOS/MPOP
+    - WDePOS/PRTDATECS
+    - WDePOS/SOCKET
+    - WDePOS/SPIRE
+    - WDePOS/UI
+  - WDePOS/BBPOS (2.3.1):
+    - WDePOS/Core
+  - WDePOS/Core (2.3.1):
+    - BerTlv
+    - CocoaLumberjack (~> 3.0)
+    - libextobjc/EXTScope (~> 0.4)
+    - Lockbox
+    - Overcoat (~> 4.0.0-beta.1)
+    - ZipArchive (~> 1.4)
+  - WDePOS/DATECSLIB (2.3.1):
+    - WDePOS/Core
+  - WDePOS/MIURA (2.3.1):
+    - WDePOS/Core
+  - WDePOS/MPOP (2.3.1):
+    - WDePOS/Core
+  - WDePOS/PRTDATECS (2.3.1):
+    - WDePOS/DATECSLIB
+  - WDePOS/SOCKET (2.3.1):
+    - WDePOS/Core
+  - WDePOS/SPIRE (2.3.1):
+    - WDePOS/Core
+  - WDePOS/UI (2.3.1):
+    - WDePOS/Core
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - NotificationBannerSwift (~> 1.6.2)
+  - TWMessageBarManager
+  - WDePOS/All (from `../`)
+
+EXTERNAL SOURCES:
+  WDePOS:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  BerTlv: 443d7658be8bf86bd48d5904435ee7c567a5f9fa
+  CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
+  libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
+  Lockbox: 4291a0b8b1aed35474881c4e592961dec3ca695e
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
+  NotificationBannerSwift: 4eceb2add9d5eaa0596c63d49690b4d6476e74ec
+  Overcoat: 2ddaa6d66edebc375f3e24a37974631d5aff7ebe
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
+  WDePOS: a245e79583ae80c9a326b169b51c90f1f37f2c35
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+PODFILE CHECKSUM: ce8110b266809ff11b0894e3d7480af30c02bf53
+
+COCOAPODS: 1.4.0

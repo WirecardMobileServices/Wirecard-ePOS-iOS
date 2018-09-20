@@ -56,6 +56,14 @@
  *  @return String from Date formatted as specified
  **/
 +(NSString*)formatDate:(NSDate *)date format:(NSString*)format;
+/**
+ *  @brief Format Date with the specified format
+ *  @param date Date to format
+ *  @param format Format to use for the Date
+ *  @param locale Locale to use to format the Date
+ *  @return String from Date formatted as specified
+ **/
++(NSString*)formatDate:(NSDate *)date format:(NSString*)format  locale:(NSLocale *)locale;
 
 /**
  *  @brief Format Date with the current locale

@@ -1,8 +1,10 @@
 framework module WDePOSUI {
-  umbrella header "WDePOSUI.h"
-
-  export *
-  module * { export * }
+    umbrella header "WDePOSUI.h"
+    header "WDPaymentMethodMask.h"
+    
+    export *
+    module * { export * }
+    //export_as WDePOSUI
 }
 
 module WDePOSUI.Swift {

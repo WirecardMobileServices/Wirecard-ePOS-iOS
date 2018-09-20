@@ -197,5 +197,12 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 -(void)barCodeTypes:(nonnull BarCodeTypeCompletion)completion;
 
+/**
+ *  @brief Get tax categories for given country code.
+ *  @param countryCode The country Code.
+ *  @param completion Block that will return the array of Tax categories.
+ **/
+-(void)taxCategoriesFor:(NSString *_Nullable)countryCode withCompletion:(nonnull TaxCategoryCompletion)completion;
+
 @end
 NS_ASSUME_NONNULL_END

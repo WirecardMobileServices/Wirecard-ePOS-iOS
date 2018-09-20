@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <WDePOS/WDePOS.h>
+@import WDePOSUI;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -11,7 +11,6 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-+ (AppDelegate *)mainDelegate;
 -(CLLocation *)currentLocation;
 
 @property (strong, nonatomic) UIWindow *window;

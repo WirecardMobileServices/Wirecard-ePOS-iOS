@@ -97,9 +97,13 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         expectation = self.expectation(description: "Refund sale")
         self.refundTransaction()
         self.waitForExpectations(timeout: 300, handler: nil)
-        if (self.saleResponse == nil || self.saleResponse?.status != .returned)
+        if let response = self.saleResponse, response.status != .returned
         {
             XCTFail("Sale did not succeed. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
+        }
+        else if self.saleResponse == nil
+        {
+            XCTFail("Sale response empty. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
         }
     }
     
@@ -158,8 +162,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         self.aSale.addGratuity(NSDecimalNumber(value: 1.0),
                                taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
-        self.aSale.addDiscount(NSDecimalNumber(value: 6.0),
-                               productId:nil)
+        self.aSale.addFlatDiscount(NSDecimalNumber(value: 6.0))
         paymentConfiguration.sale = self.aSale
         paymentConfiguration.sale.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId() //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
         paymentConfiguration.sale.shiftId = UserHelper.sharedInstance().lastShiftId()

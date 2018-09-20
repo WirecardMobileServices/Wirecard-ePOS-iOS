@@ -144,9 +144,13 @@ class CashTestsSwift: BaseTestsSwift
         expectation = self.expectation(description: "Do a sale refund")
         self.refundTransaction()
         self.waitForExpectations(timeout: 100, handler: nil)
-        if self.saleResponse == nil || self.saleResponse?.status != .partiallyReturned
+        if let response = self.saleResponse, response.status != .partiallyReturned
         {
              XCTFail("There was an error when doing a cash transaction. Please debug and keep track of any returned error.")
+        }
+        else if self.saleResponse == nil
+        {
+            XCTFail("No sale response. Please debug and keep track of any returned error.")
         }
     }
     
@@ -334,8 +338,7 @@ class CashTestsSwift: BaseTestsSwift
         self.aSale?.addGratuity(NSDecimalNumber(floatLiteral: 1.0),
                                 taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
-        self.aSale?.addDiscount(NSDecimalNumber(floatLiteral: 6.0),
-                                productId:nil)
+        self.aSale?.addFlatDiscount(NSDecimalNumber(floatLiteral: 6.0))
         let paymentConfiguration : WDPaymentConfig = WDPaymentConfig.init()
         paymentConfiguration.sale = self.aSale!
         paymentConfiguration.sale.cashRegisterId = cashRegister?.internalId ?? ""

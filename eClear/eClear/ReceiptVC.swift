@@ -42,7 +42,7 @@ import WebKit
         }
         
         if let sale = sale {
-            sale.receipt(true, showReturns: true, format: WDPrintFormat.HTML, dpi: WDPrintDpi.default, language:(UIApplication.shared.delegate as? AppDelegate)?.language ?? "en", completion: { [weak self] ( receipts: [Any]?, error: Error?) in
+            sale.receipt(true, showReturns: true, format: WDPrintFormat.HTML, dpi: WDPrintDpi.default, language:(UIApplication.shared.delegate as? AppDelegate)?.language ?? "en",  completion: { [weak self] ( receipts: [Any]?, error: Error?) in
                 
                 if error != nil {
                     self?.navigationController?.popViewController(animated: true)

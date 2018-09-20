@@ -67,6 +67,9 @@ typedef NS_ENUM(NSInteger, WDSaleItemType ) {
 @interface WDSaleItem : WDSaleItemCore
 /**
  */
+@property (nonatomic, strong) NSString * _Nullable internalProductId;
+/**
+ */
 @property (nonatomic, strong) NSString * _Nullable externalProductId;
 /**
  */

@@ -50,8 +50,8 @@
     //PART 1: We log-in and request user data
     //--------------------------------------
     
-    [self loginAndGetUserData];
-    [self waitForExpectationsWithTimeout:300 handler:nil];
+//    [self loginAndGetUserData];
+//    [self waitForExpectationsWithTimeout:300 handler:nil];
     if (!loggedUser || ![loggedUser isKindOfClass:[WDMerchantUser class]])
     {
         XCTFail(@"Error, did not return Merchant User. Are your credentials correct? Try login into the backend through internet browser.");
@@ -158,8 +158,7 @@
     [aSale addGratuity:[NSDecimalNumber decimalNumberWithString:@"1"]
                taxRate:[[UserHelper sharedInstance] tipTax]];
     //You can add a discount for the whole basket when productId is nil, or per productId otherwise
-    [aSale addDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]
-             productId:nil];
+    [aSale addFlatDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]];
     paymentConfiguration.sale = aSale;
     paymentConfiguration.sale.cashRegisterId = [[UserHelper sharedInstance] selectedCashRegisterId]; //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
     paymentConfiguration.sale.shiftId = [[UserHelper sharedInstance] lastShiftId];

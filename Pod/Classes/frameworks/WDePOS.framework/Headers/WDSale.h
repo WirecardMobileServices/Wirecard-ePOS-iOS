@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WDDataTypes.h"
 
-@class WDTerminal, WDMerchant, WDMerchantUser,WDAddress,WDShop,WDReceiptData;
+@class WDTerminal, WDMerchant, WDMerchantUser, WDAddress, WDShop, WDReceiptData, WDHtmlReceipt;
 
 
 
@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSDecimalNumberHandler *)roundModeDown;
 @end
 
-#pragma mark - AcceptSale
+#pragma mark - Sale
 /**
  *  @class WDSale
  *  @brief The Sale object contains all necessary Sale information
@@ -275,6 +275,12 @@ NS_ASSUME_NONNULL_BEGIN
                 note:(nullable NSString *)note;
 
 /**
+ *  @brief set Note for the sale
+ *  @param note sale description
+ **/
+-(void)setSaleNote:(nullable NSString *)note;
+
+/**
  *  @brief Add sale item to the sale
  *  @param unitPrice Unit price
  *  @param taxRate tax rate of the sale item (percentage e.g. tax rate of 10% = 10.0)
@@ -319,13 +325,11 @@ NS_ASSUME_NONNULL_BEGIN
            taxRate:(NSDecimalNumber *)taxRate;
 
 /**
- *  @brief Add discount to the sale - applied to the total gross price as discount percentage
+ *  @brief Add flat discount to the sale - applied to the total gross price as discount percentage
 
  *  @param discountRate Flat Discount (e.g. 5.0 for 5%)
- *  @param productId Discount has a unique identifier in the inventory
  **/
--(void)addDiscount:(NSDecimalNumber *)discountRate
-         productId:(NSString * __nullable)productId;
+-(void)addFlatDiscount:(NSDecimalNumber *)discountRate;
 
 /**
  *  @brief Add service charge to the sale - applied to the total netto price
@@ -391,7 +395,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief EMV - Amount, Authorised (Numeric) (9f02) for card payment request
  */
--(NSUInteger)authorizedAmountCard;
+-(unsigned long long)authorizedAmountCard;
 /**
  * @brief Gratuity amount as unsigned integer
  */
@@ -491,6 +495,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong,readonly) NSString *cashierId;
 /**
+ * @brief Cash Register ID as set during the payment process - this is linked to the cash drawer and the shifts of the cashier
+ */
+@property (nonatomic, strong,readonly) NSString *cashRegisterId;
+/**
  * @brief Customer ID as set during the payment process - the customer of the shop
  */
 @property (nonatomic, strong,readonly) NSString *customerId;
@@ -526,10 +534,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Returns the most onerous status of all payments composing this sale
  */
 -(WDPaymentState)mostOnerousStatus;
-/**
- * @brief Returns all data necessary for creating the Receipt
- */
--(WDReceiptData *)getReceiptData;
 
 /**
  * @brief Default Design of the Sale Receipt
@@ -567,6 +571,26 @@ NS_ASSUME_NONNULL_BEGIN
         format:(WDPrintFormat)format
            dpi:(WDPrintDpi)dpi
       language:(NSString *)language
+    completion:(ReceiptCompletion)completion;
+
+/**
+ * @brief Default Design of the Sale Receipt
+ * @discussion To show your custom application name in the receipt footer: Define the Application Name to be displayed on the receipt in the application plist file as WDApplicationName <NSString>
+ *
+ * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-merchantLogo (250x100 px) png file in the acceptResources.bundle
+ *
+ * @param forCardholder is it the Cardholder receipt ? Some receipt items are not available in Merchant copy of a receipt
+ * @param showReturns should the receipt contain all returns sub-receipts ?
+ * @param format Format of the receipt
+ * @param dpi dots per width of the receipt to be printed - not used for HTML or Datecs native format
+ * @param locale to use for localization of receipt labels (locale.languageCode) and  date formats (locale.countryCode)
+ * @param completion Receipt in the requested format
+ */
+-(void)receipt:(BOOL)forCardholder
+   showReturns:(BOOL)showReturns
+        format:(WDPrintFormat)format
+           dpi:(WDPrintDpi)dpi
+        locale:(NSLocale *)locale
     completion:(ReceiptCompletion)completion;
 
 /**

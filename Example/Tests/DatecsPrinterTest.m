@@ -16,9 +16,8 @@
 
 @interface DatecsPrinterTestsObjC : BaseTestsObcj
 {
-    __block WDReceiptData *receiptData;
-    __block WDReceipt *datecsReceipt;
-    __block BOOL printingSuccess;
+    WDHtmlReceipt *datecsReceipt;
+    BOOL printingSuccess;
 }
 
 @end
@@ -52,7 +51,7 @@
     expectation = [self expectationWithDescription:@"Getting sale receipt"];
     [self getSaleReceipt];
     [self waitForExpectationsWithTimeout:100 handler:nil];
-    if (!receiptData)
+    if (!datecsReceipt)
     {
         XCTFail(@"Error getting a complete sale. Please create some test (ie. run CashTest). Otherwise, debug and check the returned error");
     }
@@ -89,7 +88,6 @@
          saleResponse = [arr firstObject];
          if (saleResponse)
          {
-             receiptData = [saleResponse getReceiptData];
              //NOTE: Datecs printers only accept receipts in the format WDPrintFormatDatecs
              [saleResponse receipt:YES //Is the receipt for cardholder use
                        showReturns:NO //Should the receipt contain returns ?

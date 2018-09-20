@@ -16,5 +16,4 @@
 -(WDSaleRequest *)newSale;
 -(void)saleToSaveIdFrom:(WDSaleResponse*)sale;
 -(NSString*)saleIdSaved;
--(WDReceipt*)receiptForDatecsFromReceiptData:(WDReceiptData*)receiptData;
 @end

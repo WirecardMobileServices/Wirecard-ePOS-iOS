@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "eClear-Swift.h"
-#import <WDePOSUI/WDePOSUI.h>
+#import <WDePOSUI/WDePOSUI-Swift.h>
 
 typedef NS_ENUM(NSUInteger, PaymentType) {
     PaymentTypeAmountCash = 1,

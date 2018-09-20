@@ -1,0 +1,15 @@
+{{# items }}
+<div class="divBlockTable narrowPrint">
+    <div class="divBlockCell"><span class="leftAlign narrowPrint boldSection topPadding10">{{#title}}{{.}}{{/title}}</span></div>
+    {{#netAmountLabel}}<div class="divBlockCell"><span class="leftAlign narrowPrint">{{.}}:</span><span class="rightAlign boldSection" >{{#netAmount}}{{.}}{{/netAmount}}</span></div>{{/netAmountLabel}}
+    {{#taxAmountLabel}}<div class="divBlockCell"><span class="leftAlign narrowPrint">{{.}}:</span><span class="rightAlign boldSection" id="categoryItemTaxAmount">{{#taxAmount}}{{.}}{{/taxAmount}}</span></div>{{/taxAmountLabel}}
+    {{#grossAmountLabel}}<div class="divBlockCell"><span class="leftAlign narrowPrint">{{.}}:</span><span class="rightAlign bold" id="categoryItemGrossAmount">{{#grossAmount}}{{.}}{{/grossAmount}}</span></div>{{/grossAmountLabel}}
+</div>
+{{#last}} <div class="divBlock centerAlign double silver widePrint"></div>{{/last}}
+<div class="divBlockTable">
+    <div class="divBlockCell widePrint"><span class="sectionAlign" id="categoryItemTotalName">{{#title}}{{.}}{{/title}}</span></div>
+    {{#netAmountLabel}}<div class="divBlockCell widePrint"><span class="rightAlign boldSection">{{#netAmount}}{{.}}{{/netAmount}}</span></div>{{/netAmountLabel}}
+    {{#taxAmountLabel}}<div  class="divBlockCell widePrint"><span class="rightAlign boldSection">{{#taxAmount}}{{.}}{{/taxAmount}}</span></div>{{/taxAmountLabel}}
+    {{#grossAmountLabel}}<div  class="divBlockCell widePrint"><span class="rightAlign bold">{{#grossAmount}}{{.}}{{/grossAmount}}</span></div>{{/grossAmountLabel}}
+</div>
+{{/items}}

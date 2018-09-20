@@ -6,5 +6,6 @@
 #import "UserHelper.h"
 #import "SaleHelper.h"
 #import "TestUtils.h"
+#define DD_LEGACY_MACROS 0
 #import "DDLog.h"
 #import <WDePOS/NSDate+Utils.h>

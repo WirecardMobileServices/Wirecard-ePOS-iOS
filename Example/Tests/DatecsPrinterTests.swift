@@ -13,8 +13,7 @@ import WDePOS
 class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
 {
     var printingSuccess : Bool?
-    var receiptData : WDReceiptData?
-    var datecsReceipt : WDReceipt?
+    var datecsReceipt : WDHtmlReceipt?
     
     override func setUp()
     {
@@ -45,7 +44,7 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
         self.getSaleReceipt()
         self.waitForExpectations(timeout: 100,
                                  handler: nil)
-        if self.receiptData == nil {
+        if self.datecsReceipt == nil {
             XCTFail("Error getting a complete sale. Please create some test (ie. run CashTest). Otherwise, debug and check the returned error")
         }
         
@@ -84,14 +83,13 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
             self?.saleResponse = arr?.first
             if ((arr?.first) != nil)
             {
-                self?.receiptData = self?.saleResponse?.getReceiptData()
                 //NOTE: Datecs printers only accept receipts in the format Datecs
                 self?.saleResponse?.receipt(true,
                                             showReturns: false,
                                             format: .datecs,
                                             dpi: WDPrintDpi.default,
                                             completion: {(receipts : [Any]?, error : Error?) in
-                    self?.datecsReceipt = receipts?.first as? WDReceipt
+                    self?.datecsReceipt = receipts?.first as? WDHtmlReceipt
                     self?.expectation.fulfill()
                 })
             }

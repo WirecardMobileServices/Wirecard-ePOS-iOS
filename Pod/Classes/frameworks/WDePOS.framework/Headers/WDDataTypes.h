@@ -10,7 +10,6 @@
 #define WDA_DATA_TYPES
 
 #import <UIKit/UIKit.h>
-#import "WDReceipt.h"
 #import "WDProductCatalogue.h"
 #import "WDPaymentRequestCoupon.h"
 #import "WDPaymentRequestCard.h"
@@ -401,7 +400,7 @@ typedef NS_ENUM(NSUInteger, WDPrintFormat)
  **/
 typedef NS_ENUM(NSUInteger, WDPrintDpi)
 {
-    WDPrintDpiDefault=306,
+    WDPrintDpiDefault=306, 
     WDPrintDpiMpop=384,
     WDPrintDpiStarMicronics=576
 };
@@ -513,7 +512,7 @@ typedef void(^ZReportCompletion)(id _Nullable report, NSError* _Nullable error);
 /**
  *  @typedef ReceiptCompletion
  *  @brief Callback to return created receipt
- *  @param receipts array of created receipts - in the case of WDReceipt printing of All receipts (e.g. Original + Refunds) there can be multiple of receipts to be printed
+ *  @param receipts array of created receipts - in the case of WDHtmlReceipt printing of All receipts (e.g. Original + Refunds) there can be multiple of receipts to be printed
  *  @param error error when creating receipt
  **/
 typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable error);
@@ -755,7 +754,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  *  @class WDRequestPasswordReset
  *  @brief  Request Reset Password object to be used with credential management API
  **/
-@interface WDRequestPasswordReset : NSObject
+@interface WDRequestPasswordReset : WDRemindUsername
 /**
  *  @brief Reset Password for a user
  *  @param username Username for which to send the Password reset instructions
@@ -765,9 +764,6 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 /**
  */
 @property (nullable, nonatomic, retain) NSString *username;
-/**
- */
-@property (nullable, nonatomic, retain) NSString *phone;
 @end
 
 /**
@@ -1087,7 +1083,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  *  @class WDCountry
  *  @brief  Country object
  **/
-@interface WDCountry : WDObject <NSCoding>
+@interface WDCountry : WDObject <NSCoding, NSCopying>
 
 @property (nullable, nonatomic, strong) NSString *alpha2code;
 @property (nullable, nonatomic, strong) NSString *alpha3code;
@@ -1099,7 +1095,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  *  @class WDAddress
  *  @brief  Address object
  **/
-@interface WDAddress : WDObject <NSCoding>
+@interface WDAddress : WDObject <NSCoding, NSCopying>
 @property (nullable, nonatomic, strong) NSString *city;
 @property (nullable, nonatomic, strong) NSString *postalCode;
 @property (nullable, nonatomic, strong) NSString *stateOrProvince;
@@ -1200,6 +1196,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, strong) NSString *name;
 @property (nullable, nonatomic, strong) NSString *phone;
 @property (nullable, nonatomic, strong) NSNumber *requestPasswordChange;
+@property (nullable, nonatomic, strong) NSDate *lastPasswordChanged;
 @property (nullable, nonatomic, strong) NSString *status;
 @property (nullable, nonatomic, strong) NSString *username;
 @property (nullable, nonatomic, strong) WDMerchant *merchant;
@@ -1325,10 +1322,10 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, retain) NSDate *closeTime;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *openingAmount;
+@property (nullable, nonatomic, retain) NSDecimalNumber *openingAmount;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *closingAmount;
+@property (nullable, nonatomic, retain) NSDecimalNumber *closingAmount;
 ///**
 // */
 @property (nullable, nonatomic, retain) NSString *openingNote;
@@ -1346,19 +1343,19 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, retain) WDMerchantCashier *closedBy;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *cashPurchases;
+@property (nullable, nonatomic, retain) NSDecimalNumber *cashPurchases;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *cashRefunds;
+@property (nullable, nonatomic, retain) NSDecimalNumber *cashRefunds;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *cashOperationsBalance;
+@property (nullable, nonatomic, retain) NSDecimalNumber *cashOperationsBalance;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *cashBalance;
+@property (nullable, nonatomic, retain) NSDecimalNumber *cashBalance;
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *currentValue;
+@property (nullable, nonatomic, retain) NSDecimalNumber *currentValue;
 ///**
 // */
 @property (nullable, nonatomic, retain) WDShiftReport *shiftReport;
@@ -1380,12 +1377,24 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  * @brief Default Design of the Z-Report
  * @param format Format of the report
  * @param dpi dots per width of the receipt to be printed - not used for HTML or Datecs native format
- * @param language to use for translating the Z-Report labels
+ * @param language to use for translating the Z-Report labels (current NSLocale is used for date formats)
  * @param completion Report in the requested format
  */
 -(void)zReport:(WDPrintFormat)format
            dpi:(WDPrintDpi)dpi
       language:(NSString *)language
+    completion:(ZReportCompletion)completion;
+
+/**
+ * @brief Default Design of the Z-Report
+ * @param format Format of the report
+ * @param dpi dots per width of the receipt to be printed - not used for HTML or Datecs native format
+ * @param locale to use for translating the Z-Report labels (language) and formatting the dates (country)
+ * @param completion Report in the requested format
+ */
+-(void)zReport:(WDPrintFormat)format
+           dpi:(WDPrintDpi)dpi
+        locale:(NSLocale *)locale
     completion:(ZReportCompletion)completion;
 @end
 
@@ -1396,7 +1405,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @interface WDCashActivity : WDObject<NSCoding>
 ///**
 // */
-@property (nullable, nonatomic, retain) NSNumber *amount;
+@property (nullable, nonatomic, retain) NSDecimalNumber *amount;
 ///**
 // */
 @property (nullable, nonatomic, retain) NSDate *timestamp;
@@ -1780,6 +1789,24 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 
 @end
 
+/**
+ *  @class WDReceiptAddress
+ *  @brief Merchant Address
+ *  @discussion Receipt Merchant Address
+ **/
+@interface WDReceiptAddress : NSObject
+@property (nullable, nonatomic, strong) NSString *city;
+@property (nullable, nonatomic, strong) NSString *postalCode;
+@property (nullable, nonatomic, strong) NSString *stateOrProvince;
+@property (nullable, nonatomic, strong) NSString *street1;
+@property (nullable, nonatomic, strong) NSString *street2;
+@property (nullable, nonatomic, strong) NSString *country;
+
+- (nonnull instancetype)init __attribute__((unavailable("use initWithWDAddress:")));
++ (nonnull instancetype)new __attribute__((unavailable("use initWithWDAddress:")));
+- (nonnull instancetype)initWithWDAddress:(WDAddress *)address;
+@end
+
 #pragma mark - Request Callbacks
 /**
  *  @typedef PaymentProgress
@@ -1887,10 +1914,17 @@ typedef void(^MerchantCashierPinValidationCompletion)( WDCashierPinValidationRes
 
 /**
  *  @typedef CashRegisterCompletion
- *  @brief The callback upon the merchant cashier method completion
- *  @param cashRegisters the result of the getMerchantCashiers method - available if correctly logged in
+ *  @brief The callback upon the cash registers method completion
+ *  @param cashRegisters the result of the cashRegisters:shopId:cashDrawerVendor: method - available if correctly logged in
  **/
 typedef void(^CashRegisterCompletion)( NSArray <WDCashRegister *>* _Nullable cashRegisters, NSError * _Nullable cashRegistersError);
+
+/**
+ *  @typedef CashRegisterDetailsCompletion
+ *  @brief The callback upon the cash register method completion
+ *  @param cashRegister the result of the cashRegisters:shopId:cashDrawerVendor: method - available if correctly logged in
+ **/
+typedef void(^CashRegisterDetailsCompletion)( WDCashRegister * _Nullable cashRegister, NSError * _Nullable cashRegisterError);
 
 /**
  *  @typedef CashRegisterShiftCompletion
@@ -2098,6 +2132,13 @@ NSString *const WDPaymentMethodAndTransactionTypeFromWDPaymentMethodAndTransacti
  *  @param barCodeTypes Supported BarCode types
  **/
 typedef void (^BarCodeTypeCompletion)(NSArray <WDBarCodeType *>*_Nullable barCodeTypes, NSError* _Nullable error);
+
+/**
+ *  @typedef TaxCategoryCompletion
+ *  @brief Callback to be executed at the end of the tax category maintenance or query process
+ *  @param taxCategories Array of queried Tax Categories
+ **/
+typedef void (^TaxCategoryCompletion)(NSArray <WDTaxCategory *>*_Nullable taxCategories, NSError* _Nullable error);
 
 NS_ASSUME_NONNULL_END
 
