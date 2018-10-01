@@ -529,10 +529,10 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nonatomic) WDExtensionTypeUUID  vendorUUID;
 /**
  */
-@property (nonatomic, strong) NSString * _Nonnull displayName;
+@property (nonatomic, copy) NSString * _Nonnull displayName;
 /**
  */
-@property (nonatomic, strong) NSString * _Nullable alternativeDisplayName;
+@property (nonatomic, copy) NSString * _Nullable alternativeDisplayName;
 @end
 /**
  *  @class WDTerminal
@@ -541,24 +541,24 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @interface WDTerminal : WDObject <NSCoding, NSCopying>
 /**     
  */
-@property (nonatomic, strong) WDVendor * _Nonnull terminalVendor;
+@property (nonatomic, copy) WDVendor * _Nonnull terminalVendor;
 /**
  */
-@property (nonatomic, strong) NSString * _Nonnull terminalModel;
+@property (nonatomic, copy) NSString * _Nonnull terminalModel;
 /**
  * @brief terminal model as reported by EAAccessory
  */
-@property (nonatomic, strong) NSString * _Nonnull eaAccessoryModel;
+@property (nonatomic, copy) NSString * _Nonnull eaAccessoryModel;
 /**
  */
-@property (nonatomic, strong) NSString * _Nonnull terminalUUID;
+@property (nonatomic, copy) NSString * _Nonnull terminalUUID;
 /**
  * @brief configurable through paymentMethods.xml
  */
-@property (nonatomic, strong) NSString * _Nonnull displayName;
+@property (nonatomic, copy) NSString * _Nonnull displayName;
 /**
  */
-@property (nonatomic, strong) NSString * _Nonnull firmwareVersion;
+@property (nonatomic, copy) NSString * _Nonnull firmwareVersion;
 /**
  */
 @property (nonatomic) BOOL  connected;
@@ -1115,6 +1115,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, strong) NSString *externalId;
 @property (nullable, nonatomic, strong) NSString *siteId;
 @property (nullable, nonatomic, strong) WDAddress *address;
+@property (nullable, nonatomic, strong) NSString *status;
 @end
 
 /**

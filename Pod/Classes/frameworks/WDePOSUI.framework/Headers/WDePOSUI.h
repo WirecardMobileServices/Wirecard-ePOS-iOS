@@ -14,7 +14,6 @@ FOUNDATION_EXPORT double WDePOSUIVersionNumber;
 //! Project version string for WDePOSUI.
 FOUNDATION_EXPORT const unsigned char WDePOSUIVersionString[];
 
-//#import <WDBrand/WDBrand.h>
 #import <WDePOS/WDePOS.h>
 #import <WDBrand/WDBrand-Swift.h>
 #import "WDPaymentMethodMask.h"

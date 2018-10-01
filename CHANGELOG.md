@@ -1,6 +1,24 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.5.0] - 2018-10-01 
+### Added
+- New field in WDMerchantUser - date of the last user's password change
+- Tax categories getter for specified country code
+- Cash register details added
+- Receipt and Z-Report template uses Mustache template
+- Sale search filter for payment method added
+
+### Fixed
+- Disable device to enter "sleep" state during terminal firmware update
+- Minor bugfixes
+
+### Changed 
+- Cash register's activities numbers uses NSDecimalNumber instead of NSNumber
+- Datecs library from vendor updated
+- WDBrand framework embeded in WDePOSUI framework
+
+
 ## [2.4.4] - 2018-09-20 
 ### Fixed
 - Fixes for Xcode 10
