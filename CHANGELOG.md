@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
+## [2.5.1] - 2018-10-03 
+
+### Fixed
+- eClear example
 
 ## [2.5.0] - 2018-10-01 
 ### Added
