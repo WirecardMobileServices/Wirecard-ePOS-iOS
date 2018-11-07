@@ -48,13 +48,15 @@ class SalesTestsSwift: BaseTestsSwift
                                        NSNumber.init(value:WDSaleState.failed.rawValue),
                                        NSNumber.init(value: WDSaleState.returned.rawValue),
                                        NSNumber.init(value: WDSaleState.canceled.rawValue))
-        let types = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDSaleType.purchase.rawValue))        
+        let types = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDSaleType.purchase.rawValue))
+        let paymentMethods = [NSNumber.init(value: WDPaymentMethod.cash.rawValue)]
         let query : WDSalesQuery = WDSalesQuery.init(page: 0,
                                                                  pageSize: 20,
                                                                  orderBy: .createdAt,
                                                                  order: .descending,
                                                                  statuses: statuses,
-                                                                 saleTypes: types)
+                                                                 saleTypes: types,
+                                                                 paymentMethods: paymentMethods)
         sdk.saleManager.querySales(query, completion: {[weak self](arr : [WDSaleResponse]?, error: Error?) in
             self?.saleResponse = arr?.first
             self?.returnedErr = error

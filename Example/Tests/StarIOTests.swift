@@ -108,12 +108,14 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
     {
         let statuses = [NSNumber].init(arrayLiteral: NSNumber.init(value: WDSaleState.completed.rawValue))
         let types = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDSaleType.purchase.rawValue))
+        let paymentMethods = [NSNumber.init(value: WDPaymentMethod.cash.rawValue)]
         let query : WDSalesQuery = WDSalesQuery.init(page: 0,
                                                                  pageSize: 20,
                                                                  orderBy: .createdAt,
                                                                  order: .descending,
                                                                  statuses: statuses,
-                                                                 saleTypes: types)
+                                                                 saleTypes: types,
+                                                                 paymentMethods: paymentMethods)
         
         sdk.saleManager.querySales(query, completion: {[weak self](arr : [WDSaleResponse]?, error : Error?) in
             self?.returnedErr = error

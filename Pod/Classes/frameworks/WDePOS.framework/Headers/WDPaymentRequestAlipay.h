@@ -14,7 +14,7 @@
  **/
 @interface WDPaymentRequestAlipay : WDPayment
 /// Default NSObject init is unavailable
-- (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:consumerId:")));
+- (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:transactionType:consumerId:")));
 - (nonnull instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount paymentMethod:(WDPaymentMethod)paymentMethod transactionType:(WDTransactionType)transactionType __attribute__((unavailable("use initWithAmount:transactionType:consumerId:")));
 /**
  */

@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, TimeUnitsEnum) {
 -(BOOL)isDateSoonerThan:(NSDate*)right;
 +(NSInteger)getCurrentYear:(NSDate*)aDate;
 +(NSDate*)displaceDateInTimeUnits:(NSDate*)aDate amount:(NSInteger)amount timeUnit:(NSInteger)units;
-+ (NSDate *)dateWithDate:(NSDate *)date Hour:(NSInteger)hour Minute:(NSInteger)minute Second:(NSInteger)second;
++ (NSDate *)dateWithDate:(NSDate *)date Hour:(NSInteger)hour Minute:(NSInteger)minute Second:(NSInteger)second andTimeZone:(NSString*)timeZone;
 -(NSString *)asStringWithFormat:(NSString *)format;
 -(NSInteger)daysAgo;
 

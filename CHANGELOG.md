@@ -1,5 +1,11 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
+
+## [2.6.0] - 2018-11-07 
+
+### Changed
+- New Sale and transaction states added
+
 ## [2.5.1] - 2018-10-03 
 
 ### Fixed

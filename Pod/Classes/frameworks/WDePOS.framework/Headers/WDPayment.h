@@ -85,6 +85,8 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
 @interface WDPayment : WDObject<NSCoding>
 /// Default NSObject init is unavailable
 - (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
++ (nonnull instancetype)new __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
+
 /**
  */
 - (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
@@ -95,10 +97,10 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
 - (nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
 /**
  */
-@property (nonatomic) WDPaymentMethod paymentMethod;
+@property (nonatomic, readonly) WDPaymentMethod paymentMethod;
 /**
  */
-@property (nonatomic) WDTransactionType transactionType;
+@property (nonatomic, readonly) WDTransactionType transactionType;
 /**
  */
 @property (nonnull, nonatomic, strong) NSDecimalNumber *amount;

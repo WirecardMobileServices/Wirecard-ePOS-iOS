@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, minimum-scale=0.1, maximum-scale=1.0, initial-scale=1.0, user-scalable=0"/>
     <style>
         :root {
-            --bodyFontSize: 12pt;
+            --bodyFontSize: 11pt;
             --tableFontSize: 11pt;
-            --textPFontSize: 15px;
-            --textSFontSize: 14px;
-            --wrapperLeftFontSize: 10pt;
-            --wrapperRightFontSize: 10pt;
+            --textPFontSize: 11pt;
+            --textSFontSize: 11pt;
+            --wrapperLeftFontSize: 11pt;
+            --wrapperRightFontSize: 11pt;
         }
 
         body {
             background-color: rgb(255, 255, 255);
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Arial', sans-serif;
             font-size: var(--bodyFontSize);
             margin: 0;
         }
@@ -27,12 +27,12 @@
         TR,
         TD,
         TH {
-            font-family: 'Helvetica', sans-serif;
+            font-family: 'Arial', sans-serif;
             font-size: var(--tableFontSize);
             text-align: right;
-            padding: 0px;
-            margin: 0px;
-            border-spacing: 0px;
+            padding: 0pt;
+            margin: 0pt;
+            border-spacing: 0pt;
             vertical-align: top;
             border-collapse: collapse;
             empty-cells: hide;
@@ -46,7 +46,7 @@
 
         .mainTable td {
             text-align: right;
-            padding: 1px;
+            padding: 1pt;
         }
 
         .subTable {
@@ -54,13 +54,13 @@
         }
 
         .subTable td {
-            padding: 0px;
-            margin: 0px;
+            padding: 0pt;
+            margin: 0pt;
         }
 
         .summary {
             margin: 0 auto;
-            padding: 0px;
+            padding: 0pt;
             text-align: left;
             float: right;
             width: 100%
@@ -71,7 +71,7 @@
         }
 
         .rowHeader {
-            font-size: 27px;
+            font-size: 20pt;
             font-weight: bold;
         }
 
@@ -115,39 +115,34 @@
         }
 
         .h3_text {
-            font-size: 20px;
+            font-size: 15pt;
             color: #000000;
-            padding-bottom: 15px;
+            padding-bottom: 11pt;
             display: block;
         }
 
         .text_p {
             font-size: var(--textPFontSize);
             color: #000000;
-            line-height: 24px;
+            line-height: 15pt;
         }
 
         .text_s {
             font-size: var(--textSFontSize);
             color: #000000;
-            line-height: 24px;
-        }
-
-        .text_tax {
-            font-size: 3.8vw;
-            color: #000000;
+            line-height: 15pt;
         }
 
         .font24 {
-            font-size: 24px;
+            font-size: 15pt;
         }
 
         .font20 {
-            font-size: 20px;
+            font-size: 12pt;
         }
 
         .font18 {
-            font-size: 18px;
+            font-size: 11pt;
         }
 
         .pull_left {
@@ -196,18 +191,23 @@
         }
 
         table~div.paymentsBorder~div.paymentsBorder {
-            border-bottom: solid 1px #000000;
+            border-bottom: solid 1pt #000000;
             margin: 0 2% 1% 2%;
         }
 
         div.alternativePaymentsBorder {
-            border-bottom: solid 1px #000000;
+            border-bottom: solid 1pt #000000;
             margin: 0 2% 1% 2%;
         }
 
         .sectionSeparator {
-            border: solid 1px #000000;
-            margin: 0 2% 1% 2%;
+            border: none;
+            height: 2px;
+            color: #000000; /* old IE */
+            background-color: #000000; /* Modern Browsers */
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 1%;
         }
 
         .row {
@@ -248,12 +248,19 @@
         }
 
         .flexDetailsLabel {
-            flex: 0 0 42%;
-
+            flex: 0 0 44%;
         }
 
         .flexDetailsValue {
-            flex: 0 0 58%;
+            flex: 0 0 56%;
+        }
+
+        .flexAltDetailsLabel {
+            flex: 0 0 50%;
+        }
+
+        .flexAltDetailsValue {
+            flex: 0 0 50%;
         }
 
         .flexRowSpaceBetween {
@@ -303,6 +310,10 @@
             padding-right: 1%;
         }
 
+        .paddingRight4{
+            padding-right: 4pt;
+        }
+
         .paddingLeft {
             padding-left: 1%;
         }
@@ -312,7 +323,11 @@
         }
 
         .paddingLeft20 {
-            padding-left: 20px;
+            padding-left: 15pt;
+        }
+
+        .paddingLeft4{
+            padding-left: 4pt;
         }
 
         .inline {
@@ -353,7 +368,10 @@
         }
 
         .signatureUnderline {
-            border: solid 1px #000000;
+            border: none;
+            height: 2px;
+            color: #000000; /* old IE */
+            background-color: #000000; /* Modern Browsers */
             margin: 0 5%
         }
 
@@ -380,8 +398,8 @@
         }
 
         .receiptBody {
-            max-width: 600px;
-            min-width: 306px;
+            max-width: 450pt;
+            min-width: 220pt;
         }
 
         .tempty {

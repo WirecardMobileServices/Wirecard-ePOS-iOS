@@ -1,32 +1,32 @@
 {{#receipt.taxItems.size}}
 <div id="taxes" class="flex-container subTable">
-    <!-------col1---------->
+    <!-- col1 -->
     <div class="tleft">
-        <div class="text_s">
+        <div id="taxRateLabel" class="text_s">
             <b>{{receipt.taxPercentage}}</b>
         </div>
         {{#receipt.taxItems}}
-        <div class="text_s wsNoWrap">
+        <div class="text_s wsNoWrap taxValue">
             {{#value}}{{.}}{{/value}}{{^value}}{{receipt.noTaxLabel}}{{/value}}
         </div>
         {{/receipt.taxItems}}
     </div>
-    <!-------col2---------->
+    <!-- col2 -->
     <div class="tcenter">
-        <div class="text_s">
+        <div id="netAmountLabel" class="text_s">
             <b>{{receipt.netto}}</b>
         </div>
         {{#receipt.taxItems}}
-        <div class="tright text_s">{{nettoAmount}}</div>
+        <div class="tright text_s netAmount">{{nettoAmount}}</div>
         {{/receipt.taxItems}}
     </div>
-    <!-------col3---------->
+    <!-- col3 -->
     <div class="tright">
-        <div class="wordWrapBreak text_s">
+        <div id="taxAmountLabel" class="wordWrapBreak text_s">
             <b>{{receipt.tax}}</b>
         </div>
         {{#receipt.taxItems}}
-        <div class="text_s wordWrapBreak">{{taxAmount}}</div>
+        <div class="text_s wordWrapBreak taxAmount">{{taxAmount}}</div>
         {{/receipt.taxItems}}
     </div>
 </div>

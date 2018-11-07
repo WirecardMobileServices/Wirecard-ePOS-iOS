@@ -420,19 +420,15 @@ typedef NS_ENUM(NSInteger, WDSaleType ) {
  *  @brief Sale Status enumeration
  **/
 typedef NS_ENUM(NSUInteger, WDSaleState) {
-    WDSaleStateUnknown=0,
+    WDSaleStateUnknown = 0,
     WDSaleStateInProgress,
-    WDSaleStateUnconfirmed,
+    WDSaleStateOpen,
     WDSaleStateCompleted,
-    WDSaleStateReturned,
-    WDSaleStatePartiallyReturned,
     WDSaleStateCanceled,
-    WDSaleStateFailed,
+    WDSaleStatePartiallyReturned,
+    WDSaleStateReturned,
     WDSaleStateFailedIntervene,
-    WDSaleStateFailedInconsistent,
-    WDSaleStateCancelIncomplete,
-    WDSaleStateAuthorized,
-    WDSaleStateIncomplete
+    WDSaleStateFailed
 };
 
 /**
@@ -825,7 +821,8 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
                     orderBy:(WDSaleQueryOrderBy)orderBy
                   orderSort:(WDQuerySort)orderSort
                    statuses:(NSArray <NSNumber*>*)statuses
-                  saleTypes:(NSArray <NSNumber*>*)saleTypes;
+                  saleTypes:(NSArray <NSNumber*>*)saleTypes
+             paymentMethods:(NSArray <NSNumber*>*)paymentMethods;
 /**
  * If not specified then current merchant Sale query  is performed
  * System Admin can perform Sale query on any merchant
@@ -868,6 +865,10 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  * @brief statuses is an array of one or many of WDSaleState enumeration
  */
 @property (nonatomic, strong) NSArray <NSNumber*>*  _Nullable statuses;
+/**
+ * @brief paymentMethods is an array of one or many of WDPaymentMethod enumeration
+ */
+@property (nonatomic, strong) NSArray <NSNumber*>*  _Nullable paymentMethods;
 /**
  */
 @property (nonatomic) WDQuerySort orderSort;
@@ -2066,6 +2067,20 @@ typedef void(^WDTerminalRKICompletion)(WDTerminalRKI * _Nullable terminalRKI, NS
  *  @return  Transaction State as string
  **/
 NSString *const _Nullable PaymentStateFromWDState(WDPaymentState WDState);
+
+/**
+ *  @brief Get the Payment Method from WD Payment Method code
+ *  @param paymentMethod WD Payment Method code
+ *  @return Array of the Payment methods as an Array of the strings
+ **/
+NSArray<NSString*> *const PaymentMethodsFromWDPaymentMethod(WDPaymentMethod paymentMethod);
+
+/**
+ *  @brief Get the Payment Method code from WD Payment Method and Transaction Type string
+ *  @param paymentMethod WD Payment Method and Transaction Type string (e.g: @"CARD_CAPTURE")
+ *  @return Payment Method code
+ **/
+WDPaymentMethod WDPaymentMethodFromPaymentMethod(NSString *paymentMethod);
 
 /**
  *  @brief get the Switch transaction types as dictionary

@@ -1,0 +1,172 @@
+{
+    "config": {
+        "paymentMethods": [{
+                           "type": "CASH"
+                           },
+                           {
+                           "type": "CARD"
+                           },
+                           {
+                           "type": "ALIPAY"
+                           },
+                           {
+                           "type": "WECHAT"
+                           }],
+        "supportedTerminals": [{
+                               "vendor": "Spire",
+                               "model": "SPm2"
+                               }],
+        "gratuity": {
+            "rates": ["0.05", "0.08", "0.1"],
+            "tax": "0.0"
+        },
+        "GoogleAnalytics": {
+            "key": null,
+            "secondaryKey": null
+        },
+        "help":{
+                "faq_url":"",
+                "data_protection_url":"",
+                "legal_notice_url":"",
+                "terms_and_conditions_url":"",
+                "website_url":""
+        },
+        "printSupportEnabled": true,
+        "pistolScannerEnabled": true,
+        "tutorialQuestionMarkHidden": true,
+        "setFirstTerminalInListAsDefault": true,
+        "BTTutorialAvailable": true,
+        "3DTouchEnabled": false,
+        "showAlertWhenActivityIndicator": false,
+        "appTutorialInFirstRun": false,
+        "updateDataInAccountHidden": true,
+        "declinedReceiptBackgroundRed": false,
+        "fullRejectioReason": false,
+        "mandatoryUniqueTax": false,
+        "flatDiscountUIEnabled" : true,
+        "memberCardsWithExtraEACode": true,
+        "emailReceiptEnabled": true,
+        "SMSReceiptEnabled": false,
+        "numpadInputHidden": false,
+        "refundOnlyThroughBackend": false,
+        "cashDrawerButtonEnabled": true,
+        "refundOverReversalAlways": false,
+        "cardTransacNeverReturnable": false,
+        "hideServiceCharge": false,
+        "hideGratuity": false,
+        "customerReceipt": true,
+        "inventoryEnabled": true,
+        "inventoryEditable": false,
+        "quickClerkLoginEnabled": true,
+        "rememberedUsersEnabled": true,
+        "automaticPrintingEnabled": false,
+        "wideImagesInCustomerReceipt": false,
+        "signatureButtonsWithIcons": true,
+        "sendingReceiptAlways": false,
+        "bigUIMessages": false,
+        "addItemButtonLocalisedName": null,
+        "clearListButtonLocalisedName": null,
+        "taxRateLocalisedName": "VAT",
+        "supportAppName": "accept by Wirecard",
+        "owningCompanyName": "Wirecard",
+        "registrationURL": "Wirecard",
+        "legalText": [{"en":"I agree to pay the above total amount according to my card issuer agreement."}
+                      ,{"de":"Ermächtigung zum Lastschrifteinzug: Ich ermächtige hiermit das hier genannte Unternehmen und dessen Dienstleister, die Wirecard Bank AG, Einsteinring 35, D-85609 Aschheim, den hier ausgewiesenen Rechnungsbetrag von meinem durch Kontonummer und Bankleitzahl bezeichneten Konto durch Lastschrift einzuziehen. Ermächtigung zur Adressweitergabe. Ich ermächtige mein Kreditinstitut, das durch die hier angegebene Bankleitzahl bezeichnet ist, bei Nichteinlösung der Lastschrift oder bei Wiederspruch gegen die Lastschrift dem Unternehmen oder einem von Ihm beauftragten Dritten auf Aufforderung meinen Namen und meine Anschrift mitzuteilen, damit das Unternehmen seine Anspruch gegen mich geltend machen kann."}
+                      ,{"es":null}
+                      ,{"zh-Hans":"我同意本次的付款金额,并同意商店的支付条款"}],
+        "languageList": ["en","de"],
+        "UIAppFonts":null
+    },
+    "ui": {
+        "main": {
+            "text": "#ffffff",
+            "background": "#ffffff",
+            "logoBackground":"#061723",
+            "color": "#061723",
+            "navigation": "#ffffff",
+            "statusBarLight": false
+        },
+        "normal": {
+            "text": "#5E6F76",
+            "color": "#F5F5F5",
+            "highlighted": "#fcfcfc",
+            "disabled": "#e6e6e6",
+            "placeholder": "#94999E"
+        },
+        "normalReversed": {
+            "text": "#061723",
+            "color": "#f7f7f7",
+            "highlighted": "#fcfcfc",
+            "disabled": "#fbfbfb",
+            "placeholder": "#969696"
+        },
+        "selected": {
+            "text": "#ffffff",
+            "color": "#061723",
+            "highlighted": "#66061723",
+            "disabled": "#e6e6e6",
+            "placeholder": "#ffffff"
+        },
+        "numerals": {
+            "text": "#414B56",
+            "color": "#fafafa",
+            "highlighted": "#fcfcfc",
+            "disabled": "#fdfdfd",
+            "placeholder": "#94999E"
+        },
+        "numeralsReversed": {
+            "text": "#061723",
+            "color": "#fafafa",
+            "highlighted": "#fcfcfc",
+            "disabled": "#fbfbfb",
+            "placeholder": "#d6d6d6"
+        },
+        "positive": {
+            "text": "#ffffff",
+            "color": "#061723",
+            "highlighted": "#09273d",
+            "disabled": "#e6e6e6",
+            "placeholder": "#969696"
+        },
+        "positiveReversed": {
+            "text": "#061723",
+            "color": "#ffffff",
+            "highlighted": "#fcfcfc",
+            "disabled": "#fbfbfb",
+            "placeholder": "#f7f7f7"
+        },
+        "negative": {
+            "text": "#ffffff",
+            "color": "#414B56",
+            "highlighted": "#255472",
+            "disabled": "#255472"
+        },
+        "transaction": {
+            "approved": "#14AF96",
+            "canceled": "#5E6F76",
+            "rejected": "#E4094C",
+            "refunded": "#3380B3",
+            "incomplete": "#F5A623",
+            "failed": "#FF3B30"
+        },
+        "reversed":{
+            "text": "#ffffff",
+            "color": "#414B55",
+            "highlighted": "#414B55",
+            "disabled": "#e6e6e6",
+            "placeholder": "#94999E"
+        },
+        "refunded":{
+            "text": "#ffffff",
+            "color": "#3380B3",
+            "highlighted": "#3989B9",
+            "disabled": "#e6e6e6",
+            "placeholder": "#94999E"
+        },
+        "message": {
+            "info": "#061723",
+            "error": "#C03828",
+            "warn": "#ffaa46"
+        }
+    }
+}

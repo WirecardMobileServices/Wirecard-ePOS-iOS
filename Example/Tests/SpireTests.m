@@ -128,7 +128,7 @@
         NSLog(@"Terminal update progress: %ld",(long)progressUpdate);
     };
     
-    //Note: You may update the firmware too using WDTerminalUpdateTypeFirmware
+    //Note: You may update the application (Spire devices) or firmware (others) using WDTerminalUpdateTypeApplication or WDTerminalUpdateTypeFirmware in updateType below
     //Note: The accept SDK will keep track of what version was previously installed, and decide if an update is required by comparing with the latest in backend.
     //This means, the first time you run this test, the configuration will be updated on the terminal. A second time will tell you "WDUpdateConfigurationStatusUnnecessary"
     //To force the actual update again you will have to remove the demo app from your iOS device and re-run the test.
