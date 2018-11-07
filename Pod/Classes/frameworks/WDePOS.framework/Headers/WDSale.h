@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSDecimalNumber*)totalSaleItemsQuantity;
 /**
  */
--(NSArray *)payments;
+-(NSArray<WDPayment *> *)payments;
 /**
  *  @brief Returns the terminal information in the case Card payment is present
  **/

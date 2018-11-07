@@ -15,22 +15,13 @@
  *  @class WDPaymentDetail
  *  @brief Complete information about performed Payment
  **/
-@interface WDPaymentDetail : WDObject<NSCoding>
-/**
- */
-@property (nonatomic, readonly) WDPaymentMethod paymentMethod;
-/**
- */
-@property (nonatomic) WDTransactionType transactionType;
+@interface WDPaymentDetail : WDPayment
 /**
  */
 @property (nonnull, nonatomic, retain) NSString *internalId;
 /**
  */
 @property (nonatomic) WDPaymentState status;
-/**
- */
-@property (nonnull, nonatomic, retain) NSDecimalNumber *amount;
 /**
  */
 @property (nullable, nonatomic, retain) NSDate *processedByGateway;
@@ -58,15 +49,18 @@
 /**
  */
 @property (nullable, nonatomic, strong) NSArray * autoResolvePayments;
+
+/// Default NSObject init is unavailable
+- (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
++ (nonnull instancetype)new __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
 /**
  */
--(nonnull instancetype)init __attribute__((unavailable("use initWithPaymentMethod:paymentMethod:")));
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                          paymentMethod:(WDPaymentMethod)paymentMethod
+                        transactionType:(WDTransactionType)transactionType NS_DESIGNATED_INITIALIZER;
 /**
  */
-+(nonnull instancetype)new __attribute__((unavailable("use initWithPaymentMethod:paymentMethod:")));
-/**
- */
-- (nonnull instancetype)initWithPaymentMethod:(WDPaymentMethod)paymentMethod;
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
 /**
  */
 -(NSString *_Nullable)statusDescription;
