@@ -59,13 +59,13 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     [self.navigationController presentViewController:loginVC animated:YES completion:nil];
 }
 
--(void)pay:(NSDecimalNumber *)amount paymentMethod:(WDPaymentMethodMask)paymentMethod {
+-(void)pay:(NSDecimalNumber *)amount paymentMethod:(WDPaymentMethodMask*)paymentMethod {
     
     WDSaleManagerUI *ui = [WDSaleManagerUI sharedInstance];
     
     WDSaleConfiguration *config = [[WDSaleConfiguration alloc]
                                          initWithAmount:amount
-                                         currency: (paymentMethod == WDPaymentMethodMaskQR) ? @"USD" : @"EUR"
+                                         currency: (paymentMethod == WDPaymentMethodMask.qr ) ? @"USD" : @"EUR"
                                          taxRate:[NSDecimalNumber decimalNumberWithString:@"0.19"]
                                          paymentMethods:paymentMethod];
     
@@ -120,19 +120,19 @@ typedef NS_ENUM(NSUInteger, PaymentType) {
     }
     switch (tag) {
         case PaymentTypeAmountCash:
-            [self pay:[NSDecimalNumber decimalNumberWithString:@"10"] paymentMethod:WDPaymentMethodMaskCashOnly];
+            [self pay:[NSDecimalNumber decimalNumberWithString:@"10"] paymentMethod:WDPaymentMethodMask.cashOnly];
             break;
         case PaymentTypeAmountCard:
-            [self pay:[NSDecimalNumber decimalNumberWithString:@"10"] paymentMethod:WDPaymentMethodMaskCardOnly];
+            [self pay:[NSDecimalNumber decimalNumberWithString:@"10"] paymentMethod:WDPaymentMethodMask.cardOnly];
             break;
         case PaymentTypeNoAmountCardAndCash:
-            [self pay:nil paymentMethod:WDPaymentMethodMaskStandard];
+            [self pay:nil paymentMethod:WDPaymentMethodMask.standard];
             break;
         case PaymentTypeNoAmountQRCode:
-            [self pay:nil paymentMethod:WDPaymentMethodMaskQR];
+            [self pay:nil paymentMethod:WDPaymentMethodMask.qr];
             break;
         case PaymentTypeNoAmountNoPaymentMethod:
-            [self pay:nil paymentMethod:WDPaymentMethodMaskAll];
+            [self pay:nil paymentMethod:WDPaymentMethodMask.all];
             break;
 
         default:

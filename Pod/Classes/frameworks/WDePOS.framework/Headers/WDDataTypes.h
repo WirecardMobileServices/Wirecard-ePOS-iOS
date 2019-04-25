@@ -17,6 +17,7 @@
 #import "WDPaymentRequestAlipay.h"
 #import "WDPaymentRequestWeChat.h"
 #import "WDPaymentDetailCard.h"
+#import "WDPaymentDetailCash.h"
 #import "WDPaymentDetailCoupon.h"
 #import "WDPaymentDetailWeChat.h"
 #import "WDPaymentDetailAlipay.h"
@@ -24,7 +25,8 @@
 #import "WDObject.h"
 
 
-@class WDSaleRequest, WDSale, WDSaleResponse;
+@protocol WDSaleProcessing;
+@class WDSaleRequest, WDSaleCore, WDReferenceSaleRequest, WDSale, WDSaleResponse;
 
 @class WDCashRegister;
 
@@ -70,7 +72,6 @@ typedef NS_ENUM(NSInteger, WDExtensionTypeUUID ) {
         WDDatecsPrinterExtensionUUID,
         WDMPOPExtensionUUID,
         WDStarMicronicsExtensionUUID,
-        WDMiuraExtensionUUID,
         WDPaxExtensionUUID,
         WDSocketExtensionUUID,
         WDWisepadExtensionUUID
@@ -412,6 +413,8 @@ typedef NS_ENUM(NSUInteger, WDPrintDpi)
 typedef NS_ENUM(NSInteger, WDSaleType ) {
     WDSaleTypePurchase,
     WDSaleTypeReturn,
+    WDSaleTypeReferencePurchase,
+    WDSaleTypeRefund,
     WDSaleTypeUnknown
 };
 
@@ -564,17 +567,32 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  *  @class WDPaymentConfig
  *  @brief Payment configuration class. Content required to execute the payment flow
  **/
+__deprecated_msg("Please use WDSaleRequestConfiguration")
 @interface WDPaymentConfig : NSObject
 /**
  *  @brief Payment Configuration
- *  @param sale Sale Request
+ *  @param saleRequest Sale Request
  *  @param allowGratuity Terminal to ask for gratuity during the payment flow
  *  @return Payment configuration - to be used in Sale Manager to perform the payment
  **/
--(instancetype)initWithSaleRequest:(WDSaleRequest *)sale
+-(instancetype)initWithSaleRequest:(WDSaleRequest *)saleRequest
               allowGratuity:(BOOL)allowGratuity;
-@property (nonatomic, strong) WDSaleRequest * _Nonnull sale;
+@property (nonatomic, strong) WDSaleRequest * _Nonnull sale ;
 @property (nonatomic) BOOL allowGratuity;
+@end
+
+/**
+ *  @class WDSaleRequestConfiguration
+ *  @brief Sale configuration class. Content required to execute the payment flow
+ **/
+@interface WDSaleRequestConfiguration : NSObject
+/**
+ *  @brief Sale Configuration
+ *  @param saleRequest Sale Request
+ *  @return Sale configuration - to be used in Sale Manager to perform the Sale
+ **/
+-(nullable instancetype)initWithSaleRequest:(WDSaleCore<WDSaleProcessing> *)saleRequest;
+@property (nonatomic, strong, readonly) WDSaleCore<WDSaleProcessing> * _Nonnull saleRequest;
 @end
 
 
@@ -586,22 +604,25 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @interface WDSignatureRequest: NSObject
 /**
  */
-@property (nonatomic, strong) NSString * _Nullable cardHolderName;
+@property (nonatomic, copy) NSString * _Nullable cardHolderName;
 /**
  */
-@property (nonatomic, strong) NSString * _Nullable cardNumber;
+@property (nonatomic, copy) NSString * _Nullable cardNumber;
 /**
  */
-@property (nonatomic, strong) NSString *  _Nullable cardType;
+@property (nonatomic, copy) NSString *  _Nullable cardType;
 /**
  */
-@property (nonatomic, strong) NSString *  _Nullable issuer;
+@property (nonatomic, copy) NSString *  _Nullable issuer;
 /**
  */
-@property (nonatomic, strong) NSString * _Nullable maskedPAN;
+@property (nonatomic, copy) NSString * _Nullable maskedPAN;
 /**
  */
-@property (nonatomic) NSNumber *gratuityAmount;
+@property (nonatomic, copy) NSNumber *gratuityAmount;
+/**
+ */
+@property (nonatomic, assign) uint64_t amountToPay;
 /**
  *@discussion sendCollectedSignature - callback to Extension once the Payment Flow signalls the Approval/Rejection of the signature
  *                                It is used on the client side to confirm the signature validity
@@ -676,7 +697,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 //@property (nonatomic, strong) NSDecimalNumber * _Nonnull unitPrice;
 ///**
 // */
-//@property (nonatomic) NSInteger quantity;
+//@property (nonatomic) NSDecimalNumber *quantity;
 ///**
 // */
 //@property (nonatomic, strong) NSDecimalNumber * _Nonnull unitTax;
@@ -1112,6 +1133,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
  *  @brief  Shop object
  **/
 @interface WDShop : WDObject <NSCoding>
+@property (nullable, nonatomic, strong) NSString *name;
 @property (nullable, nonatomic, strong) NSString *internalId;
 @property (nullable, nonatomic, strong) NSString *externalId;
 @property (nullable, nonatomic, strong) NSString *siteId;
@@ -1148,6 +1170,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, retain) NSString *partnerId;
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSArray *paymentConstraints;
+@property (nullable, nonatomic, retain) NSArray *metadata;
 @end
 
 /**
@@ -1176,10 +1199,12 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, strong) NSNumber *serviceChargeTaxRate;
 @property (nullable, nonatomic, strong) NSNumber *tipTaxRate;
 @property (nullable, nonatomic, strong) WDPartner *partner;
-@property (nullable, nonatomic, strong) NSArray<WDShop *> *shops;
+//@property (nullable, nonatomic, strong) NSArray<WDShop *> *shops;
 @property (nullable, nonatomic, strong) NSNumber *flatDiscount;
 @property (nullable, nonatomic, strong) NSNumber *cashRegistersRequired;
 @property (nullable, nonatomic, strong) NSString *erpSystemType;
+@property (nullable, nonatomic, strong) NSNumber *productStockEnabled;
+
 /// Distinct Union of configured currencies and default currency
 -(NSArray *)availableCurrencies;
 @end
@@ -1206,6 +1231,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 @property (nullable, nonatomic, strong) NSString *timeZone;
 @property (nullable, nonatomic, strong) NSDate *created;
 @property (nullable, nonatomic, strong) NSArray<WDShop *> *merchantShops;
+@property (nullable, nonatomic, strong) NSNumber *returnForbidden;
 @end
 
 /**
@@ -1809,6 +1835,21 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 - (nonnull instancetype)initWithWDAddress:(WDAddress *)address;
 @end
 
+/**
+ *  @class WDClientInformation
+ *  @brief Client System information
+ *  @discussion The client H/W and S/W information
+ **/
+@interface WDClientInformation : WDObject<NSCoding>
+
+@property (nullable, nonatomic, readonly) NSString *appId;
+@property (nullable, nonatomic, readonly) NSDictionary *appSDKVersion;
+@property (nullable, nonatomic, readonly) NSString *appVersion;
+@property (nullable, nonatomic, readonly) NSString *deviceType;
+@property (nullable, nonatomic, readonly) NSString *osType;
+@property (nullable, nonatomic, readonly) NSString *osVersion;
+@end
+
 #pragma mark - Request Callbacks
 /**
  *  @typedef PaymentProgress
@@ -2074,6 +2115,13 @@ NSString *const _Nullable PaymentStateFromWDState(WDPaymentState WDState);
  *  @return Array of the Payment methods as an Array of the strings
  **/
 NSArray<NSString*> *const PaymentMethodsFromWDPaymentMethod(WDPaymentMethod paymentMethod);
+
+/**
+ *  @brief Get the Payment Method from WD Payment Method code without transaction type
+ *  @param paymentMethod WD Payment Method code
+ *  @return Payment method as a string
+ **/
+NSString* const PaymentMethodFromWDPaymentMethod(WDPaymentMethod paymentMethod);
 
 /**
  *  @brief Get the Payment Method code from WD Payment Method and Transaction Type string

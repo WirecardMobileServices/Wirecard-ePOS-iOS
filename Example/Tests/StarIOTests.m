@@ -43,7 +43,7 @@
     NSLog(@"\n\t\t   %s Not runnable on simulator 📱",__PRETTY_FUNCTION__);
     return;
     
-#endif
+#else
     
     //PART 1: We detect paired devices
     //--------------------------------------
@@ -91,6 +91,8 @@
         expectation = [self expectationWithDescription:@"Read barcode"];
         [self waitForExpectationsWithTimeout:100 handler:nil];
     }
+    
+#endif
 }
 
 -(void)openCashDrawer

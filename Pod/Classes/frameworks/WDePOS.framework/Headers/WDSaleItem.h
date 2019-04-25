@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, WDSaleItemType ) {
 @property (nonatomic, strong) NSDecimalNumber * _Nonnull unitPrice;
 /**
  */
-@property (nonatomic) NSInteger quantity; 
+@property (nonatomic) NSDecimalNumber *quantity; 
 /**
  */
 @property (nonatomic, strong) NSDecimalNumber * _Nonnull taxRate;

@@ -24,7 +24,7 @@ class SocketScannerTestsSwift: BaseTestsSwift, WDManagerDelegate
             NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
             return
             
-        #endif
+        #else
         
         //PART 1: We discover Socket scanners paired to your iOS device.
         //--------------------------------------
@@ -41,6 +41,8 @@ class SocketScannerTestsSwift: BaseTestsSwift, WDManagerDelegate
         expectation = self.expectation(description: "Setting active scanner to listen to")
         self.setDelegateAndActiveScanner()
         self.waitForExpectations(timeout: 100, handler: nil)
+        
+        #endif
     }
     
     func setDelegateAndActiveScanner()

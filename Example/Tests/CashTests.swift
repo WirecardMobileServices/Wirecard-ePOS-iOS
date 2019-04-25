@@ -62,16 +62,16 @@ class CashTestsSwift: BaseTestsSwift
             
             //PART 3: We request cash shifts
             //--------------------------------------
-            expectation = self.expectation(description: "Gettig Cash Shifts")
+            expectation = self.expectation(description: "Getting Cash Shifts")
             self.getLastShift()
             //Your shift keep track of what users open, close and do operations on them, for statistic report purposes.
             self.waitForExpectations(timeout: 100, handler: nil)
             
             //PART 4: We check the validity of last shift, and create a new one if none is found, or existing ones are invalid
             //--------------------------------------
+
             expectation = self.expectation(description: "Check Last Cash Shift and Create New One If Needed")
-            let openTime : NSDate = NSDate.init(date: self.lastShift?.openTime, hour: 0, minute: 0, second: 0, andTimeZone: "UTC")
-            
+            let openTime : NSDate = NSDate.init(date: self.lastShift?.openTime, hour: 0, minute: 0, second: 0, andTimeZone:"UTC")
             if self.lastShift != nil && self.lastShift?.shiftStatus == "OPEN" && openTime.isStillToday() == false
             {
                 //The shif exist, but it was open more than 24 hours ago. We need to close it, then open a new one.
@@ -107,7 +107,7 @@ class CashTestsSwift: BaseTestsSwift
             
             //PART 5: We request activities of a shift
             //--------------------------------------
-             expectation = self.expectation(description: "Gettig Activities of a Shift")
+             expectation = self.expectation(description: "Getting Activities of a Shift")
             //Note: While you can only close the last shift (no more than one shift can be open at a cash registers)
             //You can request details of activities of any existing shift you know the id.
             self.getShiftActivities()
@@ -321,18 +321,25 @@ class CashTestsSwift: BaseTestsSwift
     
     func doCashPayment()
     {
+        self.doCashPayment(amount: nil)
+    }
+    
+    func doCashPayment(amount : NSDecimalNumber?)
+    {
         //We will define a dummy payment configuration as an example. Feel free to modify and add content; the sale complexity is up to you.
         self.aSale = SaleHelper.sharedInstance().newSale()
         self.aSale?.addSaleItem(NSDecimalNumber.init(value:2.5),
-                                quantity: 5,
+                                quantity: NSDecimalNumber(value: 5),
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax(),
                                 itemDescription: "Red Apple",
-                                productId: "DummyID1")
+                                productId: "DummyID1",
+                                externalProductId:nil)
         self.aSale?.addSaleItem(NSDecimalNumber.init(value:1.25),
-                                quantity: 3,
+                                quantity: NSDecimalNumber(value: 3),
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax(),
                                 itemDescription: "Golden Apple",
-                                productId: "DummyID2")
+                                productId: "DummyID2",
+                                externalProductId:nil)
         self.aSale?.addServiceCharge(UserHelper.sharedInstance().serviceChargeRate(),
                                      taxRate:UserHelper.sharedInstance().serviceChargeTax())
         //You can add a tip of any value you want. Notice that backend validate taxes, so their values should match the ones your merchant has defined in setup.
@@ -340,16 +347,31 @@ class CashTestsSwift: BaseTestsSwift
                                 taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
         self.aSale?.addFlatDiscount(NSDecimalNumber(floatLiteral: 6.0))
-        let paymentConfiguration : WDPaymentConfig = WDPaymentConfig.init()
-        paymentConfiguration.sale = self.aSale!
-        paymentConfiguration.sale.cashRegisterId = cashRegister?.internalId ?? ""
-        paymentConfiguration.sale.shiftId = self.lastShift?.internalId ?? nil
-        paymentConfiguration.sale.resetPayments()
-        paymentConfiguration.sale.addCashPayment(paymentConfiguration.sale.totalToPay() ?? NSDecimalNumber.init(value:0))
-        sdk.saleManager.pay(paymentConfiguration, delegate: self.paymentHandler!)
+
+        self.aSale.cashRegisterId = cashRegister?.internalId ?? ""
+        self.aSale.shiftId = self.lastShift?.internalId ?? nil
+        self.aSale.resetPayments()
+        if amount == nil
+        {
+            self.aSale.addCashPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0))
+        }
+        else
+        {
+            self.aSale.addCashPayment(amount ?? NSDecimalNumber.init(value:0))
+        }
+        
+        if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
+       {
+            sdk.saleManager.pay(paymentConfiguration, with: self.paymentHandler!)
+       }
+    }
+
+    func refundTransaction()
+    {
+        self.refundTransaction(withAmount: nil)
     }
     
-    func refundTransaction()
+    func refundTransaction(withAmount amount : NSDecimalNumber?)
     {
         guard let saleToBeRefunded : WDSaleRequest = self.saleResponse?.saleReturn() else
         {
@@ -363,21 +385,32 @@ class CashTestsSwift: BaseTestsSwift
             return;
         }
         saleToBeRefunded.removeAllItems()
-        saleToBeRefunded.cashRegisterId = cashRegister?.internalId ?? ""
-        saleToBeRefunded.cashierId = saleResponse.cashierId
         saleToBeRefunded.customerId = saleResponse.customerId
         //This is an example of partial refund: only one item is refunded
-        guard let anItem : WDSaleItemCore = aSale?.items?.first else
+        
+        if (amount == nil)
         {
-            XCTFail("Something went really wrong getting anItem")
-            return;
+            saleToBeRefunded.cashRegisterId = cashRegister?.internalId ?? ""
+            
+            guard let anItem : WDSaleItemCore = aSale?.items?.first else
+            {
+                XCTFail("Something went really wrong getting anItem")
+                return;
+            }
+            saleToBeRefunded.addSaleItem(anItem.unitPrice,
+                                         quantity: 1,
+                                         taxRate: anItem.taxRate,
+                                         itemDescription: anItem.itemDescription,
+                                         productId: (anItem as? WDSaleItem)?.internalProductId,
+                                         externalProductId: (anItem as? WDSaleItem)?.externalProductId)
+            saleToBeRefunded.addCashPayment(saleToBeRefunded.totalToPay() ?? NSDecimalNumber.init(value:0))
         }
-        saleToBeRefunded.addSaleItem(anItem.unitPrice,
-                                     quantity: 1,
-                                     taxRate: anItem.taxRate,
-                                     itemDescription: anItem.itemDescription,
-                                     productId: (anItem as? WDSaleItem)?.externalProductId)
-        saleToBeRefunded.addCashPayment(saleToBeRefunded.totalToPay() ?? NSDecimalNumber.init(value:0))
+        else //refund by amount
+        {
+            saleToBeRefunded.addCashPayment(amount ?? NSDecimalNumber.init(value:0))
+        }
+
+
         sdk.saleManager.refundSale(saleToBeRefunded,
                                    message: "Refunded in demo app for testing reasons",
                                    completion: {[weak self](acceptSale : WDSaleResponse?, error : Error?) in

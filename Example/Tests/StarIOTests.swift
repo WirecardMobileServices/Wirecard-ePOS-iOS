@@ -35,7 +35,7 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
             NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
             return
             
-        #endif
+        #else
         
         //PART 1: We detect paired devices
         //--------------------------------------
@@ -90,6 +90,8 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
             expectation = self.expectation(description: "Read barcode")
             self.waitForExpectations(timeout: 100, handler: nil)
         }
+        
+        #endif
     }
     
     func openCashDrawer()
@@ -108,7 +110,8 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
     {
         let statuses = [NSNumber].init(arrayLiteral: NSNumber.init(value: WDSaleState.completed.rawValue))
         let types = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDSaleType.purchase.rawValue))
-        let paymentMethods = [NSNumber.init(value: WDPaymentMethod.cash.rawValue)]
+        let paymentMethods = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDPaymentMethod.cash.rawValue))
+
         let query : WDSalesQuery = WDSalesQuery.init(page: 0,
                                                                  pageSize: 20,
                                                                  orderBy: .createdAt,
@@ -116,7 +119,7 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
                                                                  statuses: statuses,
                                                                  saleTypes: types,
                                                                  paymentMethods: paymentMethods)
-        
+
         sdk.saleManager.querySales(query, completion: {[weak self](arr : [WDSaleResponse]?, error : Error?) in
             self?.returnedErr = error
             self?.saleResponse = arr?.first //Use the first returned sale for this example

@@ -35,7 +35,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
             NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
             return
             
-        #endif
+        #else
         
         //PART 1: We log-in and request user data
         //--------------------------------------
@@ -105,6 +105,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         {
             XCTFail("Sale response empty. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
         }
+        #endif
     }
     
     
@@ -137,7 +138,6 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
     func doCardPayment()
     {
         
-        let paymentConfiguration : WDPaymentConfig = WDPaymentConfig.init()
         guard let sale = SaleHelper.sharedInstance().newSale() else
         {
             XCTFail("Something went really wrong - doCardPayment")
@@ -146,15 +146,17 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         }
         self.aSale = sale
         self.aSale.addSaleItem(NSDecimalNumber(value: 3.4),
-                               quantity:5,
+                               quantity:NSDecimalNumber(value: 5),
                                taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
                                itemDescription:"Red Apple",
-                               productId:"Dummy ID 1")
+                               productId:"Dummy ID 1",
+                               externalProductId:nil)
         self.aSale.addSaleItem(NSDecimalNumber(value: 2.25),
-                               quantity:3,
+                               quantity:NSDecimalNumber(value: 3),
                                taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
                                itemDescription:"Orange",
-                               productId:"Dummy ID 2")
+                               productId:"Dummy ID 2",
+                               externalProductId:nil)
         //You can add a service charge to the whole basket -- but this is optional
         self.aSale.addServiceCharge(UserHelper.sharedInstance().serviceChargeRate(),
                                     taxRate:UserHelper.sharedInstance().serviceChargeTax())
@@ -163,16 +165,18 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
                                taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
         self.aSale.addFlatDiscount(NSDecimalNumber(value: 6.0))
-        paymentConfiguration.sale = self.aSale
-        paymentConfiguration.sale.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId() //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
-        paymentConfiguration.sale.shiftId = UserHelper.sharedInstance().lastShiftId()
-        paymentConfiguration.sale.resetPayments()
-        paymentConfiguration.sale.addCardPayment(paymentConfiguration.sale.totalToPay() ?? NSDecimalNumber.init(value:0),
+        self.aSale.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId() //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
+        self.aSale.shiftId = UserHelper.sharedInstance().lastShiftId()
+        self.aSale.resetPayments()
+        self.aSale.addCardPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
                                                  terminal:self.selectedDevice!)
         
-        sdk.terminalManager.setActive(self.selectedDevice, completion:{[weak self]() in
-            self?.sdk.saleManager.pay(paymentConfiguration, delegate: (self?.paymentHandler)!)
-        })
+        if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
+        {
+            sdk.terminalManager.setActive(self.selectedDevice, completion:{[weak self]() in
+                self?.sdk.saleManager.pay(paymentConfiguration, with: (self?.paymentHandler)!)
+            })
+        }
     }
     
     func refundTransaction()
@@ -192,7 +196,6 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
             return
         }
         saleToBeRefunded.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId()
-        saleToBeRefunded.cashierId = self.aSale.cashierId
         saleToBeRefunded.customerId = self.aSale.customerId
         //This is an example of full refund: all items are refunded, EXCEPT SERVICE CHARGE
         saleToBeRefunded.removeServiceCharge()

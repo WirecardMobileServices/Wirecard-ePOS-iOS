@@ -27,7 +27,7 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
             NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
             return
             
-        #endif
+        #else
         
         //PART 1: We log-in and request user data
         //--------------------------------------
@@ -73,6 +73,8 @@ class DatecsPrinterTestsSwift: BaseTestsSwift, WDPrinting, WDManagerDelegate
         {
             XCTFail("Printing failed. Please make the hardware is switched on and paired to yout iOS device settings. If it was paired to other iOS device, please unpair to it first.");
         }
+        
+        #endif
     }
     
     func getSaleReceipt()

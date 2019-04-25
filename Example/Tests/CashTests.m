@@ -73,7 +73,7 @@
         
         //PART 3: We request cash shifts
         //--------------------------------------
-        expectation = [self expectationWithDescription:@"Gettig Cash Shifts"];
+        expectation = [self expectationWithDescription:@"Getting Cash Shifts"];
         [self getLastShift];
         //Your shift keep track of what users open, close and do operations on them, for statistic report purposes.
         [self waitForExpectationsWithTimeout:100 handler:nil];
@@ -118,7 +118,7 @@
     
         //PART 5: We request activities of a shift
         //--------------------------------------
-        expectation = [self expectationWithDescription:@"Gettig Activities of a Shift"];
+        expectation = [self expectationWithDescription:@"Getting Activities of a Shift"];
         //Note: While you can only close the last shift (no more than one shift can be open at a cash registers)
         //You can request details of activities of any existing shift you know the id.
         [self getShiftActivities];
@@ -302,18 +302,19 @@
 -(void)doCashPayment
 {
     //We will define a dummy payment configuration as an example. Feel free to modify and add content; the sale complexity is up to you.
-    WDPaymentConfig *paymentConfiguration = [WDPaymentConfig new];
     aSale = [[SaleHelper sharedInstance] newSale];
     [aSale addSaleItem:[NSDecimalNumber decimalNumberWithString:@"2.5"]
-              quantity:5
+              quantity:[NSDecimalNumber decimalNumberWithString:@"5"]
                taxRate:[[UserHelper sharedInstance] preferredSaleItemTax]
        itemDescription:@"Red Apple"
-             productId:@"dummyId1"];
+             productId:@"dummyId1"
+     externalProductId:nil];
     [aSale addSaleItem:[NSDecimalNumber decimalNumberWithString:@"1.34"]
-              quantity:2
+              quantity:[NSDecimalNumber decimalNumberWithString:@"2"]
                taxRate:[[UserHelper sharedInstance] preferredSaleItemTax]
        itemDescription:@"Pineapple"
-             productId:@"dummyId2"];
+             productId:@"dummyId2"
+     externalProductId:nil];
     //You can add a service charge to the whole basket
     [aSale addServiceCharge:[[UserHelper sharedInstance]
                              serviceChargeRate]
@@ -323,12 +324,14 @@
                taxRate:[[UserHelper sharedInstance] tipTax]];
     //You can add a discount for the whole basket when productId is nil, or per productId otherwise
     [aSale addFlatDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]];
-    paymentConfiguration.sale = aSale;
-    paymentConfiguration.sale.cashRegisterId = cashRegister? cashRegister.internalId : nil;
-    paymentConfiguration.sale.shiftId = lastShift? lastShift.internalId : @"";
-    [paymentConfiguration.sale resetPayments];
-    [paymentConfiguration.sale addCashPayment:paymentConfiguration.sale.totalToPay];
-    [[sdk saleManager] pay:paymentConfiguration delegate:_paymentHandler];
+    aSale.cashRegisterId = cashRegister? cashRegister.internalId : nil;
+    aSale.shiftId = lastShift? lastShift.internalId : @"";
+    [aSale resetPayments];
+    [aSale addCashPayment:aSale.totalToPay];
+
+    WDSaleRequestConfiguration *paymentConfiguration = [[WDSaleRequestConfiguration alloc] initWithSaleRequest:aSale];
+
+    [[sdk saleManager] pay:paymentConfiguration withDelegate:_paymentHandler];
 }
 
 -(void)refundTransaction
@@ -337,16 +340,16 @@
     
     [saleToBeRefunded removeAllItems];
     saleToBeRefunded.cashRegisterId = cashRegister? cashRegister.internalId : nil;
-    saleToBeRefunded.cashierId = saleResponse.cashierId;
     saleToBeRefunded.customerId = saleResponse.customerId;
     WDSaleItemCore *anItem = [aSale.items firstObject];
     
     //This is an example of partial refund: only one item is refunded
     [saleToBeRefunded addSaleItem:anItem.unitPrice
-                         quantity:1
+                         quantity:[NSDecimalNumber decimalNumberWithString:@"1"]
                           taxRate:anItem.taxRate
                   itemDescription:anItem.itemDescription
-                        productId: ((WDSaleItem *)([anItem isKindOfClass:[WDSaleItem class]] ? anItem : nil)).externalProductId];
+                        productId: ((WDSaleItem *)([anItem isKindOfClass:[WDSaleItem class]] ? anItem : nil)).internalProductId
+                externalProductId: ((WDSaleItem *)([anItem isKindOfClass:[WDSaleItem class]] ? anItem : nil)).externalProductId];
     
     [saleToBeRefunded addCashPayment:[saleToBeRefunded totalToPay]];
     saleResponse = nil;

@@ -25,7 +25,7 @@
 
 - (nonnull instancetype)init __attribute__((unavailable("use initFromSaleResponse:isForCardholder:includeReturns:")));
 + (nonnull instancetype)new __attribute__((unavailable("use initFromSaleResponse:isForCardholder:includeReturns:")));
-- (nullable instancetype)initFromSaleResponse:(WDSaleResponse *)saleResponse isForCardholder:(BOOL)isForCardholder includeReturns:(BOOL)showReturns locale:(NSLocale *)locale;
+- (nullable instancetype)initFromSaleResponse:(nonnull WDSaleResponse *)saleResponse isForCardholder:(BOOL)isForCardholder includeReturns:(BOOL)showReturns locale:(nonnull NSLocale *)locale;
 
 @end
 
@@ -155,7 +155,7 @@
 
 - (nonnull instancetype)init __attribute__((unavailable("use initFromSaleResponse:isForCardholder:includeReturns:locale:")));
 + (nonnull instancetype)new __attribute__((unavailable("use initFromSaleResponse:isForCardholder:includeReturns:locale:")));
-- (nonnull instancetype)initFromSaleResponse:(WDSaleResponse *)saleResponse isForCardholder:(BOOL)isForCardholder includeReturns:(BOOL)showReturns locale:(NSLocale*)locale;
+- (nonnull instancetype)initFromSaleResponse:(nonnull WDSaleResponse *)saleResponse isForCardholder:(BOOL)isForCardholder includeReturns:(BOOL)showReturns locale:(nonnull NSLocale*)locale;
 /// Receipt description - to be used for console printout
--(NSString *)receiptDescription;
+- (nonnull NSString *)receiptDescription;
 @end

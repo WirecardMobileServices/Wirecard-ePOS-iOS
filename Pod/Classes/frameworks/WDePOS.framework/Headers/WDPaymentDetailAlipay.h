@@ -12,7 +12,7 @@
  *  @class WDPaymentDetailAlipay
  *  @brief Alipay Payment Detail - contains the information specific to Alipay
  **/
-@interface WDPaymentDetailAlipay : WDPaymentDetail
+@interface WDPaymentDetailAlipay : WDPaymentDetail <WDPaymentDetailRefundable, WDPaymentDetailReversable>
 
 @property (nonnull, nonatomic, strong) NSString *partnerTransactionId;
 @property (nonnull, nonatomic, strong) NSString *alipayPayTime;
@@ -25,4 +25,9 @@
 @property (nonnull, nonatomic, strong) NSString *terminalId;
 @property (nonnull, nonatomic, strong) NSString *transactionBarcodeId;
 -(id _Nullable )castTo:(Class _Nonnull )targetClass;
+
+/// Reversal to be used in Sale Reverse - to reverse this payment
+-(WDPaymentReverseAlipay * _Nullable )reversal;
+/// Refund to be used in Sale Refund - to Refund this payment
+-(WDPaymentRefundAlipay * _Nullable)refund;
 @end

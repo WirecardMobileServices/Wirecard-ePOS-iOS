@@ -30,6 +30,4 @@
     __block PaymentHandler *_paymentHandler;
 }
 
--(void)loginAndGetUserData;
-
 @end

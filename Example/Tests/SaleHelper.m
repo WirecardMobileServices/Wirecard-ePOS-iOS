@@ -18,7 +18,7 @@
     WDSaleResponse *_currentSaleResponse;
     NSString *_cashRegisterId, *_shopId, *_cashierId, *_customerId;
     NSString *_selectedCurrencyCode, *_loginCredentials;
-    WDPaymentConfig *_paymentConfiguration;
+    WDSaleRequestConfiguration *_paymentConfiguration;
     NSDecimalNumber *_gratuityTaxRate;
     NSUserDefaults *userDefaults;
     NSDateFormatter *_dateFormatter;
@@ -106,13 +106,11 @@ static SaleHelper *sharedInstance = nil;
     _currentSale = [[WDSaleRequest alloc] initWithUniqueId:transactionUniqueId
                                                                         location:terminalLocation
                                                                   inclusiveTaxes:KTAX_INCLUSIVE_ENABLED
-                                                                        currency:_selectedCurrencyCode
+                                                                        currency:@"EUR"
                                                                             note:KSALE_DESCRIPTION
                                                                  gratuityTaxRate:_gratuityTaxRate];
     _currentSale.shopId = _shopId;
-    _currentSale.cashierId = _cashierId;
     _currentSale.customerId = _customerId;
-    _currentSale.currency = [[[[[UserHelper sharedInstance] getCurrentUser] merchant] defaultCurrency] code];
     
     return _currentSale;
 }
@@ -130,7 +128,7 @@ static SaleHelper *sharedInstance = nil;
 
 -(void)saleToSaveIdFrom:(WDSaleResponse*)sale
 {
-    [userDefaults setObject:sale.internalId forKey:@"saleToSaveIdFrom"];
+    [userDefaults setObject:sale.saleId forKey:@"saleToSaveIdFrom"];
 }
 
 -(NSString*)saleIdSaved

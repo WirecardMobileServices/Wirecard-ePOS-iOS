@@ -176,6 +176,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)productStockInAllShops:(WDProductCatalogueProduct*)product
                    completion:(ProductStocksCompletion)completion;
 
+/**
+ *  @brief Maintain product stocks for the <b>Internal Catalogue</b> Product
+ *  @param stocks product stocks to create
+ *  @param catalogueId product catalogue identifier
+ *  @param productId product identifier
+ *  @param completion Block that will return the created Product Stocks
+ **/
+-(void)maintainStocks:(NSArray<WDProductStockMaintain *> * _Nonnull)stocks
+             catalogueId:(NSString* _Nonnull)catalogueId
+               productId:(NSString *_Nonnull)productId
+              completion:(ProductStocksCompletion _Nullable)completion;
 
 /**
  *  @brief Get products prices for the specified customer ID

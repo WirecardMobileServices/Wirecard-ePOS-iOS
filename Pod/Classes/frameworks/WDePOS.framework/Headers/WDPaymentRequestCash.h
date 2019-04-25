@@ -13,13 +13,4 @@
  *  @brief Cash Payment Detail - contains the information specific to Cash payment
  **/
 @interface WDPaymentRequestCash : WDPayment
-/// Default NSObject init is unavailable
--(nonnull instancetype)init __attribute__((unavailable("use initWithAmount:transactionType:")));
-+(nonnull instancetype)new __attribute__((unavailable("use initWithAmount:transactionType:")));
--(nonnull instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
-                        paymentMethod:(WDPaymentMethod)paymentMethod
-                      transactionType:(WDTransactionType)transactionType __attribute__((unavailable("use initWithAmount:transactionType:")));
--(nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
--(nullable instancetype)initWithAmount:(NSDecimalNumber * __nonnull)amount
-                       transactionType:(WDTransactionType)transactionType NS_DESIGNATED_INITIALIZER;
 @end

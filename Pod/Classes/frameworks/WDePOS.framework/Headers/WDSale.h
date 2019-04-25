@@ -10,10 +10,9 @@
 #import "WDSaleItem.h"
 #import <CoreLocation/CoreLocation.h>
 #import "WDDataTypes.h"
+#import "WDSaleProcessing.h"
 
 @class WDTerminal, WDMerchant, WDMerchantUser, WDAddress, WDShop, WDReceiptData, WDHtmlReceipt;
-
-
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma mark - AcceptSaleSummaryItem
@@ -24,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WDSaleSummaryItem : WDObject
 /**
  */
-@property (nonatomic) NSUInteger  quantity;
+@property (nonatomic) NSDecimalNumber  *quantity;
 /**
  */
 @property (nullable, nonatomic, strong) NSDecimalNumber  *total;
@@ -86,6 +85,39 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSDecimalNumberHandler *)roundModeDown;
 @end
 
+#pragma mark - Sale Core
+/**
+ *  @class WDSaleCore
+ *  @brief The Sale Core object is the base for all higher level Sale to be used for Sale operations
+ **/
+@interface WDSaleCore: WDObject <NSCoding>
+/**
+ * @brief Sale internal unique ID Set by backend after processing the Sale
+ */
+@property (nonatomic, strong, readonly) NSString *saleId;
+/**
+ */
+@property (nonatomic, readonly) WDSaleType type;
+/**
+ */
+@property (nonatomic, strong, readonly) NSString *currency;
+/**
+ */
+@property (nonatomic, strong, readonly) NSArray *payments;
+/**
+ */
+@property (nullable, nonatomic, strong, readonly) NSString * note;
+/**
+ *  @brief Returns the terminal information in the case Card payment is present
+ **/
+-(WDTerminal* _Nullable)terminal;
+/**
+ */
+-(NSString *)saleTypeDescription;
+
+@end
+
+
 #pragma mark - Sale
 /**
  *  @class WDSale
@@ -94,19 +126,13 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *              Sale already processed (WDSaleResponse)
  **/
-@interface WDSale : WDObject <NSCoding>
+@interface WDSale : WDSaleCore
 /**
  */
 @property (nonatomic, strong, readonly) NSString * externalId;
 /**
  */
 @property (nullable, nonatomic, strong, readonly) NSArray <WDSaleItemCore *>* items;
-/**
- */
-@property (nullable, nonatomic, strong, readonly) NSString * note;
-/**
- */
-@property (nonatomic, strong) NSString * currency;
 /**
  */
 @property (nullable, nonatomic, strong, readonly) CLLocation *location;
@@ -121,21 +147,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, strong, readonly) NSDecimalNumber  *flatDiscount;
 /**
  */
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder NS_DESIGNATED_INITIALIZER;
-/**
- */
-- ( instancetype)init NS_DESIGNATED_INITIALIZER;
-/**
- */
 -(NSDecimalNumber*)totalSaleItemsQuantity;
-/**
- */
--(NSArray<WDPayment *> *)payments;
-/**
- *  @brief Returns the terminal information in the case Card payment is present
- **/
--(WDTerminal* _Nullable)terminal;
-
 /**
  */
 -(NSDecimalNumber * _Nullable)totalGross;
@@ -162,7 +174,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSDecimalNumber * _Nullable)totalDiscount;
 /**
  */
--(NSDecimalNumber * _Nullable)totalToPayAfterDiscount;
+-(NSDecimalNumber * _Nullable)totalNoSCTaxed:(BOOL)taxed;
 /**
  */
 -(NSDecimalNumber * _Nullable)totalCoupon;
@@ -193,23 +205,53 @@ NS_ASSUME_NONNULL_BEGIN
 //-(NSDecimalNumberHandler *)roundModeBankers;
 @end
 
-#pragma mark - AcceptSaleRequest
+//#pragma mark - Sale Request Core
+///**
+// *  @class WDSaleCore Request
+// *  @brief The base of a Sale Request to be processed.
+// **/
+//@interface WDSaleCore(Request)
+///**
+// * @brief EMV - Amount, Authorised (Numeric) (9f02) for card payment request
+// */
+//-(unsigned long long)authorizedAmountCard;
+///**
+// * @brief total amount to pay
+// */
+//-(NSDecimalNumber *)total;
+//@end
 
+#pragma mark - Referenced Sale Request
+/**
+ *  @class WDReferencedSaleRequest
+ *  @brief The Sale to be processed - as part of a multitender Sale.
+ * Initial Sale already created by previous WDSaleRequest
+ *  @discussion References the Original Sale to process another payment
+ **/
+@interface WDReferenceSaleRequest : WDSaleCore <WDSaleProcessing>
+/**
+ *  @brief Add another payment method to the original Sale to settle it
+ *  @param originalSaleId Unique identifier of the original Sale
+ **/
+-(instancetype)initWithOriginalSaleId:(NSString *)originalSaleId NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithOriginalSaleId:(NSString *)originalSaleId
+                                 note:(nullable NSString *)note NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithCoder:(NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+@end
+
+#pragma mark - Sale Request
 /**
  *  @class WDSaleRequest
  *  @brief The Sale to be processed
  *  @discussion Contains all necessary information to perform the Sale
  **/
-@interface WDSaleRequest : WDSale
-/**
- */
-@property (nonatomic) WDSaleType type;
+@interface WDSaleRequest : WDSale <WDSaleProcessing>
 /**
  */
 @property (nonatomic, strong) NSString *shopId;
 /**
  */
-@property (nonatomic, strong) NSString *cashierId;
+@property (nonatomic, strong) NSString *cashierId __attribute__((deprecated));
 /**
  */
 @property (nullable, nonatomic, strong) NSString *customerId;
@@ -226,11 +268,8 @@ NS_ASSUME_NONNULL_BEGIN
 +( instancetype)new __attribute__((unavailable("use initWithUniqueId")));
 /// Default NSObject init is unavailable
 -( instancetype)init __attribute__((unavailable("use initWithUniqueId")));
-///
-- ( instancetype)initWithCoder:(NSCoder *)coder NS_DESIGNATED_INITIALIZER;
-
 /**
- *  @brief Create new Sale
+ *  @brief Create new Sale Purchase
  *  @param uniqueId Unique identifier of this sale as understood by your backend system - one can use WDUtils.uniqueID to generate one
  *  This parameter is also conveyed to Payment Gateways [PE (FunctionID), EE(order_number)]
  *  @param location sale location (the gps location of the terminal at the time of payment)
@@ -241,13 +280,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param gratuityTaxRate tax rate of the gratuity items
  **/
 -(nullable instancetype)initWithUniqueId:(NSString * _Nullable)uniqueId
-                       location:(CLLocation* _Nullable)location
-                 inclusiveTaxes:(BOOL)inclusiveTaxes
-                       currency:(NSString * )currency
-                           note:(NSString * _Nullable)note
-                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate NS_DESIGNATED_INITIALIZER;
+                                location:(CLLocation* _Nullable)location
+                          inclusiveTaxes:(BOOL)inclusiveTaxes
+                                currency:(NSString * )currency
+                                    note:(NSString * _Nullable)note
+                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate ;
 /**
- *  @brief Create new Sale where no Items to be added later
+ *  @brief Create new Sale Purchase where no Items to be added later
  *  @param uniqueId Unique identifier of this sale as understood by your backend system - one can use WDUtils.uniqueID to generate one
  *  This parameter is also conveyed to Payment Gateways [PE (FunctionID), EE(order_number)]
  *  @param location sale location (the gps location of the terminal at the time of payment)
@@ -264,8 +303,9 @@ NS_ASSUME_NONNULL_BEGIN
                               saleAmount:(NSDecimalNumber *)saleAmount
                                 currency:(NSString * )currency
                                     note:(NSString * _Nullable)note
-                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate  NS_DESIGNATED_INITIALIZER;
-
+                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate  ;
+-(instancetype)initWithCoder:(NSCoder *)decoder;
+///
 /**
  *  @brief set Amount and tax rate - no items to be added later
  *  @param saleAmount Amount
@@ -288,10 +328,40 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param productId Sale item (a product) has a unique identifier in the inventory
  **/
 -(void)addSaleItem:(NSDecimalNumber *)unitPrice
-          quantity:(NSInteger)quantity
+          quantity:(NSDecimalNumber *)quantity
            taxRate:(NSDecimalNumber *)taxRate
    itemDescription:(nullable NSString *)itemDescription
-         productId:(NSString * __nullable)productId;
+         productId:(nullable NSString *)productId __deprecated_msg("use addSaleItem:quantity:taxRate:itemDescription:productId:externalProductId:");
+
+/**
+ *  @brief Add sale item to the sale
+ *  @param unitPrice Unit price
+ *  @param taxRate tax rate of the sale item (percentage e.g. tax rate of 10% = 10.0)
+ *  @param itemDescription sale item description
+ *  @param productId Sale item (a product) has an unique identifier in the inventory
+ *  @param externalProductId Sale item (a product) can have an unique identifier in the ERP
+ **/
+-(void)addSaleItem:(NSDecimalNumber *)unitPrice
+          quantity:(NSDecimalNumber *)quantity
+           taxRate:(NSDecimalNumber *)taxRate
+   itemDescription:(nullable NSString *)itemDescription
+         productId:(nullable NSString *)productId
+ externalProductId:(nullable NSString *)externalProductId;
+
+/**
+ *  @brief Add sale item to the sale
+ *  @param unitPrice Unit price
+ *  @param discountRate Item's Discount (percentage e.g. discount rate of 5% = 5.0, in range: 0.0 - 100.0)
+ *  @param taxRate tax rate of the sale item (percentage e.g. tax rate of 10% = 10.0)
+ *  @param itemDescription sale item description
+ *  @param productId Sale item (a product) has an unique identifier in the inventory
+ **/
+-(void)addSaleItem:(NSDecimalNumber *)unitPrice
+      discountRate:(NSDecimalNumber *)discountRate
+          quantity:(NSDecimalNumber *)quantity
+           taxRate:(NSDecimalNumber *)taxRate
+   itemDescription:(nullable NSString *)itemDescription
+         productId:(nullable NSString *)productId __deprecated_msg("use addSaleItem:discountRate:quantity:taxRate:itemDescription:productId:externalProductId:");
 
 /**
  *  @brief Add sale item to the sale
@@ -300,13 +370,15 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param taxRate tax rate of the sale item (percentage e.g. tax rate of 10% = 10.0)
  *  @param itemDescription sale item description
  *  @param productId Sale item (a product) has a unique identifier in the inventory
+ *  @param externalProductId Sale item (a product) can have an unique identifier in the ERP
  **/
 -(void)addSaleItem:(NSDecimalNumber *)unitPrice
       discountRate:(NSDecimalNumber *)discountRate
-          quantity:(NSInteger)quantity
+          quantity:(NSDecimalNumber *)quantity
            taxRate:(NSDecimalNumber *)taxRate
    itemDescription:(nullable NSString *)itemDescription
-         productId:(NSString * __nullable)productId;
+         productId:(nullable NSString *)productId
+ externalProductId:(nullable NSString *)externalProductId;
 
 /**
  *  @brief Add coupon to the sale - Customer buys coupon - to be added to the basket
@@ -340,43 +412,6 @@ NS_ASSUME_NONNULL_BEGIN
                 taxRate:(NSDecimalNumber *)taxRate;
 
 /**
- *  @brief Add Cash payment to the sale
- *  @param amount Cash amount
- **/
--(void)addCashPayment:(NSDecimalNumber * __nonnull)amount;
-
-/**
- *  @brief Add Card payment to the sale
- *  @param amount Card amount
- *  @param terminal Terminal to execute Card payment on
- **/
--(void)addCardPayment:(NSDecimalNumber * __nonnull)amount
-                 terminal:(WDTerminal *)terminal;
-
-/**
- *  @brief Add Coupon payment to the sale
- *  @param amount Coupon amount
- **/
--(void)addCouponPayment:(NSDecimalNumber * __nonnull)amount
-                   couponId:(NSString *__nonnull)couponId
-                    brandId:(NSString *__nonnull)brandId;
-/**
- *  @brief Add Alipay payment to the sale
- *  @param amount Alipay amount
- *  @param consumerId Alipay consumer id
- **/
--(void)addAlipayPayment:(NSDecimalNumber * __nonnull)amount
-                 consumerId:(NSString *__nonnull)consumerId;
-
-/**
- *  @brief Add WeChat payment to the sale
- *  @param amount Alipay amount
- *  @param consumerId Alipay consumer id
- **/
--(void)addWeChatPayment:(NSDecimalNumber * __nonnull)amount
-             consumerId:(NSString *__nonnull)consumerId;
-
-/**
  *  @brief Remove the specified item formthe items list - Sale recalculation will be performed automatically
  *  @param itemToRemove item to remove
  **/
@@ -390,32 +425,10 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 -(void)recalculate;
 /**
- */
--(NSString *)saleTypeDescription;
-/**
- * @brief EMV - Amount, Authorised (Numeric) (9f02) for card payment request
- */
--(unsigned long long)authorizedAmountCard;
-/**
  * @brief Gratuity amount as unsigned integer
  */
 -(NSUInteger)gratuityIntAmount;
-/**
- * @brief Returns the Card payment if present on this Sale request
- */
--(WDPaymentRequestCard *)requestedCardPayment;
-/**
- * @brief Returns the Coupon payment if present on this Sale request
- */
--(WDPaymentRequestCoupon *)requestedCouponPayment;
-/**
- * @brief Returns the Cash payment if present on this Sale request
- */
--(WDPaymentRequestCash *)requestedCashPayment;
-/**
- * @brief Returns the Alipay payment if present on this Sale request
- */
--(WDPaymentRequestAlipay *)requestedAlipayPayment;
+
 /**
  * @brief Remove service charge item from sale
  */
@@ -428,31 +441,109 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Remove flat discount item from sale
  */
 -(void)removeFlatDiscount;
-/**
- * @brief Remove card payment from sale
- */
--(void)removeCardPayment;
-/**
- * @brief Remove cash payment from sale
- */
--(void)removeCashPayment;
-/**
- * @brief Remove coupon payment from sale
- */
--(void)removeCouponPayment;
-/**
- * @brief Remove Alipay payment from sale
- */
--(void)removeAlipayPayment;
-/**
- * @brief Remove all payments from sale - add payments afterwards using addXXXPayment
- */
--(void)resetPayments;
+
 /// does this Sale Request have some items which can be refunded
 -(BOOL)hasReturnableItems;
 @end
 
-#pragma mark - AcceptSaleResponse
+#pragma mark - Sale Request  - Purchase
+@interface WDSaleRequestPurchase : WDSaleRequest
+/**
+ *  @brief Create new Sale Purchase
+ *  @param uniqueId Unique identifier of this sale as understood by your backend system - one can use WDUtils.uniqueID to generate one
+ *  This parameter is also conveyed to Payment Gateways [PE (FunctionID), EE(order_number)]
+ *  @param location sale location (the gps location of the terminal at the time of payment)
+ *  @param inclusiveTaxes prices are tax inclusive
+ *  @param currency sale currency
+ *  @param note sale description
+ *  This parameter is also conveyed to Payment Gateways [PE (Usage), EE(descriptor)]
+ *  @param gratuityTaxRate tax rate of the gratuity items
+ **/
+-(nullable instancetype)initWithUniqueId:(NSString * _Nullable)uniqueId
+                                location:(CLLocation* _Nullable)location
+                          inclusiveTaxes:(BOOL)inclusiveTaxes
+                                currency:(NSString * )currency
+                                    note:(NSString * _Nullable)note
+                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate NS_DESIGNATED_INITIALIZER;
+/**
+ *  @brief Create new Sale Purchase where no Items to be added later
+ *  @param uniqueId Unique identifier of this sale as understood by your backend system - one can use WDUtils.uniqueID to generate one
+ *  This parameter is also conveyed to Payment Gateways [PE (FunctionID), EE(order_number)]
+ *  @param location sale location (the gps location of the terminal at the time of payment)
+ *  @param inclusiveTaxes prices are tax inclusive
+ *  @param saleAmount The total Sale amount
+ *  @param currency sale currency
+ *  @param note sale description
+ *  This parameter is also conveyed to Payment Gateways [PE (Usage), EE(descriptor)]
+ *  @param gratuityTaxRate tax rate of the gratuity items
+ **/
+-(nullable instancetype)initWithUniqueId:(NSString * _Nullable)uniqueId
+                                location:(CLLocation* _Nullable)location
+                          inclusiveTaxes:(BOOL)inclusiveTaxes
+                              saleAmount:(NSDecimalNumber *)saleAmount
+                                currency:(NSString * )currency
+                                    note:(NSString * _Nullable)note
+                         gratuityTaxRate:(NSDecimalNumber * _Nullable) gratuityTaxRate  NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithCoder:(NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+
+@end
+
+#pragma mark - Sale Request - Return
+@interface WDSaleRequestReturn : WDSaleRequest
+
+/**
+ *  @brief Create Sale Return
+ *  @param saleId Original Sale identifier as understood by Switch backend system
+ *  @param externalId Refund Id as understood by external system
+ *  @param location sale location (the gps location of the terminal at the time of payment)
+ *  @param inclusiveTaxes prices are tax inclusive
+ *  @param currency sale currency
+ *  @param note sale description
+ *  This parameter is also conveyed to Payment Gateways [PE (Usage), EE(descriptor)]
+ **/
+-(nullable instancetype)initWithOriginalSaleId:(NSString * _Nullable)saleId
+                                    externalId:(NSString *_Nullable)externalId
+                                      location:(CLLocation* _Nullable)location
+                                inclusiveTaxes:(BOOL)inclusiveTaxes
+                                      currency:(NSString * )currency
+                                          note:(NSString * _Nullable)note NS_DESIGNATED_INITIALIZER;
+/**
+ *  @brief Create new Sale where no Items to be added later
+ *  @param saleId Original Sale identifier as understood by Switch backend system
+ *  @param externalId Refund Id as understood by external system
+ *  @param location sale location (the gps location of the terminal at the time of payment)
+ *  @param inclusiveTaxes prices are tax inclusive
+ *  @param saleAmount The total Sale amount
+ *  @param currency sale currency
+ *  @param note sale description
+ *  This parameter is also conveyed to Payment Gateways [PE (Usage), EE(descriptor)]
+ **/
+-(nullable instancetype)initWithOriginalSaleId:(NSString * _Nullable)saleId
+                                    externalId:(NSString *_Nullable)externalId
+                                      location:(CLLocation* _Nullable)location
+                                inclusiveTaxes:(BOOL)inclusiveTaxes
+                                    saleAmount:(NSDecimalNumber *)saleAmount
+                                      currency:(NSString * )currency
+                                          note:(NSString * _Nullable)note NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithCoder:(NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+
+@end
+
+#pragma mark - Sale Request - Refund
+@interface WDSaleRequestRefund : WDSaleRequest
+/**
+ *  @brief Create new Sale Refund
+ *  @param saleId Original Sale identifier as understood by Switch backend system
+ *  @param externalId Refund Id as understood by external system
+ *  @param note Refund description
+ **/
+-(nullable instancetype)initWithOriginalSaleId:(NSString *)saleId
+                                    externalId:(NSString *_Nullable)externalId
+                                          note:(NSString * _Nullable)note NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithCoder:(NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+@end
+
+#pragma mark - Sale Response
 /**
  *  @class WDSaleResponse
  *  @brief The processed Sale
@@ -460,16 +551,13 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 @interface WDSaleResponse : WDSale
 /**
- */
-@property (nonatomic,readonly) WDSaleType type;
-/**
  * @brief Sale internal unique ID Set by backend after processing the Sale
  */
-@property (nonatomic, strong,readonly) NSString *internalId;
+@property (nonatomic, strong,readonly) NSString *internalId __deprecated_msg("will become SaleCore.saleId");
 /**
  * @brief Original Sale internal unique ID (In the case of Returned sale) Set by backend after processing the Sale
  */
-@property (nonatomic, strong,readonly) NSString *originalSaleId;
+@property (nullable, nonatomic, strong,readonly) NSString *originalSaleId;
 /**
  * @brief Sale status Set by backend after processing the Sale
  */
@@ -499,29 +587,41 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong,readonly) NSString *cashRegisterId;
 /**
+ * @brief Shift ID as set during the payment process - this is linked to the cash drawer and the shifts of the cashier
+ */
+@property (nonatomic, strong,readonly) NSString *shiftId;
+/**
  * @brief Customer ID as set during the payment process - the customer of the shop
  */
 @property (nonatomic, strong,readonly) NSString *customerId;
+/**
+ * @brief multitender indicates the sales contains more than one payment method
+ */
+@property (nonatomic, assign) BOOL multitender;
+/**
+ * @brief clientInfo Information about the client system which initiated this Sale
+ */
+@property (nonatomic, strong, readonly) WDClientInformation *clientInformation;
 /**
  * @brief array of Sale returns in the case this sale has status of RETURNED
  */
 @property (nonatomic, strong, readonly) NSArray <WDSaleResponse *>* returns;
 /**
- * @brief After the SaWDPaymentDetailCardle was processed by backend and Card Payment was requested
+ * @brief After the Sale was processed by backend and Card Payment was requested
  */
--(WDPaymentDetailCard *)processedCardPayment;
+-(WDPaymentDetailCard *)processedCardPayment __deprecated_msg("use processedCardPayments");
 /**
  * @brief After the Sale was processed by backend and Cash Payment was requested
  */
--(WDPaymentDetail *)processedCashPayment;
+-(WDPaymentDetail *)processedCashPayment __deprecated_msg("use processedCashPayments");
 /**
  * @brief After the Sale was processed by backend and Alipay Payment was requested
  */
--(WDPaymentDetailAlipay *)processedAlipayPayment;
+-(WDPaymentDetailAlipay *)processedAlipayPayment __deprecated_msg("use processedAlipayPayments");
 /**
  * @brief After the Sale was processed by backend and WeChat Payment was requested
  */
--(WDPaymentDetailWeChat *)processedWeChatPayment;
+-(WDPaymentDetailWeChat *)processedWeChatPayment __deprecated_msg("use processedWeChatPayments");
 /**
  * @brief Merchant receipt unique id
  */
@@ -534,6 +634,28 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Returns the most onerous status of all payments composing this sale
  */
 -(WDPaymentState)mostOnerousStatus;
+
+/**
+ * @brief All the Card payments processed as part of this Sale
+ */
+-(NSArray <WDPaymentDetailCard *>*)processedCardPayments ;
+/**
+ * @brief All the Cash payments processed as part of this Sale
+ */
+-(NSArray <WDPaymentDetailCash *>*)processedCashPayments ;
+/**
+ * @brief All the Alipay payments processed as part of this Sale
+ */
+-(NSArray <WDPaymentDetailAlipay *>*)processedAlipayPayments ;
+/**
+ * @brief All the WeChat payments processed as part of this Sale
+ */
+-(NSArray <WDPaymentDetailWeChat *>*)processedWeChatPayments ;
+
+/**
+ * @brief All payments that can be subject to reversal - curently with the Completed status
+ */
+-(NSArray *)reversiblePayments;
 
 /**
  * @brief Default Design of the Sale Receipt
@@ -594,9 +716,10 @@ NS_ASSUME_NONNULL_BEGIN
     completion:(ReceiptCompletion)completion;
 
 /**
- * @brief Returns all data necessary for creating the Sale Return
+ * @brief Returns all data necessary for creating the Sale Return - single payment only
+ * For multi tender sales you need to create the Sale Returns manually
  */
--(WDSaleRequest * _Nullable)saleReturn;
+-(WDSaleRequestReturn * _Nullable)saleReturn;
 /**
  * @brief Sets cashierId when missing, for example, partial returns
  */
@@ -609,6 +732,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @brief Indicates if a sale is reversible
  **/
 -(BOOL)isReversible;
+/**
+ * @brief Create Reference Sale Request from this Sale - To be used for multi-tender Sale where additional payments can be added to the original Sale
+ */
+-(WDReferenceSaleRequest *)referenceSaleRequest;
+/**
+ */
+- (NSDecimalNumber *)totalPaid;
 @end
 
 #pragma mark - Sale helpers

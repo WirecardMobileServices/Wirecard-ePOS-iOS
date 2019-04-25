@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WDObject.h"
+
 NS_ASSUME_NONNULL_BEGIN
 /**
  *  @brief WDPaymentMethod
@@ -61,49 +62,110 @@ typedef NS_ENUM(NSInteger, WDTransactionType) {
  **/
 typedef NS_ENUM(NSUInteger, WDPaymentState) {
     WDPaymentStateUnknown=0,
-    WDPaymentStateNotNeeded,
-    WDPaymentStateSkipped,
-    WDPaymentStateApproved,
-    WDPaymentStateCompleted,
-    WDPaymentStateCaptured,
     WDPaymentStateReversed,
-    WDPaymentStateRefunded,
-    WDPaymentStatePartiallyRefunded,
-    WDPaymentStateInitialized,
-    WDPaymentStateIncomplete,
-    WDPaymentStateDeclined,
+    WDPaymentStateCompleted,
     WDPaymentStateRejected,
     WDPaymentStateFailed,
-    WDPaymentStateFailedMin,
-    WDPaymentStateUnconfirmed
+    WDPaymentStateFailedIntervene,
+    WDPaymentStateIncomplete,
+    WDPaymentStateRefunded,
+    WDPaymentStateInitialized,
+    WDPaymentStateApproved,
+    WDPaymentStateUserPaying,
+    WDPaymentStateCaptured
 };
 
 /**
- *  @class WDPayment
- *  @brief Payment Request - contains the information about payment method, transaction type and amount
+ *  @class WDPayment - the base class for various types of Requests [Purchase, Refund, Reversal]
+ *  @brief Payment  - contains the information about payment method, transaction type
  **/
-@interface WDPayment : WDObject<NSCoding>
+@interface WDPaymentCore : WDObject<NSCoding>
 /// Default NSObject init is unavailable
-- (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
-+ (nonnull instancetype)new __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
-
-/**
- */
-- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
-                          paymentMethod:(WDPaymentMethod)paymentMethod
-                        transactionType:(WDTransactionType)transactionType NS_DESIGNATED_INITIALIZER;
-/**
- */
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init __attribute__((unavailable("manual initialization not allowed")));
++ (nonnull instancetype)new __attribute__((unavailable("manual initialization not allowed")));
 /**
  */
 @property (nonatomic, readonly) WDPaymentMethod paymentMethod;
 /**
  */
 @property (nonatomic, readonly) WDTransactionType transactionType;
+@end
+
+/**
+ *  @class WDPaymentRequest - Payment Request to be included in the Sale
+ *  @brief Payment Request - contains the information about payment method, transaction type and amount
+ **/
+@interface WDPayment : WDPaymentCore
 /**
  */
-@property (nonnull, nonatomic, strong) NSDecimalNumber *amount;
+@property (nonnull, nonatomic, readonly) NSDecimalNumber *amount;
 
 @end
+
+/**
+ *  @class WDPaymentRefund - Payment Refund to be used in the Sale Refund
+ *  @brief Payment Refund - contains the information about the original Payment to be refunded
+ **/
+@interface WDPaymentRefund : WDPayment
+/**
+ */
+@property (nonnull, nonatomic, readonly) NSString *originalPaymentId;
+@end
+
+/**
+ *  @class WDPaymentRefundCard - Card Payment Refund
+ **/
+@interface WDPaymentRefundCard : WDPaymentRefund
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+@end
+/**
+ *  @class WDPaymentReverseCash - Cash Payment Refund
+ **/
+@interface  WDPaymentRefundCash : WDPaymentRefund
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+@end
+/**
+ *  @class WDPaymentReverseWeChat - WeChat Payment Refund
+ **/
+@interface  WDPaymentRefundWeChat : WDPaymentRefund
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+@end
+/**
+ *  @class WDPaymentReverseAlipay - Alipay Payment Refund
+ **/
+@interface  WDPaymentRefundAlipay : WDPaymentRefund
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+@end
+
+/**
+ *  @class WDPaymentReverse - Payment Reversal to be used in the Sale Reversal
+ *  @brief Payment Request - contains the information about the original Payment to be reversed
+ **/
+@interface WDPaymentReverse : WDPaymentCore
+/**
+ */
+@property (nonnull, nonatomic, readonly) NSString *originalPaymentId;
+
+@end
+
+/**
+ *  @class WDPaymentReverseCard - Card Payment Reversal
+ **/
+@interface WDPaymentReverseCard : WDPaymentReverse @end
+/**
+ *  @class WDPaymentReverseCash - Cash Payment Reversal
+ **/
+@interface  WDPaymentReverseCash : WDPaymentReverse @end
+/**
+ *  @class WDPaymentReverseWeChat - WeChat Payment Reversal
+ **/
+@interface  WDPaymentReverseWeChat : WDPaymentReverse @end
+/**
+ *  @class WDPaymentReverseAlipay - Alipay Payment Reversal
+ **/
+@interface  WDPaymentReverseAlipay : WDPaymentReverse @end
 NS_ASSUME_NONNULL_END

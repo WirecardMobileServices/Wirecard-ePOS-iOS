@@ -73,7 +73,7 @@ class UserTestsSwift: BaseTestsSwift
             NSLog("\n\t\t    [%@ %@] Not to run in automated tests 🤖",file.deletingPathExtension , #function);
             return
             
-        #endif
+        #else
         expectation = self.expectation(description: "Change Password")
         let changePassword : WDChangePassword = WDChangePassword()
         //NOTE: To test password change functionality please provide below your own old password and your new password instead of the dummy strings
@@ -100,6 +100,7 @@ class UserTestsSwift: BaseTestsSwift
         {
             XCTFail("Failed to change password.")
         }
+        #endif
     }
     
 }

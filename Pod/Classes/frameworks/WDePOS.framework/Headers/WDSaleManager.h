@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface WDSaleManager : NSObject
 
+- (void)pay:(WDPaymentConfig* )saleConfiguration
+   delegate:(id<WDPaymentDelegate>)delegate __deprecated_msg("Please use pay:withDelegate:");
 /**
  @brief Start the payment process
  
@@ -32,11 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
  @b cardApplication @@b  informs that an application selection is needed with the chip card inserted.
  
  @b completion @@b that will be called at the very end of payment flow. It provides an Saleobject (that may be nil if unauthorised) or a descriptive error
- @param saleConfiguration Configuration to be used to perform this payment
+ @param saleRequestConfiguration Configuration to be used to perform this Sale
  @param delegate to receive the events from the payment flow
  **/
-- (void)pay:(WDPaymentConfig* )saleConfiguration
-   delegate:(id<WDPaymentDelegate>)delegate;
+- (void)pay:(WDSaleRequestConfiguration* )saleRequestConfiguration
+   withDelegate:(id<WDPaymentDelegate>)delegate;
 
 /**
  *  @brief Cancel the payment flow ONLY if the situation/terminal allows it. For Miura terminals, this function works anytime. For other terminals (ie Spire ones), it ONLY works when waiting signature input -- the call will be IGNORED by the hardware otherwise, as they are designed to accept only cancellation through keypad.
@@ -78,15 +80,90 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param message detailed information to be set for this action
  *  @param completion Block executed at the end of the  method
  */
--(void)reverseSale:(NSString * _Nonnull)internalId cashRegisterId:(NSString * _Nullable)cashRegisterId message:(NSString *_Nullable)message completion:(SaleUpdateCompletion _Nonnull)completion;
+-(void)reverseSale:(NSString * _Nonnull)internalId
+    cashRegisterId:(NSString * _Nullable)cashRegisterId
+           message:(NSString *_Nullable)message
+        completion:(SaleUpdateCompletion _Nonnull)completion __deprecated_msg("Please use reverseSale:message:completion:");
+
+
 
 /**
- *  @brief Refund the sale
- *  @param sale original sale to refund
+ *  @brief Reverse the Sale - All payments will be Reversed and Sale will be flagged as Cancelled
+ *  @param internalId  Sale id - internal identificator of the original Sale
  *  @param message detailed information to be set for this action
  *  @param completion Block executed at the end of the  method
  */
+-(void)reverseSale:(NSString * _Nonnull)internalId
+           message:(NSString *_Nullable)message
+        completion:(SaleUpdateCompletion _Nonnull)completion ;
+
+/**
+ *  @brief Reverse the Sale - The specific payment will be Reversed.
+ *         After all Payments are Reversed the Sale can be cancelled by using cancelSale:message:completion
+ *  @param internalId unique sale id - internal identificator
+ *  @param message detailed information to be set for this action
+ *  @param externalId The Reversal ID as known by the external system
+ *  @param payment Payment to Reverse
+ *  @param completion Block executed at the end of the  method
+ */
+-(void)reverseSale:(NSString * _Nonnull)internalId
+           message:(NSString *_Nullable)message
+        externalId:(NSString *_Nullable)externalId
+           payment:(WDPaymentReverse *)payment
+        completion:(SaleUpdateCompletion _Nonnull)completion ;
+
+/**
+ *  @brief Cancel the Sale where all payments were Reversed previously by using reverseSale:message:externalId:payment:completion
+ *  @param internalId unique sale id - internal
+ *  @param message detailed information to be set for this action
+ *  @param completion Block executed at the end of the  method
+ */
+-(void)cancelSale:(NSString * _Nonnull)internalId
+          message:(NSString *_Nullable)message
+        completion:(SaleUpdateCompletion _Nonnull)completion ;
+
+/**
+ *  @brief Refund the Sale - For multitender may need to be called multiple times for each Payment and related items list you wish to return
+ *  @param sale The Original sale to refund
+ *  @param message Detailed information to be set for this action
+ *  @param completion Block executed at the end of the  method
+ */
 -(void)refundSale:(WDSaleRequest * )sale
+          message:(NSString *)message
+       completion:(SaleUpdateCompletion )completion;
+
+/**
+ *  @brief Refund the Sale - The specific payment will be Refunded.
+ *         Applicable for Sale in Unconfirmed or Failed Intervene state
+ *  @param internalId The Original Sale id - internal identificator
+ *  @param message detailed information to be set for this action
+ *  @param externalId The Refund ID as known by the external system
+ *  @param payment Payment to Refund
+ *  @param completion Block executed at the end of the  method
+ */
+-(void)refundSale:(NSString * _Nonnull)internalId
+           message:(NSString *_Nullable)message
+        externalId:(NSString *_Nullable)externalId
+           payment:(WDPaymentRefund *)payment
+        completion:(SaleUpdateCompletion _Nonnull)completion ;
+
+/**
+ *  @brief Return content from a sale
+ *  @param sale original sale to return rom
+ *  @param message detailed information to be set for this action
+ *  @param completion Block executed at the end of the  method
+ */
+-(void)returnSale:(WDSaleRequest * )sale
+          message:(NSString *)message
+       completion:(SaleUpdateCompletion )completion;
+
+/**
+ *  @brief Fail the Sale
+ *  @param internalId original sale Id to Fail
+ *  @param message detailed information to be set for this action
+ *  @param completion Block executed at the end of the  method
+ */
+-(void)failSale:(NSString * )internalId
           message:(NSString *)message
        completion:(SaleUpdateCompletion )completion;
 

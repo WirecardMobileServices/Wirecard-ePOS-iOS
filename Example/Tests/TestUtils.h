@@ -12,8 +12,6 @@
 
 
 @interface TestUtils : NSObject
-+(NSString *)basicAuthenticationFromConfig;
-+(NSDictionary *)defaultWDEnvironmentPublicTest;
 +(NSString *)uniqueID;
 + (UIImage *) signatureImageFromText:(NSString *)signatureText;
 + (UIImage *) signatureImageFromText:(NSString *)signatureText withSize:(CGSize)imageSize;

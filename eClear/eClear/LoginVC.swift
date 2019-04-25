@@ -40,21 +40,21 @@ class LoginVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, U
     */
     
     @IBAction func onTapLogin(_ sender: Any) {
-//        if self.tUsername.text == "" || self.tPassword.text == ""{
-//            self.app.showError("Login", text: "Username and Password needs to be provided")
-//        }
-//        else{
+        if self.tUsername.text == "" || self.tPassword.text == ""{
+            self.app.showError("Login", text: "Username and Password needs to be provided")
+        }
+        else{
             let arrBackend:NSArray = self.app.backends! as NSArray
-            let backend:NSDictionary = arrBackend.object(at: 1) as! NSDictionary
+            let backend:NSDictionary = arrBackend.object(at: picker.selectedRow(inComponent: 0)) as! NSDictionary
             let selectedBackend = (backend.value(forKey: "url") as! String)
             
 
-            self.app.loginUser("jpulik", password: "wirecard", backend: selectedBackend ,completion:{ (success) in
+            self.app.loginUser(self.tUsername.text, password: self.tPassword.text, backend: selectedBackend ,completion:{ (success) in
                 if(success == true){
                     self.dismiss(animated: true, completion: nil)
                 }
             })
-//        }
+        }
     }
     
     // MARK: - Picker -

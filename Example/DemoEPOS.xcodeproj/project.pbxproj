@@ -16,6 +16,7 @@
 		5D185BEE1E715226005430DA /* CashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D185BED1E715226005430DA /* CashTests.m */; };
 		5D185BF21E71550B005430DA /* SaleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D185BF11E71550B005430DA /* SaleHelper.m */; };
 		5D185BF31E71572A005430DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D63357D1E704D870008810F /* CoreLocation.framework */; };
+		5D2DF12721A2DF8F00E16118 /* MultitenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2DF12621A2DF8E00E16118 /* MultitenderTests.swift */; };
 		5D2E8FF81C89C9C80062A2F2 /* fakereceipt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E8FF71C89C9C80062A2F2 /* fakereceipt.png */; };
 		5D3AFCF71E70044C00D0FC56 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AFCF51E70044C00D0FC56 /* StartViewController.m */; };
 		5D4DD0191F2773E500ACDB8E /* StarIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4DD0181F2773E500ACDB8E /* StarIOTests.swift */; };
@@ -79,6 +80,7 @@
 		5D185BED1E715226005430DA /* CashTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashTests.m; sourceTree = "<group>"; };
 		5D185BF01E71550B005430DA /* SaleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaleHelper.h; path = ../Tests/SaleHelper.h; sourceTree = "<group>"; };
 		5D185BF11E71550B005430DA /* SaleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaleHelper.m; path = ../Tests/SaleHelper.m; sourceTree = "<group>"; };
+		5D2DF12621A2DF8E00E16118 /* MultitenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitenderTests.swift; sourceTree = "<group>"; };
 		5D2E8FF71C89C9C80062A2F2 /* fakereceipt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakereceipt.png; sourceTree = "<group>"; };
 		5D3AFCF41E70044C00D0FC56 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		5D3AFCF51E70044C00D0FC56 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5D2DF12621A2DF8E00E16118 /* MultitenderTests.swift */,
 				5D5FCD6E1F540F8E0006EA11 /* BaseTests.h */,
 				5D5FCD6C1F540F290006EA11 /* BaseTests.m */,
 				5D5FCD6A1F5407280006EA11 /* BaseTests.swift */,
@@ -322,6 +325,7 @@
 				C05089DE1BBD599200E30786 /* Frameworks */,
 				C05089DF1BBD599200E30786 /* Resources */,
 				9666BF3F7196442BE4E613BF /* [CP] Embed Pods Frameworks */,
+				3058720D02DB0CBE9F391FF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +346,7 @@
 				C0C640361AE93287007A6D1A /* Frameworks */,
 				C0C640371AE93287007A6D1A /* Resources */,
 				1E04EFBD703FD29BE90C5761 /* [CP] Embed Pods Frameworks */,
+				7FA18FEA03D7254CCE34AD35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -434,15 +439,9 @@
 				"${BUILT_PRODUCTS_DIR}/GRMustache/GRMustache.framework",
 				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JRSwizzle/JRSwizzle.framework",
-				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Spire_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Stario_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUI.framework",
+				"${BUILT_PRODUCTS_DIR}/WDePOS/WDePOS.framework",
 				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 			);
@@ -454,21 +453,30 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRMustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRSwizzle.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spire_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stario_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOSUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePosDemo/Pods-ePosDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3058720D02DB0CBE9F391FF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4D835D1237BEC3BE56C36644 /* [CP] Check Pods Manifest.lock */ = {
@@ -507,6 +515,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7FA18FEA03D7254CCE34AD35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ePosDemo/Pods-ePosDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9666BF3F7196442BE4E613BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -520,15 +543,9 @@
 				"${BUILT_PRODUCTS_DIR}/GRMustache/GRMustache.framework",
 				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JRSwizzle/JRSwizzle.framework",
-				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Spire_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/Stario_SDK.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUI.framework",
+				"${BUILT_PRODUCTS_DIR}/WDePOS/WDePOS.framework",
 				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 			);
@@ -540,15 +557,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRMustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRSwizzle.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spire_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stario_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOSUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 			);
@@ -578,6 +589,7 @@
 				5D53A4F01E797D870054D794 /* DatecsPrinterTest.m in Sources */,
 				5D5FCD6D1F540F290006EA11 /* BaseTests.m in Sources */,
 				5DCB4B9F1E72E7CF008ED498 /* UserTests.m in Sources */,
+				5D2DF12721A2DF8F00E16118 /* MultitenderTests.swift in Sources */,
 				5DCB4BA31E72E84A008ED498 /* SpireTests.m in Sources */,
 				5D185BF21E71550B005430DA /* SaleHelper.m in Sources */,
 				5DDD4E911F27611000B2CA99 /* UserTests.swift in Sources */,
@@ -844,6 +856,7 @@
 					"DEV_MODE_ENABLED=1",
 				);
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"$(PODS_ROOT)/WDePos/\"/**",
@@ -910,6 +923,7 @@
 					"DEV_MODE_ENABLED=1",
 				);
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"$(PODS_ROOT)/WDePos/\"/**",

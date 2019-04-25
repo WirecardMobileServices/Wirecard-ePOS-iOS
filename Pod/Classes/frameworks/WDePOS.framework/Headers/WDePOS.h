@@ -33,6 +33,7 @@ FOUNDATION_EXPORT const unsigned char WDePOSVersionString[];
 #import <WDePOS/WDPayment.h>
 #import <WDePOS/WDPaymentDetail.h>
 #import <WDePOS/WDPaymentDetailCard.h>
+#import <WDePOS/WDPaymentDetailCash.h>
 #import <WDePOS/WDPaymentDetailCoupon.h>
 #import <WDePOS/WDPaymentDetailAlipay.h>
 #import <WDePOS/WDPaymentRequestCard.h>

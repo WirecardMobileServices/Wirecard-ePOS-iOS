@@ -1,5 +1,6 @@
 binary "./WDePOS.json"
 binary "./WDePOSUI.json"
+binary "./WDBrand.json"
 binary "./Datecs_SDK.json"
 binary "./Socket_SDK.json"
 binary "./Spire_SDK.json"
@@ -10,7 +11,7 @@ binary "./JRSwizzle.json"
 binary "./ZipArchive.json"
 github "granoff/Lockbox"
 github "evsinev/BerTlv"
-github "CocoaLumberjack/CocoaLumberjack" ~> 3.2.1
+github "CocoaLumberjack/CocoaLumberjack" ~> 3.5.2
 github "groue/GRMustache" "master"
 github "AFNetworking/AFNetworking" ~> 3.0
 github "Mantle/Mantle" ~> 2.0

@@ -49,7 +49,8 @@ class SalesTestsSwift: BaseTestsSwift
                                        NSNumber.init(value: WDSaleState.returned.rawValue),
                                        NSNumber.init(value: WDSaleState.canceled.rawValue))
         let types = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDSaleType.purchase.rawValue))
-        let paymentMethods = [NSNumber.init(value: WDPaymentMethod.cash.rawValue)]
+        let paymentMethods = [NSNumber].init(arrayLiteral:NSNumber.init(value: WDPaymentMethod.cash.rawValue))
+        
         let query : WDSalesQuery = WDSalesQuery.init(page: 0,
                                                                  pageSize: 20,
                                                                  orderBy: .createdAt,
