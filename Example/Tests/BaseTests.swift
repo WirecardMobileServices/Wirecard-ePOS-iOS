@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import WDePOS
+import CocoaLumberjack
 
 class PaymentHandler : NSObject, WDPaymentDelegate {
     var completion: ((_ transaction: WDSaleResponse?, _ error: Error?) -> Void)?

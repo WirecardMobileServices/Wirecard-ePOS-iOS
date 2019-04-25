@@ -1,6 +1,36 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.7.0] - 2019-04-17 
+
+### Added
+- Multitender support: Combining payment methods into one Sale
+- Referenced sale request: References the Original Sale to process another payment
+- Product Stock management
+
+### Deprecated
+- WDSaleRequest: can now contain only one payment method 
+- WDPaymentConfig: use WDSaleRequestConfiguration
+- WDSaleManager
+	* `pay:delegate:` use `pay:withDelegate:` - uses the new WDSaleRequestConfiguration instead of deprecated WDPaymentConfig
+	* `reverseSale:cashRegisterId:message:completion:` use `reverseSale:message:completion:`
+	* `addSaleItem:quantity:taxRate:itemDescription:productId:` use `addSaleItem:quantity:taxRate:itemDescription:productId:externalProductId`
+	* `addSaleItem:discountRate:quantity:taxRate:itemDescription:productId:` use `addSaleItem:discountRate:quantity:taxRate:itemDescription:productId:externalProductId:`
+	* processedCashPayment changed to processedCashPayments - returns array of the processed cash payments now
+	* processedCardPayment changed to processedCardPayments - returns array of the processed card payments now
+	* processedAlipayPayment changed to processedAlipayPayments - returns array of the processed Alipay payments now
+	* processedWeChatPayment changed to processedWeChatPayments - returns array of the processed WeChat payments now
+- WDSaleResponse's property internalId is now saleId
+- WDSaleRequest's property cashierId is deprecated
+
+### Changed
+- Detection of POS entry mode for Contactless card transaction - POS entry mode value based on another data that could be provided by Spm2 terminal
+- Track all transactions Declined Offline by terminal on backend
+
+### Fixed
+- Tax summary and Service charge calculations on the receipt
+
+
 ## [2.6.0] - 2018-11-07 
 
 ### Changed

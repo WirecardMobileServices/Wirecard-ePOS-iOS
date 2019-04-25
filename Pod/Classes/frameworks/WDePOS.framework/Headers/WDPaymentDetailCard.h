@@ -11,7 +11,7 @@
  *  @class WDPaymentDetailCard
  *  @brief Card Payment Detail - contains the information specific to Card payment
  **/
-@interface WDPaymentDetailCard : WDPaymentDetail
+@interface WDPaymentDetailCard : WDPaymentDetail<WDPaymentDetailRefundable, WDPaymentDetailReversable>
 /**
  */
 @property (nullable, nonatomic, retain) NSString *cardHolderName;
@@ -66,4 +66,8 @@
 /**
  */
 @property (nullable, nonatomic, retain) NSString *issuerScript;
+/// Reversal to be used in Sale Reverse - to reverse this payment
+-(WDPaymentReverseCard * _Nullable )reversal;
+/// Refund to be used in Sale Refund - to refund this payment
+-(WDPaymentRefundCard * _Nullable)refund;
 @end

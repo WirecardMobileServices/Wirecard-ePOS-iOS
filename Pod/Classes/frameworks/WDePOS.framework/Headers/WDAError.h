@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  @brief WDSError
  *  @discussion Enumerator of acceptSDK errors
@@ -126,6 +129,7 @@ typedef NS_ENUM(NSInteger, WDError) {
     WDErrorMissingMerchant, //This happens when a System Admin, Partner or any role without merchant tries to log in
     WDErrorAnotherTransactionIsInProgress,
     WDErrorTerminalApplicationDoesNotExist,
+    WDErrorPaymentFailed,
     // Keep it the last:
     WDErrorCounter
 };
@@ -177,7 +181,7 @@ typedef NS_ENUM(NSInteger, WDError) {
  *  @param underlyingError underlying error
  *  @return Error object
  **/
-+(NSError *)error:(WDError)errorCode withDescription:(NSString*)description andReason:(NSString *)reason  andUnderlyingError:(NSError *)underlyingError;
++(NSError *)error:(WDError)errorCode withDescription:(nullable NSString*)description andReason:(nullable NSString *)reason andUnderlyingError:(nullable NSError *)underlyingError;
     
 /**
  *  @brief Get the default description linked to this error code
@@ -199,3 +203,6 @@ typedef NS_ENUM(NSInteger, WDError) {
  **/
 +(void)underlyingReasons:(NSError *)reason reasons:(NSMutableArray *)reasons;
 @end
+
+NS_ASSUME_NONNULL_END
+

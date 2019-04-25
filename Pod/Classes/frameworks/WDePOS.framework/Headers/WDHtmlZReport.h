@@ -82,7 +82,7 @@
 @interface WDHtmlZReport:NSObject
 - (nonnull instancetype)init __attribute__((unavailable("use initWithShift:cashRegister:")));
 + (nonnull instancetype)new __attribute__((unavailable("use initWithShift:cashRegister:")));
--(nonnull instancetype)initWithShift:(WDCashShift*)shift cashRegister:(WDCashRegister*)cashRegister locale:(NSLocale*)locale;
+- (nonnull instancetype)initWithShift:(nonnull WDCashShift*)shift cashRegister:(nonnull WDCashRegister*)cashRegister locale:(nonnull NSLocale*)locale;
 /**
  */
 @property (nullable,nonatomic,strong,readonly) NSString *reportId;

@@ -6,6 +6,6 @@
 
 #ifdef __OBJC__
 
-  #import "WDePOS-Swift.h"
-
+#import "WDePOS-Swift.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #endif

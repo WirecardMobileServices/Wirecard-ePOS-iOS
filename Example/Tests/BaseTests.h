@@ -8,7 +8,6 @@
 
 #import "SaleHelper.h"
 #import "UserHelper.h"
-#import "DDLog.h"
 
 @interface PaymentHandler : NSObject<WDPaymentDelegate>
 @end
@@ -29,7 +28,5 @@
     __block WDTerminal *selectedDevice;
     __block PaymentHandler *_paymentHandler;
 }
-
--(void)loginAndGetUserData;
 
 @end

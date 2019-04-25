@@ -9,7 +9,6 @@
 #import <XCTest/XCTest.h>
 #import <libextobjc/EXTScope.h>
 #import "UserHelper.h"
-#import "DDLog.h"
 #import "BaseTests.h"
 
 @interface StatsTestsObjC : BaseTestsObcj

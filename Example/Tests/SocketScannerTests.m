@@ -11,7 +11,6 @@
 #import <libextobjc/EXTScope.h>
 #import "SaleHelper.h"
 #import "UserHelper.h"
-#import "DDLog.h"
 #import <WDePOS/NSString+WDExtras.h>
 #import "BaseTests.h"
 
@@ -39,7 +38,7 @@
     NSLog(@"\n\t\t   %s Not runnable on simulator 📱",__PRETTY_FUNCTION__);
     return;
     
-#endif
+#else
     
     //PART 1: We discover Socket scanners
     //paired to your iOS device.
@@ -58,6 +57,8 @@
     expectation = [self expectationWithDescription:@"Setting active scanner to listen to"];
     [self setDelegateAndActiveScanner];
     [self waitForExpectationsWithTimeout:100 handler:nil];
+    
+#endif
 }
 
 -(void)setDelegateAndActiveScanner

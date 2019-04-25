@@ -11,7 +11,6 @@
 #import <libextobjc/EXTScope.h>
 #import "SaleHelper.h"
 #import "UserHelper.h"
-#import "DDLog.h"
 #import "BaseTests.h"
 
 @interface DatecsPrinterTestsObjC : BaseTestsObcj
@@ -35,7 +34,7 @@
         NSLog(@"\n\t\t   %s Not runnable on simulator 📱",__PRETTY_FUNCTION__);
         return;
     
-    #endif
+    #else
     //PART 1: We log-in and request user data
     //--------------------------------------
     
@@ -76,6 +75,7 @@
         XCTFail(@"Error Printing. Please, debug and check the returned error");
     }
 
+    #endif
 }
 
 -(void)getSaleReceipt

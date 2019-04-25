@@ -181,8 +181,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  @brief Product availability
  **/
 @interface WDProductAvailability: WDObject <NSCoding>
-@property (nonatomic, strong) NSString *externalProductId;
-@property (nonatomic, strong) NSNumber *stockQuantity;
+/// Available in the case of ERP
+@property (nonatomic, strong, nullable) NSString *externalProductId;
+/// Available in the case of internal Product Catalogue
+@property (nonatomic, strong, nullable) NSDecimalNumber *notificationThreshold;
+@property (nonatomic, strong) NSDecimalNumber *stockQuantity;
 @end
 
 /**
@@ -191,8 +194,35 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 @interface WDProductStock: WDObject <NSCoding>
 @property (nonatomic, strong) NSArray <WDProductAvailability*>* productsAvailability;
-@property (nonatomic, strong) NSString *siteId;
+@property (nullable, nonatomic, strong) NSString *siteId;
+@property (nullable, nonatomic, strong) NSString *shopInternalId;
+/// Available in the case of internal Product Catalogue
+@property (nonatomic, strong, nullable) NSString *shopName;
+/// Available in the case of internal Product Catalogue
+@property (nonatomic, strong, nullable) NSString *shopStatus;
 @property (nonatomic, strong) WDAddress *address;
+@end
+
+@interface WDProductStockMaintain: WDObject <NSCoding>
+/**
+ *  @brief Create Stock Maintenance
+ *  @param shopId Shop identification
+ *  @param quantityChange Change in Product Stock quantity
+            - increase by specifying positive number
+            - decrease by specifying negative number
+ *  @param notificationThreshold Product stock quantity Threshold for sending the notification email to the Admin user
+ *  @param reason Reason for the update
+ *  @return new Stock Maintenance object
+ **/
+- (instancetype)initWithShopId:(NSString *)shopId
+                quantityChange:(NSNumber *)quantityChange
+         notificationThreshold:(nullable NSNumber *)notificationThreshold
+                        reason:(nullable NSString *)reason;
+@property (nullable, nonatomic, retain) NSNumber *notificationThreshold;
+@property (nonatomic, retain, readonly) NSNumber *quantityChange;
+@property (nonatomic, retain, readonly) NSString *shopId;
+@property (nullable, nonatomic, retain, readonly) NSString *reason;
+
 @end
 
 /**

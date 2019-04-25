@@ -6,9 +6,10 @@ install! 'cocoapods', :deterministic_uuids => false
 project 'eClear.xcodeproj'
 
 def shared_dependencies
-     pod 'WDePOS/All', :path => '../'
-     pod 'NotificationBannerSwift', '~> 1.6.2'
-	 pod 'TWMessageBarManager'
+    pod 'WDBrand', :path => '../'
+    pod 'WDePOS/All', :path => '../'
+    pod 'NotificationBannerSwift', '~> 1.6.2'
+    pod 'TWMessageBarManager'
 end
 
 target 'eClear' do

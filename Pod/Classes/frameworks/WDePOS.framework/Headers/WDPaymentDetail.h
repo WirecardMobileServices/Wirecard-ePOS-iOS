@@ -10,6 +10,18 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WDPayment.h"
 
+@protocol WDPaymentDetailRefundable
+/**
+ */
+-(WDPaymentRefund * _Nullable)refund;
+
+@end
+
+@protocol WDPaymentDetailReversable
+/**
+ */
+-(WDPaymentReverse* _Nullable )reversal;
+@end
 
 /**
  *  @class WDPaymentDetail
@@ -42,25 +54,17 @@
 @property (nullable, nonatomic, strong) NSString *technicalMessage;
 /**
  */
-@property (nullable, nonatomic, strong) NSArray * refundPayments;
+@property (nullable, nonatomic, strong) NSArray * refundTransactions;
 /**
  */
-@property (nullable, nonatomic, strong) NSArray * reversalPayments;
+@property (nullable, nonatomic, strong) NSArray * reversalTransactions;
 /**
  */
-@property (nullable, nonatomic, strong) NSArray * autoResolvePayments;
+@property (nullable, nonatomic, strong) WDPaymentDetail * purchaseTransaction;
+/**
+ */
+@property (nullable, nonatomic, strong) NSArray * autoResolveTransactions;
 
-/// Default NSObject init is unavailable
-- (nonnull instancetype)init __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
-+ (nonnull instancetype)new __attribute__((unavailable("use initWithAmount:paymentMethod:transactionType:")));
-/**
- */
-- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
-                          paymentMethod:(WDPaymentMethod)paymentMethod
-                        transactionType:(WDTransactionType)transactionType NS_DESIGNATED_INITIALIZER;
-/**
- */
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)decoder NS_DESIGNATED_INITIALIZER;
 /**
  */
 -(NSString *_Nullable)statusDescription;
@@ -76,6 +80,5 @@
 /**
  */
 -(BOOL)reversible;
-
 @end
 

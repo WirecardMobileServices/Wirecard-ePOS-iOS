@@ -10,7 +10,6 @@
 #import <libextobjc/EXTScope.h>
 #import "UserHelper.h"
 #import "SaleHelper.h"
-#import "DDLog.h"
 #import "TestUtils.h"
 #import "BaseTests.h"
 
@@ -36,6 +35,7 @@
 
 - (void)setUp
 {
+    loggedUser = nil;
     [super setUp];
 }
 
@@ -45,7 +45,7 @@
     NSLog(@"\n\t\t   %s Not runnable on simulator 📱",__PRETTY_FUNCTION__);
     return;
     
-#endif
+#else
     
     //PART 1: We log-in and request user data
     //--------------------------------------
@@ -109,6 +109,8 @@
     {
         XCTFail(@"Sale did cancel. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).");
     }
+    
+#endif
 }
 
 -(void)checkingForTerminalConfigUpdates
@@ -139,18 +141,19 @@
 
 -(void)doCardPayment
 {
-    WDPaymentConfig *paymentConfiguration = [WDPaymentConfig new];
     aSale = [[SaleHelper sharedInstance] newSale];
     [aSale addSaleItem:[NSDecimalNumber decimalNumberWithString:@"2.5"]
-              quantity:5
+              quantity:[NSDecimalNumber decimalNumberWithString:@"5"]
                taxRate:[[UserHelper sharedInstance] preferredSaleItemTax]
        itemDescription:@"Red Apple"
-             productId:@"dummyId1"];
+             productId:@"dummyId1"
+     externalProductId:nil];
     [aSale addSaleItem:[NSDecimalNumber decimalNumberWithString:@"1.34"]
-              quantity:2
+              quantity:[NSDecimalNumber decimalNumberWithString:@"2"]
                taxRate:[[UserHelper sharedInstance] preferredSaleItemTax]
        itemDescription:@"Pineapple"
-             productId:@"dummyId2"];
+             productId:@"dummyId2"
+     externalProductId:nil];
     //You can add a service charge to the whole basket -- though this is totally optional
     [aSale addServiceCharge:[[UserHelper sharedInstance] serviceChargeRate]
                     taxRate:[[UserHelper sharedInstance] serviceChargeTax]];
@@ -159,16 +162,17 @@
                taxRate:[[UserHelper sharedInstance] tipTax]];
     //You can add a discount for the whole basket when productId is nil, or per productId otherwise
     [aSale addFlatDiscount:[NSDecimalNumber decimalNumberWithString:@"6"]];
-    paymentConfiguration.sale = aSale;
-    paymentConfiguration.sale.cashRegisterId = [[UserHelper sharedInstance] selectedCashRegisterId]; //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
-    paymentConfiguration.sale.shiftId = [[UserHelper sharedInstance] lastShiftId];
-    [paymentConfiguration.sale resetPayments];
-    [paymentConfiguration.sale addCardPayment:paymentConfiguration.sale.totalToPay
+    aSale.cashRegisterId = [[UserHelper sharedInstance] selectedCashRegisterId]; //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
+    aSale.shiftId = [[UserHelper sharedInstance] lastShiftId];
+    [aSale resetPayments];
+    [aSale addCardPayment:aSale.totalToPay
                                      terminal:selectedDevice];
+    
+    WDSaleRequestConfiguration *paymentConfiguration = [[WDSaleRequestConfiguration alloc] initWithSaleRequest:aSale];
     
     [sdk.terminalManager setActive:selectedDevice completion:
     ^{
-        [[sdk saleManager] pay:paymentConfiguration delegate:_paymentHandler];
+        [[sdk saleManager] pay:paymentConfiguration withDelegate:_paymentHandler];
     }];
 }
 
@@ -176,7 +180,6 @@
 {
     WDSaleRequest *saleToBeRefunded = [saleResponse saleReturn];
     saleToBeRefunded.cashRegisterId = [[UserHelper sharedInstance] selectedCashRegisterId];
-    saleToBeRefunded.cashierId = saleResponse.cashierId;
     saleToBeRefunded.customerId = saleResponse.customerId;
     //This is an example of full refund: all items are refunded, EXCEPT SERVICE CHARGE
     [saleToBeRefunded removeServiceCharge];

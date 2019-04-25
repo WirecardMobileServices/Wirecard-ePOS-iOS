@@ -71,18 +71,6 @@
             }
         }
     },
-    "WDMiuraExtensionUUID":{
-        "name":"Miurasystems",
-        "displayName":{"en":"Miura"},
-        "enabled":false,
-        "devices":{
-            "M010":{
-                "displayName":{"en":"Miura M010"},
-                "enabled":true,
-                "cardExclusion":[]
-            }
-        }
-    },
     "WDSocketExtensionUUID":{
         "name":"Socket Mobile",
         "displayName":{"en":"Socket Mobile"},

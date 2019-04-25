@@ -10,7 +10,6 @@
 #import <libextobjc/EXTScope.h>
 #import "SaleHelper.h"
 #import "UserHelper.h"
-#import "DDLog.h"
 #import "BaseTests.h"
 
 @interface CatalogueTestsObjC : BaseTestsObcj

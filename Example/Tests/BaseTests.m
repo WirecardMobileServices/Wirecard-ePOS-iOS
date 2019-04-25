@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <libextobjc/EXTScope.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "BaseTests.h"
 #import "TestUtils.h"
 

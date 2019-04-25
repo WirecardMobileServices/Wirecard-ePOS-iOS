@@ -62,7 +62,7 @@
             <b>{{receipt.receiptNumberLabel}}:</b> {{.}}
             {{/receipt.receiptNumber}}
         </div>
-        
+
         {{#receipt.processedDate}}
         <div id="dateTime" class="flexItem tright">
             {{.}}
@@ -96,7 +96,7 @@
         <span id="serviceChargeAmount" class="rightCell">{{.}}</span>
     </div>
     {{/receipt.serviceChargeAmount}}
-    
+
     {{#receipt.tipInclusiveTaxAmount}}
     <div class="row">
         <span id="tipLabel" class="leftCell">
@@ -125,14 +125,14 @@
     <hr class="sectionSeparator">
     <table class="mainTable subTable">
         <tbody>
-            <tr id="totalAmount">
-                <td id="totalLabel" class="tleft pull_left font24">
-                    {{receipt.totalAmountLabel}}:
-                </td>
-                <td id="receiptTotalAmount" class="tright pull_right font24">
-                    {{receipt.totalAmount}}
-                </td>
-            </tr>
+        <tr id="totalAmount">
+            <td id="totalLabel" class="tleft pull_left font24">
+                {{receipt.totalAmountLabel}}:
+            </td>
+            <td id="receiptTotalAmount" class="tright pull_right font24">
+                {{receipt.totalAmount}}
+            </td>
+        </tr>
         </tbody>
     </table>
     <hr class="sectionSeparator">
@@ -141,11 +141,11 @@
     {{#receipt.detailsTitle}}
     <table class="mainTable subTable">
         <thead>
-            <tr>
-                <td id="detailsTitle" class="text_p tcenter detailsTitle" colspan="2">
-                    <b class="uppercase">{{receipt.detailsTitle}}</b>
-                </td>
-            </tr>
+        <tr>
+            <td id="detailsTitle" class="text_p tcenter detailsTitle" colspan="2">
+                <b class="uppercase">{{receipt.detailsTitle}}</b>
+            </td>
+        </tr>
         </thead>
     </table>
     {{/receipt.detailsTitle}}
@@ -182,13 +182,13 @@
     {{/receipt.line1}}
     {{#image}}
     <img class="signatureImg" alt="signature" src="data:image/png;base64, {{.}}"/>
-    
+
     <hr class="signatureUnderline">
     <div class="margin0auto text_p paddingBottom4 signatureLabel">{{receipt.signatureLabel}}</div>
     {{/image}}
     {{#receipt.retainLabel}}
     <span class="text_p margin0auto detailsTitle retainLabel">
-        {{receipt.retainLabel}}
+    {{receipt.retainLabel}}
     </span>
     {{/receipt.retainLabel}}
     {{/receipt.payments}}
@@ -239,28 +239,28 @@
     <table class="mainTable subTable">
         {{#title}}
         <thead>
-            <tr>
-                <td class="text_p tcenter detailsTitle" colspan="2">
-                    <b class="uppercase title">{{.}}</b>
-                </td>
-            </tr>
+        <tr>
+            <td class="text_p tcenter detailsTitle altPayTitle" colspan="2">
+                <b class="uppercase title">{{.}}</b>
+            </td>
+        </tr>
         </thead>
         {{/title}}
         <tbody>
-            {{#logo}}
-            <tr>
-                <td class="tcenter width90 margin0auto">
-                    <img class="autoResize altPaymentLogo" alt="footer logo" src="data:image/png;base64, {{.}}"/>
-                </td>
-            </tr>
-            {{/logo}}
-            {{^logo}}
-            <tr>
-                <td>
-                    <hr size="1px" color="#000000"/>
-                </td>
-            </tr>
-            {{/logo}}
+        {{#logo}}
+        <tr>
+            <td class="tcenter width90 margin0auto">
+                <img class="autoResize altPaymentLogo" alt="footer logo" src="data:image/png;base64, {{.}}"/>
+            </td>
+        </tr>
+        {{/logo}}
+        {{^logo}}
+        <tr>
+            <td>
+                <hr size="1px" color="#000000"/>
+            </td>
+        </tr>
+        {{/logo}}
         </tbody>
     </table>
     {{#details}}
@@ -285,30 +285,30 @@
     {{#image}}
     <table class="mainTable subTable">
         <tbody>
-            <tr class="borderedRow">
-                <td>
-                    <table class="summary">
-                        <tr>
-                            <td class="rowHeader total tcenter">
-                                <img class="width100 altBarcode" alt="receiptIDBarCode" src="data:image/png;base64, {{.}}"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text_p tcenter marginBottom2 altBarcodeData">
-                                <b>{{receipt.alternativePayments.barcodeData}}</b>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            {{/image}}
-            {{#receipt.retainLabel}}
-            <tr>
-                <td class="text_p tcenter detailsTitle">
-                    {{.}}
-                </td>
-            </tr>
-            {{/receipt.retainLabel}}
+        <tr class="borderedRow">
+            <td>
+                <table class="summary">
+                    <tr>
+                        <td class="rowHeader total tcenter">
+                            <img class="width100 altBarcode" alt="receiptIDBarCode" src="data:image/png;base64, {{.}}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text_p tcenter marginBottom2 altBarcodeData">
+                            <b>{{receipt.alternativePayments.barcodeData}}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {{/image}}
+        {{#receipt.retainLabel}}
+        <tr>
+            <td class="text_p tcenter detailsTitle">
+                {{.}}
+            </td>
+        </tr>
+        {{/receipt.retainLabel}}
         </tbody>
     </table>
     {{/receipt.alternativePayments}}

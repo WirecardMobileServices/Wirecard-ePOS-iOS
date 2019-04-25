@@ -11,7 +11,6 @@
 #import <libextobjc/EXTScope.h>
 #import "SaleHelper.h"
 #import "UserHelper.h"
-#import "DDLog.h"
 #import "BaseTests.h"
 
 @interface UserTestsObjc : BaseTestsObcj
@@ -94,7 +93,7 @@
     NSLog(@"\n\t\t   %s Not to run in automated tests 🤖",__PRETTY_FUNCTION__);
     return;
     
-#endif
+#else
     expectation = [self expectationWithDescription:@"testChangePassword"];
     
     //End of credential management process
@@ -132,6 +131,9 @@
     {
         XCTFail(@"Failed to change password.");
     }
+    
+#endif
+
 }
 
 
