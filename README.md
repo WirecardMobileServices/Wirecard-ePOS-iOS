@@ -136,6 +136,8 @@ The Switch ePOS backend documentation:
    Francisco Fortes
    
    Marek Timko
+   
+   Jaroslav Pulik
 
 ## License
 

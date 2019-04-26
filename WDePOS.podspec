@@ -56,8 +56,12 @@ Pod::Spec.new do |s|
   s.subspec 'UI' do |ss|
     ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDePOSUI.framework'
     ss.dependency     'WDePOS/Core'
-    ss.dependency     'WDBrand'
+    ss.dependency     'WDePOS/WDBrand'
     ss.xcconfig = { 'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'YES' }
+  end
+
+  s.subspec 'WDBrand' do |ss|
+    ss.vendored_frameworks  = 'Pod/Classes/frameworks/WDBrand.framework'
   end
 
   s.subspec 'Spire' do |ss|
