@@ -47,7 +47,7 @@ Switch system is mobile Cashier backend sale system for merchants, which provide
 * Possibility to communicate with HSM module for data decryption and reencryption
 * Terminals supported: Spire SPm2, Spire Posmate, bbpos Chipper, IDTECH UnimagPro, Miura (HSM is needed)
 
-Find more information about Switch in the [Switch Fact Sheet](./docs/Fact-Sheet-ePOS.pdf) and [Switch ePOS backend overview](./docs/SWITCH-Overview.pdf)
+Find more information about Switch in the [Switch Fact Sheet](/docs/Fact-Sheet-ePOS.pdf) and [Switch ePOS backend overview](/docs/SWITCH-Overview.pdf)
 
 ## Whitelabel solution
 Wirecard Technologies is using the Wirecard-ePOS in their Whitelabel application which is fully integrated professional mPOS solution. The **Whitelabel** app is **VISA and Mastercard certified** and utilises the Wirecard infrastructure for card payment processing.
