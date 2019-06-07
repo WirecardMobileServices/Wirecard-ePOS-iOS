@@ -1,6 +1,26 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.8.0] - 2019-05-29
+
+### Added
+- Card Authorisation and Card Capture as new payment methods
+- Better handling of disconnections on Datecs printer
+- Separate Header/Footer images on receipt
+- Different receipts for full sales and payments
+- Brandable localisation files for setting your own translations on receipt content
+
+### Fixed
+- Pos entry mode fix based on 9f26 and online tag (Spm2)
+- Several fixes on WDBrand classes
+
+### Deprecated
+- `addCardPayment:terminal:terminal`, use `addCardPayment:amount:originalPaymentId`
+- `addCouponPayment:couponId:brandId`, use `addCouponPayment:amount:couponId:brandId`
+- `addAlipayPayment:consumerId`, use `addAlipayPayment:amount:consumerId:originalPaymentId`
+- `addWeChatPayment:consumerId`, use `addWeChatPayment:amount:consumerId:originalPaymentId`
+
+
 ## [2.7.0] - 2019-04-17 
 
 ### Added

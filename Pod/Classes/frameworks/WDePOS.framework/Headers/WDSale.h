@@ -106,7 +106,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSArray *payments;
 /**
  */
-@property (nullable, nonatomic, strong, readonly) NSString * note;
+@property (nullable, nonatomic, strong) NSString * note;
 /**
  *  @brief Returns the terminal information in the case Card payment is present
  **/
@@ -228,7 +228,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Initial Sale already created by previous WDSaleRequest
  *  @discussion References the Original Sale to process another payment
  **/
-@interface WDReferenceSaleRequest : WDSaleCore <WDSaleProcessing>
+@interface WDReferenceSaleRequest : WDSaleCore <WDReferenceSaleProcessing>
 /**
  *  @brief Add another payment method to the original Sale to settle it
  *  @param originalSaleId Unique identifier of the original Sale
@@ -489,7 +489,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 #pragma mark - Sale Request - Return
-@interface WDSaleRequestReturn : WDSaleRequest
+@interface WDSaleRequestReturn : WDSaleRequest<WDSaleReturnProcessing>
 
 /**
  *  @brief Create Sale Return
@@ -661,7 +661,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Default Design of the Sale Receipt
  * @discussion To show your custom application name in the receipt footer: Define the Application Name to be displayed on the receipt in the application plist file as WDApplicationName <NSString>
  *
- * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-merchantLogo (250x100 px) png file in the acceptResources.bundle
+ * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-headerLogo (250x100 px) png file in the acceptResources.bundle
  *
  * @param forCardholder is it the Cardholder receipt ? Some receipt items are not available in Merchant copy of a receipt
  * @param showReturns should the receipt contain all returns sub-receipts ?
@@ -679,7 +679,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Default Design of the Sale Receipt
  * @discussion To show your custom application name in the receipt footer: Define the Application Name to be displayed on the receipt in the application plist file as WDApplicationName <NSString>
  *
- * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-merchantLogo (250x100 px) png file in the acceptResources.bundle
+ * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-headerLogo (250x100 px) png file in the acceptResources.bundle
  *
  * @param forCardholder is it the Cardholder receipt ? Some receipt items are not available in Merchant copy of a receipt
  * @param showReturns should the receipt contain all returns sub-receipts ?
@@ -699,7 +699,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Default Design of the Sale Receipt
  * @discussion To show your custom application name in the receipt footer: Define the Application Name to be displayed on the receipt in the application plist file as WDApplicationName <NSString>
  *
- * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-merchantLogo (250x100 px) png file in the acceptResources.bundle
+ * To show your custom Logo on the receipt: Supply your receipt Logo images and replace wd-headerLogo (250x100 px) png file in the acceptResources.bundle
  *
  * @param forCardholder is it the Cardholder receipt ? Some receipt items are not available in Merchant copy of a receipt
  * @param showReturns should the receipt contain all returns sub-receipts ?
@@ -714,6 +714,14 @@ NS_ASSUME_NONNULL_BEGIN
            dpi:(WDPrintDpi)dpi
         locale:(NSLocale *)locale
     completion:(ReceiptCompletion)completion;
+
+/**
+ * @brief Create the SaleResponse object with specified Payment details to be used to create the Single Payment Receipt
+ * @param paymentId for which to create the receipt
+ * @return SaleResponse with Single Payment to be used with receipt:showReturns:format:dpi:locale:completion
+*/
+-(WDSaleResponse*)paymentForReceipt:(NSString*)paymentId;
+
 
 /**
  * @brief Returns all data necessary for creating the Sale Return - single payment only

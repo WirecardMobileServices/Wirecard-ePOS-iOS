@@ -14,16 +14,16 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
 {
     var userHelper : UserHelper!
     var printingSuccess : Bool?
-    var openingDrawerSuccess, openingDrawerDone  : Bool?
+    var openingDrawerSuccess, isConnected  : Bool?
     var scanningSuccess : Bool?
     var deviceModel : WDExtensionTypeUUID!
     
     override func setUp()
     {
         super.setUp()
-        deviceModel = .WDMPOPExtensionUUID
+        deviceModel = .WDMPOPExtensionUUID // Use .WDStarMicronicsExtensionUUID for printer
         self.openingDrawerSuccess = false
-        self.openingDrawerDone = false
+        self.isConnected = false
         self.scanningSuccess = false
         self.scanningSuccess = false
     }
@@ -56,12 +56,16 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
         //PART 2: We open the cash drawer
         //--------------------------------------
         expectation = self.expectation(description: "Open cash drawer")
-        //Open of cash drawer is trigger in delegate method connectionStatusDidChange below, once it is connected
         self.waitForExpectations(timeout: 100, handler: nil)
-        if (openingDrawerSuccess == false)
+        if (isConnected == false)
         {
             XCTFail("Device communication failed. Please make the hardware is switched on and paired to yout iOS device settings. If it was paired to other iOS device, please unpair it first.");
         }
+        
+        expectation = self.expectation(description: "Open cash drawer")
+        self.openCashDrawer() //It will retry if failed
+        self.waitForExpectations(timeout: 100, handler: nil)
+        
         
         //PART 4: Getting a sale
         //--------------------------------------
@@ -99,6 +103,12 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
         if let selectedDevice = self.selectedDevice {
             sdk.cashDrawerManager.openCashDrawer(selectedDevice,
                                                  completion: {[weak self](success : Bool?, error : Error?) in
+                                                    if error != nil || success == false
+                                                    {
+                                                        //We retry if failed. In your application, handle the error properly and trigger the open drawing from UI, ie. from a button. On unit tests, when print, open and scanning is all triggered and monitored on a unit tests, the StarIO device is known to fail sometimes.
+                                                        self?.openCashDrawer()
+                                                        return
+                                                    }
                                                     self?.openingDrawerSuccess = success
                                                     self?.returnedErr = error
                                                     self?.expectation.fulfill()
@@ -187,10 +197,10 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
     func device(_ device: WDTerminal, connectionStatusDidChange status:WDExtensionConnectionStatus)
     {
         print("Connection status changed \(status)")
-        if (status == .connected && self.openingDrawerDone == false)
+        if (status == .connected && self.isConnected == false)
         {
-            self.openingDrawerDone = true
-            self.openCashDrawer()
+            self.isConnected = true
+            self.expectation.fulfill()
         }
     }
     
@@ -230,4 +240,9 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
                                             self?.expectation.fulfill()
         })
     }
+
+    
 }
+
+
+

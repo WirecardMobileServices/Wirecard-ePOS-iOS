@@ -59,8 +59,9 @@
  */
 @property (nullable, nonatomic, strong) NSArray * reversalTransactions;
 /**
+ * Elements of the array can be either WDPayment or WDPaymentReference
  */
-@property (nullable, nonatomic, strong) WDPaymentDetail * purchaseTransaction;
+@property (nullable, nonatomic, strong) NSArray <WDObject *> *referencedTransactions;
 /**
  */
 @property (nullable, nonatomic, strong) NSArray * autoResolveTransactions;
@@ -82,3 +83,9 @@
 -(BOOL)reversible;
 @end
 
+/**
+ *  @class WDPaymentDetailCardReferenced
+ *  @brief Referenced Payment Detail - contains the information specific to the payment
+ **/
+@interface WDPaymentDetailReferenced : WDPaymentDetail
+@end

@@ -147,6 +147,7 @@
 /// "Payment issued by accept by Wirecard"
 @property (nullable, nonatomic, strong, readonly) NSString *issuedByLabel;
 @property (nullable, nonatomic, strong, readonly) NSString *barcode;
+@property (nullable, nonatomic, strong, readonly) NSString *barcodeData;
 /// "HAVE A NICE DAY!"
 @property (nullable, nonatomic, strong, readonly) NSString *closingLabel;
 /// Helper labels

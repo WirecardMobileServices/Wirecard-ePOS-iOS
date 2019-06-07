@@ -6,29 +6,12 @@
 //  Copyright © 2018 Wirecard. All rights reserved.
 //
 
-//#import "WDSaleItem.h"
-//#import <CoreLocation/CoreLocation.h>
 #import "WDDataTypes.h"
 
-@protocol WDSaleProcessing <NSObject>
-@optional
-///Add Card Payment to the Sale to settle it by this payment
-- (void)addCardPayment:(nonnull NSDecimalNumber *)amount terminal:(nonnull WDTerminal *)terminal;
-///Add Alipay Payment to the Sale to settle it by this payment
-- (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
-///Add WeChat Payment to the Sale to settle it by this payment
-- (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
-
-@required
-///Add Cash Payment to the Sale to settle it by this payment
-- (void)addCashPayment:(nonnull NSDecimalNumber *)amount;
-///Add Card Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
-- (void)addCardPayment:(nonnull NSDecimalNumber *)amount terminal:(nonnull WDTerminal *)terminal originalPaymentId:(nullable NSString *)originalPaymentId;
-///Add Alipay Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
-- (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
-///Add WeChat Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
-- (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
-
+/**
+ @protocol WDSaleProcessing - The Sale Request core supported methods
+ */
+@protocol WDSaleProcessingCore <NSObject>
 - (void)removeCardPayment;
 - (void)removeCashPayment;
 - (void)removeCouponPayment;
@@ -60,5 +43,46 @@
 
 - (unsigned long long)authorizedAmountCard;
 - (nullable NSDecimalNumber *)total;
+@end
 
+/**
+ @protocol WDSaleProcessing - The Sale Request supported methods
+ */
+@protocol WDSaleProcessing <WDSaleProcessingCore>
+@required
+///Add Cash Payment to the Sale to settle it by this payment
+- (void)addCashPayment:(nonnull NSDecimalNumber *)amount;
+///Add Card Payment to the Sale to settle it by this payment
+- (void)addCardPayment:(nonnull NSDecimalNumber *)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Alipay Payment to the Sale to settle it by this payment
+- (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
+///Add WeChat Payment to the Sale to settle it by this payment
+- (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
+///Add Card Authorization to the Sale to settle it by this payment
+-(void)addCardAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
+
+@end
+
+/**
+ @protocol WDSaleProcessing - The Return Sale Request supported methods
+ */
+@protocol WDSaleReturnProcessing <WDSaleProcessingCore>
+@required
+///Add Card Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
+- (void)addCardPayment:(nonnull NSDecimalNumber *)amount originalPaymentId:(nullable NSString *)originalPaymentId;
+///Add Alipay Payment Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
+- (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
+///Add WeChat Payment Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
+- (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
+///Add Card Capture Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
+-(void)addCardCapture:(NSDecimalNumber * __nonnull)amount originalPaymentId:(NSString * __nonnull)originalPaymentId;
+@end
+
+/**
+ @protocol WDSaleProcessing - The Referenced Sale Request supported methods
+ */
+@protocol WDReferenceSaleProcessing <WDSaleProcessing>
+@required
+///Add Card Capture to the Sale - to be used for Sale with previous authorization - to Capture it - as we are referring to the original Payment by its Payment Id
+-(void)addCardCapture:(NSDecimalNumber * __nonnull)amount originalPaymentId:(NSString * __nonnull)originalPaymentId;
 @end

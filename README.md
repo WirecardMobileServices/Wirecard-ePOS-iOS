@@ -47,7 +47,7 @@ Switch system is mobile Cashier backend sale system for merchants, which provide
 * Possibility to communicate with HSM module for data decryption and reencryption
 * Terminals supported: Spire SPm2, Spire Posmate, bbpos Chipper, IDTECH UnimagPro, Miura (HSM is needed)
 
-Find more information about Switch in the [Switch Fact Sheet](https://github.com/WirecardMobileServices/Wirecard-ePOS-iOS/blob/master/docs/Fact-Sheet-ePOS.pdf) and [Switch ePOS backend overview](https://github.com/WirecardMobileServices/Wirecard-ePOS-iOS/blob/master/docs/SWITCH-Overview.pdf)
+Find more information about Switch in the [Switch Fact Sheet](./docs/Fact-Sheet-ePOS.pdf) and [Switch ePOS backend overview](./docs/SWITCH-Overview.pdf)
 
 ## Whitelabel solution
 Wirecard Technologies is using the Wirecard-ePOS in their Whitelabel application which is fully integrated professional mPOS solution. The **Whitelabel** app is **VISA and Mastercard certified** and utilises the Wirecard infrastructure for card payment processing.
@@ -119,12 +119,12 @@ The Switch ePOS backend documentation:
 * XCode 9
 * Device running iOS > 9.0
 * One of Wirecard approved terminals, printers, cash drawers, barcode scanners
-	* Spire [PosMate](http://www.spirepayments.com/ "PosMate")
-	* Spire [SPm2](http://www.spirepayments.com/ "SPm2")
-	* Datecs printer [DPP-250](http://www.datecs.bg/en/ "DPP-250")
+	* Spire [PosMate](http://www.spirepayments.com/product/posmate/ "PosMate")
+	* Spire [SPm2](http://www.spirepayments.com/product/spm2/ "SPm2")
+	* Datecs printer [DPP-250](http://www.datecs.bg/en/products/DPP-250/2/175 "DPP-250")
 	* StarMicronics [TSP650](http://www.starmicronics.com/pages/TSP650-Series "TSP650")
 	* StarMicronics [mPOP](http://www.starmicronics.com/pages/mPOP "mPOP") 	* StarMicronics [SMD2](http://www.starmicronics.com/pages/SMD2-1214 "SMD2")
-	* SocketMobile [Series 7](https://www.socketmobile.com/ "Series 7")	
+	* SocketMobile [Series 7](https://www.socketmobile.com/products/series-7/series-7-colorful/overview "Series 7")	
 	
 
 ## Authors

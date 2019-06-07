@@ -15,13 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion Enumerator with the payment types.
  **/
 typedef NS_ENUM(NSInteger, WDPaymentMethod ){
-    WDPaymentMethodCash, //Default
-    WDPaymentMethodCard,
-    WDPaymentMethodAlipay,
-    WDPaymentMethodWeChat,
-    WDPaymentMethodCoupon,
-    WDPaymentMethodUnknown
-    
+    WDPaymentMethodCash         = 1 << 0, //Default,
+    WDPaymentMethodCard         = 1 << 1,
+    WDPaymentMethodAlipay       = 1 << 2,
+    WDPaymentMethodWeChat       = 1 << 3,
+    WDPaymentMethodCoupon       = 1 << 4,
+    WDPaymentMethodUnknown      = 1 << 5
 };
 
 /**
@@ -46,14 +45,14 @@ typedef NS_ENUM(NSInteger, WDPaymentMethod ){
 //    WDTransactionTypeAlipayRefund
 //};
 typedef NS_ENUM(NSInteger, WDTransactionType) {
-    WDTransactionTypePurchase, //Default
-    WDTransactionTypeAuthorize,
-    WDTransactionTypeCapture,
-    WDTransactionTypeRefund,
-    WDTransactionTypeReferenceRefund,
-    WDTransactionTypeReversal,
-    WDTransactionTypeAutoResolve,
-    WDTransactionTypeUnknown
+    WDTransactionTypePurchase           = 1 << 0, //Default
+    WDTransactionTypeAuthorize          = 1 << 1,
+    WDTransactionTypeCapture            = 1 << 2,
+    WDTransactionTypeRefund             = 1 << 3,
+    WDTransactionTypeReferenceRefund    = 1 << 4,
+    WDTransactionTypeReversal           = 1 << 5,
+    WDTransactionTypeAutoResolve        = 1 << 6,
+    WDTransactionTypeUnknown            = 1 << 7
 };
 
 /**
@@ -61,19 +60,28 @@ typedef NS_ENUM(NSInteger, WDTransactionType) {
  *  @discussion Payment Status enumeration
  **/
 typedef NS_ENUM(NSUInteger, WDPaymentState) {
-    WDPaymentStateUnknown=0,
-    WDPaymentStateReversed,
-    WDPaymentStateCompleted,
-    WDPaymentStateRejected,
-    WDPaymentStateFailed,
-    WDPaymentStateFailedIntervene,
-    WDPaymentStateIncomplete,
-    WDPaymentStateRefunded,
-    WDPaymentStateInitialized,
-    WDPaymentStateApproved,
-    WDPaymentStateUserPaying,
-    WDPaymentStateCaptured
+    WDPaymentStateUnknown           = 1 << 0,
+    WDPaymentStateReversed          = 1 << 1,
+    WDPaymentStateCompleted         = 1 << 2,
+    WDPaymentStateRejected          = 1 << 3,
+    WDPaymentStateFailed            = 1 << 4,
+    WDPaymentStateFailedIntervene   = 1 << 5,
+    WDPaymentStateIncomplete        = 1 << 6,
+    WDPaymentStateRefunded          = 1 << 7,
+    WDPaymentStateInitialized       = 1 << 8,
+    WDPaymentStateApproved          = 1 << 9,
+    WDPaymentStateUserPaying        = 1 << 10,
+    WDPaymentStateCaptured          = 1 << 11
 };
+
+/**
+ *  @class WDPaymentreference - Payment Reference
+ *  @brief Payment  - contains the id of the referenced payments
+ **/
+@interface WDPaymentReference : WDObject<NSCoding>
+@property (nonatomic, readonly) NSString * type;
+@property (nonatomic, readonly) NSString * internalId;
+@end
 
 /**
  *  @class WDPayment - the base class for various types of Requests [Purchase, Refund, Reversal]
@@ -140,6 +148,13 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
 - (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
                       originalPaymentId:(nonnull NSString *)originalPaymentId;
 @end
+/**
+ *  @class WDPaymentReverseAlipay - Alipay Payment Refund
+ **/
+@interface  WDPaymentRefundCardCapture : WDPaymentRefund
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+@end
 
 /**
  *  @class WDPaymentReverse - Payment Reversal to be used in the Sale Reversal
@@ -168,4 +183,24 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
  *  @class WDPaymentReverseAlipay - Alipay Payment Reversal
  **/
 @interface  WDPaymentReverseAlipay : WDPaymentReverse @end
+/**
+ *  @class WDPaymentReverseCardCapture - Card Capture Reversal
+ **/
+@interface WDPaymentReverseCardCapture : WDPaymentReverse @end
+
+/**
+ *  @class WDPaymentCapture - Payment Capture to be used in the Referenced Sale with previous  Authorization
+ *  @brief Payment Capture - contains the information about the original Payment Authorization to be captured
+ **/
+@interface WDPaymentCapture : WDPayment
+/**
+ */
+@property (nonnull, nonatomic, readonly) NSString *originalPaymentId;
+@end
+
+/**
+ *  @class WDPaymentCaptureCard -  Card Capture to be used in the Referenced Sale with previous Card Authorization
+ *  @brief Card Capture - contains the information about the original Payment Authorization to be captured
+ **/
+@interface WDPaymentCaptureCard : WDPaymentCapture @end
 NS_ASSUME_NONNULL_END

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @brief WDePOS Environments enumerator
  **/
 typedef NS_ENUM(NSUInteger, WDEnvironment) {
+    WDEnvironmentUndefined = 0,
     WDEnvironmentProduction = 1,
     WDEnvironmentPublicTest = 2
 };

@@ -73,6 +73,7 @@
 @interface WDHtmlZReportImages: NSObject
 @property (nullable, nonatomic, strong) NSString *headerLogo;
 @property (nullable, nonatomic, strong) NSString *headerLogoSmall;
+@property (nullable, nonatomic, strong) NSString *footerLogo;
 @end
 
 /**

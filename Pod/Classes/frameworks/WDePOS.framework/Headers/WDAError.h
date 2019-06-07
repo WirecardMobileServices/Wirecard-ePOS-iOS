@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSErrorUserInfoKey const WDAErrorStatusCode;
+
 /**
  *  @brief WDSError
  *  @discussion Enumerator of acceptSDK errors
@@ -182,7 +184,17 @@ typedef NS_ENUM(NSInteger, WDError) {
  *  @return Error object
  **/
 +(NSError *)error:(WDError)errorCode withDescription:(nullable NSString*)description andReason:(nullable NSString *)reason andUnderlyingError:(nullable NSError *)underlyingError;
-    
+
+/**
+ *  @brief Error constructor
+ *  @param errorCode Error code
+ *  @param description Error description
+ *  @param reason Error reason
+ *  @param underlyingError underlying error
+  * @param customUserInfo additional custom user info dictionary items
+ *  @return Error object
+ **/
++(NSError *)error:(WDError)errorCode withDescription:(nullable NSString*)description andReason:(nullable NSString *)reason andUnderlyingError:(nullable NSError *)underlyingError andCustomUserInfo:(nullable NSDictionary *)customUserInfo;
 /**
  *  @brief Get the default description linked to this error code
  *  @param errorCode Error code

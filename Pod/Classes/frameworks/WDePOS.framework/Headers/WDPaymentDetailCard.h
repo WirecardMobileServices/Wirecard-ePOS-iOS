@@ -71,3 +71,25 @@
 /// Refund to be used in Sale Refund - to refund this payment
 -(WDPaymentRefundCard * _Nullable)refund;
 @end
+
+/**
+ *  @class WDPaymentDetailReferencedCardCapture
+ *  @brief Referenced Payment Detail - contains the information specific to the payment
+ **/
+@interface WDPaymentDetailReferencedCardCapture : WDPaymentDetailReferenced <WDPaymentDetailRefundable, WDPaymentDetailReversable>
+/// Either WDPayment or WDPaymentReference
+@property (nullable, nonatomic, retain) WDObject *authorizationTransaction;
+/// Reversal to be used in Sale Reverse - to reverse this payment
+-(WDPaymentReverseCardCapture * _Nullable)reversal;
+/// Refund to be used in Sale Refund - to refund this payment
+-(WDPaymentRefundCardCapture * _Nullable)refund;
+@end
+
+/**
+ *  @class WDPaymentDetailReferencedCardRefund
+ *  @brief Referenced Payment Detail - contains the information specific to the payment
+ **/
+@interface WDPaymentDetailReferencedCardRefund : WDPaymentDetailReferenced <WDPaymentDetailReversable>
+/// Either WDPayment or WDPaymentReference
+@property (nullable, nonatomic, retain) WDObject *purchaseTransaction;
+@end

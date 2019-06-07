@@ -43,7 +43,7 @@
     </div>
     {{/receipt.saleStatus}}
     <hr class="sectionSeparator">
-    {{#receipt.cashierIdLabel}}{{#receipt.receiptNumberLabel}}{{#receipt.shopLabel}}
+    {{#receipt.cashierIdLabel}}{{#receipt.receiptNumberLabel}}{{#receipt.shop}}
     <div class="flexRowSpaceBetween">
         <div id="cashierIdLabelAndValue" class="breakWord flexItem50 tleft paddingRight">
             {{#receipt.cashierId}}
@@ -70,7 +70,7 @@
         {{/receipt.processedDate}}
     </div>
     <hr class="sectionSeparator">
-    {{/receipt.shopLabel}}{{/receipt.receiptNumberLabel}}{{/receipt.cashierIdLabel}}
+    {{/receipt.shop}}{{/receipt.receiptNumberLabel}}{{/receipt.cashierIdLabel}}
     {{>receipt_items}}
     {{#receipt.subTotalAmount}}
     <div class="row">
@@ -121,7 +121,7 @@
         <span class="rightCell">{{.}}</span>
     </div>
     {{/receipt.customerCardID}}
-    {{#receipt.totalAmountLabel}}
+    {{#receipt.totalAmount}}
     <hr class="sectionSeparator">
     <table class="mainTable subTable">
         <tbody>
@@ -136,7 +136,7 @@
         </tbody>
     </table>
     <hr class="sectionSeparator">
-    {{/receipt.totalAmountLabel}}
+    {{/receipt.totalAmount}}
     {{>receipt_taxes}}
     {{#receipt.detailsTitle}}
     <table class="mainTable subTable">
@@ -194,13 +194,6 @@
     {{/receipt.payments}}
     <!-- footer -->
     <table class="mainTable subTable">
-        {{#images.footerLogo}}
-        <tr>
-            <td class="tcenter width90 margin0auto">
-                <img id="footerLogos" class="width90" alt="footer logo" src="data:image/png;base64, {{.}}"/>
-            </td>
-        </tr>
-        {{/images.footerLogo}}
         {{#images.barcode}}
         <tr class="borderedRow">
             <td>
@@ -219,6 +212,14 @@
             </td>
         </tr>
         {{/images.barcode}}
+        {{#images.footerLogo}}
+        <tr>
+            <td class="tcenter width90 margin0auto">
+                <img id="footerLogos" class="width90" alt="footer logo" src="data:image/png;base64, {{.}}"/>
+            </td>
+        </tr>
+        {{/images.footerLogo}}
+
         {{#receipt.issuedByLabel}}
         <tr>
             <td id="issuedBy" class="text_p tcenter detailsTitle">
