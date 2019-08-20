@@ -43,7 +43,7 @@
     </div>
     {{/receipt.saleStatus}}
     <hr class="sectionSeparator">
-    {{#receipt.cashierIdLabel}}{{#receipt.receiptNumberLabel}}{{#receipt.shop}}
+    {{#receipt.cashierIdLabel}}{{#receipt.receiptNumberLabel}}{{#receipt.shopLabel}}
     <div class="flexRowSpaceBetween">
         <div id="cashierIdLabelAndValue" class="breakWord flexItem50 tleft paddingRight">
             {{#receipt.cashierId}}
@@ -70,7 +70,7 @@
         {{/receipt.processedDate}}
     </div>
     <hr class="sectionSeparator">
-    {{/receipt.shop}}{{/receipt.receiptNumberLabel}}{{/receipt.cashierIdLabel}}
+    {{/receipt.shopLabel}}{{/receipt.receiptNumberLabel}}{{/receipt.cashierIdLabel}}
     {{>receipt_items}}
     {{#receipt.subTotalAmount}}
     <div class="row">

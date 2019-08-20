@@ -19,4 +19,7 @@
  */
 @property (nonnull, nonatomic, strong) WDTerminal * terminal;
 
+- (nullable instancetype)initEFTCardWithAmount:(nonnull NSDecimalNumber *)amount
+                      terminal:(nonnull WDTerminal *)terminal;
+
 @end

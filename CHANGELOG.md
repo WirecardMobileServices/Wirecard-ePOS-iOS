@@ -1,6 +1,19 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.9.0] - 2019-08-20
+
+### Added
+
+- New payment method: EFT Card payment
+- Include Notification (Callback) URL in Sale Purchase request
+- Printer Star SM-L200 support
+
+### Fixed
+
+- Datecs printer library update
+- Minor bug fixes
+
 ## [2.8.0] - 2019-05-29
 
 ### Added

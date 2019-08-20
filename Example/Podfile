@@ -2,8 +2,7 @@ platform :ios, :deployment_target => '9.0'
 use_frameworks!
 
 def shared_dependencies
-    pod 'WDBrand', :path => '../'
-    pod 'WDePOS/All', :path => '../'
+    pod 'WDePOS/All'
     pod 'INTULocationManager'
     pod 'CocoaLumberjack', '~> 3.5'
     pod 'CocoaLumberjack/Swift'

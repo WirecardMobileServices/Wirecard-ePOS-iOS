@@ -16,7 +16,6 @@
 - (NSString *)leftPadStringWithPadding:(NSString *)padding;
 - (NSString *)leftPadStringToLength:(int)toLength;
 - (NSString *)stringByEncodingHTMLEntities ;
-- (BOOL)contains:(NSString*)string;
 
 + (NSString *)hexFromStr:(NSString*)str;
 + (NSString *)hexToString:(NSString *)string;
