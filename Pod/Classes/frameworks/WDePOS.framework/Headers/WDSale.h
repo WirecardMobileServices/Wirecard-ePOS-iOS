@@ -202,6 +202,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Plain Rounding for this Sale - taking in consideration the Currency - number of decimal places
 -(NSDecimalNumberHandler *)roundModePlain;
 -(NSDecimalNumberHandler *)roundModeDown;
+-(NSDecimalNumberHandler *)roundModePlainInteger;
+
 //-(NSDecimalNumberHandler *)roundModeBankers;
 @end
 
@@ -248,16 +250,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WDSaleRequest : WDSale <WDSaleProcessing>
 /**
  */
-@property (nonatomic, strong) NSString *shopId;
+@property (nullable, nonatomic, strong) NSString *shopId;
 /**
  */
-@property (nonatomic, strong) NSString *cashierId __attribute__((deprecated));
+@property (nullable, nonatomic, strong) NSString *cashierId __attribute__((deprecated));
 /**
  */
 @property (nullable, nonatomic, strong) NSString *customerId;
 /**
  */
-@property (nonatomic, strong) NSString *cashRegisterId;
+@property (nullable, nonatomic, strong) NSString *cashRegisterId;
 /**
  */
 @property (nullable, nonatomic, strong) NSString *shiftId;
@@ -638,19 +640,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief All the Card payments processed as part of this Sale
  */
--(NSArray <WDPaymentDetailCard *>*)processedCardPayments ;
+-(NSArray <WDPaymentDetailCard *>*)processedCardPayments;
 /**
  * @brief All the Cash payments processed as part of this Sale
  */
--(NSArray <WDPaymentDetailCash *>*)processedCashPayments ;
+-(NSArray <WDPaymentDetailCash *>*)processedCashPayments;
 /**
  * @brief All the Alipay payments processed as part of this Sale
  */
--(NSArray <WDPaymentDetailAlipay *>*)processedAlipayPayments ;
+-(NSArray <WDPaymentDetailAlipay *>*)processedAlipayPayments;
 /**
  * @brief All the WeChat payments processed as part of this Sale
  */
--(NSArray <WDPaymentDetailWeChat *>*)processedWeChatPayments ;
+-(NSArray <WDPaymentDetailWeChat *>*)processedWeChatPayments;
 
 /**
  * @brief All payments that can be subject to reversal - curently with the Completed status

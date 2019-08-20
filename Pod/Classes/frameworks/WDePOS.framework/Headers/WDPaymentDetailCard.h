@@ -41,6 +41,12 @@
 @property (nullable, nonatomic, retain) NSString *mid;
 /**
  */
+@property (nullable, nonatomic, retain) NSString *referenceId;
+/**
+ */
+@property (nullable, nonatomic, retain) NSString *reasonCode;
+/**
+ */
 @property (nullable, nonatomic, strong) NSString *signatureImage;
 /**
  */
@@ -71,6 +77,7 @@
 /// Refund to be used in Sale Refund - to refund this payment
 -(WDPaymentRefundCard * _Nullable)refund;
 @end
+
 
 /**
  *  @class WDPaymentDetailReferencedCardCapture

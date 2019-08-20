@@ -60,6 +60,8 @@
 - (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
 ///Add Card Authorization to the Sale to settle it by this payment
 -(void)addCardAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Card EFTCard to the Sale to settle it by this payment
+-(void)addEFTCardPayment:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
 
 @end
 
@@ -70,6 +72,8 @@
 @required
 ///Add Card Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
 - (void)addCardPayment:(nonnull NSDecimalNumber *)amount originalPaymentId:(nullable NSString *)originalPaymentId;
+///Add EFTCard Payment to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
+- (void)addEFTCardPayment:(nonnull NSDecimalNumber *)amount originalPaymentId:(nullable NSString *)originalPaymentId;
 ///Add Alipay Payment Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
 - (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
 ///Add WeChat Payment Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id

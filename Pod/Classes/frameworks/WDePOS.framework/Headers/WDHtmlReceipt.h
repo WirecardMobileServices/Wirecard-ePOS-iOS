@@ -144,7 +144,7 @@
 @property (nullable, nonatomic, strong, readonly) NSString *signature;
 /// "Please retain receipt for future reference."
 @property (nullable, nonatomic, strong, readonly) NSString *retainLabel;
-/// "Payment issued by accept by Wirecard"
+/// "Payment issued by Wirecard ePOS"
 @property (nullable, nonatomic, strong, readonly) NSString *issuedByLabel;
 @property (nullable, nonatomic, strong, readonly) NSString *barcode;
 @property (nullable, nonatomic, strong, readonly) NSString *barcodeData;

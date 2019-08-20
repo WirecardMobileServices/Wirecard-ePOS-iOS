@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, WDPaymentMethod ){
     WDPaymentMethodAlipay       = 1 << 2,
     WDPaymentMethodWeChat       = 1 << 3,
     WDPaymentMethodCoupon       = 1 << 4,
-    WDPaymentMethodUnknown      = 1 << 5
+    WDPaymentMethodEFTCard       = 1 << 5,
+    WDPaymentMethodUnknown      = 1 << 6
 };
 
 /**
@@ -125,6 +126,8 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
  **/
 @interface WDPaymentRefundCard : WDPaymentRefund
 - (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                      originalPaymentId:(nonnull NSString *)originalPaymentId;
+- (nullable instancetype)initEFTWithAmount:(nonnull NSDecimalNumber *)amount
                       originalPaymentId:(nonnull NSString *)originalPaymentId;
 @end
 /**

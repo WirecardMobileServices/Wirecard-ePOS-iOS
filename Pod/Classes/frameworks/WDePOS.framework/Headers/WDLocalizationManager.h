@@ -17,11 +17,15 @@ extern const int64_t kWDLANGUAGE_BUNDLE_KEY;
 @interface WDLocalizationManager : NSObject
 
 /// List of supported languages - for Receipt | Z-Report  localization
-- (NSArray<NSString *> *)supportedLanguages;
+- (NSArray<NSString *> *_Nonnull)supportedLanguages;
 /// Set the required language - for Receipt | Z-Report  localization
-- (void)setLanguage:(NSString *)language;
+- (void)setLanguage:(NSString *_Nonnull)language;
+/// Set the default language upon initialisation - for Receipt | Z-Report  localization
+- (void)setDefaultLanguageFromLocale:(NSString*_Nonnull)localeCode;
+/// Get the current locale/language
++ (NSString*_Nonnull)getLocaleCode;
 @end
 
 
-NSString* WDLocalizedString(NSString *key);
+NSString* _Nonnull WDLocalizedString(NSString * _Nonnull key);
 

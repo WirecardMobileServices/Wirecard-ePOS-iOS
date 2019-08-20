@@ -74,7 +74,9 @@ typedef NS_ENUM(NSInteger, WDExtensionTypeUUID ) {
         WDStarMicronicsExtensionUUID,
         WDPaxExtensionUUID,
         WDSocketExtensionUUID,
-        WDWisepadExtensionUUID
+        WDWisepadExtensionUUID,
+        WDBleStarMicronicExtensionUUID,
+        WDSPm2SimExtensionUUID
 };
 
 
@@ -561,6 +563,7 @@ typedef void(^ReceiptCompletion)(NSArray* _Nullable receipts, NSError* _Nullable
 /**
  */
 @property (nonatomic) BOOL  connected;
+
 @end
 
 /**
@@ -1170,7 +1173,6 @@ __deprecated_msg("Please use WDSaleRequestConfiguration")
 @property (nullable, nonatomic, retain) NSString *partnerId;
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSArray *paymentConstraints;
-@property (nullable, nonatomic, retain) NSArray *metadata;
 @end
 
 /**
@@ -1232,6 +1234,8 @@ __deprecated_msg("Please use WDSaleRequestConfiguration")
 @property (nullable, nonatomic, strong) NSDate *created;
 @property (nullable, nonatomic, strong) NSArray<WDShop *> *merchantShops;
 @property (nullable, nonatomic, strong) NSNumber *returnForbidden;
+@property (nullable, nonatomic, retain) NSArray *merchantMetadata;
+@property (nullable, nonatomic, retain) NSArray *partnerMetadata;
 @end
 
 /**

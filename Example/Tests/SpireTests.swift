@@ -28,7 +28,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         super.setUp()
     }
     
-    func testSpire()
+    func setupSpire()
     {
         #if arch(i386) || arch(x86_64)
             let file:NSString = (#file as NSString).lastPathComponent as NSString
@@ -75,16 +75,24 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
             XCTFail("Error when updating the terminal. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
         }
         
-        let doPurchaseAndRefund = true //Change this to false to do card authorised and capture of payments instead of regular purchase + refund
-        
-        if doPurchaseAndRefund
-        {
-            self.doPurchaseAndRefund()
-        }
-        else
-        {
-            self.doAuthorisedAndCapture()
-        }
+    }
+    
+    func testCardPurchaseAndRefund()
+    {
+        setupSpire()
+        doPurchaseAndRefund()
+    }
+    
+    func testAuthorisedAndCapture()
+    {
+        setupSpire()
+        doAuthorisedAndCapture()
+    }
+    
+    func testSepaEFTPayment()
+    {
+        setupSpire()
+        doSepaEFTPayment()
     }
     
     func doPurchaseAndRefund()
@@ -288,6 +296,52 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         }
     }
 
+    func doSepaEFTPayment()
+    {
+        //PART 4: We do a card sale using Spire terminal
+        //---------------------------------------------
+        expectation = self.expectation(description: "SEPA EFT sale")
+        
+        guard let sale = SaleHelper.sharedInstance().newSale() else
+        {
+            XCTFail("Something went really wrong - doSepaEFTPayment")
+            self.expectation.fulfill()
+            return
+        }
+        self.aSale = sale
+        self.aSale.cashRegisterId = UserHelper.sharedInstance()?.selectedCashRegisterId() ?? ""
+        self.aSale.addSaleItem(NSDecimalNumber(value: 3.4),
+                               quantity:NSDecimalNumber.init(value: 5),
+                               taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
+                               itemDescription:"Red Apple",
+                               productId:"Dummy ID 1",
+                               externalProductId : nil)
+        //    self.aSale.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId() //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
+        self.aSale.shiftId = UserHelper.sharedInstance().lastShiftId()
+        self.aSale.resetPayments()
+        
+        
+        self.aSale.addEFTCardPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
+                                     terminal:self.selectedDevice!)
+        
+        if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
+        {
+            sdk.terminalManager.setActive(self.selectedDevice, completion:{[weak self]() in
+                self?.sdk.saleManager.pay(paymentConfiguration, with: (self?.paymentHandler)!)
+            })
+        }
+        
+        self.waitForExpectations(timeout: 300, handler: nil)
+        if (self.saleResponse == nil)
+        {
+            XCTFail("Sale did not succeed. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
+            //NOTE:  if your merchant settings have cash mgmt enabled in backend, you will need to run cash tests first - otherwise you will receive a "not authorized" kind of error
+        }
+        else
+        {
+            SaleHelper.sharedInstance().saleToSaveId(from:self.saleResponse)
+        }
+    }
     
     
     func device(_ device: WDTerminal, connectionStatusDidChange status:WDExtensionConnectionStatus)

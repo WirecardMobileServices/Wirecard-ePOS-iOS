@@ -31,6 +31,7 @@
                 "terms_and_conditions_url":"",
                 "website_url":""
         },
+        "multitenderEnabled": true,
         "printSupportEnabled": true,
         "pistolScannerEnabled": true,
         "tutorialQuestionMarkHidden": true,
@@ -58,7 +59,8 @@
         "inventoryEnabled": true,
         "inventoryEditable": false,
         "quickClerkLoginEnabled": true,
-        "rememberedUsersEnabled": true,
+        "rememberingSingleUserEnabled": true,
+        "rememberingMultipleUsersEnabled": true,
         "automaticPrintingEnabled": false,
         "wideImagesInCustomerReceipt": false,
         "signatureButtonsWithIcons": true,
@@ -67,14 +69,14 @@
         "addItemButtonLocalisedName": null,
         "clearListButtonLocalisedName": null,
         "taxRateLocalisedName": "VAT",
-        "supportAppName": "accept by Wirecard",
+        "supportAppName": "Wirecard ePOS",
         "owningCompanyName": "Wirecard",
         "registrationURL": "Wirecard",
         "legalText": [{"en":"I agree to pay the above total amount according to my card issuer agreement."}
                       ,{"de":"Ermächtigung zum Lastschrifteinzug: Ich ermächtige hiermit das hier genannte Unternehmen und dessen Dienstleister, die Wirecard Bank AG, Einsteinring 35, D-85609 Aschheim, den hier ausgewiesenen Rechnungsbetrag von meinem durch Kontonummer und Bankleitzahl bezeichneten Konto durch Lastschrift einzuziehen. Ermächtigung zur Adressweitergabe. Ich ermächtige mein Kreditinstitut, das durch die hier angegebene Bankleitzahl bezeichnet ist, bei Nichteinlösung der Lastschrift oder bei Wiederspruch gegen die Lastschrift dem Unternehmen oder einem von Ihm beauftragten Dritten auf Aufforderung meinen Namen und meine Anschrift mitzuteilen, damit das Unternehmen seine Anspruch gegen mich geltend machen kann."}
                       ,{"es":null}
                       ,{"zh-Hans":"我同意本次的付款金额,并同意商店的支付条款"}],
-        "languageList": ["en","de"],
+        "languageList": ["de","en","fr"],
         "UIAppFonts":null
     },
     "ui": {

@@ -71,6 +71,18 @@
             }
         }
     },
+    "WDBleStarMicronicsExtensionUUID":{
+        "name":"Star Micronics BLE",
+        "displayName":{"en":"Star Micronics BLE"},
+        "enabled":true,
+        "devices":{
+            "SM-L200": {
+                "displayName":{"en":"SM-L200"},
+                "enabled":true,
+                "cardExclusion":[]
+            }
+        }
+    },
     "WDSocketExtensionUUID":{
         "name":"Socket Mobile",
         "displayName":{"en":"Socket Mobile"},
