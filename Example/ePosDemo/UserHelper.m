@@ -46,8 +46,7 @@ static UserHelper *sharedInstance = nil;
 -(NSDecimalNumber*)preferredSaleItemTax
 {
     //You are free to select the tax from the avalilables in taxCategories and taxRates, that will depend on the country of your merchant
-    return currentUser.merchant.taxCategories.count > 0 && [[currentUser.merchant.taxCategories firstObject] currentValue] != nil ? 
-        [[currentUser.merchant.taxCategories firstObject] currentValue] : NSDecimalNumber.zero;
+    return [[currentUser.merchant.taxCategories firstObject] currentValue];
 }
 
 -(NSDecimalNumber*)tipTax
