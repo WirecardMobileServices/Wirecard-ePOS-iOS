@@ -1183,7 +1183,8 @@ __deprecated_msg("Please use WDSaleRequestConfiguration")
 @property (nullable, nonatomic, strong) NSNumber *defaultNetTaxation;
 @property (nullable, nonatomic, strong) NSString *merchantId;
 @property (nullable, nonatomic, strong) NSString *name;
-@property (nullable, nonatomic, strong) NSString *notifyCallbackUrl;
+@property (nullable, nonatomic, strong) NSString *notifyUrlFormat;
+@property (nullable, nonatomic, strong) NSString *notifyUrl;
 @property (nullable, nonatomic, strong) NSString *phone;
 @property (nullable, nonatomic, strong) NSNumber *receiptIncludedSaleItems;
 @property (nullable, nonatomic, strong) NSNumber *smsSendingAllowed;

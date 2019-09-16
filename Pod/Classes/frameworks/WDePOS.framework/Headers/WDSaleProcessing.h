@@ -52,16 +52,26 @@
 @required
 ///Add Cash Payment to the Sale to settle it by this payment
 - (void)addCashPayment:(nonnull NSDecimalNumber *)amount;
+///Add Cash Payment to the Sale to settle it by this payment
+- (void)addCashPayment:(nonnull NSDecimalNumber *)amount notifyUrl:(nonnull NSString *)notifyUrl;
 ///Add Card Payment to the Sale to settle it by this payment
 - (void)addCardPayment:(nonnull NSDecimalNumber *)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Card Payment to the Sale to settle it by this payment
+- (void)addCardPayment:(nonnull NSDecimalNumber *)amount terminal:(nonnull WDTerminal *)terminal notifyUrl:(nonnull NSString *)notifyUrl;
 ///Add Alipay Payment to the Sale to settle it by this payment
 - (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
+///Add Alipay Payment to the Sale to settle it by this payment
+- (void)addAlipayPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId notifyUrl:(nonnull NSString *)notifyUrl;
 ///Add WeChat Payment to the Sale to settle it by this payment
 - (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId;
+///Add WeChat Payment to the Sale to settle it by this payment
+- (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId notifyUrl:(nonnull NSString *)notifyUrl;
 ///Add Card Authorization to the Sale to settle it by this payment
 -(void)addCardAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
 ///Add Card EFTCard to the Sale to settle it by this payment
 -(void)addEFTCardPayment:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Card EFTCard to the Sale to settle it by this payment
+-(void)addEFTCardPayment:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal notifyUrl:(nonnull NSString *)notifyUrl;
 
 @end
 

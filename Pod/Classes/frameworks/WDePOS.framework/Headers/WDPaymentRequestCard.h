@@ -22,4 +22,8 @@
 - (nullable instancetype)initEFTCardWithAmount:(nonnull NSDecimalNumber *)amount
                       terminal:(nonnull WDTerminal *)terminal;
 
+- (nullable instancetype)initEFTCardWithAmount:(nonnull NSDecimalNumber *)amount
+                                      terminal:(nonnull WDTerminal *)terminal
+                                     notifyUrl:(nonnull NSString *)notifyUrl;
+
 @end

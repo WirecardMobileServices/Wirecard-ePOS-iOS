@@ -108,6 +108,7 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
 /**
  */
 @property (nonnull, nonatomic, readonly) NSDecimalNumber *amount;
+@property (nullable, nonatomic, readonly) NSString *notifyUrl;
 
 @end
 
