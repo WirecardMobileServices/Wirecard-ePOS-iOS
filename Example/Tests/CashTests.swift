@@ -71,7 +71,7 @@ class CashTestsSwift: BaseTestsSwift
             //--------------------------------------
 
             expectation = self.expectation(description: "Check Last Cash Shift and Create New One If Needed")
-            let openTime : NSDate = NSDate.init(date: self.lastShift?.openTime, hour: 0, minute: 0, second: 0, andTimeZone:"UTC")
+            let openTime : NSDate = NSDate.init(date: self.lastShift?.openTime ?? Date(), hour: 0, minute: 0, second: 0, andTimeZone:"UTC")
             if self.lastShift != nil && self.lastShift?.shiftStatus == "OPEN" && openTime.isStillToday() == false
             {
                 //The shif exist, but it was open more than 24 hours ago. We need to close it, then open a new one.
