@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.9.2] - 2019-09-19
+
+### Fixed
+
+- iOS 13 compatibility fix
+
 ## [2.9.1] - 2019-09-16
 
 ### Fixed

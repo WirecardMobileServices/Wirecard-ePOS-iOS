@@ -341,6 +341,7 @@ SWIFT_PROTOCOL("_TtP7WDBrand11Formattable_")
 
 
 @interface NSString (SWIFT_EXTENSION(WDBrand))
+- (BOOL)contains:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)instr:(NSString * _Nullable)substring SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)stringByRemovingControlCharacters SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)containsHTMLInjectionCharacters SWIFT_WARN_UNUSED_RESULT;
@@ -1060,6 +1061,7 @@ SWIFT_PROTOCOL("_TtP7WDBrand11Formattable_")
 
 
 @interface NSString (SWIFT_EXTENSION(WDBrand))
+- (BOOL)contains:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)instr:(NSString * _Nullable)substring SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)stringByRemovingControlCharacters SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)containsHTMLInjectionCharacters SWIFT_WARN_UNUSED_RESULT;
@@ -1784,6 +1786,7 @@ SWIFT_PROTOCOL("_TtP7WDBrand11Formattable_")
 
 
 @interface NSString (SWIFT_EXTENSION(WDBrand))
+- (BOOL)contains:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)instr:(NSString * _Nullable)substring SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)stringByRemovingControlCharacters SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)containsHTMLInjectionCharacters SWIFT_WARN_UNUSED_RESULT;
@@ -2503,6 +2506,7 @@ SWIFT_PROTOCOL("_TtP7WDBrand11Formattable_")
 
 
 @interface NSString (SWIFT_EXTENSION(WDBrand))
+- (BOOL)contains:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)instr:(NSString * _Nullable)substring SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)stringByRemovingControlCharacters SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)containsHTMLInjectionCharacters SWIFT_WARN_UNUSED_RESULT;
