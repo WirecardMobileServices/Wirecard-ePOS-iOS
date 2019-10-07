@@ -815,7 +815,7 @@ INPUT                  = Pod/Classes/frameworks/WDePos.framework/Headers/WDePosS
   					     Pod/Classes/frameworks/WDePos.framework/Headers/WDSaleManager.h \
                          Pod/Classes/frameworks/WDePos.framework/Headers/WDUserManager.h \
                          Pod/Classes/frameworks/WDePos.framework/Headers/WDUtils.h \
-                         Pod/Classes/frameworks/WDePos.framework/Headers/WDADataTypes.h \
+                         Pod/Classes/frameworks/WDePos.framework/Headers/WDDataTypes.h \
                          Pod/Classes/frameworks/WDePos.framework/Headers/WDAError.h \
                          Pod/Classes/frameworks/WDePos.framework/Headers/WDSSessionManagerCredentials.h
 
