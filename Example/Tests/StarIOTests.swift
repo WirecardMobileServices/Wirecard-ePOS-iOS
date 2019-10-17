@@ -176,7 +176,7 @@ class StarIOTestsSwift: BaseTestsSwift, WDScanning, WDPrinting, WDManagerDelegat
         self.saleResponse?.receipt(true,
                               showReturns: false,
                               format: .uiImage,
-                              dpi: .starMicronics,
+                              dpi: .default,
                               completion: {[weak self](receipts : [Any]?, error : Error?) in
             self?.returnedErr = error
             //Receipt as per format specified HTML | PDF | UIImage | WDReceipt object

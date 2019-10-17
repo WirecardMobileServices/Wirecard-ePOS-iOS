@@ -1,0 +1,6 @@
+framework module Datecs_SDK {
+  umbrella header "Datecs_SDK.h"
+
+  export *
+  module * { export * }
+}

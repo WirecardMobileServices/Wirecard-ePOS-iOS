@@ -1,0 +1,6 @@
+framework module Pods_WDePOS {
+  umbrella header "Pods-WDePOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

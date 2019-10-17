@@ -1,0 +1,126 @@
+//NOTICE: names of fields and coresponding getters must have following names(also match case): 	
+//NOTE: names of classes doesn't matter 
+//https://mustache.github.io/
+
+	class PrintableReceipt {
+		 Bitmap headerLogo;
+		 Bitmap signatureImage;
+		 // header labels
+		 String headerLabel;
+		 String receiptNumberLabel;
+		 // header values
+		 String receiptType;
+		 String receiptNumber;
+		 String processedDate;
+		 String contactlessInfo;
+		 String merchantName;
+		 PrintableAddress PrintableAddress;
+		 String merchantTaxNumber;
+		 String cashierIdLabel;
+		 String cashierId;
+		 String shopLabel;
+		 String shop;
+		 String processedDateLabel;
+		 // items
+		 List<PrintableSaleItem> saleItems;
+		 String unitPricesTaxation;
+		 String taxPercentage;
+		 String netto;
+		 String brutto;
+		 String tax;
+		 List<TaxItem> taxItems;
+		 String totalAmountLabel;
+		 String totalAmount;
+		 String subTotalAmountLabel;
+		 String subTotalAmount;
+		 String serviceChargeLabel;
+		 String serviceChargeAmount;
+		 String serviceChargeWithTaxLabel;
+		 String serviceChargeWithTaxAmount;
+		 String discountPercentageLabel;
+		 String percentageDiscountLabel;
+		 String discountAmount;
+		 String itemDiscountLabel;
+		 String tipInclusiveTaxLabel;
+		 String tipInclusiveTaxAmount;
+		 String vouchersLabel;
+		 String vouchersAmount;
+		 String customerCardLabel;
+		 String customerCardID;
+		 // details
+		 String detailsTitle;
+		 List<PrintableDetail> details;
+		 // footer
+		 String line1 = "";
+		 String signatureLabel;
+		 String signature;
+		 String line2;// = "Disclaimer for Customer\nMerchant / Customer Copy";
+		 Bitmap logos;
+		 String line3;// = "Payment issued by accept by Wirecard";
+		 String barcodeData;
+		 boolean displayBarcodeLabel;
+		 String line4;// = "HAVE A NICE DAY!";
+		 boolean hasNext;
+	 }
+	 
+	class PrintableAddress {
+		String street1;
+		String street2;
+		String city; 
+		String postalCode
+		String stateOrProvince;
+		String country;
+		
+		//NOTE: this class needs to override toString() and return empty string or null in case that all fields are nulls or empty strings
+	}
+	 
+	class PrintableDetail {
+
+		String label;
+		String value;
+		String center;
+		Boolean bold;
+	}
+	
+	class PrintableSaleItem {
+
+		String description;
+		String unitPrice;
+		String discount;
+		BigDecimal quantity;
+		BigDecimal unitTax;
+		String itemTotal;
+	}
+	
+	class TaxItem {
+
+		 String val;
+		 String nettoAmount;
+		 String taxAmount;
+		 String totalAmount;
+	}
+	
+	class Images {
+        String headerLogo; 	//base 64 string
+        String footerLogo; 	//base 64 string
+        String barcode;		//base 64 string
+    }
+	
+	class Auxiliary {
+		Boolean showLineAfterMerchantInfo;
+        Boolean showCashierAndShop;
+	}
+	
+	class Content {
+		Images images;
+        Auxiliary aux;
+		PrintableReceipt receipt;
+	
+	}
+	
+	//anonymous class passed to mustache as context
+	class ??? {
+		Boolean isPrinter;
+        Array<Content> receipts;
+		
+	}

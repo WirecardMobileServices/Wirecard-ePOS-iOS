@@ -24,7 +24,7 @@ class MultitenderTests: CashTestsSwift
      
      */
     
-    func testMultitenderPaymens()
+    func testMultitenderPayments()
     {
         var completeSuccessfully = false
         var originalSaleResponseBackup : WDSaleResponse?

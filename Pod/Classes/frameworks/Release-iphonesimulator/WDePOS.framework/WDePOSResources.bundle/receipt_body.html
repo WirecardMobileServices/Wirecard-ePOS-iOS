@@ -1,0 +1,317 @@
+<div class="receiptBody tcenter margin0auto">
+    <span id="hrHider"></span>
+    {{#images.headerLogo}}
+    <img alt="headerLogo width100" class="imgLogo" src="data:image/jpg;base64,{{.}}"/>
+    {{/images.headerLogo}}
+    {{#receipt.headerLabel}}
+    <div id="receiptLabel" class="row h3_text tcenter">{{.}}</div>
+    {{/receipt.headerLabel}}
+    {{#receipt.merchantName}}
+    <div id="merchantName" class="row"><b>{{.}}</b></div>
+    {{/receipt.merchantName}}
+    {{#receipt.address}}
+    <div id="address" class="row wordWrapBreak">
+        {{street2}}
+        {{#street1}}
+        {{.}}
+        <br>
+        {{/street1}}
+        {{postalCode}}
+        {{city}}
+        {{#country}}
+        <br>
+        {{.}}
+        {{/country}}
+    </div>
+    {{/receipt.address}}
+    {{#receipt.taxNumber}}
+    <div id="taxNumber" class="row wordWrapBreak">{{.}}</div>
+    {{/receipt.taxNumber}}
+    {{#receipt.receiptType}}
+    <div id="receiptType" class="row uppercase">
+        <br>
+        <b>{{.}}</b>
+        <br>
+        <br>
+    </div>
+    {{/receipt.receiptType}}
+    {{#receipt.saleStatus}}
+    <div id="status" class="row uppercase">
+        <b>{{.}}</b>
+        <br/>
+        <br/>
+    </div>
+    {{/receipt.saleStatus}}
+    <hr class="sectionSeparator">
+    {{#receipt.cashierIdLabel}}{{#receipt.receiptNumberLabel}}{{#receipt.shopLabel}}
+    <div class="flexRowSpaceBetween">
+        <div id="cashierIdLabelAndValue" class="breakWord flexItem50 tleft paddingRight">
+            {{#receipt.cashierId}}
+            <b>{{receipt.cashierIdLabel}}:</b> {{.}}
+            {{/receipt.cashierId}}
+        </div>
+        <div id="shopLabelAndValue" class="breakWord flexItem50 tRightJustify paddingLeft">
+            {{#receipt.shop}}
+            <b>{{receipt.shopLabel}}:</b> {{.}}
+            {{/receipt.shop}}
+        </div>
+    </div>
+    <div class="flexRowSpaceBetween flexWrap">
+        <div id="receiptNumberLabelAndValue" class="flexItem tleft">
+            {{#receipt.receiptNumber}}
+            <b>{{receipt.receiptNumberLabel}}:</b> {{.}}
+            {{/receipt.receiptNumber}}
+        </div>
+
+        {{#receipt.processedDate}}
+        <div id="dateTime" class="flexItem tright">
+            {{.}}
+        </div>
+        {{/receipt.processedDate}}
+    </div>
+    <hr class="sectionSeparator">
+    {{/receipt.shopLabel}}{{/receipt.receiptNumberLabel}}{{/receipt.cashierIdLabel}}
+    {{>receipt_items}}
+    {{#receipt.subTotalAmount}}
+    <div class="row">
+        <span id="subtotalLabel" class="leftCell">
+            <b>{{receipt.subTotalAmountLabel}}:</b>
+        </span>
+        <span id="subtotalAmount" class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.subTotalAmount}}
+    {{#receipt.discountAmount}}
+    <div class="row">
+        <span id="discountLabel" class="leftCell">
+            <b>{{receipt.discountLabel}}:</b>
+        </span>
+        <span id="discountAmount" class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.discountAmount}}
+    {{#receipt.serviceChargeAmount}}
+    <div class="row">
+        <span id="serviceChargeLabel" class="leftCell">
+            <b>{{receipt.serviceChargeLabel}}</b>{{#receipt.serviceChargeTax}} {{.}}{{/receipt.serviceChargeTax}}:
+        </span>
+        <span id="serviceChargeAmount" class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.serviceChargeAmount}}
+
+    {{#receipt.tipInclusiveTaxAmount}}
+    <div class="row">
+        <span id="tipLabel" class="leftCell">
+            <b>{{receipt.tipLabel}}</b>{{#receipt.tipTax}} {{.}}{{/receipt.tipTax}}:
+        </span>
+        <span id="tipAmount" class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.tipInclusiveTaxAmount}}
+    {{#receipt.vouchersAmount}}
+    <div class="row">
+        <span class="leftCell">
+            <b>{{receipt.vouchersLabel}}:</b>
+        </span>
+        <span class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.vouchersAmount}}
+    {{#receipt.customerCardID}}
+    <div class="row">
+        <span class="leftCell">
+            <b>{{receipt.customerCardLabel}}:</b>
+        </span>
+        <span class="rightCell">{{.}}</span>
+    </div>
+    {{/receipt.customerCardID}}
+    {{#receipt.totalAmount}}
+    <hr class="sectionSeparator">
+    <table class="mainTable subTable">
+        <tbody>
+        <tr id="totalAmount">
+            <td id="totalLabel" class="tleft pull_left font24">
+                {{receipt.totalAmountLabel}}:
+            </td>
+            <td id="receiptTotalAmount" class="tright pull_right font24">
+                {{receipt.totalAmount}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <hr class="sectionSeparator">
+    {{/receipt.totalAmount}}
+    {{>receipt_taxes}}
+    {{#receipt.detailsTitle}}
+    <table class="mainTable subTable">
+        <thead>
+        <tr>
+            <td id="detailsTitle" class="text_p tcenter detailsTitle" colspan="2">
+                <b class="uppercase">{{receipt.detailsTitle}}</b>
+            </td>
+        </tr>
+        </thead>
+    </table>
+    {{/receipt.detailsTitle}}
+    {{#receipt.payments}}
+    <div class="paymentsBorder"></div>
+    {{#title}}
+    <div class="margin0auto text_p tcenter detailsTitle" colspan="2">
+        <b class="uppercase">{{.}}</b>
+    </div>
+    {{/title}}
+    {{#details}}
+    {{#center}}
+    <div class="text_s {{#bold}}bold{{/bold}} detailsValueCenter">
+        {{.}}
+    </div>
+    {{/center}}
+    {{^center}}
+    {{#value}}
+    <div class="flexRow">
+        <div class="flexDetailsLabel bold tleft text_s breakWord detailsLabel">
+            {{#label}}{{.}}:{{/label}}
+        </div>
+        <div class="flexDetailsValue tleft text_s breakWord {{#bold}}bold{{/bold}} paddingLeft4 detailsValue">
+            {{.}}
+        </div>
+    </div>
+    {{/value}}
+    {{/center}}
+    {{/details}}
+    {{#receipt.line1}}
+    <div class="text_p margin0auto detailsTitle">
+        {{receipt.line1}}
+    </div>
+    {{/receipt.line1}}
+    {{#image}}
+    <img class="signatureImg" alt="signature" src="data:image/png;base64, {{.}}"/>
+
+    <hr class="signatureUnderline">
+    <div class="margin0auto text_p paddingBottom4 signatureLabel">{{receipt.signatureLabel}}</div>
+    {{/image}}
+    {{#receipt.retainLabel}}
+    <span class="text_p margin0auto detailsTitle retainLabel">
+    {{receipt.retainLabel}}
+    </span>
+    {{/receipt.retainLabel}}
+    {{/receipt.payments}}
+    <!-- footer -->
+    <table class="mainTable subTable">
+        {{#images.barcode}}
+        <tr class="borderedRow">
+            <td>
+                <table class="summary">
+                    <tr>
+                        <td class="rowHeader total tcenter">
+                            <img id="barcodeImage" class="width100" alt="receiptIDBarCode" src="data:image/png;base64, {{.}}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="barcodeValue" class="text_p tcenter marginBottom2">
+                            <b>{{receipt.barcodeData}}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {{/images.barcode}}
+        {{#images.footerLogo}}
+        <tr>
+            <td class="tcenter width90 margin0auto">
+                <img id="footerLogos" class="width90" alt="footer logo" src="data:image/png;base64, {{.}}"/>
+            </td>
+        </tr>
+        {{/images.footerLogo}}
+
+        {{#receipt.issuedByLabel}}
+        <tr>
+            <td id="issuedBy" class="text_p tcenter detailsTitle">
+                {{.}}
+            </td>
+        </tr>
+        {{/receipt.issuedByLabel}}
+        {{#receipt.closingLabel}}
+        <tr>
+            <td id="closingLabel" class="text_p tcenter detailsTitle">
+                {{.}}
+            </td>
+        </tr>
+        {{/receipt.closingLabel}}
+    </table>
+    {{#receipt.alternativePayments}}
+    <div class="alternativePaymentsBorder"></div>
+    <table class="mainTable subTable">
+        {{#title}}
+        <thead>
+        <tr>
+            <td class="text_p tcenter detailsTitle altPayTitle" colspan="2">
+                <b class="uppercase title">{{.}}</b>
+            </td>
+        </tr>
+        </thead>
+        {{/title}}
+        <tbody>
+        {{#logo}}
+        <tr>
+            <td class="tcenter width90 margin0auto">
+                <img class="autoResize altPaymentLogo" alt="footer logo" src="data:image/png;base64, {{.}}"/>
+            </td>
+        </tr>
+        {{/logo}}
+        {{^logo}}
+        <tr>
+            <td>
+                <hr size="1px" color="#000000"/>
+            </td>
+        </tr>
+        {{/logo}}
+        </tbody>
+    </table>
+    {{#details}}
+    {{#center}}
+    <div class="text_s {{#bold}}bold{{/bold}} altDetailsCenteredValue">
+        {{.}}
+    </div>
+    {{/center}}
+    {{^center}}
+    {{#value}}
+    <div class="flexRow">
+        <div class="flexAltDetailsLabel bold tleft text_s breakWord">
+            {{#label}}{{.}}:{{/label}}
+        </div>
+        <div class="flexAltDetailsValue tleft text_s breakWord {{#bold}}bold{{/bold}} paddingLeft4">
+            {{.}}
+        </div>
+    </div>
+    {{/value}}
+    {{/center}}
+    {{/details}}
+    {{#image}}
+    <table class="mainTable subTable">
+        <tbody>
+        <tr class="borderedRow">
+            <td>
+                <table class="summary">
+                    <tr>
+                        <td class="rowHeader total tcenter">
+                            <img class="width100 altBarcode" alt="receiptIDBarCode" src="data:image/png;base64, {{.}}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text_p tcenter marginBottom2 altBarcodeData">
+                            <b>{{receipt.alternativePayments.barcodeData}}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {{/image}}
+        {{#receipt.retainLabel}}
+        <tr>
+            <td class="text_p tcenter detailsTitle">
+                {{.}}
+            </td>
+        </tr>
+        {{/receipt.retainLabel}}
+        </tbody>
+    </table>
+    {{/receipt.alternativePayments}}
+    <hr class="sectionSeparator">
+</div>

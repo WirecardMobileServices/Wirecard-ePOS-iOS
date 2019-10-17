@@ -1,0 +1,6 @@
+framework module Stario_SDK {
+  umbrella header "Stario_SDK.h"
+
+  export *
+  module * { export * }
+}

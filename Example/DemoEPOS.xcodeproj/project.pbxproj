@@ -19,6 +19,7 @@
 		5D2E8FF81C89C9C80062A2F2 /* fakereceipt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E8FF71C89C9C80062A2F2 /* fakereceipt.png */; };
 		5D3AFCF71E70044C00D0FC56 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AFCF51E70044C00D0FC56 /* StartViewController.m */; };
 		5D4DD0191F2773E500ACDB8E /* StarIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4DD0181F2773E500ACDB8E /* StarIOTests.swift */; };
+		5D5E9937228198E400B06001 /* ModifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E9936228198E400B06001 /* ModifyTests.swift */; };
 		5D5FCD6B1F5407280006EA11 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FCD6A1F5407280006EA11 /* BaseTests.swift */; };
 		5D5FCD6D1F540F290006EA11 /* BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FCD6C1F540F290006EA11 /* BaseTests.m */; };
 		5D878F0222A140850049B738 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D878F0022A140850049B738 /* logo@2x.png */; };
@@ -76,6 +77,7 @@
 		5D3AFCF41E70044C00D0FC56 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		5D3AFCF51E70044C00D0FC56 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		5D4DD0181F2773E500ACDB8E /* StarIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarIOTests.swift; sourceTree = "<group>"; };
+		5D5E9936228198E400B06001 /* ModifyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyTests.swift; sourceTree = "<group>"; };
 		5D5FCD6A1F5407280006EA11 /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		5D5FCD6C1F540F290006EA11 /* BaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTests.m; sourceTree = "<group>"; };
 		5D5FCD6E1F540F8E0006EA11 /* BaseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTests.h; sourceTree = "<group>"; };
@@ -217,7 +219,6 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5D2DF12621A2DF8E00E16118 /* MultitenderTests.swift */,
 				5D5FCD6E1F540F8E0006EA11 /* BaseTests.h */,
 				5D5FCD6C1F540F290006EA11 /* BaseTests.m */,
 				5D5FCD6A1F5407280006EA11 /* BaseTests.swift */,
@@ -229,6 +230,8 @@
 				5DC0CD601F3200A60030D4AB /* SocketScannerTests.swift */,
 				A660E66C1F2CE043003583E0 /* SpireTests.swift */,
 				5D4DD0181F2773E500ACDB8E /* StarIOTests.swift */,
+				5D2DF12621A2DF8E00E16118 /* MultitenderTests.swift */,
+				5D5E9936228198E400B06001 /* ModifyTests.swift */,
 				5DD2B44D1F0139E000E0B75A /* StatsTests.swift */,
 				5DDD4E901F27611000B2CA99 /* UserTests.swift */,
 				5DE4680F1E70397100ECB7FE /* TestUtils.h */,
@@ -419,13 +422,13 @@
 				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDBrand.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Spire_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Stario_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUI.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDBrand.framework",
 				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 			);
@@ -440,13 +443,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDBrand.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spire_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stario_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOSUI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDBrand.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 			);
@@ -507,13 +510,13 @@
 				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/Overcoat/Overcoat.framework",
+				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDBrand.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOS.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Datecs_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Socket_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Spire_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/Stario_SDK.framework",
 				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDePOSUI.framework",
-				"${PODS_ROOT}/../../Pod/Classes/frameworks/WDBrand.framework",
 				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 			);
@@ -528,13 +531,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overcoat.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDBrand.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Datecs_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spire_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stario_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDePOSUI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDBrand.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 			);
@@ -557,6 +560,7 @@
 				5D5FCD6B1F5407280006EA11 /* BaseTests.swift in Sources */,
 				5DCFDA1B1F3353D600C6E1D3 /* ERPTests.swift in Sources */,
 				5DD2B44E1F0139E000E0B75A /* StatsTests.swift in Sources */,
+				5D5E9937228198E400B06001 /* ModifyTests.swift in Sources */,
 				5D5FCD6D1F540F290006EA11 /* BaseTests.m in Sources */,
 				5D2DF12721A2DF8F00E16118 /* MultitenderTests.swift in Sources */,
 				5D185BF21E71550B005430DA /* SaleHelper.m in Sources */,

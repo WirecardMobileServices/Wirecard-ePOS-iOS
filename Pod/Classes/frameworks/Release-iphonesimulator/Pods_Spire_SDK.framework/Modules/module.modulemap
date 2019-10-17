@@ -1,0 +1,6 @@
+framework module Pods_Spire_SDK {
+  umbrella header "Pods-Spire_SDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

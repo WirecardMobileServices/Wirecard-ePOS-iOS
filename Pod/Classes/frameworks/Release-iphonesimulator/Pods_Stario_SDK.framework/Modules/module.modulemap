@@ -1,0 +1,6 @@
+framework module Pods_Stario_SDK {
+  umbrella header "Pods-Stario_SDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

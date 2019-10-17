@@ -1,0 +1,258 @@
+<table class="mainTable">
+    <TBODY>
+        <tr ##merchantLogoDisplay##>
+            <td class="bold tcenter logo" colspan="2" id="merchantLogo">
+                <img alt="Logo" class="desaturate" style="margin:30px; 20px;" src="data:image/png;base64,##merchantLogo##" />
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="slarge tcenter" style="text-transform: uppercase; padding: 20px 0px 10px 0px;" colspan="2" id="receiptAcknowledgeText">##receiptAcknowledgeText##</td>
+        </tr>
+        <tr>
+            <td class="bold tcenter" colspan="2" id="merchantName">
+                ##merchantName##
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="tcenter" colspan="2" id="address">
+                ##address##
+            </td>
+        </tr>
+        <tr ##merchantTaxNumberDisplay##>
+            <td class="tcenter" style="padding-top: 10px;" colspan="2" id="merchantTaxNumber">
+                ##merchantTaxNumber##
+            </td>
+        </tr>
+        <tr>
+            <td class="bold tcenter" style="text-transform: uppercase; padding-top: 10px;" colspan="2" id="transactionTypeAsText">
+                <b>##transactionTypeAsText##</b>
+            </td>
+        </tr>
+        <tr ##contactlessIndicatorDisplay##>
+            <td class=" tcenter" style="text-transform: uppercase;" colspan="2" id="contactlessIndicator">
+                ##contactlessIndicator##
+            </td>
+        </tr>
+        <tr><td colspan="2"><br></td></tr>
+
+        <tr><td class="margin_wrap" colspan="2"><hr style="border-bottom: solid 1px #000000;"></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                <tr>
+                    <td class="tleft pull_left slarge" id="cashierId"><div ##cashierIdDisplay##><b>##cashierIdHeader##:</b> ##cashierId##</div></td>
+                    <td class="tright pull_right slarge" id="shopId"><div ##shopIdDisplay##><b>##shopIdHeader##:</b> ##shopId##</div></td>
+                </tr>
+                <tr>
+                    <td class="tleft pull_left slarge" id="receiptNO"><b>##receiptNOHeader##:</b> ##receiptNO##</td>
+                    <td class="tright pull_right slarge" id="transactionDate">
+                        ##date## (##time##)
+                    </td>
+                </tr>
+            </TBODY></table>
+        </td></tr>
+        <tr><td class="margin_wrap" colspan="2"><hr style="border-bottom: solid 1px #000000;"></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                ##itemRows@wd-receipt-itemRows##
+            </TBODY></table>
+        </td></tr>
+        <tr><td class="margin_wrap" colspan="2"><hr style="margin-top: 20px; margin-bottom: 20px; border-bottom: solid 1px #000000;"></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                <tr>
+                    <td class="bold tleft pull_left">##subtotalHeader##:</td>
+                    <td class="tright pull_right" id="subtotalAmount">##subtotal##</td>
+                </tr>
+                <tr ##serviceChargeDisplay##>
+                    <td class="bold tleft pull_left">##serviceChargeHeader##:</td>
+                    <td class="tright pull_right" id="serviceCharge">##serviceCharge##</td>
+                </tr>
+                <tr ##serviceChargeWithTaxDisplay##>
+                    <td class="bold tleft pull_left">##serviceChargeWithTaxHeader##:</td>
+                    <td class="tright pull_right" id="serviceChargeWithTax">##serviceChargeWithTax##</td>
+                </tr>
+                <tr ##discountDisplay##>
+                    <td class="bold tleft pull_left">##discountHeader##:</td>
+                    <td class="tright pull_right" id="discount">##discount##</td>
+                </tr>
+                <tr ##tipWithTaxDisplay##>
+                    <td class="bold tleft pull_left">##tipWithTaxHeader##:</td>
+                    <td class="tright pull_right" id="tipWithTax">##tipWithTax##</td>
+                </tr>
+                <tr ##vouchersDisplay##>
+                    <td class="bold tleft pull_left">##vouchersHeader##:</td>
+                    <td class="tright pull_right" id="voucher">##vouchers##</td>
+                </tr>
+                <tr ##customerCardDisplay##>
+                    <td class="bold tleft pull_left">##customerCardHeader##:</td>
+                    <td class="tright pull_right" id="customerCard">##customerCard##</td>
+                </tr>
+            </TBODY></table>
+        </td></tr>
+        <tr><td class="margin_wrap" colspan="2"><hr style="display: block; margin-top: 20px; margin-bottom: 20px; border-bottom: solid 2px #000000; padding: 0px;"></td></tr>
+
+        <tr>
+            <td class="bold tleft pull_left stotal">##totalHeader##:</td>
+            <td class="tright pull_right stotal" id="totalAmount">##total##</td>
+        </tr>
+
+        <tr><td class="margin_wrap" colspan="2"><hr style="border-bottom: solid 1px #000000; padding: 0px;"></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                <tr>
+                    <td class="bold tleft " style="width: 15%;">##taxHeader##</td>
+                    <td class="bold tleft " style="width: 30%;">##taxNettoHeader##</td>
+                    <td class="bold tleft " style="width: 15%;">##taxTotalHeader##</td>
+                    <td class="bold tleft " style="width: 30%;">##taxBruttoHeader##</td>
+                </tr>
+                ##taxValueRows@wd-receipt-taxValueRows##
+            </TBODY></table>
+        </td></tr>
+
+        <tr><td class="margin_wrap" colspan="2"><hr style="border-bottom: solid 1px #000000;"></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                <tr>
+                    <td class="bold tcenter slarge" style="text-transform: uppercase; padding: 10px 30px 20px 30px;" colspan="2">
+                        ##paymentDetailsHeader##
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bold tleft pull_left">##paymentTypeHeader##:</td>
+                    <td class="tleft pull_right" id="paymentType">##paymentType##</td>
+                </tr>
+                <tr ##cardNumberDisplay##>
+                    <td class="bold tleft pull_left">##cardNumberHeader##:</td>
+                    <td class="tleft pull_right" id="cardNumber">##cardNumber##</td>
+                </tr>
+                <tr ##cardholderNameDisplay##>
+                    <td class="bold tleft pull_left">##cardholderNameHeader##:</td>
+                    <td class="tleft pull_right" style="white-space: normal;" id="cardholderName">##cardholderName##</td>
+                </tr>
+
+                <tr><td colspan="2"><br></td></tr>
+
+                <tr ##cardTypeDisplay##>
+                    <td class="bold tleft pull_left">##cardTypeHeader##:</td>
+                    <td class="tleft pull_right" id="cardType">##cardType##</td>
+                </tr>
+                <tr ##posEntryInterpretedDisplay##>
+                    <td class="bold tleft pull_left"><br></td>
+                    <td class="tleft pull_right" id="posEntryInterpreted">##posEntryInterpreted##</td>
+                </tr>
+                <tr ##terminalIDDisplay##>
+                    <td class="bold tleft pull_left">##terminalIDHeader##:</td>
+                    <td class="tleft pull_right" id="tid">##terminalID##</td>
+                </tr>
+                <tr ##midDisplay##>
+                    <td class="bold tleft pull_left">##midHeader##</td>
+                    <td class="tleft pull_right" id="mid">##mid##</td>
+                </tr>
+
+                <tr><td colspan="2"><br></td></tr>
+
+                <tr>
+                    <td class="bold tleft pull_left">##receiptNOHeader##:</td>
+                    <td class="tleft pull_right" id="receiptNo">##receiptNO##</td>
+                </tr>
+                <tr>
+                    <td class="bold tleft pull_left">##aosaHeader##</td>
+                    <td class="tleft pull_right" id="aosa">##aosa##</td>
+                </tr>
+                <tr>
+                    <td class="bold tleft pull_left">##transactionStatusHeader##:</td>
+                    <td class="tleft pull_right" id="transactionStatus">##transactionStatus##</td>
+                </tr>
+                <tr>
+                    <td class="bold tleft pull_left "\>##aidHeader##</td>
+                    <td class="tleft pull_right" id="aid">##aid##</td>
+                </tr>
+                <tr>
+                    <td class="bold tleft pull_left">##transactionTypeHeader##</td>
+                    <td class="tleft pull_right" id="transactionType">##transactionType##</td>
+                </tr>
+                <tr ##approvalCodeDisplay##>
+                    <td class="bold tleft pull_left">##approvalCodeHeader##:</td>
+                    <td class="tleft pull_right" id="approvalCode">##approvalCode##</td>
+                </tr>
+                
+                <tr ##AppCryptDisplay##>
+                    <td class="bold tleft pull_left">##AppCryptHeader##</td>
+                    <td class="tleft pull_right">&nbsp;</td>
+                </tr>
+                
+                <tr ##AppCryptDisplay##>
+                    <td class="tright appCrypt" colspan="2" id="appCrypt">##AppCrypt##</td>
+                </tr>
+                
+                <tr ##DeclinedReasonDisplay##>
+                    <td class="bold tleft pull_left">##DeclinedReasonHeader##:</td>
+                    <td class="tleft pull_right" id="declinedReason">##DeclinedReason##</td>
+                </tr>
+                
+                <tr>
+                    <td class="bold tleft pull_left">##dateHeader##:</td>
+                    <td class="tleft pull_right" id="timestamp">##date## (##time##)</td>
+                </tr>
+            </TBODY></table>
+        </td></tr>
+        <tr><td><br></td></tr>
+        <tr><td colspan="2">
+            <table class="subTable"><TBODY>
+                <tr ##verifiedOnDeviceCVMDisplay##>
+                    <td class=" tcenter" style="margin-top: 20px;" colspan="2" id="verifiedOnDeviceCVM">
+                        ##verifiedOnDeviceCVM##
+                    </td>
+                </tr>
+                <tr><td></td></tr>
+
+                <tr ##pinVerifiedTextDisplay##>
+                    <td class=" tcenter" colspan="2" id="pinVerifiedText">##pinVerifiedText##</td>
+                </tr>
+
+                <tr ##signatureDisplay##>
+                    <td style="text-align: center; padding-top: 30px;" colspan="2" id="signature">
+                        <img alt="signature" style="margin:0 auto;" src="data:image/jpg;base64,##signature##"/>
+                    </td>
+                </tr>
+                <tr ##signatureDisplay##>
+                    <td class="tleft" colspan="2"><hr style="border-bottom: solid 2px #000000;"></td>
+                </tr>
+                <tr ##signatureDisplay##>
+                    <td class="tcenter" style="padding: 0px 100px;" colspan="2">##signatureHeader##</td>
+                </tr>
+                <tr ##qrCodePaymentDisplay##>
+                    <td class="bold total" style="padding-top: 60px; text-align: center;" colspan="2" id="qrCode">
+                        <img alt="QRcode" class="desaturate" style="width:75%; argin:0 auto;" src="data:image/png;base64,##qrCodePayment##"/>
+                    </td>
+                </tr>
+            </TBODY></table>
+        </td></tr>
+        <tr><td><br></td></tr>
+        <tr>
+            <td class="tcenter" style="padding-bottom: 30px;" colspan="2" id="receiptFooter">
+                ##footer##
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="tcenter" style="text-transform: uppercase;" colspan="2" id="byeMessage">
+                ##byeMessage##
+               
+            </td>
+        </tr>
+        
+        <tr ##AlipayDisplay##>
+            <td class="tcenter">##AlipayDisplayHeader##</td>
+        </tr>
+
+    <tr ##WeChatDisplay##>
+        <td class="tcenter">##WeChatDisplayHeader##</td>
+    </tr>
+
+
+    </TBODY>
+</table>

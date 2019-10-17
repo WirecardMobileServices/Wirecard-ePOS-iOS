@@ -348,7 +348,10 @@ class CashTestsSwift: BaseTestsSwift
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
         self.aSale?.addFlatDiscount(NSDecimalNumber(floatLiteral: 6.0))
 
-        self.aSale.cashRegisterId = cashRegister?.internalId ?? ""
+        if let cashRegisterId = cashRegister?.internalId
+        {
+            self.aSale.cashRegisterId = cashRegisterId
+        }
         self.aSale.shiftId = self.lastShift?.internalId ?? nil
         self.aSale.resetPayments()
         if amount == nil

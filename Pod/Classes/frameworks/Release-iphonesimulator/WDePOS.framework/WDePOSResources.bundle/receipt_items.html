@@ -1,0 +1,30 @@
+{{#receipt.saleItems}}
+<div class="mainTable margin0auto">
+    <div class="width100 text_p breakWord font20 tleft bold pull_left description">{{itemDescription}}
+        <div class="inline text_p font20 pull_right paddingLeft20 bold total">
+            {{itemTotal}}
+        </div>
+    </div>
+    
+</div>
+<div class="flexRowSpaceBetween mainTable overflowHidden">
+    <div class="flexItem tleft font18 quantityAndPrice">
+        {{quantity}} x {{unitPrice}}
+    </div>
+    <div class="flexItem tright font18 tax">
+        {{#unitTax}}
+        {{receipt.unitPricesTaxation}} {{unitTax}} {{receipt.tax}}
+        {{/unitTax}}
+        {{^unitTax}}
+        {{receipt.noTaxLabel}}
+        {{/unitTax}}
+    </div>
+</div>
+{{#discount}}
+<div class="flexRowSpaceBetween mainTable overflowHidden">
+    <div class="flexItem tleft font18 discountRate">{{receipt.discountLabel}} {{discountPercentage}}</div>
+    <div class="flexItem tright font18 discountAmount">{{.}}</div>
+</div>
+{{/discount}}
+{{/receipt.saleItems}}
+<hr class="sectionSeparator">

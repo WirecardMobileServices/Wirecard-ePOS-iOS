@@ -1,17 +1,14 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
-## [2.9.2] - 2019-09-19
+## [2.10.0] - 2019-10-16
 
 ### Fixed
 
-- iOS 13 compatibility fix
-
-## [2.9.1] - 2019-09-16
-
-### Fixed
-
-- Include Notification (Callback) URL in Sale Purchase request
+- Slow mPOP connection fix
+- iOS 13 mandatory changes (ie UIWebView replaced by WKWebView in receipt/z-report pdf generation)
+- EFT Card (SEPA) payments authorized by signature instead of PIN
+- Possibility to complete/modify an open sale during a different shift and/or using a different cash register.
 
 ## [2.9.0] - 2019-08-20
 

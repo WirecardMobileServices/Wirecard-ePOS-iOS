@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1, maximum-scale=1.0, initial-scale=1.0, user-scalable=0"/>
+    <style>
+        :root {
+            --bodyFontSize: 11pt;
+            --tableFontSize: 11pt;
+            --textPFontSize: 11pt;
+            --textSFontSize: 11pt;
+            --wrapperLeftFontSize: 11pt;
+            --wrapperRightFontSize: 11pt;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: 'Arial', sans-serif;
+            font-size: var(--bodyFontSize);
+            margin: 0;
+        }
+
+        TABLE,
+        TBODY,
+        THEAD,
+        TFOOT,
+        TR,
+        TD,
+        TH {
+            font-family: 'Arial', sans-serif;
+            font-size: var(--tableFontSize);
+            text-align: right;
+            padding: 0pt;
+            margin: 0pt;
+            border-spacing: 0pt;
+            vertical-align: top;
+            border-collapse: collapse;
+            empty-cells: hide;
+            border: none;
+        }
+
+        .mainTable {
+            width: 96%;
+            margin: 0;
+        }
+
+        .mainTable td {
+            text-align: right;
+            padding: 1pt;
+        }
+
+        .subTable {
+            margin: 2%;
+        }
+
+        .subTable td {
+            padding: 0pt;
+            margin: 0pt;
+        }
+
+        .summary {
+            margin: 0 auto;
+            padding: 0pt;
+            text-align: left;
+            float: right;
+            width: 100%
+        }
+
+        .borderedRow td {
+            border: none;
+        }
+
+        .rowHeader {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        td.total {
+            font-weight: bold;
+        }
+
+        .tright,
+        td.tright {
+            text-align: right;
+        }
+
+        .tleft,
+        td.tleft {
+            text-align: left;
+        }
+
+        .tcenter,
+        td.tcenter {
+            text-align: center;
+        }
+
+        .tRightJustify {
+            text-align: justify;
+            direction: rtl;
+        }
+
+        .valign_bottom {
+            vertical-align: bottom;
+        }
+
+        td img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img.desaturate {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+
+        .h3_text {
+            font-size: 15pt;
+            color: #000000;
+            padding-bottom: 11pt;
+            display: block;
+        }
+
+        .text_p {
+            font-size: var(--textPFontSize);
+            color: #000000;
+            line-height: 15pt;
+        }
+
+        .text_s {
+            font-size: var(--textSFontSize);
+            color: #000000;
+            line-height: 15pt;
+        }
+
+        .font24 {
+            font-size: 15pt;
+        }
+
+        .font20 {
+            font-size: 12pt;
+        }
+
+        .font18 {
+            font-size: 11pt;
+        }
+
+        .pull_left {
+            float: left;
+        }
+
+        .pull_right {
+            float: right;
+        }
+
+        .wrapperLeft {
+            display: block;
+            float: left;
+            text-align: left;
+            font-size: var(--wrapperLeftFontSize);
+        }
+
+        .wrapperRight {
+            display: block;
+            float: right;
+            font-size: var(--wrapperRightFontSize);
+        }
+
+        .smart_word_wrap {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            word-break: break-word;
+            -ms-hyphens: none;
+            -moz-hyphens: none;
+            -webkit-hyphens: none;
+            hyphens: none;
+        }
+
+        .bold {
+            font-weight: bold
+        }
+
+        #hrHider+hr.sectionSeparator,
+        hr.sectionSeparator+hr.sectionSeparator {
+            display: none;
+        }
+
+        div.paymentsBorder {
+            border: none;
+        }
+
+        table~div.paymentsBorder~div.paymentsBorder {
+            border-bottom: solid 1pt #000000;
+            margin: 0 2% 1% 2%;
+        }
+
+        div.alternativePaymentsBorder {
+            border-bottom: solid 1pt #000000;
+            margin: 0 2% 1% 2%;
+        }
+
+        .sectionSeparator {
+            border: none;
+            height: 2px;
+            color: #000000; /* old IE */
+            background-color: #000000; /* Modern Browsers */
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 1%;
+        }
+
+        .row {
+            margin: auto;
+            width: 96%;
+            display: block;
+        }
+
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .rightCell {
+            float: right;
+            /* overflow-wrap: normal; */
+        }
+
+        .leftCell {
+            float: left;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .flexWrap {
+            flex-wrap: wrap;
+        }
+
+
+        .flexRow {
+            width: 96%;
+            margin: auto;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .flexDetailsLabel {
+            flex: 0 0 44%;
+        }
+
+        .flexDetailsValue {
+            flex: 0 0 56%;
+        }
+
+        .flexAltDetailsLabel {
+            flex: 0 0 50%;
+        }
+
+        .flexAltDetailsValue {
+            flex: 0 0 50%;
+        }
+
+        .flexRowSpaceBetween {
+            width: 96%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flexItem50 {
+            flex: 1 1 50%;
+        }
+
+        .flexItem {
+            flex: 1 1 auto;
+        }
+
+        .flexItemBottom {
+            align-self: flex-end;
+        }
+
+        .breakWord {
+            word-break: break-all;
+        }
+
+        .wordWrapBreak {
+            word-wrap: break-word;
+        }
+
+        .wsNoWrap {
+            white-space: nowrap;
+        }
+
+        .marginLeft2 {
+            margin-left: 2%;
+        }
+
+        .marginBottom2 {
+            margin-bottom: 2%;
+        }
+
+        .margin0auto {
+            margin: 0 auto;
+        }
+
+        .paddingRight {
+            padding-right: 1%;
+        }
+
+        .paddingRight4{
+            padding-right: 4pt;
+        }
+
+        .paddingLeft {
+            padding-left: 1%;
+        }
+
+        .paddingBottom4 {
+            padding-bottom: 4%;
+        }
+
+        .paddingLeft20 {
+            padding-left: 15pt;
+        }
+
+        .paddingLeft4{
+            padding-left: 4pt;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .width100 {
+            width: 100%;
+        }
+
+        .minWidth35 {
+            min-width: 35%;
+        }
+
+        .width90 {
+            width: 90%;
+        }
+
+        .width30 {
+            width: 30%
+        }
+
+        .detailsTitle {
+            margin-top: 3%;
+            margin-bottom: 2%
+        }
+
+        #totalAmount {
+            overflow: hidden;
+            display: block;
+            clear: both;
+        }
+
+        .signatureImg {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        .signatureUnderline {
+            border: none;
+            height: 2px;
+            color: #000000; /* old IE */
+            background-color: #000000; /* Modern Browsers */
+            margin: 0 5%
+        }
+
+        img.autoResize {
+            width: 100%;
+            height: auto;
+        }
+
+        .blockClearBoth {
+            display: block;
+            clear: both;
+        }
+
+        .overflowHidden {
+            overflow: hidden;
+        }
+
+        .tableFixed {
+            table-layout: fixed;
+        }
+
+        .clearBoth {
+            clear: both;
+        }
+
+        .receiptBody {
+            max-width: 450pt;
+            min-width: 220pt;
+        }
+
+        .tempty {
+            width: 50%;
+        }
+
+        .mainTableDiv {
+            width: 96%;
+            margin: 0;
+            display: table;
+        }
+
+        .divTableRow {
+            display: table-row;
+        }
+
+        .divTableCell,
+        .divTableHead {
+            border: none;
+            display: table-cell;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .title {
+            white-space: pre;
+        }
+
+        .title::before {
+            content: "\A";
+        }
+
+        .title::after {
+            content: "\A\A";
+        }
+
+        .imgLogo {
+            display: table;
+            margin: 0 auto;
+            width: 100%;
+        }
+    </style>
+    <title>Receipt</title>
+</head>
+
+<body>
+{{>receipt_body}}
+</body>
+
+</html>

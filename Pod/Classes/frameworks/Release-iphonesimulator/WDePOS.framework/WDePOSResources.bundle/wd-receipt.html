@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width, minimum-scale=0.1, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+        <style>
+            body {
+                font-family:'Helvetica Neue', sans-serif;
+                font-size:12pt;
+                margin: 0;
+            }
+        TABLE, TBODY, THEAD, TFOOT, TR, TD, TH {
+            font-family:'Helvetica', sans-serif;
+            font-size:14pt;
+            color: #000000;
+            margin:5px 5px 5px 5px;
+            text-align:left;
+            padding:0px;
+            border-spacing:0px;
+            vertical-align:top;
+            /*border-collapse: collapse;*/
+            border:none;
+            white-space: nowrap;
+            max-width: 595px;
+        }
+        .mainTable{
+            width:100%;
+            margin:10px 0px 20px 0px;
+        }
+        .mainTable td{
+            text-align:left;
+            min-width:50px;
+        }
+        .mainTable .logo {
+            vertical-align: middle;
+            text-align: center;
+            height:100%;
+            width: 100%;
+<!--            border: 2px dashed;-->
+            display: block;
+            margin: 0px 40px;
+            margin-bottom: 20px;
+            text-overflow: clip;
+            overflow: visible;
+        }
+        .mainTable .logoNoBorder {
+            vertical-align: middle;
+            text-align: center;
+            height:100%;
+            width: 100%;
+            display: block;
+            margin: 0px 40px;
+            margin-bottom: 20px;
+            text-overflow: clip;
+            overflow: visible;
+        }
+        .subTable{
+            width:100%;
+            margin: 10px 0px 10px 0px;
+            padding: 0;
+        }
+        .subTable td{
+            text-align:left;
+            padding: 1px 10px 1px 10px;
+            min-width:50px;
+            max-width:250px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .bold{
+            font-weight:bold;
+        }
+        td.data{
+            padding-bottom:2px;
+        }
+        td.tright{
+            text-align:right;
+        }
+        td.tleft{
+            text-align:left;
+        }
+        
+        @media (min-width: 590px) {
+            td.tcenter{
+                text-align:center;
+            }
+        }
+        @media (max-width: 590px) {
+            td.tcenter{
+                text-align:center;
+                text-overflow: ellipsis; overflow: hidden; display: block; max-width: 370px;
+            }
+        }
+        td.italics{
+            font-style:italic;
+            font-size:smaller;
+        }
+        pre{
+            font-family: HelveticaNeue
+        }
+        img.desaturate {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+        .appCrypt {
+            font-family:'Helvetica Neue', sans-serif;
+            font-size: 14pt;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .slarge {
+            font-size: 16pt;
+            /*line-height: 24px;*/
+        }
+        .stotal{
+            font-size: 20pt;
+        }
+        td.pull_left {
+            float: left;
+            padding-right: 1px;
+        }
+        td.pull_right {
+            float: right;
+            padding-left: 1px;
+        }
+        td.margin_wrap {
+            padding: 0px 0px;
+        }
+        td.bold.tleft.pull_left.stotal {
+            padding-left: 10px;
+        }
+        td.tright.pull_right.stotal {
+            padding-right: 10px;
+        }
+        hr {
+            border-left:0px;
+            border-right:0px;
+            border-top:0px;
+        }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center;">
+            ##saleReceipt@wd-receipt-template##
+            ##returnReceipts@wd-receipt-template##
+        </div>
+    </body>
+</html>
