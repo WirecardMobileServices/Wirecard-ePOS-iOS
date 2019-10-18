@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/CocoaLumberjack-umbrella.h</key>
 		<data>
-		92UPtcboo5Gxpk+QPXiP5Glqe60=
+		2HEcCLoXP1b4mVPuNL373QsTJFM=
 		</data>
 		<key>Headers/CocoaLumberjack.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/DDFileLogger.h</key>
 		<data>
-		ATZSqFJgX+CpkUttPhKZ5hhrJoU=
+		ilSin1h5ASH34VXXTyQnVlZXV1s=
 		</data>
 		<key>Headers/DDLegacyMacros.h</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/DDLog.h</key>
 		<data>
-		wWpLVFKNWEM5uCUA0JUXDdWSZJI=
+		RLPp9WCcJCZKspFiom/cg5wy8Fc=
 		</data>
 		<key>Headers/DDLogMacros.h</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Headers/DDTTYLogger.h</key>
 		<data>
-		YuTIWzP58TpMjDPGu463JCscoFY=
+		aQ8YtUca/qurcfLLVeNC/qsGU0I=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oN33WhJEQdciZ8o/jLcW0QD1bS8=
+		QIk3Br64AklTJTsBDbiCge/wOgg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>PrivateHeaders/DDFileLogger+Internal.h</key>
 		<data>
-		XiW/p4kXIbKDjUQrDufxE408W7Q=
+		yh/l+7K/xWKP079JtruVpolfS/Y=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -110,11 +110,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			92UPtcboo5Gxpk+QPXiP5Glqe60=
+			2HEcCLoXP1b4mVPuNL373QsTJFM=
 			</data>
 			<key>hash2</key>
 			<data>
-			bivEiJ4ZJL7So5mo4Ev34BVwQrqIHMz9rF+cNwRktOY=
+			wb/N1ZBEJ9oMuE4i/6FFw9UtIrl6cIE+S4gtqnheh3A=
 			</data>
 		</dict>
 		<key>Headers/CocoaLumberjack.h</key>
@@ -209,11 +209,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ATZSqFJgX+CpkUttPhKZ5hhrJoU=
+			ilSin1h5ASH34VXXTyQnVlZXV1s=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z+4BCYjoNaF1qlybNMH5hqH6ez8B7UpcOigrNMsst38=
+			Nz644vS27FWsWsYx6/HTTO6qfTBKUNKab2q0pUaWbyU=
 			</data>
 		</dict>
 		<key>Headers/DDLegacyMacros.h</key>
@@ -242,11 +242,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wWpLVFKNWEM5uCUA0JUXDdWSZJI=
+			RLPp9WCcJCZKspFiom/cg5wy8Fc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sUG9PPIzJ96BGXbRZDvCduF+I68Qdm5FfB2wy6W3wsE=
+			aRwfBb+Q4lRhE+NqTtahKrBqj1Yjvtoo9KTGZFmJdok=
 			</data>
 		</dict>
 		<key>Headers/DDLogMacros.h</key>
@@ -297,11 +297,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YuTIWzP58TpMjDPGu463JCscoFY=
+			aQ8YtUca/qurcfLLVeNC/qsGU0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			+kx+SbHWq/9qvGJJ9qOv1YW5/0EqJPaeYXFJpSVzwX8=
+			nsoKPzcgTXneXFwog4oneaUo1b4yrAozLvXA2FUxN+I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -319,11 +319,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XiW/p4kXIbKDjUQrDufxE408W7Q=
+			yh/l+7K/xWKP079JtruVpolfS/Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			fePzgO/feKygM9CnVlbgadsNpCDe9u2p/PuZJgf3VoM=
+			AHFVJ7S2WLS3A41occKXs0sACYUB+xcLFoKP3MxoBBw=
 			</data>
 		</dict>
 	</dict>
