@@ -201,7 +201,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, WDSupportedPaymentType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDSupportedPaymentType, open) {
   WDSupportedPaymentTypeCashPurchase = 0,
   WDSupportedPaymentTypeCardPurchase = 1,
   WDSupportedPaymentTypeCardAuthorization = 2,
@@ -429,7 +429,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, WDSupportedPaymentType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDSupportedPaymentType, open) {
   WDSupportedPaymentTypeCashPurchase = 0,
   WDSupportedPaymentTypeCardPurchase = 1,
   WDSupportedPaymentTypeCardAuthorization = 2,

@@ -229,7 +229,7 @@ SWIFT_PROTOCOL("_TtP8WDePOSUI21WDBasePopupCompatible_")
 @property (nonatomic, strong) WDBasePopupVC * _Nullable basePopupVC;
 @end
 
-typedef SWIFT_ENUM(NSInteger, WDBasePopupType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDBasePopupType, open) {
   WDBasePopupTypeEmptyContainer = 0,
   WDBasePopupTypeWithCalculator = 1,
   WDBasePopupTypeWithPaymentMethodSelection = 2,
@@ -896,7 +896,7 @@ SWIFT_PROTOCOL("_TtP8WDePOSUI21WDBasePopupCompatible_")
 @property (nonatomic, strong) WDBasePopupVC * _Nullable basePopupVC;
 @end
 
-typedef SWIFT_ENUM(NSInteger, WDBasePopupType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDBasePopupType, open) {
   WDBasePopupTypeEmptyContainer = 0,
   WDBasePopupTypeWithCalculator = 1,
   WDBasePopupTypeWithPaymentMethodSelection = 2,
@@ -1568,7 +1568,7 @@ SWIFT_PROTOCOL("_TtP8WDePOSUI21WDBasePopupCompatible_")
 @property (nonatomic, strong) WDBasePopupVC * _Nullable basePopupVC;
 @end
 
-typedef SWIFT_ENUM(NSInteger, WDBasePopupType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDBasePopupType, open) {
   WDBasePopupTypeEmptyContainer = 0,
   WDBasePopupTypeWithCalculator = 1,
   WDBasePopupTypeWithPaymentMethodSelection = 2,
@@ -2235,7 +2235,7 @@ SWIFT_PROTOCOL("_TtP8WDePOSUI21WDBasePopupCompatible_")
 @property (nonatomic, strong) WDBasePopupVC * _Nullable basePopupVC;
 @end
 
-typedef SWIFT_ENUM(NSInteger, WDBasePopupType, closed) {
+typedef SWIFT_ENUM(NSInteger, WDBasePopupType, open) {
   WDBasePopupTypeEmptyContainer = 0,
   WDBasePopupTypeWithCalculator = 1,
   WDBasePopupTypeWithPaymentMethodSelection = 2,

@@ -166,7 +166,7 @@
 		</data>
 		<key>Headers/WDePOS-Swift.h</key>
 		<data>
-		ne7DDLvGOZe6Oz61tSqtXp4jcVY=
+		o4szcFXVQQc2DvL4MJXCwzSaBpk=
 		</data>
 		<key>Headers/WDePOS.h</key>
 		<data>
@@ -182,39 +182,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UfXaE5gZdX1rRFgfSh5WgJt9g0k=
+		mirbgcu5hCfw6TIGUx8MddWwyiw=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
 		YuNKgnpVTpUjhKsMioqfWyROc2w=
 		</data>
+		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
+		<data>
+		Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kGm7dzJORAg/UAxzJ3xwgrr8Cng=
+		/9iXkgM1/bpGWFfj5HDxHd0tCBs=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftdoc</key>
 		<data>
 		YuNKgnpVTpUjhKsMioqfWyROc2w=
 		</data>
+		<key>Modules/WDePOS.swiftmodule/i386.swiftinterface</key>
+		<data>
+		Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+		</data>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftmodule</key>
 		<data>
-		kGm7dzJORAg/UAxzJ3xwgrr8Cng=
+		/9iXkgM1/bpGWFfj5HDxHd0tCBs=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
 		JNJlhVxH9qvqqv2so4PgKzGASmQ=
 		</data>
+		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		DBHxtaRskA2e+ruRuhQbdNSnBKs=
+		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RZpuotHQR03u7ukKVzADzIG8dTo=
+		0Nd+tX5FSJAuH54hOuG80W9ZDRM=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
 		JNJlhVxH9qvqqv2so4PgKzGASmQ=
 		</data>
+		<key>Modules/WDePOS.swiftmodule/x86_64.swiftinterface</key>
+		<data>
+		DBHxtaRskA2e+ruRuhQbdNSnBKs=
+		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		RZpuotHQR03u7ukKVzADzIG8dTo=
+		0Nd+tX5FSJAuH54hOuG80W9ZDRM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -290,11 +306,11 @@
 		</data>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<data>
-		ayuC/YdnWlpZV2CzgwezwU4w7go=
+		WKuPndiXdeZWpG+qmyEysTBcw4E=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		KbdtHlUYrJvPG5kDvmosP58fuR0=
+		HCUuzcu3zIDKc28eQuzV0u4iTOo=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -302,7 +318,7 @@
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		q6nalT/dV+TI4ahZABjWg1iFEM0=
+		cQgr1ax6DIv0LdoYp59Y6YY0+3Q=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -1164,11 +1180,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ne7DDLvGOZe6Oz61tSqtXp4jcVY=
+			o4szcFXVQQc2DvL4MJXCwzSaBpk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nxi2+YRk5QVgfyhfhvra5xenfdYp3oz3StAVryY15q8=
+			HUpReVtV9aAmUNn4oDfQKLCIFRXrjNguWB4sBXBpIzg=
 			</data>
 		</dict>
 		<key>Headers/WDePOS.h</key>
@@ -1215,15 +1231,26 @@
 			FtiuSw7iMji8iW+5HAHGab30F8TfdQjYeO0cJZzVc9M=
 			</data>
 		</dict>
+		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+			</data>
+			<key>hash2</key>
+			<data>
+			OipOw/HgKFWWlM0V0OHYBZbnjkkNRcGqgAbRFpTdpm8=
+			</data>
+		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kGm7dzJORAg/UAxzJ3xwgrr8Cng=
+			/9iXkgM1/bpGWFfj5HDxHd0tCBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			1TJYlCEdF/KnQfNjf7RnIVLI7ix66KEw77lg0or3kds=
+			ZA9gxw5olXEyqQBKklugtVPninqernzuKtaI3pSaFmc=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftdoc</key>
@@ -1237,15 +1264,26 @@
 			FtiuSw7iMji8iW+5HAHGab30F8TfdQjYeO0cJZzVc9M=
 			</data>
 		</dict>
+		<key>Modules/WDePOS.swiftmodule/i386.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+			</data>
+			<key>hash2</key>
+			<data>
+			OipOw/HgKFWWlM0V0OHYBZbnjkkNRcGqgAbRFpTdpm8=
+			</data>
+		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kGm7dzJORAg/UAxzJ3xwgrr8Cng=
+			/9iXkgM1/bpGWFfj5HDxHd0tCBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			1TJYlCEdF/KnQfNjf7RnIVLI7ix66KEw77lg0or3kds=
+			ZA9gxw5olXEyqQBKklugtVPninqernzuKtaI3pSaFmc=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1259,15 +1297,26 @@
 			T+u60hrug9kzpxnc4UaxKkj3qySqsrtNqAlWA3O8rsE=
 			</data>
 		</dict>
+		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DBHxtaRskA2e+ruRuhQbdNSnBKs=
+			</data>
+			<key>hash2</key>
+			<data>
+			b9Ei/diKFVPTuj4paZ9y7raIDf9qPPoF6krZwuTlJWQ=
+			</data>
+		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RZpuotHQR03u7ukKVzADzIG8dTo=
+			0Nd+tX5FSJAuH54hOuG80W9ZDRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q+0bnavr0RYA8nw8RnOXxRJnI5vmux2O3F2hLFdVIf0=
+			5zL3qjmK7IofrY6XZf0u6xkhf16ZNUgBz7Hi6LVSTFA=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftdoc</key>
@@ -1281,15 +1330,26 @@
 			T+u60hrug9kzpxnc4UaxKkj3qySqsrtNqAlWA3O8rsE=
 			</data>
 		</dict>
+		<key>Modules/WDePOS.swiftmodule/x86_64.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DBHxtaRskA2e+ruRuhQbdNSnBKs=
+			</data>
+			<key>hash2</key>
+			<data>
+			b9Ei/diKFVPTuj4paZ9y7raIDf9qPPoF6krZwuTlJWQ=
+			</data>
+		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RZpuotHQR03u7ukKVzADzIG8dTo=
+			0Nd+tX5FSJAuH54hOuG80W9ZDRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q+0bnavr0RYA8nw8RnOXxRJnI5vmux2O3F2hLFdVIf0=
+			5zL3qjmK7IofrY6XZf0u6xkhf16ZNUgBz7Hi6LVSTFA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1494,22 +1554,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ayuC/YdnWlpZV2CzgwezwU4w7go=
+			WKuPndiXdeZWpG+qmyEysTBcw4E=
 			</data>
 			<key>hash2</key>
 			<data>
-			WPEXpN8fgAZBzeFvrdR3sYuoZFZN/hPnILNR2AuW1yo=
+			AB9U8fV5Zrd+pV0q17F76R9Ko47xhdqxJA0qhCoTjM4=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KbdtHlUYrJvPG5kDvmosP58fuR0=
+			HCUuzcu3zIDKc28eQuzV0u4iTOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NNYeYxauRk8Ce/wgCGEqkdXFUeMT5ZPTuSvosN2jlJY=
+			BonFD4eQw2xOCHVu+b2BEiDDJsXW89OWQA9ccjkd1VQ=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -1527,11 +1587,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q6nalT/dV+TI4ahZABjWg1iFEM0=
+			cQgr1ax6DIv0LdoYp59Y6YY0+3Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			q6CrKcnxUI9cSp8q1WOwOyfUHWBstXa5W+MFJj/Zk7I=
+			7zwYjJiaRDeBdTNZHIVoeEEMaJ8/6Fp1lwCDWF3YOb0=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>

@@ -1,12 +1,11 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
-## [2.10.1] - 2019-10-18
+## [2.10.2] - 2019-11-4
 
 ### Fixed
 
-- Localization manager was not allowing translations out of the SDK
-- Missing simulator binaries in Core
+- Swift 5.1.2 compiler compatibility
 
 ## [2.10.0] - 2019-10-16
 

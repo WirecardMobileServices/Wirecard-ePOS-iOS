@@ -1,0 +1,416 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WDePOSUI
+import AVFoundation
+import Foundation
+import Swift
+import UIKit
+@_exported import WDePOSUI
+@objc open class WDCancelableVC : UIKit.UIViewController {
+  public func cancelPayment()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public class WDAlert : WDePOSUI.WDAlertBase {
+  override public var type: UIKit.UIAlertController.Style {
+    get
+  }
+  public func addTextField(_ configurationHandler: ((UIKit.UITextField) -> ())? = nil) -> WDePOSUI.WDAlertBase
+  override public init(withTitle title: Swift.String, message: Swift.String)
+  override public init(withMessage message: Swift.String)
+  @objc deinit
+}
+public protocol WDStoryboardable : AnyObject {
+  static var storyboardID: Swift.String { get }
+}
+extension WDStoryboardable where Self : UIKit.UIViewController {
+  public static var storyboardID: Swift.String {
+    get
+  }
+  public static func storyboardViewController<T>() -> T where T : UIKit.UIViewController, T : WDePOSUI.WDStoryboardable
+}
+@objc public protocol WDSelectShopDelegate : AnyObject {
+  @objc func selectShop(_ selectCashRegister: WDePOSUI.WDSelectShopVC, didSelectShop shop: WDePOS.WDShop)
+}
+@objc public class WDSelectShopVC : WDePOSUI.WDCancelableVC, WDePOSUI.WDBasePopupCompatible, WDePOSUI.WDStoryboardable {
+  @objc weak public var basePopupVC: WDePOSUI.WDBasePopupVC?
+  weak public var delegate: WDePOSUI.WDSelectShopDelegate?
+  public var merchantShops: [WDePOS.WDShop] {
+    get
+    set(newValue)
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension WDSelectShopVC : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension WDSelectShopVC : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public class WDAlertBase : WDePOSUI.WDAlertProtocol {
+  public var type: UIKit.UIAlertController.Style {
+    get
+  }
+  public var textFields: [UIKit.UITextField] {
+    get
+  }
+  public init(withTitle title: Swift.String, message: Swift.String)
+  public init(withMessage message: Swift.String)
+  public func addDestructiveButton(withTitle title: Swift.String) -> WDePOSUI.WDAlertBase
+  public func addCancelButton(withTitle title: Swift.String) -> WDePOSUI.WDAlertBase
+  public func addButton(withTitle title: Swift.String) -> WDePOSUI.WDAlertBase
+  public func addCancelButton(withTitle title: Swift.String, andAction action: @escaping (WDePOSUI.WDAlertBase) -> ()) -> WDePOSUI.WDAlertBase
+  public func addDestructiveButton(withTitle title: Swift.String, andAction action: @escaping (WDePOSUI.WDAlertBase) -> ()) -> WDePOSUI.WDAlertBase
+  public func addButton(withTitle title: Swift.String, andAction action: @escaping (WDePOSUI.WDAlertBase) -> ()) -> WDePOSUI.WDAlertBase
+  public func show(in controller: UIKit.UIViewController? = UIApplication.shared.keyWindow?.rootViewController, withDelegate delegate: WDePOSUI.WDAlertDelegate? = nil, completion: (() -> Swift.Void)? = nil)
+  public func close()
+  public func show(after timeInterval: Swift.Double)
+  public func show(andCloseAfter closeTimeInterval: Swift.Double)
+  public func show(after showTimeInterval: Swift.Double, andCloseAfter closeTimeInterval: Swift.Double)
+  @objc deinit
+}
+@objc open class WDSaleConfiguration : ObjectiveC.NSObject {
+  @objc open var amount: Foundation.NSDecimalNumber? {
+    get
+    }
+  @objc open var currency: Swift.String {
+    get
+    }
+  @objc open var taxRate: Foundation.NSDecimalNumber? {
+    get
+    }
+  @objc open var paymentMethods: WDePOSUI.WDPaymentMethodMask {
+    get
+    }
+  @objc open var currencyDecimalPlaces: Swift.Int16 {
+    @objc get
+  }
+  @objc open var resetUserPreferences: Swift.Bool
+  @objc open var language: Swift.String
+  @objc required public init(amount: Foundation.NSDecimalNumber, currency: Swift.String, taxRate: Foundation.NSDecimalNumber, paymentMethods: WDePOSUI.WDPaymentMethodMask)
+  @objc required public init(currency: Swift.String, taxRate: Foundation.NSDecimalNumber, paymentMethods: WDePOSUI.WDPaymentMethodMask)
+  @objc required public init(currency: Swift.String, paymentMethods: WDePOSUI.WDPaymentMethodMask)
+  @objc deinit
+}
+@objc public protocol WDSaleManagerCompatible {
+  @objc var saleConfiguration: WDePOSUI.WDSaleConfiguration? { get set }
+}
+@objc open class WDSaleManagerUI : ObjectiveC.NSObject {
+  @objc open var paymentCompletion: WDePOS.SaleCompletion?
+  @objc open var paymentProgress: WDePOS.PaymentProgress?
+  @objc public static var sharedInstance: WDePOSUI.WDSaleManagerUI
+  @objc open func pay(_ saleConfiguration: WDePOSUI.WDSaleConfiguration, progress: @escaping WDePOS.PaymentProgress, completion: WDePOS.SaleCompletion?)
+  @objc deinit
+}
+public protocol WDAlertProtocol {
+  var type: UIKit.UIAlertController.Style { get }
+  var textFields: [UIKit.UITextField] { get }
+}
+@objc open class WDCUILabel : UIKit.UILabel {
+  public var customEdgeInsets: UIKit.UIEdgeInsets {
+    get
+    set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect, limitedToNumberOfLines numberOfLines: Swift.Int) -> CoreGraphics.CGRect
+  @objc override dynamic open func drawText(in rect: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc public protocol WDSelectCardApplicationDelegate : AnyObject {
+  @objc func selectCardApplication(_ selectCardApplication: WDePOSUI.WDSelectCardApplicationVC, didSelectCardApplication cardApplication: Swift.String, on row: Swift.Int)
+}
+@objc public class WDSelectCardApplicationVC : UIKit.UIViewController, WDePOSUI.WDStoryboardable, WDePOSUI.WDBasePopupCompatible {
+  @objc public var basePopupVC: WDePOSUI.WDBasePopupVC?
+  weak public var delegate: WDePOSUI.WDSelectCardApplicationDelegate?
+  public var cardApplications: [Swift.String] {
+    get
+    set(newValue)
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension WDSelectCardApplicationVC : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension WDSelectCardApplicationVC : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc open class WDBarcodeScannerConstants : ObjectiveC.NSObject {
+  @objc public static var scanCameraMode: Swift.String
+  @objc public static var kDelayForNextBarcodeReading: Swift.Double
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol WDCBarcodeScannerCompatible : ObjectiveC.NSObjectProtocol {
+  @objc var centralHoleImageView: UIKit.UIImageView! { get }
+}
+@objc public protocol WDCBarcodeScannerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func finishedBarcodeScan(barcodeData: Swift.String?, type: Swift.String)
+}
+@objc open class WDCBarcodeScanner : UIKit.UIView {
+  @objc weak public var delegate: WDePOSUI.WDCBarcodeScannerDelegate?
+  @objc public var inDelegateWait: Swift.Bool
+  @objc public var cameraPosition: AVFoundation.AVCaptureDevice.Position {
+    @objc get
+    @objc set(newPosition)
+  }
+  @objc weak public var parentVC: (UIKit.UIViewController & WDePOSUI.WDCBarcodeScannerCompatible)?
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public init(with viewController: UIKit.UIViewController & WDePOSUI.WDCBarcodeScannerCompatible)
+  @objc deinit
+  @objc public func startCapture()
+  @objc public func stopCapture()
+  @objc public func cancelBarcodeScanning()
+  @objc public func setInterestRect(for imageView: UIKit.UIImageView)
+  @objc public func changeCameraMode()
+  @objc public func isTorchAvailable() -> Swift.Bool
+  @objc public static func isTorchAvailableForCamera(on position: AVFoundation.AVCaptureDevice.Position) -> Swift.Bool
+  @objc public static func isTorchAvaiableFor(_ camera: AVFoundation.AVCaptureDevice) -> Swift.Bool
+  @objc public func toggleTorch()
+  @objc public func isTorchActive() -> Swift.Bool
+  @objc public func isTorchMatching(uiState uiEnabled: Swift.Bool) -> Swift.Bool
+  @objc public func orientationDidChange(notification: Foundation.NSNotification)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc extension WDCBarcodeScanner : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
+@objc open class WDPaymentDetailUI : ObjectiveC.NSObject {
+  public var paymentMethodTypes: Swift.Array<WDePOS.WDPaymentMethod>
+  public init(paymentMethodTypes: Swift.Array<WDePOS.WDPaymentMethod>, amount: Foundation.NSDecimalNumber)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol WDBasePopupCompatible {
+  @objc var basePopupVC: WDePOSUI.WDBasePopupVC? { get set }
+}
+@objc public enum WDBasePopupType : Swift.Int {
+  case emptyContainer = 0
+  case withCalculator
+  case withPaymentMethodSelection
+  case withShiftMgmt
+  case withCashRegisterSelection
+  case withShopSelection
+  case withSignatureRequest
+  case withSignatureConfirmation
+  case withBarcodeScanner
+  case withCardApplicationSelection
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc open class WDBasePopupVC : UIKit.UIViewController, WDePOSUI.WDStoryboardable {
+  @objc @IBOutlet weak public var viewHeader: UIKit.UIView!
+  @objc @IBOutlet weak public var viewBottom: UIKit.UIView!
+  @objc @IBOutlet weak public var viewContainer: UIKit.UIView!
+  @objc @IBOutlet weak public var lblTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var lblSubtitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var btnBack: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnCancel: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnMainAction: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSecondaryAction: UIKit.UIButton!
+  open var popupType: WDePOSUI.WDBasePopupType {
+    get
+    set(newValue)
+  }
+  open var mainActionCompletion: (() -> Swift.Void)?
+  open var secondaryActionCompletion: (() -> Swift.Void)?
+  open var backActionCompletion: (() -> Swift.Void)?
+  open var cancelActionCompletion: (() -> Swift.Void)?
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func didReceiveMemoryWarning()
+  open func fillContainerContent(_ type: WDePOSUI.WDBasePopupType) -> WDePOSUI.WDBasePopupCompatible?
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension WDBasePopupVC : WDePOSUI.WDSaleManagerCompatible {
+  @objc dynamic public var saleConfiguration: WDePOSUI.WDSaleConfiguration? {
+    @objc get
+    @objc set(newValue)
+  }
+  public var paymentDetail: WDePOSUI.WDPaymentDetailUI? {
+    get
+    set(newValue)
+  }
+}
+@objc open class WDTouchDraw : UIKit.UIView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  open func asImage() -> UIKit.UIImage
+  open func clearDrawing()
+  @objc deinit
+}
+extension WDTouchDraw {
+  @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+}
+@objc public protocol WDSignatureRequestDelegate : AnyObject {
+  @objc func signature(_ signatureVC: WDePOSUI.WDSignatureRequestVC, didCollectSignature signatureImage: UIKit.UIImage?)
+}
+@objc open class WDSignatureRequestVC : UIKit.UIViewController, WDePOSUI.WDBasePopupCompatible, WDePOSUI.WDStoryboardable {
+  @objc public var basePopupVC: WDePOSUI.WDBasePopupVC?
+  weak public var delegate: WDePOSUI.WDSignatureRequestDelegate?
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class WDUserPreferences : ObjectiveC.NSObject {
+  public var merchantId: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var cashRegisterId: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var shopId: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var shift: Swift.Dictionary<Swift.String, Any>? {
+    get
+    set(newValue)
+  }
+  public var cashManagementEnabled: Swift.Bool? {
+    get
+    set(newValue)
+  }
+  public var currentUserName: Swift.String? {
+    get
+    set(newValue)
+  }
+  @objc deinit
+}
+@objc public class WDProgressView : UIKit.UIView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class WDPaymentNavigationVC : UIKit.UINavigationController, WDePOSUI.WDStoryboardable, WDePOSUI.WDSaleManagerCompatible {
+  @objc public var saleConfiguration: WDePOSUI.WDSaleConfiguration? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func viewDidLoad()
+  @objc deinit
+}
+extension WDPaymentNavigationVC : WDePOSUI.WDSelectCardApplicationDelegate {
+  @objc dynamic public func selectCardApplication(_ selectCardApplication: WDePOSUI.WDSelectCardApplicationVC, didSelectCardApplication cardApplication: Swift.String, on row: Swift.Int)
+}
+extension WDPaymentNavigationVC : WDePOSUI.WDSignatureRequestDelegate {
+  @objc dynamic public func signature(_ signatureVC: WDePOSUI.WDSignatureRequestVC, didCollectSignature signatureImage: UIKit.UIImage?)
+}
+extension WDPaymentNavigationVC : WDePOSUI.WDSelectCashRegisterDelegate {
+  @objc dynamic public func selectCashRegister(_ selectCashRegister: WDePOSUI.WDSelectCashRegisterVC, didSelectCashRegister cashRegister: WDePOS.WDCashRegister)
+  @objc dynamic public func selectCashRegister(didLoadCashRegisters: [WDePOS.WDCashRegister])
+}
+extension WDPaymentNavigationVC : WDePOSUI.WDSelectShopDelegate {
+  @objc dynamic public func selectShop(_ selectCashRegister: WDePOSUI.WDSelectShopVC, didSelectShop shop: WDePOS.WDShop)
+}
+@objc open class WDCSidePopupAnimator : ObjectiveC.NSObject {
+  public var duration: Foundation.TimeInterval
+  public var isPresenting: Swift.Bool
+  public init(duration: Foundation.TimeInterval, isPresenting: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension WDCSidePopupAnimator : UIKit.UIViewControllerAnimatedTransitioning {
+  @objc dynamic public func transitionDuration(using transitionContext: UIKit.UIViewControllerContextTransitioning?) -> Foundation.TimeInterval
+  @objc dynamic public func animateTransition(using transitionContext: UIKit.UIViewControllerContextTransitioning)
+}
+public protocol WDAlertDelegate {
+  func willShow(_ alert: WDePOSUI.WDAlertProtocol)
+  func didShow(_ alert: WDePOSUI.WDAlertProtocol)
+  func willDisappear(_ alert: WDePOSUI.WDAlertProtocol)
+  func didDisappear(_ alert: WDePOSUI.WDAlertProtocol)
+}
+@objc public class WDUILoader : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public func setClasses()
+  @objc deinit
+}
+public class WDActionSheet : WDePOSUI.WDAlertBase {
+  override public var type: UIKit.UIAlertController.Style {
+    get
+  }
+  override public init(withTitle title: Swift.String, message: Swift.String)
+  override public init(withMessage message: Swift.String)
+  @objc deinit
+}
+@objc public protocol WDSelectCashRegisterDelegate : AnyObject {
+  @objc func selectCashRegister(_ selectCashRegister: WDePOSUI.WDSelectCashRegisterVC, didSelectCashRegister cashRegister: WDePOS.WDCashRegister)
+  @objc optional func selectCashRegister(didLoadCashRegisters: [WDePOS.WDCashRegister])
+}
+@objc public class WDSelectCashRegisterVC : WDePOSUI.WDCancelableVC, WDePOSUI.WDBasePopupCompatible, WDePOSUI.WDStoryboardable {
+  @objc weak public var basePopupVC: WDePOSUI.WDBasePopupVC?
+  weak public var delegate: WDePOSUI.WDSelectCashRegisterDelegate?
+  public var cashRegisters: [WDePOS.WDCashRegister] {
+    get
+    set(newValue)
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension WDSelectCashRegisterVC : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension WDSelectCashRegisterVC : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc final public class WDPaymentMethodMask : ObjectiveC.NSObject, Swift.OptionSet {
+  @objc public static var cashOnly: WDePOSUI.WDPaymentMethodMask
+  @objc public static var cardOnly: WDePOSUI.WDPaymentMethodMask
+  @objc public static var alipayOnly: WDePOSUI.WDPaymentMethodMask
+  @objc public static var weChatOnly: WDePOSUI.WDPaymentMethodMask
+  @objc public static var standard: WDePOSUI.WDPaymentMethodMask
+  @objc public static var qr: WDePOSUI.WDPaymentMethodMask
+  @objc public static var all: WDePOSUI.WDPaymentMethodMask
+  final public var rawValue: Swift.Int
+  public typealias RawValue = Swift.Int
+  @objc override dynamic public convenience init()
+  public init(rawValue: Swift.Int)
+  @available(swift, obsoleted: 1.0)
+  @objc public convenience init(abilitiesToUnion: [WDePOSUI.WDPaymentMethodMask])
+  @objc override final public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  final public func formUnion(_ other: WDePOSUI.WDPaymentMethodMask)
+  final public func formIntersection(_ other: WDePOSUI.WDPaymentMethodMask)
+  final public func formSymmetricDifference(_ other: WDePOSUI.WDPaymentMethodMask)
+  public typealias Element = WDePOSUI.WDPaymentMethodMask
+  public typealias ArrayLiteralElement = WDePOSUI.WDPaymentMethodMask
+  @objc deinit
+}
+@objc open class WDCCustomModalSegue : UIKit.UIStoryboardSegue {
+  @objc override dynamic open func perform()
+  @objc override dynamic public init(identifier: Swift.String?, source: UIKit.UIViewController, destination: UIKit.UIViewController)
+  @objc deinit
+}
+extension WDCCustomModalSegue : UIKit.UIViewControllerTransitioningDelegate {
+  @objc dynamic open func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc dynamic open func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+}

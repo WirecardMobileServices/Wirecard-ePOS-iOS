@@ -1,0 +1,1074 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WDBrand
+import Foundation
+import Swift
+import UIKit
+@_exported import WDBrand
+public enum UITextViewStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case textColor
+  public static func == (a: WDBrand.UITextViewStyleableKeys, b: WDBrand.UITextViewStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UITextViewStyled {
+  public var colors: [WDBrand.UITextViewStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public enum UIImageViewStyledType : Swift.String {
+  case main
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UIImageViewStyled : UIKit.UIImageView, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UIImageViewStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  public typealias StyleableKeysEnum = WDBrand.UIImageViewStyleableKeys
+  @objc override dynamic public init(image: UIKit.UIImage?)
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+  @objc deinit
+}
+@objc open class UIImageViewStyledNoIntrinsicContentSize : WDBrand.UIImageViewStyled {
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic open func invalidateIntrinsicContentSize()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum UISwitchStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case onTintColor
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: WDBrand.UISwitchStyleableKeys, b: WDBrand.UISwitchStyleableKeys) -> Swift.Bool
+}
+extension WDStyleable where Self : WDBrand.UISwitchStyled {
+  public var colors: [WDBrand.UISwitchStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public enum UISwitchStyledType : Swift.String {
+  case brand
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UISwitchStyled : UIKit.UISwitch, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UISwitchStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc deinit
+  public typealias StyleableKeysEnum = WDBrand.UISwitchStyleableKeys
+}
+@objc public class WDBrandGoogleAnalytics : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var key: Swift.String? {
+    get
+    }
+  @objc public var secondaryKey: Swift.String? {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum UIViewStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case backgroundColor
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: WDBrand.UIViewStyleableKeys, b: WDBrand.UIViewStyleableKeys) -> Swift.Bool
+}
+extension WDStyleable where Self : WDBrand.UIViewStyled {
+  public var colors: [WDBrand.UIViewStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public enum UIControlStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case backgroundColor
+  public static func == (a: WDBrand.UIControlStyleableKeys, b: WDBrand.UIControlStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UIControlStyled {
+  public var colors: [WDBrand.UIControlStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public protocol WDDrawable {
+  func prepareForInterfaceBuilder()
+}
+public enum UISearchBarStyledType : Swift.String {
+  case main
+  case transparent
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UISearchBarStyled : UIKit.UISearchBar, WDBrand.WDStyleable, WDBrand.WDTranslatable {
+  public var style: WDBrand.UISearchBarStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable public var translationKey: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  public typealias StyleableKeysEnum = WDBrand.UISearchBarStyleableKeys
+  @objc deinit
+}
+public enum UIControlStyledType : Swift.String {
+  case main
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UIControlStyled : UIKit.UIControl, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UIControlStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc deinit
+  public typealias StyleableKeysEnum = WDBrand.UIControlStyleableKeys
+}
+@objc public class WDBrandTransactionColors : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var positive: UIKit.UIColor {
+    get
+    }
+  @objc public var incomplete: UIKit.UIColor {
+    get
+    }
+  @objc public var refunded: UIKit.UIColor {
+    get
+    }
+  @objc public var failed: UIKit.UIColor {
+    get
+    }
+  @objc public var canceled: UIKit.UIColor {
+    get
+    }
+  @objc public var reversed: UIKit.UIColor {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum UIButtonStyledType : Swift.String {
+  case primary
+  case primaryLight
+  case primaryInverted
+  case negative
+  case negativeInverted
+  case numerals
+  case numeralsBrand
+  case failed
+  case refunded
+  case canceled
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UIButtonStyled : UIKit.UIButton, WDBrand.WDStyleable, WDBrand.WDTranslatable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UIButtonStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable public var translationKey: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc override dynamic open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic open func setImage(_ image: UIKit.UIImage?, for state: UIKit.UIControl.State)
+  @IBInspectable @objc public var borderTop: Swift.Bool
+  @IBInspectable @objc public var borderBottom: Swift.Bool
+  @IBInspectable @objc public var borderWidth: Swift.Int
+  @objc public var textColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public var alternativeStyleKeyPath: Swift.String
+  @objc public var textColorHighlighted: UIKit.UIColor?
+  @objc public var originalBackgroundColor: UIKit.UIColor?
+  public typealias StyleableKeysEnum = WDBrand.UIButtonStyleableKeys
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol WDTranslatable {
+  var translationKey: Swift.String { get set }
+}
+@objc extension UIView {
+  @objc dynamic public func setCustomAccessibilityLabel(_ accessibilityLabel: Swift.String?)
+}
+extension UIView {
+  open class func getNestedDynamicBrandableSubviews(view: UIKit.UIView) -> [WDBrand.WDDynamicBrandable]
+  open func getNestedDynamicBrandableSubviews() -> [WDBrand.WDDynamicBrandable]
+  @objc dynamic public func getAlpha(_ color: UIKit.UIColor?) -> CoreGraphics.CGFloat
+}
+@objc public class WDBrandHelp : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var faqUrl: Swift.String {
+    get
+    }
+  @objc public var dataProtectionUrl: Swift.String {
+    get
+    }
+  @objc public var legalNoticeUrl: Swift.String {
+    get
+    }
+  @objc public var termsAndConditionsUrl: Swift.String {
+    get
+    }
+  @objc public var websiteUrl: Swift.String {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc extension NSString {
+  @objc dynamic open func toColor() -> UIKit.UIColor?
+}
+public enum UIViewStyledType : Swift.String {
+  case main
+  case secondary
+  case separator
+  case brand
+  case mainText
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UIViewStyled : UIKit.UIView, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UIViewStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc deinit
+  public typealias StyleableKeysEnum = WDBrand.UIViewStyleableKeys
+}
+@objc public protocol Formattable : ObjectiveC.NSObjectProtocol {
+  @objc func format(_ string: Swift.String) -> Swift.String
+  @objc func reverseValue(_ string: Swift.String) -> Swift.String
+  @objc func replaceCharacters(in range: Foundation.NSRange, with replacementString: Swift.String, for formattedString: Swift.String) -> Swift.String
+}
+@objc public protocol UITextFieldStyledDelegate : UIKit.UITextFieldDelegate {
+  @objc func textFieldDidChange(_ textField: WDBrand.UITextFieldStyled)
+  @objc optional func textFieldShouldHandleError(_ textField: WDBrand.UITextFieldStyled) -> Swift.Bool
+}
+public enum UITextFieldStyledType : Swift.String {
+  case primary
+  case transparentLight
+  case transparentBrand
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@IBDesignable @objc open class UITextFieldStyled : UIKit.UITextField, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  @objc @IBInspectable open var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var translationKey: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var placeholderImage: UIKit.UIImage?
+  @objc @IBInspectable open var canShowErrorStyle: Swift.Bool
+  @objc @IBInspectable open var isValidated: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  public var style: WDBrand.UITextFieldStyledType {
+    get
+    set(newValue)
+  }
+  @objc open var customFontName: Swift.String
+  @objc open var edgeInsets: UIKit.UIEdgeInsets
+  @objc open var placeholderColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc open var borderColor: UIKit.UIColor?
+  @objc open var borderWidth: CoreGraphics.CGFloat
+  @objc open var formatterDelegate: WDBrand.Formattable?
+  @objc override dynamic open var delegate: UIKit.UITextFieldDelegate? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic open var text: Swift.String? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic open var placeholder: Swift.String? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc open func setFonts()
+  open func translate()
+  @objc open func textFieldChanged(_ notification: Foundation.Notification?)
+  @objc open func setNeedsStyle()
+  @objc open func setupUXSpecificProperties()
+  public typealias StyleableKeysEnum = WDBrand.UITextFieldStyleableKeys
+}
+extension UITextFieldStyled {
+  @objc dynamic open func getTextWithoutFormatting(_ textWithFormatting: Swift.String) -> Swift.String
+  @objc dynamic open func formatTextField(_ textField: WDBrand.UITextFieldStyled)
+}
+extension UITextFieldStyled {
+  @objc dynamic open func setValidateWhileEditing(_ regex: Swift.String)
+  @objc dynamic open func setValidateAfterEditing(_ regex: Swift.String)
+  @objc dynamic open func validate(_ shouldHandleErrorStyle: Swift.Bool = true) -> Swift.Bool
+  @objc dynamic open func setErrorStyle()
+  @objc dynamic open func resetErrorStyle()
+}
+extension UITextFieldStyled : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc dynamic public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@objc public class WDBrandConfig : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var paymentMethods: [WDBrand.PaymentMethod] {
+    get
+    }
+  @objc public var supportedTerminals: [WDBrand.SupportedTerminal] {
+    get
+    }
+  @objc public var gratuity: WDBrand.WDBrandGratuity {
+    get
+    }
+  @objc public var googleAnalytics: WDBrand.WDBrandGoogleAnalytics {
+    get
+    }
+  @objc public var help: WDBrand.WDBrandHelp {
+    get
+    }
+  @objc public var multitenderEnabled: Swift.Bool {
+    get
+    }
+  @objc public var printSupportEnabled: Swift.Bool {
+    get
+    }
+  @objc public var pistolScannerEnabled: Swift.Bool {
+    get
+    }
+  @objc public var tutorialQuestionMarkHidden: Swift.Bool {
+    get
+    }
+  @objc public var setFirstTerminalInListAsDefault: Swift.Bool {
+    get
+    }
+  @objc public var btTutorialAvailable: Swift.Bool {
+    get
+    }
+  @objc public var the3DTouchEnabled: Swift.Bool {
+    get
+    }
+  @objc public var showAlertWhenActivityIndicator: Swift.Bool {
+    get
+    }
+  @objc public var appTutorialInFirstRun: Swift.Bool {
+    get
+    }
+  @objc public var updateDataInAccountHidden: Swift.Bool {
+    get
+    }
+  @objc public var declinedReceiptBackgroundRed: Swift.Bool {
+    get
+    }
+  @objc public var fullRejectioReason: Swift.Bool {
+    get
+    }
+  @objc public var mandatoryUniqueTax: Swift.Bool {
+    get
+    }
+  @objc public var flatDiscountUIEnabled: Swift.Bool {
+    get
+    }
+  @objc public var memberCardsWithExtraEACode: Swift.Bool {
+    get
+    }
+  @objc public var emailReceiptEnabled: Swift.Bool {
+    get
+    }
+  @objc public var smsReceiptEnabled: Swift.Bool {
+    get
+    }
+  @objc public var numpadInputHidden: Swift.Bool {
+    get
+    }
+  @objc public var refundOnlyThroughBackend: Swift.Bool {
+    get
+    }
+  @objc public var cashDrawerButtonEnabled: Swift.Bool {
+    get
+    }
+  @objc public var refundOverReversalAlways: Swift.Bool {
+    get
+    }
+  @objc public var cardTransacNeverReturnable: Swift.Bool {
+    get
+    }
+  @objc public var hideServiceCharge: Swift.Bool {
+    get
+    }
+  @objc public var hideGratuity: Swift.Bool {
+    get
+    }
+  @objc public var hideStatistics: Swift.Bool {
+    get
+    }
+  @objc public var customerReceipt: Swift.Bool {
+    get
+    }
+  @objc public var inventoryEnabled: Swift.Bool {
+    get
+    }
+  @objc public var inventoryEditable: Swift.Bool {
+    get
+    }
+  @objc public var quickClerkLoginEnabled: Swift.Bool {
+    get
+    }
+  @objc public var rememberingSingleUserEnabled: Swift.Bool {
+    get
+    }
+  @objc public var rememberingMultipleUsersEnabled: Swift.Bool {
+    get
+    }
+  @objc public var automaticPrintingEnabled: Swift.Bool {
+    get
+    }
+  @objc public var wideImagesInCustomerReceipt: Swift.Bool {
+    get
+    }
+  @objc public var signatureButtonsWithIcons: Swift.Bool {
+    get
+    }
+  @objc public var sendingReceiptAlways: Swift.Bool {
+    get
+    }
+  @objc public var bigUIMessages: Swift.Bool {
+    get
+    }
+  @objc public var addItemButtonLocalisedName: Swift.String? {
+    get
+    }
+  @objc public var clearListButtonLocalisedName: Swift.String? {
+    get
+    }
+  @objc public var supportAppName: Swift.String, owningCompanyName: Swift.String, registrationUrl: Swift.String
+  @objc public var legalText: [WDBrand.WDBrandLegalText] {
+    get
+    }
+  @objc public var languageList: [Swift.String] {
+    get
+    }
+  @objc public var uiAppFonts: Swift.String? {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum UIPickerViewStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case tintColor
+  public static func == (a: WDBrand.UIPickerViewStyleableKeys, b: WDBrand.UIPickerViewStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UIPickerViewStyled {
+  public var colors: [WDBrand.UIPickerViewStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+@objc public class WDBrandGratuity : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var rates: [Swift.String] {
+    get
+    }
+  @objc public var tax: Swift.String {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public protocol WDBrandStyleableKeysDefinable : Swift.Hashable {
+}
+public protocol WDStyleable {
+  associatedtype StyleableKeysEnum : WDBrand.WDBrandStyleableKeysDefinable
+  var styleKeyPath: Swift.String { get set }
+  var colors: [Self.StyleableKeysEnum : UIKit.UIColor] { get }
+}
+@objc public class WDBrandLegalText : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var en: Swift.String? {
+    get
+    }
+  @objc public var de: Swift.String? {
+    get
+    }
+  @objc public var es: Swift.String? {
+    get
+    }
+  @objc public var zhHans: Swift.String? {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension UIColor {
+  @objc dynamic public func getColoredImage(with size: CoreGraphics.CGSize = CGSize(width: 1, height: 1)) -> UIKit.UIImage?
+  @objc public static func colorWithDictionary(_ dict: Foundation.NSDictionary) -> UIKit.UIColor?
+  @objc dynamic public func lighter() -> UIKit.UIColor?
+  @objc dynamic public func darker() -> UIKit.UIColor?
+  @objc dynamic public func combine(with color: UIKit.UIColor, alpha: CoreGraphics.CGFloat) -> UIKit.UIColor
+}
+@objc public class WDBrandUI : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var mainAccentColor: UIKit.UIColor {
+    get
+    }
+  @objc public var primaryBackgroundColor: UIKit.UIColor {
+    get
+    }
+  @objc public var secondaryBackgroundColor: UIKit.UIColor {
+    get
+    }
+  @objc public var solidSeparatorColor: UIKit.UIColor {
+    get
+    }
+  @objc public var infoColor: UIKit.UIColor {
+    get
+    }
+  @objc public var successColor: UIKit.UIColor {
+    get
+    }
+  @objc public var warningColor: UIKit.UIColor {
+    get
+    }
+  @objc public var errorColor: UIKit.UIColor {
+    get
+    }
+  @objc public var textColors: WDBrand.WDBrandTextColors {
+    get
+    }
+  @objc public var buttonColors: WDBrand.WDBrandButtonColors {
+    get
+    }
+  @objc public var transactionColors: WDBrand.WDBrandTransactionColors {
+    get
+    }
+  @objc public var opacity: WDBrand.WDBrandOpacity {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum UITextFieldStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case textColor
+  case backgroundColor
+  case placeholderColor
+  public static func == (a: WDBrand.UITextFieldStyleableKeys, b: WDBrand.UITextFieldStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UITextFieldStyled {
+  public var colors: [WDBrand.UITextFieldStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public enum UISearchBarStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case tintColor
+  case backgroundColor
+  public static func == (a: WDBrand.UISearchBarStyleableKeys, b: WDBrand.UISearchBarStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UISearchBarStyled {
+  public var colors: [WDBrand.UISearchBarStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+@IBDesignable @objc open class WDCInputWithErrorStyled : UIKit.UIStackView {
+  @objc @IBInspectable open var textFieldStyleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var textFieldTranslationKey: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var textField: WDBrand.UITextFieldStyled
+  @objc @IBInspectable open var textFieldCornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var errorLabel: WDBrand.UILabelStyled
+  @objc @IBInspectable open var errorColor: UIKit.UIColor {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc open var hasError: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc open func showError()
+  @objc open func showError(with text: Swift.String?)
+  @objc open func hideError()
+  @objc deinit
+}
+public enum UIPickerViewStyledType : Swift.String {
+  case primary
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UIPickerViewStyled : UIKit.UIPickerView, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UIPickerViewStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  public typealias StyleableKeysEnum = WDBrand.UIPickerViewStyleableKeys
+  @objc deinit
+}
+@objc public class SupportedTerminal : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var vendor: Swift.String? {
+    get
+    }
+  @objc public var model: Swift.String? {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum UIImageViewStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case tintColor
+  public static func == (a: WDBrand.UIImageViewStyleableKeys, b: WDBrand.UIImageViewStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UIImageViewStyled {
+  public var colors: [WDBrand.UIImageViewStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+@objc public class WDBrandButtonColors : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var mainTextColor: UIKit.UIColor {
+    get
+    }
+  @objc public var negativeColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledBackgroundColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledTextColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledIconColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledInvertedBackgroundColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledInvertedTextColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledInvertedIconColor: UIKit.UIColor {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@objc open class ConfigurationFile : ObjectiveC.NSObject {
+  @objc open var brand: WDBrand.WDBrand
+  @objc public var isDynamicallyBranded: Swift.Bool {
+    get
+    }
+  @objc open class func shared() -> WDBrand.ConfigurationFile
+  @objc open class func reInitialize()
+  public init(_ brandJsonData: Foundation.Data?)
+  @objc override dynamic public init()
+  @objc open func applicationFontFamilyName() -> Swift.String?
+  @objc deinit
+}
+@objc public class WDBrandTextColors : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var mainColor: UIKit.UIColor {
+    get
+    }
+  @objc public var lightTextColor: UIKit.UIColor {
+    get
+    }
+  @objc public var disabledTextColor: UIKit.UIColor {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum UITableViewCellStyledType : Swift.String {
+  case primary
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UITableViewCellStyled : UIKit.UITableViewCell, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UITableViewCellStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc deinit
+  public typealias StyleableKeysEnum = WDBrand.UITableViewCellStyleableKeys
+}
+@objc public class WDBrand : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var config: WDBrand.WDBrandConfig {
+    get
+    }
+  @objc public var ui: WDBrand.WDBrandUI {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum UISegmentedControlStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case tintColor
+  @available(iOS 13.0, *)
+  case backgroundColor
+  @available(iOS 13.0, *)
+  case normalTextColor
+  @available(iOS 13.0, *)
+  case selectedTextColor
+  @available(iOS 13.0, *)
+  case disabledTextColor
+  public static func == (a: WDBrand.UISegmentedControlStyleableKeys, b: WDBrand.UISegmentedControlStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UISegmentedControlStyled {
+  public var colors: [WDBrand.UISegmentedControlStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public enum UISegmentedControlStyledType : Swift.String {
+  case primary
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UISegmentedControlStyled : UIKit.UISegmentedControl, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDDrawable {
+  public var style: WDBrand.UISegmentedControlStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  public typealias StyleableKeysEnum = WDBrand.UISegmentedControlStyleableKeys
+  @objc override dynamic public init(items: [Any]?)
+  @objc deinit
+}
+public enum UIButtonStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case titleColor
+  case titleColorHighlighted
+  case titleColorDisabled
+  case backgroundColor
+  case backgroundColorHighlighted
+  case backgroundColorDisabled
+  public static func == (a: WDBrand.UIButtonStyleableKeys, b: WDBrand.UIButtonStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UIButtonStyled {
+  public var colors: [WDBrand.UIButtonStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+public protocol WDDynamicBrandable {
+  func applyBranding()
+}
+@objc public class WDBrandOpacity : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var primary: CoreGraphics.CGFloat {
+    get
+    }
+  @objc public var secondary: CoreGraphics.CGFloat {
+    get
+    }
+  @objc public var placeholder: CoreGraphics.CGFloat {
+    get
+    }
+  @objc public var disabled: CoreGraphics.CGFloat {
+    get
+    }
+  @objc public var highlighted: CoreGraphics.CGFloat {
+    get
+    }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum UITableViewCellStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case titleColor
+  case backgroundColor
+  public static func == (a: WDBrand.UITableViewCellStyleableKeys, b: WDBrand.UITableViewCellStyleableKeys) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension WDStyleable where Self : WDBrand.UITableViewCellStyled {
+  public var colors: [WDBrand.UITableViewCellStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+@objc extension UIFont {
+  @objc public static func fontFromAppFonts(by familyName: Swift.String, basedOn baseFont: UIKit.UIFont) -> UIKit.UIFont?
+  @objc public static func fontFromFontFile(at path: Swift.String, basedOn baseFont: UIKit.UIFont) -> UIKit.UIFont?
+  @objc public static func getArrayCustomFonts() -> [Swift.String]?
+}
+public enum UITextViewStyledType : Swift.String {
+  case main
+  case error
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @IBDesignable open class UITextViewStyled : UIKit.UITextView, WDBrand.WDStyleable {
+  public var style: WDBrand.UITextViewStyledType {
+    get
+    set(newValue)
+  }
+  open var customFontName: Swift.String
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  public func setFonts()
+  public typealias StyleableKeysEnum = WDBrand.UITextViewStyleableKeys
+  @objc deinit
+}
+public enum UILabelStyledType : Swift.String {
+  case normal
+  case brand
+  case light
+  case error
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@IBDesignable @objc open class UILabelStyled : UIKit.UILabel, WDBrand.WDStyleable, WDBrand.WDDynamicBrandable, WDBrand.WDTranslatable, WDBrand.WDDrawable {
+  @objc public var customFontName: Swift.String?
+  @objc public var customEdgeInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set(newValue)
+  }
+  public var style: WDBrand.UILabelStyledType {
+    get
+    set(newValue)
+  }
+  @objc @IBInspectable public var styleKeyPath: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable public var translationKey: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc override dynamic open func awakeFromNib()
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @objc override dynamic open func drawText(in rect: CoreGraphics.CGRect)
+  @objc override dynamic open var font: UIKit.UIFont! {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public func setAttributedText(_ newText: Swift.String, bold: Swift.Bool, ofSize size: CoreGraphics.CGFloat)
+  @objc public func setAttributedText(_ newText: Swift.String, bold: Swift.Bool, ofSize size: CoreGraphics.CGFloat, verticalOffset: CoreGraphics.CGFloat)
+  @objc deinit
+  public typealias StyleableKeysEnum = WDBrand.UILabelStyleableKeys
+}
+@objc open class UILabelStyledNoIntrinsicContentSize : WDBrand.UILabelStyled {
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic open func invalidateIntrinsicContentSize()
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public enum UILabelStyleableKeys : WDBrand.WDBrandStyleableKeysDefinable {
+  case textColor
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: WDBrand.UILabelStyleableKeys, b: WDBrand.UILabelStyleableKeys) -> Swift.Bool
+}
+extension WDStyleable where Self : WDBrand.UILabelStyled {
+  public var colors: [WDBrand.UILabelStyleableKeys : UIKit.UIColor] {
+    get
+  }
+  public func applyBranding()
+}
+@objc public class PaymentMethod : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var type: Swift.String {
+    get
+    }
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
