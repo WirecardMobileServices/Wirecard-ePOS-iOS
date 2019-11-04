@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WDePOS"
-  s.version          = "2.10.2"
+  s.version          = "2.10.3"
   s.summary          = "Wirecard epos - Accept Card, Cash, Alipay, Giftcard payments"
   s.description      = <<-DESC
                        The library extends the Point of Sale and alternative payment methods to modern mobile environment.

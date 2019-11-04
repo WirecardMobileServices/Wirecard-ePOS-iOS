@@ -1,11 +1,12 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
-## [2.10.2] - 2019-11-4
+## [2.10.3] - 2019-11-4
 
 ### Fixed
 
 - Swift 5.1.2 compiler compatibility
+- Missing architectures
 
 ## [2.10.0] - 2019-10-16
 
