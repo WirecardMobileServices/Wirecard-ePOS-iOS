@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.10.4] - 2019-11-5
+
+### Fixed
+
+- WKWebKit fix for long receipts and z-reports
+
 ## [2.10.3] - 2019-11-4
 
 ### Fixed

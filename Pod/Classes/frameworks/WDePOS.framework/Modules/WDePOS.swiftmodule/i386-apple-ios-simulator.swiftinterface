@@ -19,9 +19,9 @@ import Swift
   }
 }
 @objc @objcMembers public class WDSupportedPaymentTypeBridge : ObjectiveC.NSObject {
-  @objc final public let supportedPaymentType: WDePOS.WDSupportedPaymentType
-  @objc public init(supportedPaymentType: WDePOS.WDSupportedPaymentType)
-  @objc public func corePayment() -> WDePOS.WDPaymentCore?
+  @objc final public let supportedPaymentType: WDSupportedPaymentType
+  @objc public init(supportedPaymentType: WDSupportedPaymentType)
+  @objc public func corePayment() -> WDPaymentCore?
   @objc override dynamic public init()
   @objc deinit
 }

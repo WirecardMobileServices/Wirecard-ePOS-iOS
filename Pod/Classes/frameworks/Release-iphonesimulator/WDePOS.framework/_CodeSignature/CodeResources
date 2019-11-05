@@ -182,7 +182,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zd8jwXsKtJBAni8w0KM/z2DuezQ=
+		9MDs6sbJn1CVanWpbtv1CN/F+00=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -302,15 +302,15 @@
 		</data>
 		<key>PrivateHeaders/WKWebView+Image.h</key>
 		<data>
-		IkchNH8OLPDG8Srmu0WeXo9endA=
+		ER+m3sONb5ZW6lximmi0VWWdiuI=
 		</data>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<data>
-		WKuPndiXdeZWpG+qmyEysTBcw4E=
+		/2nSw+tr7OynjqXhsrZSJfZy+j0=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		HCUuzcu3zIDKc28eQuzV0u4iTOo=
+		Y+60ndNg3BHg1O4DmrnjUDoUNAI=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		cQgr1ax6DIv0LdoYp59Y6YY0+3Q=
+		2MLy0NF5XeN4MwaFcA0TcTFxkMI=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -1543,33 +1543,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IkchNH8OLPDG8Srmu0WeXo9endA=
+			ER+m3sONb5ZW6lximmi0VWWdiuI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ax6uFHeiAACwYhnuIKxyNXrIC36tTdv/qVTDJhSc8yY=
+			HNBo9YP6LqvjDGM6jI5/IZQZiRgC9crvg9cIa8j3hBo=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WKuPndiXdeZWpG+qmyEysTBcw4E=
+			/2nSw+tr7OynjqXhsrZSJfZy+j0=
 			</data>
 			<key>hash2</key>
 			<data>
-			AB9U8fV5Zrd+pV0q17F76R9Ko47xhdqxJA0qhCoTjM4=
+			MCTMqt2R100oivnsSCeCJIs1rk6ef7EjmgKXC16Wdu4=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HCUuzcu3zIDKc28eQuzV0u4iTOo=
+			Y+60ndNg3BHg1O4DmrnjUDoUNAI=
 			</data>
 			<key>hash2</key>
 			<data>
-			BonFD4eQw2xOCHVu+b2BEiDDJsXW89OWQA9ccjkd1VQ=
+			0P0wklHw0UVtEtL18HGJK6PlVuuRjYvrAi+HgPpS1nM=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -1587,11 +1587,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cQgr1ax6DIv0LdoYp59Y6YY0+3Q=
+			2MLy0NF5XeN4MwaFcA0TcTFxkMI=
 			</data>
 			<key>hash2</key>
 			<data>
-			7zwYjJiaRDeBdTNZHIVoeEEMaJ8/6Fp1lwCDWF3YOb0=
+			haGD/Pp79iKUQFHuDA9mznOZLOq0Ix3MnFXly1zYTQ0=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
