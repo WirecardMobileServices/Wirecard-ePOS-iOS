@@ -12,9 +12,7 @@
 ## Overview
 The library enables cashless payment processing with selected mPOS terminals (magStripe and Chip and PIN) via the fully-licensed Wirecard Bank, Wirecard Retail Services which allows acceptance of many different cards, including Visa, MasterCard and American Express. In addition alternative payment method Alipay is also available.
 
-<div style="width:614px;height:656px;position:relative;"> 
-<iframe src=“https://docs.google.com/forms/d/e/1FAIpQLSe4TYGYcNqG0hWuVPnbPlhDgQD95c-6HNbk-JHC6Herz4I8Sg/viewform?embedded=true” width=“640" height=“764” frameborder=“0" marginheight=“0” marginwidth=“0">Loading…</iframe>
-</div>
+[We would appreciate your input on the ePOS product.](https://docs.google.com/forms/d/e/1FAIpQLSe4TYGYcNqG0hWuVPnbPlhDgQD95c-6HNbk-JHC6Herz4I8Sg/viewform?embedded=true)
 
 The SDK and Wirecard Payment infrastructure supports:
 
