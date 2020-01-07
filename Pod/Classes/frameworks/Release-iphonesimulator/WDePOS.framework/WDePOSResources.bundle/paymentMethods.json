@@ -74,7 +74,7 @@
     "WDBleStarMicronicsExtensionUUID":{
         "name":"Star Micronics BLE",
         "displayName":{"en":"Star Micronics BLE"},
-        "enabled":false,
+        "enabled":true,
         "devices":{
             "SM-L200": {
                 "displayName":{"en":"SM-L200"},

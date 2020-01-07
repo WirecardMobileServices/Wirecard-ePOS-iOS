@@ -10,6 +10,9 @@
             "type": "CARD_AUTHORIZATION"
         },
         {
+            "type": "CARD_PREAUTHORIZATION"
+        },
+        {
             "type": "ALIPAY"
         },
         {
@@ -34,6 +37,7 @@
             "termsAndConditionsUrl":"",
             "websiteUrl":""
         },
+        "referenceEnabled": true,
         "multitenderEnabled": true,
         "printSupportEnabled": true,
         "pistolScannerEnabled": true,

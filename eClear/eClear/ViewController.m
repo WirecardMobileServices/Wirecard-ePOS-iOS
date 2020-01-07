@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
 #import "eClear-Swift.h"
+#import <WDePOS/WDePOS.h>
 #import <WDePOSUI/WDePOSUI-Swift.h>
 
 typedef NS_ENUM(NSUInteger, PaymentType) {

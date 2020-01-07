@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(WDPaymentCore *)cashPurchasePaymentType;
 +(WDPaymentCore *)cardPurchasePaymentType;
 +(WDPaymentCore *)cardAuthorizationPaymentType;
++(WDPaymentCore *)cardPreAuthorizationPaymentType;
++(WDPaymentCore *)cardPreAuthorizationSupplementPaymentType;
 +(WDPaymentCore *)eftCardPurchasePaymentType;
 +(WDPaymentCore *)alipayPurchasePaymentType;
 +(WDPaymentCore *)wechatPurchasePaymentType;

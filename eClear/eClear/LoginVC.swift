@@ -40,21 +40,19 @@ class LoginVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, U
     */
     
     @IBAction func onTapLogin(_ sender: Any) {
-        if self.tUsername.text == "" || self.tPassword.text == ""{
+        guard let username = tUsername.text, let password = tPassword.text else {
             self.app.showError("Login", text: "Username and Password needs to be provided")
+            return
         }
-        else{
-            let arrBackend:NSArray = self.app.backends! as NSArray
-            let backend:NSDictionary = arrBackend.object(at: picker.selectedRow(inComponent: 0)) as! NSDictionary
-            let selectedBackend = (backend.value(forKey: "url") as! String)
-            
+        let arrBackend: NSArray = self.app.backends as NSArray
+        let backend: NSDictionary = arrBackend.object(at: picker.selectedRow(inComponent: 0)) as! NSDictionary
+        let selectedBackend = (backend.value(forKey: "url") as! String)
 
-            self.app.loginUser(self.tUsername.text, password: self.tPassword.text, backend: selectedBackend ,completion:{ (success) in
-                if(success == true){
-                    self.dismiss(animated: true, completion: nil)
-                }
-            })
-        }
+        app.loginUser(username, password: password, backend: selectedBackend ,completion: { [weak self] (success) in
+            if success == true {
+                self?.dismiss(animated: true, completion: nil)
+            }
+        })
     }
     
     // MARK: - Picker -
@@ -67,7 +65,7 @@ class LoginVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, U
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let arrBackend:NSArray = app.backends! as NSArray
+        let arrBackend:NSArray = app.backends as NSArray
         let backend:NSDictionary = arrBackend.object(at: row) as! NSDictionary
         return (backend.value(forKey: "url") as! String)
     }

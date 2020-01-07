@@ -68,6 +68,13 @@
 - (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId notifyUrl:(nonnull NSString *)notifyUrl;
 ///Add Card Authorization to the Sale to settle it by this payment
 -(void)addCardAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Card Authorization to the Sale to settle it by this payment
+-(void)addCardAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal notifyUrl:(nonnull NSString *)notifyUrl;
+///Add Card PreAuthorization to the Sale to settle it by this payment
+-(void)addCardPreAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
+///Add Card PreAuthorization to the Sale to settle it by this payment
+-(void)addCardPreAuthorization:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal notifyUrl:(nonnull NSString *)notifyUrl;
+-(void)addCardPreAuthorizationSupplement:(NSDecimalNumber * __nonnull)amount originalTransactionId:(NSString *__nonnull)originalTransactionId authorizationCode:(NSString * __nonnull)authorizationCode;
 ///Add Card EFTCard to the Sale to settle it by this payment
 -(void)addEFTCardPayment:(NSDecimalNumber * __nonnull)amount terminal:(nonnull WDTerminal *)terminal;
 ///Add Card EFTCard to the Sale to settle it by this payment
@@ -90,6 +97,8 @@
 - (void)addWeChatPayment:(nonnull NSDecimalNumber *)amount consumerId:(nonnull NSString *)consumerId originalPaymentId:(nullable NSString *)originalPaymentId;
 ///Add Card Capture Refund to the Sale - to be used for Sale Refunds as we are referring to the original Payment by its Payment Id
 -(void)addCardCapture:(NSDecimalNumber * __nonnull)amount originalPaymentId:(NSString * __nonnull)originalPaymentId;
+///Add Card PreAuth Supplement  to the Sale - to be used for Sale with previous pre-authorization -as we are referring to the original Payment by its Payment Id
+-(void)addCardPreAuthorizationSupplement:(NSDecimalNumber * __nonnull)amount originalTransactionId:(NSString * __nonnull)originalTransactionId authorizationCode:(NSString * __nonnull)authorizationCode;
 @end
 
 /**
@@ -99,4 +108,6 @@
 @required
 ///Add Card Capture to the Sale - to be used for Sale with previous authorization - to Capture it - as we are referring to the original Payment by its Payment Id
 -(void)addCardCapture:(NSDecimalNumber * __nonnull)amount originalPaymentId:(NSString * __nonnull)originalPaymentId;
+///Add Card PreAuth Supplement  to the Sale - to be used for Sale with previous pre-authorization -as we are referring to the original Payment by its Payment Id
+-(void)addCardPreAuthorizationSupplement:(NSDecimalNumber * __nonnull)amount originalTransactionId:(NSString * __nonnull)originalTransactionId authorizationCode:( NSString *__nonnull)authorizationCode;
 @end

@@ -10,6 +10,13 @@ import Foundation
 import XCTest
 import WDePOS
 
+enum paymentOperation
+{
+    case regularCard
+    case cardAuth
+    case cardPreAuth
+}
+
 class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
 {
     var configCompletionStatus : WDUpdateConfigurationStatus!
@@ -103,6 +110,19 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         doAuthorisedAndCapture()
         #endif
     }
+
+    func testPreAuthorisedAndSupplement()
+    {
+        #if arch(i386) || arch(x86_64)
+        let file:NSString = (#file as NSString).lastPathComponent as NSString
+        NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
+        return
+
+        #else
+        setupSpire()
+        doPreAuthorisedAndSupplement()
+        #endif
+    }
     
     func testSepaEFTPayment()
     {
@@ -128,7 +148,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         //PART 4: We do a card sale using Spire terminal
         //---------------------------------------------
         expectation = self.expectation(description: "Card sale")
-        self.doCardPayment(authorised: false)
+        self.doCardPayment(paymentOperation: .regularCard)
         self.waitForExpectations(timeout: 300, handler: nil)
         if (self.saleResponse == nil)
         {
@@ -168,8 +188,8 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         #else
         //PART 4: We do a card sale using Spire terminal
         //---------------------------------------------
-        expectation = self.expectation(description: "Card sale")
-        self.doCardPayment(authorised: true)
+        expectation = self.expectation(description: "Card auth")
+        self.doCardPayment(paymentOperation: .cardAuth)
         self.waitForExpectations(timeout: 300, handler: nil)
         if (self.saleResponse == nil)
         {
@@ -185,10 +205,49 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         //(for testing purposes; this is important if you develop using an actual credit card)
         //Algo note that refunds are allowed only for some period of time (ie: midnight on current time, or next 24 hours, etc) and after that, only reversals are allowed. But refunds are for free, while reversals actually cost money (so use reversals responsibly!)
         //-------------------------------------------
-        expectation = self.expectation(description: "Refund sale")
+        expectation = self.expectation(description: "Capture the auth")
         self.captureSale()
         self.waitForExpectations(timeout: 300, handler: nil)
         if let response = self.saleResponse, let payment = response.payments.first as? WDPaymentDetail, payment.status != .captured
+        {
+            XCTFail("Sale did not succeed. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
+        }
+        else if self.saleResponse == nil
+        {
+            XCTFail("Sale response empty. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
+        }
+        #endif
+    }
+    
+    func doPreAuthorisedAndSupplement()
+    {
+        #if arch(i386) || arch(x86_64)
+        let file:NSString = (#file as NSString).lastPathComponent as NSString
+        NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
+        return
+
+        #else
+        //PART 4: We do a card pre-auth using Spire terminal
+        //---------------------------------------------
+        expectation = self.expectation(description: "Card pre-auth")
+        self.doCardPayment(paymentOperation: .cardPreAuth)
+        self.waitForExpectations(timeout: 300, handler: nil)
+        if (self.saleResponse == nil)
+        {
+            XCTFail("Sale did not succeed. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
+            //NOTE:  if your merchant settings have cash mgmt enabled in backend, you will need to run cash tests first - otherwise you will receive a "not authorized" kind of error
+        }
+        else
+        {
+            SaleHelper.sharedInstance().saleToSaveId(from:self.saleResponse)
+        }
+        
+        //PART 5: We add a supplement to the previous pre-auth payment (to increase the pre-auth amount on the sale)
+        //-------------------------------------------
+        expectation = self.expectation(description: "Add supplement to pre-auth")
+        self.addSupplement()
+        self.waitForExpectations(timeout: 300, handler: nil)
+        if let response = self.saleResponse, let payment = response.payments.first as? WDPaymentDetail, payment.status != .completed
         {
             XCTFail("Sale did not succeed. Make sure your terminal is paired in your iOS device settings and that the terminal is in stand-by mode (ie. by switching off and then on and waiting until the screen lights off).")
         }
@@ -232,7 +291,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         #endif
     }
     
-    func doCardPayment(authorised : Bool)
+    func doCardPayment(paymentOperation : paymentOperation)
     {
         #if arch(i386) || arch(x86_64)
         let file:NSString = (#file as NSString).lastPathComponent as NSString
@@ -261,8 +320,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
                                productId:"Dummy ID 2",
                                externalProductId : nil)
         //You can add a service charge to the whole basket -- but this is optional
-        self.aSale.addServiceCharge(UserHelper.sharedInstance().serviceChargeRate(),
-                                    taxRate:UserHelper.sharedInstance().serviceChargeTax())
+        self.aSale.addServiceChargeRate(UserHelper.sharedInstance().serviceChargeRate(), taxRate:UserHelper.sharedInstance().serviceChargeTax())
         //You can add a tip of any value you want. Notice that backend validate taxes, so their values should match the ones your merchant has defined in setup.
         self.aSale.addGratuity(NSDecimalNumber(value: 1.0),
                                taxRate:UserHelper.sharedInstance().tipTax())
@@ -272,15 +330,20 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         self.aSale.shiftId = UserHelper.sharedInstance().lastShiftId()
         self.aSale.resetPayments()
         
-        if authorised
+        if paymentOperation == .cardAuth
         {
             self.aSale.addCardAuthorization(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
                                       terminal:self.selectedDevice!)
         }
-        else
+        else if paymentOperation == .regularCard
         {
             self.aSale.addCardPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
                                       terminal:self.selectedDevice!)
+        }
+        else if paymentOperation == .cardPreAuth
+        {
+            self.aSale.addCardPreAuthorization(NSDecimalNumber.init(value:5),
+                                            terminal: self.selectedDevice!)
         }
         
         if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
@@ -360,6 +423,35 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         #endif
     }
 
+    func addSupplement()
+    {
+        #if arch(i386) || arch(x86_64)
+        let file:NSString = (#file as NSString).lastPathComponent as NSString
+        NSLog("\n\t\t    [%@ %@] Not runnable on simulator 📱",file.deletingPathExtension , #function);
+        return
+
+        #else
+        guard let currentSale = self.saleResponse else
+        {
+            XCTFail("Something went really wrong - no sale to capture")
+            self.expectation.fulfill()
+            return
+        }
+        
+        
+        let refSaleRequest = currentSale.referenceSaleRequest()
+        
+        refSaleRequest.addCardPreAuthorizationSupplement(NSDecimalNumber.one, originalTransactionId: currentSale.processedCardPayments().first?.internalId ?? "", authorizationCode:currentSale.processedCardPayments().first?.authorizationCode ?? "")
+                
+        if let paymentConfiguration = WDSaleRequestConfiguration(saleRequest: refSaleRequest)
+        {
+            sdk.terminalManager.setActive(self.selectedDevice, completion:{[weak self]() in
+                self?.sdk.saleManager.pay(paymentConfiguration, with: (self?.paymentHandler)!)
+            })
+        }
+        #endif
+    }
+    
     func doSepaEFTPayment()
     {
         #if arch(i386) || arch(x86_64)

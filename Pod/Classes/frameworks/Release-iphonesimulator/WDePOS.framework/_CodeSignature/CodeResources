@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/WDConstants.h</key>
 		<data>
-		PPbaWz+uMTeP+Fsajkrjsm5mvdw=
+		MYzCvl63F6l5umg1pl5anAKmjOM=
 		</data>
 		<key>Headers/WDCustomerManager.h</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Headers/WDPayment.h</key>
 		<data>
-		CURTZuQscRRD9YCFzJ0lUHQWeH8=
+		i321UFi+7uxkWA8PFtSLamTNYBo=
 		</data>
 		<key>Headers/WDPaymentCore+Extension.h</key>
 		<data>
-		GoTySSsILfADfc8zzxF2hl3350c=
+		tnE7XNNR3ugh9XL5Mqu9s+7U1UY=
 		</data>
 		<key>Headers/WDPaymentDetail.h</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Headers/WDProtocols.h</key>
 		<data>
-		b6dJdtApaf/9n5mCHtrr+16DdWs=
+		4SYSpsR5uuScGt73hlZ4duky5+k=
 		</data>
 		<key>Headers/WDSale.h</key>
 		<data>
-		mSin/SIwjvnj+kynZaHT5BEkw+0=
+		ih26F+xfMQhMRuvezIGj6TmKLkA=
 		</data>
 		<key>Headers/WDSaleItem.h</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Headers/WDSaleProcessing.h</key>
 		<data>
-		Nyqg7cUJQ7IZAIQoPbJwvOFbQKU=
+		9OztrA9iotaES96usYR3blmLBOo=
 		</data>
 		<key>Headers/WDUserManager.h</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Headers/WDePOS-Swift.h</key>
 		<data>
-		o4szcFXVQQc2DvL4MJXCwzSaBpk=
+		PestvZbP3+4GyDs1UOfSvJs1pe4=
 		</data>
 		<key>Headers/WDePOS.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/WDePOSSDK.h</key>
 		<data>
-		0p9rDgQBTmbFTJp6BGi2DtF5AtM=
+		XoLmgbT201ALaEAtts7JpOhRulY=
 		</data>
 		<key>Headers/WDePOSVersion.h</key>
 		<data>
@@ -182,55 +182,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9MDs6sbJn1CVanWpbtv1CN/F+00=
+		rri/cikVuusUvTibYYxTmnDOaMQ=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YuNKgnpVTpUjhKsMioqfWyROc2w=
+		nqYSgdO+taWOn6XLFePAO5B/Ess=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+		QeKrg6uskJZGQ8u7kRo/ORtVRp4=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/9iXkgM1/bpGWFfj5HDxHd0tCBs=
+		j4v2LcspgvL7WcN0tGc+j0wxlLc=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftdoc</key>
 		<data>
-		YuNKgnpVTpUjhKsMioqfWyROc2w=
+		nqYSgdO+taWOn6XLFePAO5B/Ess=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftinterface</key>
 		<data>
-		Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+		QeKrg6uskJZGQ8u7kRo/ORtVRp4=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftmodule</key>
 		<data>
-		/9iXkgM1/bpGWFfj5HDxHd0tCBs=
+		j4v2LcspgvL7WcN0tGc+j0wxlLc=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JNJlhVxH9qvqqv2so4PgKzGASmQ=
+		GPxlfMVXmgUvZIXBd26BHWpLBJM=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DBHxtaRskA2e+ruRuhQbdNSnBKs=
+		x7jb2w+973uaG0ljCzcumzXzZ3o=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0Nd+tX5FSJAuH54hOuG80W9ZDRM=
+		DwKLtfLQB/5wjxD7rUncepDyNxo=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		JNJlhVxH9qvqqv2so4PgKzGASmQ=
+		GPxlfMVXmgUvZIXBd26BHWpLBJM=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		DBHxtaRskA2e+ruRuhQbdNSnBKs=
+		x7jb2w+973uaG0ljCzcumzXzZ3o=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		0Nd+tX5FSJAuH54hOuG80W9ZDRM=
+		DwKLtfLQB/5wjxD7rUncepDyNxo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -278,7 +278,7 @@
 		</data>
 		<key>PrivateHeaders/WDPayment+Private.h</key>
 		<data>
-		NEsXs/FYgGIDB0V7bxSUHFoZMF0=
+		c6PVDPbK3dOBytkdd6nvO7194wQ=
 		</data>
 		<key>PrivateHeaders/WDPayment+Protocol.h</key>
 		<data>
@@ -306,11 +306,11 @@
 		</data>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<data>
-		/2nSw+tr7OynjqXhsrZSJfZy+j0=
+		Y6Za6Uj1hUW6m5XUCuhd6tuaQWg=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		Y+60ndNg3BHg1O4DmrnjUDoUNAI=
+		y0ImyfTfJ9FhreUx5uz1VbxjmZU=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -318,11 +318,11 @@
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		2MLy0NF5XeN4MwaFcA0TcTFxkMI=
+		8wy6G254Pq6ctyObrRe+8/A+l7s=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		yfQIf5g9Rd/x1MXp9PUFpCg9JC4=
+		FUnQzZtuXgn3pInlugJB2CPAbLM=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -612,7 +612,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OhLx3gZftNKAJ+OwkKkLjyPUqqs=
+			CEvTdQuyvumrCKzr6zKtInPb6C0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -621,7 +621,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A8S+2fUzPNkmPNIAUT3OAfbz2jY=
+			h6fPTg1JuBDONZYU7wyfPnYmkqs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -630,7 +630,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dz7Zx3umFYDvju9e1YnM3UiAtQ4=
+			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -639,7 +639,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8XIwKy6H7H4SN4BeHdjVFbpY824=
+			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -654,7 +654,7 @@
 		</data>
 		<key>WDePOSResources.bundle/paymentMethods.json</key>
 		<data>
-		xbCtvSl3EE1YEJS2QsKXPQo0ZUo=
+		66DUVbiYw8FFQzF1j1xTDvDaUmw=
 		</data>
 		<key>WDePOSResources.bundle/receipt.html</key>
 		<data>
@@ -728,7 +728,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LRALiqIhDTOehu63XDJhSVjNWMo=
+			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -817,11 +817,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PPbaWz+uMTeP+Fsajkrjsm5mvdw=
+			MYzCvl63F6l5umg1pl5anAKmjOM=
 			</data>
 			<key>hash2</key>
 			<data>
-			a3Rd3WZF/4l0xCklyA0DxpyUdUNU8HC62wu5eww3y3w=
+			WM2zazzSv5PvIeOXBvHv0n+pd80mDhgJk2y6YPoYp54=
 			</data>
 		</dict>
 		<key>Headers/WDCustomerManager.h</key>
@@ -938,22 +938,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CURTZuQscRRD9YCFzJ0lUHQWeH8=
+			i321UFi+7uxkWA8PFtSLamTNYBo=
 			</data>
 			<key>hash2</key>
 			<data>
-			kJQ8dGD79kRxuMoyqoAohrqsom2Ptgn5nKdGGLUkTL0=
+			nHaYRhimz+XIK1vD6Qga85z58vJZf/5B+ToJGOrPBgs=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentCore+Extension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GoTySSsILfADfc8zzxF2hl3350c=
+			tnE7XNNR3ugh9XL5Mqu9s+7U1UY=
 			</data>
 			<key>hash2</key>
 			<data>
-			VJtwZKa9BaiFM+huR5qQl2VRFR00BMdBsmZN/NyOR14=
+			/5Owm9l7xbx5vRIJqv1mqtGS/sONwooATjf0jxHMB5A=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetail.h</key>
@@ -1103,22 +1103,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b6dJdtApaf/9n5mCHtrr+16DdWs=
+			4SYSpsR5uuScGt73hlZ4duky5+k=
 			</data>
 			<key>hash2</key>
 			<data>
-			lzfOknPikIC6JekDf5MXD+QlgCqwpBvPxPpNXTw4VZE=
+			WqoPfoWp5ZwxFLDOYgnytd6XENxf4c/wy72BF5MTkHo=
 			</data>
 		</dict>
 		<key>Headers/WDSale.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mSin/SIwjvnj+kynZaHT5BEkw+0=
+			ih26F+xfMQhMRuvezIGj6TmKLkA=
 			</data>
 			<key>hash2</key>
 			<data>
-			hmRb1O3lEOHTuGj2RapTUXTNww39ioN22n2YNuymDwk=
+			d7ddEqHuLd5ER7XXQTBaT9AXggtf8d0rKAx1TAAAH1Q=
 			</data>
 		</dict>
 		<key>Headers/WDSaleItem.h</key>
@@ -1147,11 +1147,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Nyqg7cUJQ7IZAIQoPbJwvOFbQKU=
+			9OztrA9iotaES96usYR3blmLBOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			DUoSQJ/UiV93WsETTLOTMyApOcnuDLADHCMEzVs+y+o=
+			d10Fpe0eqwGFaUocyFBEcuFeiTtfcSe3OIoI1uGPouY=
 			</data>
 		</dict>
 		<key>Headers/WDUserManager.h</key>
@@ -1180,11 +1180,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o4szcFXVQQc2DvL4MJXCwzSaBpk=
+			PestvZbP3+4GyDs1UOfSvJs1pe4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HUpReVtV9aAmUNn4oDfQKLCIFRXrjNguWB4sBXBpIzg=
+			eJ1Mji6AjPLV5nOYejvT7SqAhBGqNBuxNyK7BugAoZU=
 			</data>
 		</dict>
 		<key>Headers/WDePOS.h</key>
@@ -1202,11 +1202,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0p9rDgQBTmbFTJp6BGi2DtF5AtM=
+			XoLmgbT201ALaEAtts7JpOhRulY=
 			</data>
 			<key>hash2</key>
 			<data>
-			SfRVSSj6i6AYjXZkx5pH/ARawM0zcF4/DR+JA7RHcD4=
+			ziiXpyPaWXu/hpL1eN4zgK/FdvyJZqWJ0H4CiP9GzeQ=
 			</data>
 		</dict>
 		<key>Headers/WDePOSVersion.h</key>
@@ -1224,132 +1224,132 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YuNKgnpVTpUjhKsMioqfWyROc2w=
+			nqYSgdO+taWOn6XLFePAO5B/Ess=
 			</data>
 			<key>hash2</key>
 			<data>
-			FtiuSw7iMji8iW+5HAHGab30F8TfdQjYeO0cJZzVc9M=
+			O5uVPuHg0GATyZykwmtWK40hfI+j3pjD42iCi9+3vYk=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+			QeKrg6uskJZGQ8u7kRo/ORtVRp4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OipOw/HgKFWWlM0V0OHYBZbnjkkNRcGqgAbRFpTdpm8=
+			bk0KzSRCb3g+MhNSef8v2HZhAFyWPl5RK+T4IUsNxRI=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/9iXkgM1/bpGWFfj5HDxHd0tCBs=
+			j4v2LcspgvL7WcN0tGc+j0wxlLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZA9gxw5olXEyqQBKklugtVPninqernzuKtaI3pSaFmc=
+			K2JFi4yun0xEvepc71CGTMUxHAW1v7NB0GpD6BFqZaA=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YuNKgnpVTpUjhKsMioqfWyROc2w=
+			nqYSgdO+taWOn6XLFePAO5B/Ess=
 			</data>
 			<key>hash2</key>
 			<data>
-			FtiuSw7iMji8iW+5HAHGab30F8TfdQjYeO0cJZzVc9M=
+			O5uVPuHg0GATyZykwmtWK40hfI+j3pjD42iCi9+3vYk=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cl3diNSPXnaqY/UmwYw1CtuSyp8=
+			QeKrg6uskJZGQ8u7kRo/ORtVRp4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OipOw/HgKFWWlM0V0OHYBZbnjkkNRcGqgAbRFpTdpm8=
+			bk0KzSRCb3g+MhNSef8v2HZhAFyWPl5RK+T4IUsNxRI=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/9iXkgM1/bpGWFfj5HDxHd0tCBs=
+			j4v2LcspgvL7WcN0tGc+j0wxlLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZA9gxw5olXEyqQBKklugtVPninqernzuKtaI3pSaFmc=
+			K2JFi4yun0xEvepc71CGTMUxHAW1v7NB0GpD6BFqZaA=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JNJlhVxH9qvqqv2so4PgKzGASmQ=
+			GPxlfMVXmgUvZIXBd26BHWpLBJM=
 			</data>
 			<key>hash2</key>
 			<data>
-			T+u60hrug9kzpxnc4UaxKkj3qySqsrtNqAlWA3O8rsE=
+			5sH2M/qmHxm086oiKL5HUMpd59YHL02LH5P6lraaYeo=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DBHxtaRskA2e+ruRuhQbdNSnBKs=
+			x7jb2w+973uaG0ljCzcumzXzZ3o=
 			</data>
 			<key>hash2</key>
 			<data>
-			b9Ei/diKFVPTuj4paZ9y7raIDf9qPPoF6krZwuTlJWQ=
+			VGEjSyWbZZ/NGalCRPD7413yhWz0F8h0JniAwaa7564=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0Nd+tX5FSJAuH54hOuG80W9ZDRM=
+			DwKLtfLQB/5wjxD7rUncepDyNxo=
 			</data>
 			<key>hash2</key>
 			<data>
-			5zL3qjmK7IofrY6XZf0u6xkhf16ZNUgBz7Hi6LVSTFA=
+			bTItwi3w2cKSb+tiE3RdeAxnMORbs5q+DfoJVMgta4s=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JNJlhVxH9qvqqv2so4PgKzGASmQ=
+			GPxlfMVXmgUvZIXBd26BHWpLBJM=
 			</data>
 			<key>hash2</key>
 			<data>
-			T+u60hrug9kzpxnc4UaxKkj3qySqsrtNqAlWA3O8rsE=
+			5sH2M/qmHxm086oiKL5HUMpd59YHL02LH5P6lraaYeo=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DBHxtaRskA2e+ruRuhQbdNSnBKs=
+			x7jb2w+973uaG0ljCzcumzXzZ3o=
 			</data>
 			<key>hash2</key>
 			<data>
-			b9Ei/diKFVPTuj4paZ9y7raIDf9qPPoF6krZwuTlJWQ=
+			VGEjSyWbZZ/NGalCRPD7413yhWz0F8h0JniAwaa7564=
 			</data>
 		</dict>
 		<key>Modules/WDePOS.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0Nd+tX5FSJAuH54hOuG80W9ZDRM=
+			DwKLtfLQB/5wjxD7rUncepDyNxo=
 			</data>
 			<key>hash2</key>
 			<data>
-			5zL3qjmK7IofrY6XZf0u6xkhf16ZNUgBz7Hi6LVSTFA=
+			bTItwi3w2cKSb+tiE3RdeAxnMORbs5q+DfoJVMgta4s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1477,11 +1477,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NEsXs/FYgGIDB0V7bxSUHFoZMF0=
+			c6PVDPbK3dOBytkdd6nvO7194wQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			nMX0BJX4nKLwgHSvQBT+mXwb515poN9Ioc0ZG/6yzks=
+			wc9dhkK7SmCAjUjFGdhZb/yU3TqhZKncd1bW4sG5RSk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDPayment+Protocol.h</key>
@@ -1554,22 +1554,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/2nSw+tr7OynjqXhsrZSJfZy+j0=
+			Y6Za6Uj1hUW6m5XUCuhd6tuaQWg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MCTMqt2R100oivnsSCeCJIs1rk6ef7EjmgKXC16Wdu4=
+			7w8gh3zMVt2J7OaVVkAb/g7Tj5eF7p3cpMYt6FP5Khk=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y+60ndNg3BHg1O4DmrnjUDoUNAI=
+			y0ImyfTfJ9FhreUx5uz1VbxjmZU=
 			</data>
 			<key>hash2</key>
 			<data>
-			0P0wklHw0UVtEtL18HGJK6PlVuuRjYvrAi+HgPpS1nM=
+			WYOxo54xWqcdlLiuAONbCT5iBcCVPI8S/WqHY1mEcxs=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -1587,22 +1587,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2MLy0NF5XeN4MwaFcA0TcTFxkMI=
+			8wy6G254Pq6ctyObrRe+8/A+l7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			haGD/Pp79iKUQFHuDA9mznOZLOq0Ix3MnFXly1zYTQ0=
+			zD66mG5uA6Zs2DIsjJbiY5l0Egjez2+8ECBKL714dj0=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yfQIf5g9Rd/x1MXp9PUFpCg9JC4=
+			FUnQzZtuXgn3pInlugJB2CPAbLM=
 			</data>
 			<key>hash2</key>
 			<data>
-			hHjQfr7mWOKfVnh5M1RmkpmjwcWu6I9menHGfQyg+sI=
+			orxIZA/ahw3omXo0zwL7XxJJgAXVyPp+qmhKybpPgmU=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeSignature</key>
@@ -2390,11 +2390,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OhLx3gZftNKAJ+OwkKkLjyPUqqs=
+			CEvTdQuyvumrCKzr6zKtInPb6C0=
 			</data>
 			<key>hash2</key>
 			<data>
-			P/MTgeMdOnJqOE8GylNaBiwXOK+vXIXzEBs4guTOw1Q=
+			k1vaJebu9HUfKiba9eRlZZyylUmI46Mu7vvALOntjvo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2403,11 +2403,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A8S+2fUzPNkmPNIAUT3OAfbz2jY=
+			h6fPTg1JuBDONZYU7wyfPnYmkqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PGg4LFrCVFgBy9kE47WHtO0mKXqc31Z+tOt5Z7rVwxA=
+			QV3DXCxKIWFwp1tVABfwER/O4laAHzZXJRd5eE4w3Uw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2416,11 +2416,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dz7Zx3umFYDvju9e1YnM3UiAtQ4=
+			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			2i+5m89eWMOEvQncVirGdQUW5z6RBhev00uxk8TQxWA=
+			Kt9lHIZth260UcswAxdfpAAkHHXd+huDGOKL5arLCwk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2429,11 +2429,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8XIwKy6H7H4SN4BeHdjVFbpY824=
+			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+zyV66UZlq1tgpkSpmfgFOMF2241v2jlBUXXyvEGeXA=
+			e6EphaYbJAb9GajJQtSgjXfwdP+BKvPVlDi17HQb5jA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2464,11 +2464,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xbCtvSl3EE1YEJS2QsKXPQo0ZUo=
+			66DUVbiYw8FFQzF1j1xTDvDaUmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KABP+EDNYslw4WuZJyMPM+b7/0YdtmPQH7yU7eVRolM=
+			BlAuLTLs4dWD5eaElbIZJN0FawjUStY/WMKefQkafbc=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/receipt.html</key>
@@ -2662,11 +2662,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LRALiqIhDTOehu63XDJhSVjNWMo=
+			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
 			</data>
 			<key>hash2</key>
 			<data>
-			h+Cny1xAErA4ZxBoNyMr3+/apWiSxlkiekGLtE4ikSM=
+			u1nujZc+aqL3GZqElQe66kNJQmbkZufEmr38YEDnJR8=
 			</data>
 			<key>optional</key>
 			<true/>

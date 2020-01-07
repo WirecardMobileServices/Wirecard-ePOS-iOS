@@ -288,7 +288,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OhLx3gZftNKAJ+OwkKkLjyPUqqs=
+			CEvTdQuyvumrCKzr6zKtInPb6C0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -297,7 +297,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A8S+2fUzPNkmPNIAUT3OAfbz2jY=
+			h6fPTg1JuBDONZYU7wyfPnYmkqs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -306,7 +306,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dz7Zx3umFYDvju9e1YnM3UiAtQ4=
+			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -315,7 +315,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8XIwKy6H7H4SN4BeHdjVFbpY824=
+			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -330,7 +330,7 @@
 		</data>
 		<key>paymentMethods.json</key>
 		<data>
-		xbCtvSl3EE1YEJS2QsKXPQo0ZUo=
+		66DUVbiYw8FFQzF1j1xTDvDaUmw=
 		</data>
 		<key>receipt.html</key>
 		<data>
@@ -404,7 +404,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LRALiqIhDTOehu63XDJhSVjNWMo=
+			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1186,11 +1186,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OhLx3gZftNKAJ+OwkKkLjyPUqqs=
+			CEvTdQuyvumrCKzr6zKtInPb6C0=
 			</data>
 			<key>hash2</key>
 			<data>
-			P/MTgeMdOnJqOE8GylNaBiwXOK+vXIXzEBs4guTOw1Q=
+			k1vaJebu9HUfKiba9eRlZZyylUmI46Mu7vvALOntjvo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1199,11 +1199,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A8S+2fUzPNkmPNIAUT3OAfbz2jY=
+			h6fPTg1JuBDONZYU7wyfPnYmkqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PGg4LFrCVFgBy9kE47WHtO0mKXqc31Z+tOt5Z7rVwxA=
+			QV3DXCxKIWFwp1tVABfwER/O4laAHzZXJRd5eE4w3Uw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1212,11 +1212,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dz7Zx3umFYDvju9e1YnM3UiAtQ4=
+			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			2i+5m89eWMOEvQncVirGdQUW5z6RBhev00uxk8TQxWA=
+			Kt9lHIZth260UcswAxdfpAAkHHXd+huDGOKL5arLCwk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1225,11 +1225,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8XIwKy6H7H4SN4BeHdjVFbpY824=
+			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+zyV66UZlq1tgpkSpmfgFOMF2241v2jlBUXXyvEGeXA=
+			e6EphaYbJAb9GajJQtSgjXfwdP+BKvPVlDi17HQb5jA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1260,11 +1260,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xbCtvSl3EE1YEJS2QsKXPQo0ZUo=
+			66DUVbiYw8FFQzF1j1xTDvDaUmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KABP+EDNYslw4WuZJyMPM+b7/0YdtmPQH7yU7eVRolM=
+			BlAuLTLs4dWD5eaElbIZJN0FawjUStY/WMKefQkafbc=
 			</data>
 		</dict>
 		<key>receipt.html</key>
@@ -1458,11 +1458,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LRALiqIhDTOehu63XDJhSVjNWMo=
+			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
 			</data>
 			<key>hash2</key>
 			<data>
-			h+Cny1xAErA4ZxBoNyMr3+/apWiSxlkiekGLtE4ikSM=
+			u1nujZc+aqL3GZqElQe66kNJQmbkZufEmr38YEDnJR8=
 			</data>
 			<key>optional</key>
 			<true/>

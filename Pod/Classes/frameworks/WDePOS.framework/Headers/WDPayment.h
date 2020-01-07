@@ -29,14 +29,16 @@ typedef NS_ENUM(NSInteger, WDPaymentMethod ){
  *  @discussion Enumerator with the transaction types.
  **/
 typedef NS_ENUM(NSInteger, WDTransactionType) {
-    WDTransactionTypePurchase           = 1 << 0, //Default
-    WDTransactionTypeAuthorize          = 1 << 1,
-    WDTransactionTypeCapture            = 1 << 2,
-    WDTransactionTypeRefund             = 1 << 3,
-    WDTransactionTypeReferenceRefund    = 1 << 4,
-    WDTransactionTypeReversal           = 1 << 5,
-    WDTransactionTypeAutoResolve        = 1 << 6,
-    WDTransactionTypeUnknown            = 1 << 7
+    WDTransactionTypePurchase               = 1 << 0, //Default
+    WDTransactionTypeAuthorize              = 1 << 1,
+    WDTransactionTypePreAuthorize           = 1 << 2,
+    WDTransactionTypePreAuthorizeSupplement = 1 << 3,
+    WDTransactionTypeCapture                = 1 << 4,
+    WDTransactionTypeRefund                 = 1 << 5,
+    WDTransactionTypeReferenceRefund        = 1 << 6,
+    WDTransactionTypeReversal               = 1 << 7,
+    WDTransactionTypeAutoResolve            = 1 << 8,
+    WDTransactionTypeUnknown                = 1 << 9
 };
 
 /**
@@ -190,4 +192,27 @@ typedef NS_ENUM(NSUInteger, WDPaymentState) {
  *  @brief Card Capture - contains the information about the original Payment Authorization to be captured
  **/
 @interface WDPaymentCaptureCard : WDPaymentCapture @end
+
+
+/**
+*  @class WDPaymentPreAuthorizeSupplement -  Pre-Authorize Supplement to be used in the Referenced Sale with previous  Pre-Authorization
+ *  @brief Payment Capture - contains the information about the original Payment Authorization to be captured
+**/
+@interface WDPaymentPreAuthorizeSupplement : WDPayment
+/**
+ */
+@property (nullable, nonatomic, retain) NSString *originalTransactionId;
+@property (nullable, nonatomic, retain) NSString *authorizationCode;
+@end
+
+/**
+ *  @class WDPaymentPreAuthorizeSupplementCard -  Card Pre-Authorize Supplement to be used in the Referenced Sale with previous Card Pre-Authorization
+ *  @brief Card Capture - contains the information about the original Payment Pre-Authorization
+ **/
+@interface WDPaymentPreAuthorizeSupplementCard : WDPaymentPreAuthorizeSupplement
+- (nullable instancetype)initWithAmount:(nonnull NSDecimalNumber *)amount
+                  originalTransactionId:(nonnull NSString *)originalTransactionId
+                      authorizationCode:(nonnull NSString *)authorizationCode;
+@end
+
 NS_ASSUME_NONNULL_END

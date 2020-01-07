@@ -18,7 +18,7 @@
 #import "WDCustomerManager.h"
 #import "WDFileManager.h"
 
-NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN 
 
 /**
   @brief Implement it if you would like to receive HTTP errors from web services

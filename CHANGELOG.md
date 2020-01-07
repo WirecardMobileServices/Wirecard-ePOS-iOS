@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.11.0] - 2019-12-19
+
+### Added
+
+- New payment types: Preauthorization, supplement & capture
+
 ## [2.10.4] - 2019-11-5
 
 ### Fixed

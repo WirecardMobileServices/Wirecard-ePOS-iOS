@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import WDePOS
 
 @objc class ReceiptVC: UIViewController {
 

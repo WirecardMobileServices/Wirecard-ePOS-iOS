@@ -81,6 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief In case of payment which requires customer payment confirmation
  * @param confirmationType designates the type of customer's confirmation Signature | WeChat password ...
+   * If the signature approval is done on the terminal this event is still called with paymentConfirmationResult set to nil
  * @param paymentConfirmationResult is provided by caller and carries the customer's confirmation Yes/No
  **/
 -(void)confirm:(WDPaymentConfirmationType )confirmationType

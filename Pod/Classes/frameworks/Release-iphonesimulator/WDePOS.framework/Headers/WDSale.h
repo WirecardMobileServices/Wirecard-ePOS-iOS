@@ -132,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WDSale : WDSaleCore
 /**
  */
-@property (nonatomic, strong, readonly) NSString * externalId;
+@property (nonatomic, strong, readwrite) NSString * externalId;
 /**
  */
 @property (nullable, nonatomic, strong, readonly) NSArray <WDSaleItemCore *>* items;
@@ -245,6 +245,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  */
 @property (nullable, nonatomic, strong) NSString *cashRegisterId;
+@property (nullable, nonatomic, strong) NSString * externalId;
 @end
 
 #pragma mark - Sale Request
@@ -639,7 +640,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @brief Sale initialized by payment gateway Set by backend after processing the Sale
  */
-@property (nonatomic, strong,readonly) NSDate *initialized;
+@property (nullable, nonatomic, strong,readonly) NSDate *initialized;
 /**
  * @brief Merchant Set by backend after processing the Sale
  */
