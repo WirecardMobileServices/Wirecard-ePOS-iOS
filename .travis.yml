@@ -9,7 +9,7 @@ podfile: Example/Podfile
 before_install:
 - env
 - locale
-- rvm use 2.2.2 --install --binary --fuzzy
+- rvm use 2.6.5 --install --binary --fuzzy
 - gem install cocoapods # Since Travis is not always on latest version
 - pod cache clean --all
 - rm -rf ./Example/Pods/*
