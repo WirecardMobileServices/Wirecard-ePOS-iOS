@@ -27,14 +27,14 @@ PODS:
     - AFNetworking/NSURLSession (~> 3.0)
     - AFNetworking/Serialization (~> 3.0)
     - Mantle (~> 2.0)
-  - WDePOS/All (2.9.0):
+  - WDePOS/All (2.11.0):
     - WDePOS/Core
     - WDePOS/Datecs
     - WDePOS/Socket
     - WDePOS/Spire
     - WDePOS/Stario
     - WDePOS/UI
-  - WDePOS/Core (2.9.0):
+  - WDePOS/Core (2.11.0):
     - BerTlv
     - CocoaLumberjack (~> 3.5.2)
     - GRMustache (~> 7.3.2)
@@ -42,28 +42,28 @@ PODS:
     - Lockbox
     - Overcoat (~> 4.0.0-beta.2)
     - ZipArchive (~> 1.4)
-  - WDePOS/Datecs (2.9.0):
+  - WDePOS/Datecs (2.11.0):
     - WDePOS/Core
-  - WDePOS/Socket (2.9.0):
+  - WDePOS/Socket (2.11.0):
     - WDePOS/Core
-  - WDePOS/Spire (2.9.0):
+  - WDePOS/Spire (2.11.0):
     - WDePOS/Core
-  - WDePOS/Stario (2.9.0):
+  - WDePOS/Stario (2.11.0):
     - WDePOS/Core
-  - WDePOS/UI (2.9.0):
+  - WDePOS/UI (2.11.0):
     - WDePOS/Core
     - WDePOS/WDBrand
-  - WDePOS/WDBrand (2.9.0)
+  - WDePOS/WDBrand (2.11.0)
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
-  - CocoaLumberjack (~> 3.5)
+  - CocoaLumberjack (~> 3.5.3)
   - CocoaLumberjack/Swift
   - INTULocationManager
   - WDePOS/All
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - BerTlv
     - CocoaLumberjack
@@ -88,9 +88,9 @@ SPEC CHECKSUMS:
   Lockbox: 4291a0b8b1aed35474881c4e592961dec3ca695e
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Overcoat: 2ddaa6d66edebc375f3e24a37974631d5aff7ebe
-  WDePOS: f5d43dab91cfbd0bcbed548bd93588343d5f8440
+  WDePOS: 2e8ab5d393c7c0f50bc21aa04528d49c4879e9dc
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: dc174cd6438b0dfd8aab7050656ad78ac4db1a2a
+PODFILE CHECKSUM: 4d82a1a7c9833b9bb0841df35d56fdb85fcee4e8
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

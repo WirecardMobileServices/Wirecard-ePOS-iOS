@@ -243,7 +243,7 @@ class CashTestsSwift: BaseTestsSwift
         }
         sdk.cashManager.openShift(cashRegisterId,
                                   note: "Here you can include a text note",
-                                  amount: NSDecimalNumber.init(value: 100),
+                                  amount: NSDecimalNumber(string: "100"),
                                   completion: {[weak self](success : Bool, error : Error?) in
             self?.returnedErr = error
             if error == nil && success == true
@@ -267,7 +267,7 @@ class CashTestsSwift: BaseTestsSwift
         }
         sdk.cashManager.closeShift(cashRegisterId,
                                    note: "Here you can include a text note",
-                                   amount: NSDecimalNumber.init(value:100),
+                                   amount: NSDecimalNumber(string: "100"),
                                    completion:{[weak self](success : Bool, error : Error?) in
             self?.returnedErr = error
             if error == nil && success == true
@@ -311,7 +311,7 @@ class CashTestsSwift: BaseTestsSwift
         //Note: The operation of paying cash In or Out of a register is determined by the sign of the amount. In the "Pay In" below, the amount -100 would do a "Pay Out".
         sdk.cashManager.cashOperation(cashRegisterId,
                                       note: "Here you can add a text note",
-                                      amount: NSDecimalNumber.init(value: 100),
+                                      amount: NSDecimalNumber(string: "100"),
                                       currency: currencyCode,
                                       completion: {[weak self](success : Bool, error : Error?) in
             self?.cashOperationSucceed = error == nil && success == true
@@ -328,14 +328,14 @@ class CashTestsSwift: BaseTestsSwift
     {
         //We will define a dummy payment configuration as an example. Feel free to modify and add content; the sale complexity is up to you.
         self.aSale = SaleHelper.sharedInstance().newSale()
-        self.aSale?.addSaleItem(NSDecimalNumber.init(value:2.5),
-                                quantity: NSDecimalNumber(value: 5),
+        self.aSale?.addSaleItem(NSDecimalNumber(string: "2.5"),
+                                quantity: NSDecimalNumber(string: "5"),
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax(),
                                 itemDescription: "Red Apple",
                                 productId: "DummyID1",
                                 externalProductId:nil)
-        self.aSale?.addSaleItem(NSDecimalNumber.init(value:1.25),
-                                quantity: NSDecimalNumber(value: 3),
+        self.aSale?.addSaleItem(NSDecimalNumber(string: "1.25"),
+                                quantity: NSDecimalNumber(string: "3"),
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax(),
                                 itemDescription: "Golden Apple",
                                 productId: "DummyID2",
@@ -343,10 +343,10 @@ class CashTestsSwift: BaseTestsSwift
         self.aSale?.addServiceCharge(UserHelper.sharedInstance().serviceChargeRate(),
                                      taxRate:UserHelper.sharedInstance().serviceChargeTax())
         //You can add a tip of any value you want. Notice that backend validate taxes, so their values should match the ones your merchant has defined in setup.
-        self.aSale?.addGratuity(NSDecimalNumber(floatLiteral: 1.0),
+        self.aSale?.addGratuity(NSDecimalNumber(string: "1.0"),
                                 taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
-        self.aSale?.addFlatDiscount(NSDecimalNumber(floatLiteral: 6.0))
+        self.aSale?.addFlatDiscount(NSDecimalNumber(string: "6.0"))
 
         if let cashRegisterId = cashRegister?.internalId
         {
@@ -356,11 +356,11 @@ class CashTestsSwift: BaseTestsSwift
         self.aSale.resetPayments()
         if amount == nil
         {
-            self.aSale.addCashPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0))
+            self.aSale.addCashPayment(self.aSale.totalToPay() ?? .zero)
         }
         else
         {
-            self.aSale.addCashPayment(amount ?? NSDecimalNumber.init(value:0))
+            self.aSale.addCashPayment(amount ?? .zero)
         }
         
         if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
@@ -406,11 +406,11 @@ class CashTestsSwift: BaseTestsSwift
                                          itemDescription: anItem.itemDescription,
                                          productId: (anItem as? WDSaleItem)?.internalProductId,
                                          externalProductId: (anItem as? WDSaleItem)?.externalProductId)
-            saleToBeRefunded.addCashPayment(saleToBeRefunded.totalToPay() ?? NSDecimalNumber.init(value:0))
+            saleToBeRefunded.addCashPayment(saleToBeRefunded.totalToPay() ?? .zero)
         }
         else //refund by amount
         {
-            saleToBeRefunded.addCashPayment(amount ?? NSDecimalNumber.init(value:0))
+            saleToBeRefunded.addCashPayment(amount ?? .zero)
         }
 
 

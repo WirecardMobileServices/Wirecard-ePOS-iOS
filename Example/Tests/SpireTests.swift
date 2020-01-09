@@ -307,14 +307,14 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         }
         self.aSale = sale
         self.aSale.cashRegisterId = UserHelper.sharedInstance()?.selectedCashRegisterId() ?? ""
-        self.aSale.addSaleItem(NSDecimalNumber(value: 3.4),
-                               quantity:NSDecimalNumber.init(value: 5),
+        self.aSale.addSaleItem(NSDecimalNumber(string: "3.4"),
+                               quantity:NSDecimalNumber(string: "5"),
                                taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
                                itemDescription:"Red Apple",
                                productId:"Dummy ID 1",
                                externalProductId : nil)
-        self.aSale.addSaleItem(NSDecimalNumber(value: 2.25),
-                               quantity:NSDecimalNumber.init(value: 3),
+        self.aSale.addSaleItem(NSDecimalNumber(string: "2.25"),
+                               quantity:NSDecimalNumber(string: "3"),
                                taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
                                itemDescription:"Orange",
                                productId:"Dummy ID 2",
@@ -322,27 +322,27 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         //You can add a service charge to the whole basket -- but this is optional
         self.aSale.addServiceChargeRate(UserHelper.sharedInstance().serviceChargeRate(), taxRate:UserHelper.sharedInstance().serviceChargeTax())
         //You can add a tip of any value you want. Notice that backend validate taxes, so their values should match the ones your merchant has defined in setup.
-        self.aSale.addGratuity(NSDecimalNumber(value: 1.0),
+        self.aSale.addGratuity(NSDecimalNumber(string: "1.0"),
                                taxRate:UserHelper.sharedInstance().tipTax())
         //You can add a discount for the whole basket when productId is nil, or per productId otherwise. Below, a discount of 6%
-        self.aSale.addFlatDiscount(NSDecimalNumber(value: 6.0))
+        self.aSale.addFlatDiscount(NSDecimalNumber(string: "6.0"))
     //    self.aSale.cashRegisterId = UserHelper.sharedInstance().selectedCashRegisterId() //Note: if your backend settings have cash mgmt enabled in backend, you will need to run cash tests first to get this value as well as shiftId below
         self.aSale.shiftId = UserHelper.sharedInstance().lastShiftId()
         self.aSale.resetPayments()
         
         if paymentOperation == .cardAuth
         {
-            self.aSale.addCardAuthorization(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
+            self.aSale.addCardAuthorization(self.aSale.totalToPay() ?? .zero,
                                       terminal:self.selectedDevice!)
         }
         else if paymentOperation == .regularCard
         {
-            self.aSale.addCardPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
+            self.aSale.addCardPayment(self.aSale.totalToPay() ?? .zero,
                                       terminal:self.selectedDevice!)
         }
         else if paymentOperation == .cardPreAuth
         {
-            self.aSale.addCardPreAuthorization(NSDecimalNumber.init(value:5),
+            self.aSale.addCardPreAuthorization(NSDecimalNumber(string: "5"),
                                             terminal: self.selectedDevice!)
         }
         
@@ -472,8 +472,8 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         }
         self.aSale = sale
         self.aSale.cashRegisterId = UserHelper.sharedInstance()?.selectedCashRegisterId() ?? ""
-        self.aSale.addSaleItem(NSDecimalNumber(value: 3.4),
-                               quantity:NSDecimalNumber.init(value: 5),
+        self.aSale.addSaleItem(NSDecimalNumber(string: "3.4"),
+                               quantity:NSDecimalNumber(string: "5"),
                                taxRate:UserHelper.sharedInstance().preferredSaleItemTax(),
                                itemDescription:"Red Apple",
                                productId:"Dummy ID 1",
@@ -483,7 +483,7 @@ class SpireTestsSwift: BaseTestsSwift, WDManagerDelegate
         self.aSale.resetPayments()
         
         
-        self.aSale.addEFTCardPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0),
+        self.aSale.addEFTCardPayment(self.aSale.totalToPay() ?? .zero,
                                      terminal:self.selectedDevice!)
         
         if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)
