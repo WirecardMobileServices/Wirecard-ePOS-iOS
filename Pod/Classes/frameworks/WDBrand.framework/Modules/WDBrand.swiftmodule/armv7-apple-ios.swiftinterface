@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)
 // swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WDBrand
 import Foundation
 import Swift
@@ -90,8 +90,8 @@ public enum UISwitchStyledType : Swift.String {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc override dynamic open func awakeFromNib()
   @objc override dynamic open func prepareForInterfaceBuilder()
-  public typealias StyleableKeysEnum = UISwitchStyleableKeys
   @objc deinit
+  public typealias StyleableKeysEnum = UISwitchStyleableKeys
 }
 @objc public class WDBrandGoogleAnalytics : ObjectiveC.NSObject, Swift.Decodable {
   @objc public var key: Swift.String? {
@@ -101,8 +101,8 @@ public enum UISwitchStyledType : Swift.String {
     get
     }
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
 }
 public enum UIViewStyleableKeys : WDBrandStyleableKeysDefinable {
   case backgroundColor
@@ -185,8 +185,8 @@ public enum UIControlStyledType : Swift.String {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic open func awakeFromNib()
   @objc override dynamic open func prepareForInterfaceBuilder()
-  public typealias StyleableKeysEnum = UIControlStyleableKeys
   @objc deinit
+  public typealias StyleableKeysEnum = UIControlStyleableKeys
 }
 @objc public class WDBrandTransactionColors : ObjectiveC.NSObject, Swift.Decodable {
   @objc public var positive: UIKit.UIColor {
@@ -565,6 +565,9 @@ extension UITextFieldStyled : UIKit.UITextFieldDelegate {
   @objc public var languageList: [Swift.String] {
     get
     }
+  @objc public var languageListDev: [Swift.String] {
+    get
+    }
   @objc public var uiAppFonts: Swift.String? {
     get
     }
@@ -688,11 +691,11 @@ extension WDStyleable where Self : UITextFieldStyled {
 public enum UISearchBarStyleableKeys : WDBrandStyleableKeysDefinable {
   case tintColor
   case backgroundColor
+  public static func == (a: UISearchBarStyleableKeys, b: UISearchBarStyleableKeys) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: UISearchBarStyleableKeys, b: UISearchBarStyleableKeys) -> Swift.Bool
 }
 extension WDStyleable where Self : UISearchBarStyled {
   public var colors: [UISearchBarStyleableKeys : UIKit.UIColor] {
@@ -854,8 +857,8 @@ public enum UITableViewCellStyledType : Swift.String {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic open func awakeFromNib()
   @objc override dynamic open func prepareForInterfaceBuilder()
-  public typealias StyleableKeysEnum = UITableViewCellStyleableKeys
   @objc deinit
+  public typealias StyleableKeysEnum = UITableViewCellStyleableKeys
 }
 @objc public class WDBrand : ObjectiveC.NSObject, Swift.Decodable {
   @objc public var config: WDBrandConfig {
@@ -922,11 +925,11 @@ public enum UIButtonStyleableKeys : WDBrandStyleableKeysDefinable {
   case backgroundColor
   case backgroundColorHighlighted
   case backgroundColorDisabled
+  public static func == (a: UIButtonStyleableKeys, b: UIButtonStyleableKeys) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: UIButtonStyleableKeys, b: UIButtonStyleableKeys) -> Swift.Bool
 }
 extension WDStyleable where Self : UIButtonStyled {
   public var colors: [UIButtonStyleableKeys : UIKit.UIColor] {
@@ -1044,8 +1047,8 @@ public enum UILabelStyledType : Swift.String {
   }
   @objc public func setAttributedText(_ newText: Swift.String, bold: Swift.Bool, ofSize size: CoreGraphics.CGFloat)
   @objc public func setAttributedText(_ newText: Swift.String, bold: Swift.Bool, ofSize size: CoreGraphics.CGFloat, verticalOffset: CoreGraphics.CGFloat)
-  public typealias StyleableKeysEnum = UILabelStyleableKeys
   @objc deinit
+  public typealias StyleableKeysEnum = UILabelStyleableKeys
 }
 @objc open class UILabelStyledNoIntrinsicContentSize : UILabelStyled {
   @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {

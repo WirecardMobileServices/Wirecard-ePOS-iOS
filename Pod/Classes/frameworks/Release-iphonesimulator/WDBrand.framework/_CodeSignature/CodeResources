@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/WDBrand-Swift.h</key>
 		<data>
-		hTtlZI6FAxXcJMQtmijYPbakF3Y=
+		/ZG6YmM9vE2MXqvCy39FyWtwRjg=
 		</data>
 		<key>Headers/WDBrand.h</key>
 		<data>
@@ -18,55 +18,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DGvUZqJsW8zn+Xf5Yj2bAEsYa6k=
+		X0UpY9nwdjC8nNBA3isn/YGrqcs=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jgzqXFLjI9ZAT/K96KugywW/W00=
+		uZ9q5wKGBPZLg6wHqBAULjlck7w=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UaNT3wMge79a19+ULVE3Ic3s4S0=
+		KdLSbc7lrx4c/QDJ7HI1dKjtyW8=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ITRCjhD0AMfFZVZkOmrHHyPfjGY=
+		U/s7qobi6MUQz3G0w/9fxpV3VbY=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftdoc</key>
 		<data>
-		jgzqXFLjI9ZAT/K96KugywW/W00=
+		uZ9q5wKGBPZLg6wHqBAULjlck7w=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftinterface</key>
 		<data>
-		UaNT3wMge79a19+ULVE3Ic3s4S0=
+		KdLSbc7lrx4c/QDJ7HI1dKjtyW8=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftmodule</key>
 		<data>
-		ITRCjhD0AMfFZVZkOmrHHyPfjGY=
+		U/s7qobi6MUQz3G0w/9fxpV3VbY=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		l4I5q+crc2IiwV873XXDr/fzD9U=
+		+IyYRUYpVuBXWWlbxg2jkGKu/0o=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8r4KH8bM+59HBPzLeKhaRy/R1ks=
+		FWPKj0QdvewHfON2ImWdekZdZx8=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fotUSCxO7E6NoZEJdEa6a8iYKcA=
+		gvfFiSsCQDrpsqDv51Smd/+5e7A=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		l4I5q+crc2IiwV873XXDr/fzD9U=
+		+IyYRUYpVuBXWWlbxg2jkGKu/0o=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		8r4KH8bM+59HBPzLeKhaRy/R1ks=
+		FWPKj0QdvewHfON2ImWdekZdZx8=
 		</data>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		fotUSCxO7E6NoZEJdEa6a8iYKcA=
+		gvfFiSsCQDrpsqDv51Smd/+5e7A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -148,11 +148,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hTtlZI6FAxXcJMQtmijYPbakF3Y=
+			/ZG6YmM9vE2MXqvCy39FyWtwRjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			X80PlNVco9AZvluREn5rftrGpRTVg4HHSp2WQTRyl5E=
+			KHdiaM2BXWdcOmBotKDUkdO3pOhLwKC2Lk3o6Wn/1iQ=
 			</data>
 		</dict>
 		<key>Headers/WDBrand.h</key>
@@ -170,132 +170,132 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jgzqXFLjI9ZAT/K96KugywW/W00=
+			uZ9q5wKGBPZLg6wHqBAULjlck7w=
 			</data>
 			<key>hash2</key>
 			<data>
-			dP/btV5LM6+qqRP5ITnR5GGoqOT9wUFzlcsIQU8tzE8=
+			D5XB/OSXsoC2CiRzLUFp5bqtJImNF7m0qB460Z7FI2Q=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UaNT3wMge79a19+ULVE3Ic3s4S0=
+			KdLSbc7lrx4c/QDJ7HI1dKjtyW8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bYtNnkv+/JKUH+DYJkb0Ny8LOjgWFblAJ68dJFXmrNM=
+			aeAgCd9abzHdBs3P38vVHDUPxqbiSuULKdS9gYf172Y=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ITRCjhD0AMfFZVZkOmrHHyPfjGY=
+			U/s7qobi6MUQz3G0w/9fxpV3VbY=
 			</data>
 			<key>hash2</key>
 			<data>
-			mGoY+Z+fQuy5cKDSxqo6OHPzCt2WcYYaeI+kjAoCgDg=
+			HbyTCOdTGJdDmoeAQahRo7PlrimlbcZeJBnFmsJ/TGc=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jgzqXFLjI9ZAT/K96KugywW/W00=
+			uZ9q5wKGBPZLg6wHqBAULjlck7w=
 			</data>
 			<key>hash2</key>
 			<data>
-			dP/btV5LM6+qqRP5ITnR5GGoqOT9wUFzlcsIQU8tzE8=
+			D5XB/OSXsoC2CiRzLUFp5bqtJImNF7m0qB460Z7FI2Q=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UaNT3wMge79a19+ULVE3Ic3s4S0=
+			KdLSbc7lrx4c/QDJ7HI1dKjtyW8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bYtNnkv+/JKUH+DYJkb0Ny8LOjgWFblAJ68dJFXmrNM=
+			aeAgCd9abzHdBs3P38vVHDUPxqbiSuULKdS9gYf172Y=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ITRCjhD0AMfFZVZkOmrHHyPfjGY=
+			U/s7qobi6MUQz3G0w/9fxpV3VbY=
 			</data>
 			<key>hash2</key>
 			<data>
-			mGoY+Z+fQuy5cKDSxqo6OHPzCt2WcYYaeI+kjAoCgDg=
+			HbyTCOdTGJdDmoeAQahRo7PlrimlbcZeJBnFmsJ/TGc=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l4I5q+crc2IiwV873XXDr/fzD9U=
+			+IyYRUYpVuBXWWlbxg2jkGKu/0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGG6biatOMrpMNk3JtSnsfgXIQ+Zam+QqOhAwBHhQuM=
+			MNytTMRaUsXv70UzytmdKyJl8he6H+YoQlYZNQRnlFo=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8r4KH8bM+59HBPzLeKhaRy/R1ks=
+			FWPKj0QdvewHfON2ImWdekZdZx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			KQ4516C38SpVYalB3ePlTPzuIoXwj0ATDV9ZJ4IG/s0=
+			hQEQ0EvLONVG/rekR+fQrXSgKN/j/QwYs+NIpsvsAc0=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fotUSCxO7E6NoZEJdEa6a8iYKcA=
+			gvfFiSsCQDrpsqDv51Smd/+5e7A=
 			</data>
 			<key>hash2</key>
 			<data>
-			h+9Y7Pu4pOJXaY6fv6cFh0wRUURShm2u+eDSNlR9GeU=
+			olThlv4+PrEnGnoiQjWXkY3PvBPbmOp+z7UH3XwLWRc=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l4I5q+crc2IiwV873XXDr/fzD9U=
+			+IyYRUYpVuBXWWlbxg2jkGKu/0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGG6biatOMrpMNk3JtSnsfgXIQ+Zam+QqOhAwBHhQuM=
+			MNytTMRaUsXv70UzytmdKyJl8he6H+YoQlYZNQRnlFo=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8r4KH8bM+59HBPzLeKhaRy/R1ks=
+			FWPKj0QdvewHfON2ImWdekZdZx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			KQ4516C38SpVYalB3ePlTPzuIoXwj0ATDV9ZJ4IG/s0=
+			hQEQ0EvLONVG/rekR+fQrXSgKN/j/QwYs+NIpsvsAc0=
 			</data>
 		</dict>
 		<key>Modules/WDBrand.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fotUSCxO7E6NoZEJdEa6a8iYKcA=
+			gvfFiSsCQDrpsqDv51Smd/+5e7A=
 			</data>
 			<key>hash2</key>
 			<data>
-			h+9Y7Pu4pOJXaY6fv6cFh0wRUURShm2u+eDSNlR9GeU=
+			olThlv4+PrEnGnoiQjWXkY3PvBPbmOp+z7UH3XwLWRc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

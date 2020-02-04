@@ -284,11 +284,20 @@
 		<data>
 		U5XtdPY4iQ11Tm7qpzMo7HZkey0=
 		</data>
+		<key>cs.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tRpghsIt1HOxwYDPgXYDgCeXA1I=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/SDKLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CEvTdQuyvumrCKzr6zKtInPb6C0=
+			3VVd47zwrFeq+UwDy+LVTba84GQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -297,7 +306,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h6fPTg1JuBDONZYU7wyfPnYmkqs=
+			x1tyMnYTsV/CFIS8p6lnyHBRoK4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -306,7 +315,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
+			Sl+K7WUPvPtbsE+OjbyB+TptM38=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -315,7 +324,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
+			siZwdrDIDgorK8Onlzo3EqtaNWs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -324,14 +333,41 @@
 		<data>
 		gches8XnUwKa6DEtO0if8bFX2Vc=
 		</data>
+		<key>it.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lV6IpZm96zaPhB+fhx2yK8FKX7U=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>mustache_template_model.txt</key>
 		<data>
 		ECXxLZUhJnTb7zXQLByDEVaGUOQ=
 		</data>
+		<key>nl.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3a3LBBkN0SQc16gFAoqq1raqNBg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>paymentMethods.json</key>
 		<data>
 		66DUVbiYw8FFQzF1j1xTDvDaUmw=
 		</data>
+		<key>pl.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4V6B/yznDbOpEbC1IhyYQJb1hcA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>receipt.html</key>
 		<data>
 		ZTbbaxEU8gYKBqggXfy2RCe1wxY=
@@ -404,7 +440,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
+			DR/FnSZ8UzTf26IxIspXmUwgEI0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1182,15 +1218,28 @@
 			3xOi3HfGhF4NTyFoPUWMd6EM58Hc1STkT6z6voHktxY=
 			</data>
 		</dict>
+		<key>cs.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tRpghsIt1HOxwYDPgXYDgCeXA1I=
+			</data>
+			<key>hash2</key>
+			<data>
+			mxZaOkST034fqjfvgNtGeJ+IVSw0UDLgPKeTwGH8KdY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/SDKLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CEvTdQuyvumrCKzr6zKtInPb6C0=
+			3VVd47zwrFeq+UwDy+LVTba84GQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			k1vaJebu9HUfKiba9eRlZZyylUmI46Mu7vvALOntjvo=
+			9q/k7KFALdeqfBwh2BVqgWQ1SX8Ia+bx3vo8tq8fNEk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1199,11 +1248,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h6fPTg1JuBDONZYU7wyfPnYmkqs=
+			x1tyMnYTsV/CFIS8p6lnyHBRoK4=
 			</data>
 			<key>hash2</key>
 			<data>
-			QV3DXCxKIWFwp1tVABfwER/O4laAHzZXJRd5eE4w3Uw=
+			bL3rFs+Xsvr89G6P+4kBY9F3U4nyTNSJEtCQGBwUjIw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1212,11 +1261,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mHoBp/rFBwsrD/RfT6wY0JkY+ZQ=
+			Sl+K7WUPvPtbsE+OjbyB+TptM38=
 			</data>
 			<key>hash2</key>
 			<data>
-			Kt9lHIZth260UcswAxdfpAAkHHXd+huDGOKL5arLCwk=
+			DfRduvMC+sOQH2VdYEWxBzoz2FM4UOOv4AoDuaW0GC8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1225,11 +1274,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eRrkxrL/BTRQAQK4nF+QKUC7eLU=
+			siZwdrDIDgorK8Onlzo3EqtaNWs=
 			</data>
 			<key>hash2</key>
 			<data>
-			e6EphaYbJAb9GajJQtSgjXfwdP+BKvPVlDi17HQb5jA=
+			xGamTCstagrf7JvmDF8HgHLZpXTaSn0uG6j4Fhz6KWo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1245,6 +1294,19 @@
 			gpPvwFMSnz7oNi3msvuKPR3pGNppeBGO2ztxO2wId9k=
 			</data>
 		</dict>
+		<key>it.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lV6IpZm96zaPhB+fhx2yK8FKX7U=
+			</data>
+			<key>hash2</key>
+			<data>
+			usnO7TZL5tlF7ZT45pXH4deib4ymxpLjJ/yt0hGbva0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>mustache_template_model.txt</key>
 		<dict>
 			<key>hash</key>
@@ -1256,6 +1318,19 @@
 			BjKeSgdG4LfwwA+LCwcPfUUWKINQ0MtdafIrONjnM4k=
 			</data>
 		</dict>
+		<key>nl.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3a3LBBkN0SQc16gFAoqq1raqNBg=
+			</data>
+			<key>hash2</key>
+			<data>
+			NUA1DN/TpFmx75g8bsuYoRl+aLJHvlrwl1Ah0J8eabM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>paymentMethods.json</key>
 		<dict>
 			<key>hash</key>
@@ -1266,6 +1341,19 @@
 			<data>
 			BlAuLTLs4dWD5eaElbIZJN0FawjUStY/WMKefQkafbc=
 			</data>
+		</dict>
+		<key>pl.lproj/SDKLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4V6B/yznDbOpEbC1IhyYQJb1hcA=
+			</data>
+			<key>hash2</key>
+			<data>
+			GMiTd6Q1VfEhjMuqLHnY91kJP/obcaF4FJNC188NDr4=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>receipt.html</key>
 		<dict>
@@ -1458,11 +1546,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yJUIzN3yjncsTF6Zl/sJhuYXg5s=
+			DR/FnSZ8UzTf26IxIspXmUwgEI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			u1nujZc+aqL3GZqElQe66kNJQmbkZufEmr38YEDnJR8=
+			wVvCYykAVWBuixBym3KJb3Mf9sH53V58S7I+XR1d0sY=
 			</data>
 			<key>optional</key>
 			<true/>

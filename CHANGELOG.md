@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.11.1] - 2020-02-04
+
+### Fixed
+
+- Adapting to latest Mantle version
+
 ## [2.11.0] - 2019-12-19
 
 ### Added
