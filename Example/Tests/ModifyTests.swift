@@ -58,7 +58,7 @@ class ModifyTests: CashTestsSwift
         //PART 3: We execute a Cash sale
         //--------------------------------------
         expectation = self.expectation(description: "Do a Cash Sale payment")
-        self.doIncompleteCashPayment(amount: NSDecimalNumber.init(value: 1.11))
+        self.doIncompleteCashPayment(amount: NSDecimalNumber(string: "1.11"))
         self.waitForExpectations(timeout: 100, handler: nil)
         if self.saleResponse == nil
         {
@@ -71,8 +71,8 @@ class ModifyTests: CashTestsSwift
         
         //PART 4: We execute a modification on the sale we left open above
         //----------------------------------------------------------------
-        self.aSale.addSaleItem(NSDecimalNumber.init(value:3.23),
-                    quantity: NSDecimalNumber(value: 1),
+        self.aSale.addSaleItem(NSDecimalNumber(string: "3.23"),
+                    quantity: NSDecimalNumber.one,
                     taxRate: UserHelper.sharedInstance().preferredSaleItemTax() ?? NSDecimalNumber.zero,
                     itemDescription: "Water bottle",
                     productId: "DummyID3",
@@ -153,14 +153,14 @@ class ModifyTests: CashTestsSwift
     {
         //We will define a dummy payment configuration as an example. Feel free to modify and add content; the sale complexity is up to you.
         self.aSale = SaleHelper.sharedInstance().newSale()
-        self.aSale?.addSaleItem(NSDecimalNumber.init(value:1.0),
-                                quantity: NSDecimalNumber(value: 1),
+        self.aSale?.addSaleItem(NSDecimalNumber.one,
+                                quantity: NSDecimalNumber.one,
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax() ?? NSDecimalNumber.zero,
                                 itemDescription: "Red Apple",
                                 productId: "DummyID1",
                                 externalProductId:nil)
-        self.aSale?.addSaleItem(NSDecimalNumber.init(value:1.25),
-                                quantity: NSDecimalNumber(value: 1),
+        self.aSale?.addSaleItem(NSDecimalNumber(string: "1.25"),
+                                quantity: NSDecimalNumber.one,
                                 taxRate: UserHelper.sharedInstance().preferredSaleItemTax() ?? NSDecimalNumber.zero,
                                 itemDescription: "Golden Apple",
                                 productId: "DummyID2",
@@ -181,11 +181,11 @@ class ModifyTests: CashTestsSwift
         self.aSale.resetPayments()
         if amount == nil
         {
-            self.aSale.addCashPayment(self.aSale.totalToPay() ?? NSDecimalNumber.init(value:0))
+            self.aSale.addCashPayment(self.aSale.totalToPay() ?? .zero)
         }
         else
         {
-            self.aSale.addCashPayment(amount ?? NSDecimalNumber.init(value:0))
+            self.aSale.addCashPayment(amount ?? .zero)
         }
         
         if let paymentConfiguration : WDSaleRequestConfiguration = WDSaleRequestConfiguration.init(saleRequest: self.aSale)

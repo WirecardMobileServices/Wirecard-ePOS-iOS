@@ -60,7 +60,7 @@ class MultitenderTests: CashTestsSwift
         //PART 3: We execute a Cash sale
         //--------------------------------------
         expectation = self.expectation(description: "Do a Cash Sale payment")
-        self.doCashPayment(amount: NSDecimalNumber.init(value: 2.34))
+        self.doCashPayment(amount: NSDecimalNumber(string: "2.34"))
         self.waitForExpectations(timeout: 100, handler: nil)
         if self.saleResponse == nil
         {
@@ -75,7 +75,7 @@ class MultitenderTests: CashTestsSwift
         //PART 4: We execute a second transaction continuing the payment above (it will be under its original sale id, composing a multi-tender payment)
         //--------------------------------------
         expectation = self.expectation(description: "Do a multi-tender payment")
-        self.doMultitenderCashTransaction(amount : NSDecimalNumber.init(value: 3.21))
+        self.doMultitenderCashTransaction(amount : NSDecimalNumber(string: "3.21"))
         self.waitForExpectations(timeout: 100, handler: nil)
         if self.saleResponse == nil
         {
@@ -92,7 +92,7 @@ class MultitenderTests: CashTestsSwift
             //PART 5a, with successful completion: We execute another transaction that will match the original total amount to pay, thus closing the sale as done
             //--------------------------------------
             expectation = self.expectation(description: "Do a multi-tender payment")
-            self.doMultitenderCashTransaction(amount : NSDecimalNumber.init(value: 10.07))
+            self.doMultitenderCashTransaction(amount : NSDecimalNumber(string: "10.07"))
             self.waitForExpectations(timeout: 100, handler: nil)
             if self.saleResponse == nil
             {
@@ -106,7 +106,7 @@ class MultitenderTests: CashTestsSwift
             expectation = self.expectation(description: "Do a sale refund")
             self.saleResponse = originalSaleResponseBackup
             SaleHelper.sharedInstance().saleToSaveId(from: self.saleResponse)
-            self.refundTransaction(withAmount: NSDecimalNumber.init(value: 5.55)) //We refund the exact total of the sub payments we did
+            self.refundTransaction(withAmount: NSDecimalNumber(string: "5.55")) //We refund the exact total of the sub payments we did
             //Note: we refund (cancel) the payment as we did cash payment, but usually the default (and cheapest) option is to reverse (return) the payments, specially for card payments.
             self.waitForExpectations(timeout: 100, handler: nil)
             if let response = self.saleResponse, response.status != .failed
