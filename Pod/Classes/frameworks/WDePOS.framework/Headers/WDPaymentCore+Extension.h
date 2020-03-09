@@ -3,7 +3,7 @@
 //  WDePOSResources
 //
 //  Created by Danko, Radoslav on 01/10/2019.
-//  Copyright © 2019 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <WDePOS/WDePOS.h>

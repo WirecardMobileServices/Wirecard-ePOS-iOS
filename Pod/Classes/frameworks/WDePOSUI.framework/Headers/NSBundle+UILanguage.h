@@ -3,7 +3,7 @@
 //  WDePOSUI
 //
 //  Created by Pulik, Jaroslav on 31/08/2018.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

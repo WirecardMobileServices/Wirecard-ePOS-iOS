@@ -3,7 +3,7 @@
 //  test787
 //
 //  Created by Pulik, Jaroslav on 17/11/2019.
-//  Copyright © 2019 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 import UIKit

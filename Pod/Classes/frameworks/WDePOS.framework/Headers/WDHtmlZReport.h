@@ -3,7 +3,7 @@
 //  WDePOS
 //
 //  Created by Danko, Radoslav on 09/07/2018.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

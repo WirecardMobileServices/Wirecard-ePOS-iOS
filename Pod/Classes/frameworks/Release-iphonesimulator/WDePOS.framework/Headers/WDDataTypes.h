@@ -3,7 +3,7 @@
 //   WDePOS
 //
 //  Created by Danko, Radoslav on 22/10/15.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #ifndef WDA_DATA_TYPES
@@ -86,6 +86,7 @@ typedef NS_ENUM(NSInteger, WDExtensionTypeUUID ) {
  *  @brief Enumerator of statuses for informing the flow status or asking feedback to the user, received in the progress block of Pay function.
  **/
 typedef NS_ENUM(NSInteger, WDStateUpdate ) {
+    WDStateUnknown = -999,
     WDStateConfigurationProgressTerminalNotReady = -1,
     WDStateWaitingForPlugIn = 0,
     WDStateWaitingForSwipe,
@@ -96,7 +97,7 @@ typedef NS_ENUM(NSInteger, WDStateUpdate ) {
     WDStateInitialize,
     WDStateTerminalConfigOngoing,
     WDStateInsertOrSwipeCard,
-    WDStateTapOrInsertOrSwipeCard,
+    WDStatePresentCard,
     WDStateWaitingForInsertCard, //10
     WDStateCheckingCard,
     WDStateRemoveCard,

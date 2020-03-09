@@ -84,6 +84,7 @@
             ,{"es":null}
             ,{"zh-Hans":"我同意本次的付款金额,并同意商店的支付条款"}],
         "languageList": ["de","en","fr"],
+        "languageListDev": ["de","en","fr"],
         "uiAppFonts":null
     },
     "ui": {
