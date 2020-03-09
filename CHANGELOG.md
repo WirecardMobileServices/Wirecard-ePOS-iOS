@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
-## [2.11.2] - 2020-03-09
+## [2.11.2] - 2020-03-09 
 
 ### Deprecated
 
