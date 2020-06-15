@@ -3,7 +3,7 @@
 //  WDePOS
 //
 //  Created by Timko, Marek on 10/07/2017.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import "WDPaymentDetail.h"

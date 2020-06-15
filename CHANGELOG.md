@@ -1,6 +1,25 @@
 # Change Log
 All notable changes to Wirecard epos will be documented in this file.
 
+## [2.11.2] - 2020-03-09
+
+### Deprecated
+
+- IMPORTANT: this may affect your current UI implementation => `WDStateTapOrInsertOrSwipeCard` was removed, please use `WDStatePresentCard`.
+
+### Added
+ 
+- Adopted PSD2 requirements for Strong customer authentication (SCA).
+
+### Changed
+
+- Subtotal amounts are now not combined with total discount amount.
+
+### Fixed
+
+- Terminal updates do not time out unnecessarily with slow download speeds.
+- Several fixes in the Example unit test app
+
 ## [2.11.1] - 2020-02-04
 
 ### Fixed

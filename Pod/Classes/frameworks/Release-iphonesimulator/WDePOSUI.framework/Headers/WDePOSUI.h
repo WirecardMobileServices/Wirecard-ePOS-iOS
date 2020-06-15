@@ -3,7 +3,7 @@
 //  WDePOSUI
 //
 //  Created by Danko, Radoslav on 13/04/2017.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

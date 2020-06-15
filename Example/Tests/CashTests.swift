@@ -393,7 +393,7 @@ class CashTestsSwift: BaseTestsSwift
         
         if (amount == nil)
         {
-            saleToBeRefunded.cashRegisterId = cashRegister?.internalId ?? ""
+            saleToBeRefunded.cashRegisterId = cashRegister?.internalId
             
             guard let anItem : WDSaleItemCore = aSale?.items?.first else
             {

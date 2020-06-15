@@ -1,6 +1,5 @@
 framework module WDePOSUI {
     umbrella header "WDePOSUI.h"
-    
     export *
     module * { export * }
     //export_as WDePOSUI

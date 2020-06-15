@@ -3,7 +3,7 @@
 //  WDePOS
 //
 //  Created by Timko, Marek on 25/10/2018.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import "WDDataTypes.h"

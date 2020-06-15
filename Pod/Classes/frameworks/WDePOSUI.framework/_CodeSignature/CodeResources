@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NSBundle+UILanguage.h</key>
 		<data>
-		i3AVdSZGHPePsENasNm67QPdqvw=
+		5tAzhRpdQ2BcUdhnOxcOGV8YiUo=
 		</data>
 		<key>Headers/WDePOSUI-Swift.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/WDePOSUI.h</key>
 		<data>
-		F/Hn5uiwqWdOKZchzSWw8cbInkQ=
+		J83l5EsCnhNqW612Xq+roQ2+VKs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/arm.swiftmodule</key>
 		<data>
-		GrQiW0slD1a32Pxg5pMxTlQq3YA=
+		GNcyYnTkcqWvqz9NAItfpqWhwBs=
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		OVr9ldcP6lcc/ZTz7H/Imz+/5lA=
+		zeZr249an7CqmHltIOuOu0G+9T4=
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		OVr9ldcP6lcc/ZTz7H/Imz+/5lA=
+		zeZr249an7CqmHltIOuOu0G+9T4=
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		GrQiW0slD1a32Pxg5pMxTlQq3YA=
+		GNcyYnTkcqWvqz9NAItfpqWhwBs=
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -78,15 +78,15 @@
 		</data>
 		<key>Modules/WDePOSUI.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		GrQiW0slD1a32Pxg5pMxTlQq3YA=
+		GNcyYnTkcqWvqz9NAItfpqWhwBs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		AriibRfb0TFUeGCs433V7DxGd+A=
+		0hMyZdwuFCQKP0CFaqq8ZH9nNDA=
 		</data>
 		<key>WDePOSUIResources.bundle/Info.plist</key>
 		<data>
-		36vzA9Np2jUKlhMy5Bel4TxG854=
+		6jLCqNjpiWPfM/135yY+FpxQQus=
 		</data>
 		<key>WDePOSUIResources.bundle/ScanFrameCenter.png</key>
 		<data>
@@ -114,259 +114,259 @@
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Eh5-Uf-JDa-view-Kcw-4o-5Vg.nib/objects-11.0+.nib</key>
 		<data>
-		5709sQci9tF9evXiaApGWFzuCKA=
+		FAuNqoxg8kZSpkYQ6vVLlfDk9X8=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Eh5-Uf-JDa-view-Kcw-4o-5Vg.nib/objects-13.0+.nib</key>
 		<data>
-		8MK9psPoEk16ZvuJZrBlyogbOoY=
+		fHYG/vr+uVGdNhFhh9erGxIv9/c=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Eh5-Uf-JDa-view-Kcw-4o-5Vg.nib/runtime.nib</key>
 		<data>
-		l4LKoFGumQBXIB9VIK9gWpqQR+0=
+		KKtQQQ0lsuMX1bFIYxj/8xJR6SM=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Info.plist</key>
 		<data>
-		lmhbPCEaTZxW2I72aXKIbWTlFmg=
+		LEPNdQ2SiB9vcF+ngJjewL5MnXY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/objects-11.0+.nib</key>
 		<data>
-		d/CAcKk9r/wPTSJQ3KFvPHWLE+k=
+		3KIppQgcGAFKj92nxjYNpD+pjsY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/objects-13.0+.nib</key>
 		<data>
-		Z+ZWv3vtzaDzlnnkEsao0sgzB8A=
+		KUKi6gIZ8Q34WQvdLIfMnRd2uIc=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/runtime.nib</key>
 		<data>
-		K+bGT0KFX593hEqZiuzO0x5QnY8=
+		Os08NRfrpDPQ16g5xZkm6bW2MKw=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/objects-11.0+.nib</key>
 		<data>
-		vUDhWJey94BKX2LoTpyccTdS6As=
+		a322xrF0iGJsRwTAJWxpUhq83BY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/objects-13.0+.nib</key>
 		<data>
-		FI/l5hNTa7xk5e6VcRpOZ20frbQ=
+		NxIlWy/qLMy4gmfUqN4JVRvDhNY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/runtime.nib</key>
 		<data>
-		/fxN8yZpd4Ktn/cB0g2QlZX628g=
+		Ceiwx5VDwl3w4XUqx8uTdGOQSTo=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/objects-11.0+.nib</key>
 		<data>
-		AQK+csVmnoovEKoY4ibJmHEfwQU=
+		SSMoLbLrS5MVmi/y1eBmIfxcR38=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/objects-13.0+.nib</key>
 		<data>
-		3v/DTU0VUr2ulncqn3W/XClvX6Y=
+		sOFumEI5Vz0rr4Hfb+BHUmNDX9g=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/runtime.nib</key>
 		<data>
-		6JMQmJPrMfG3NIcS0cxCTyKq9L8=
+		G0bXw5ZQcQTUeU5k7lrIrQRP/F0=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/objects-11.0+.nib</key>
 		<data>
-		Ro6dgE+XCCYPoP6rF793+2lZyfw=
+		EZCcJ5FdVtx2OWRZqBBKFmpqIJk=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/objects-13.0+.nib</key>
 		<data>
-		vYAR5ENyGnrnKwh8uFzrxB8d40A=
+		H/KdHkeC4Btu1MUV4LkpcWpwI5c=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/runtime.nib</key>
 		<data>
-		A94MvtiVBIXDit7utlqZIUSEKU8=
+		hIZdNbJ8Dy9eerdRkebTkGTbpqg=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/objects-11.0+.nib</key>
 		<data>
-		fu5ygs3vzerE0k0x13SwSJjLgs0=
+		3wr6K+yaV+F3smiWsIqFN5pnVYM=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/objects-13.0+.nib</key>
 		<data>
-		cp0gWzXfZ4GbwKfq0rUPHg+ujA4=
+		S+FPvuo72Rc8BGemPjdch5UZEWE=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/runtime.nib</key>
 		<data>
-		UxeHd72SRzINsfUSH+S37DsbEOE=
+		6HWUE3Ry+fV7D+Kmerp/jzIZPJ0=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/objects-11.0+.nib</key>
 		<data>
-		U+so/knAhG/2Vx7iXe0WRMVjkg4=
+		lZ1qNABPW2aJC+atiW3WF5uxklY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/objects-13.0+.nib</key>
 		<data>
-		kp6R2BsJzZF6i/3p49n9xsTY448=
+		YXoyCeM0tHjVK0eb9XIBk6ZGnKU=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/runtime.nib</key>
 		<data>
-		p27Izzgo//xVYjA0aX+5pMz9Vm4=
+		hHIHm9oGspYPw4EPBcW4d8058L8=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/objects-11.0+.nib</key>
 		<data>
-		1xb6127+zR6HjqDPCCJMTq3kYso=
+		KDO8Uj3SHQleZ8DjflRUxMLeGUc=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/objects-13.0+.nib</key>
 		<data>
-		r+GZOm3kksicoUPY+dGtVUY9gos=
+		k7tnP5l3o3Xt+yA6DP1AzUca0Nc=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/runtime.nib</key>
 		<data>
-		Ibj0Jd4nI1ZEAouJQwYtPdvfxL8=
+		vj/ql6bex4IxQsIxIpEHkvgGtZQ=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/objects-11.0+.nib</key>
 		<data>
-		zrfCbA4ke5OJb1nbzThHRgTXuEs=
+		SuvRKN2DslEoUMf9DM6U6M7d+GI=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/objects-13.0+.nib</key>
 		<data>
-		bAa7mb0RGaPTZlfewpJEq6kIWL0=
+		ZDbVqS7t3LSI24bFMlCKLloutEo=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/runtime.nib</key>
 		<data>
-		Oqbv8+/uBTmHwHDMGn7egY9m+Xg=
+		kqmaMRue2c/MOz5zPfmcIONwwU8=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/objects-11.0+.nib</key>
 		<data>
-		5Cna2jQS+3SV1mr5qVelD93rBJs=
+		C3UGsJTVP4641R9nWenKz9z0iOs=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/objects-13.0+.nib</key>
 		<data>
-		wVWh3XJ3nmUt4noZkz3/gKWqIvE=
+		dhm/89aGDtpjnFpg2Ill28Hr5Ps=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/runtime.nib</key>
 		<data>
-		39u4qVIkC7e5+Q0GURu6qpZgP7w=
+		2+iGNU+pTt5JiDACSpZwm9jBDSU=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/objects-11.0+.nib</key>
 		<data>
-		XS2zHF7SE+vDvjlbrqnffD3O6vM=
+		OKDOcu3i57Q1a3Utd0xSjAhjrbE=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/objects-13.0+.nib</key>
 		<data>
-		BrTKxYtuh5qUTyFpA3MbFbNdtUM=
+		V00RSQh00hE/nChUope5PAyxhC4=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/runtime.nib</key>
 		<data>
-		H5H2FMCsAPRs1QLvF9lbvZDWf/o=
+		JRdNoLMF3GvA8gam9nAtCkxPgyY=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/objects-11.0+.nib</key>
 		<data>
-		xRFyTVbq6ywhfEM9ZqFCZ8UR8fg=
+		PNG9IGcV4woLm9NFwgnMGeKbPj0=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/objects-13.0+.nib</key>
 		<data>
-		DuJIvN7JmS+ffBEkrJWWsV7cyeo=
+		2ZyNiLi0WzRCq/sZI1yYg4FgnUw=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/runtime.nib</key>
 		<data>
-		op089SkLXNjnDvsK6qcCc7/gBcE=
+		DrQxBKLRW1iji/S9rnucL36Z17c=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/objects-11.0+.nib</key>
 		<data>
-		2CfJ7Ecs0+RatQPmH8JiznWKVik=
+		d8VHYGJoeFgOjC2OFq/A3zIwWaQ=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/objects-13.0+.nib</key>
 		<data>
-		ULheSPbJ+Jhmm2a4bDStE3LtpIM=
+		f/3mNtvU5A2ZAzx5RTWzsNT4ogI=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/runtime.nib</key>
 		<data>
-		CwtIpoWpLqMlsmsQLUuw9qhCbmE=
+		eUobz83j5E3Dczmt8Tv2E5ac7/0=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/objects-11.0+.nib</key>
 		<data>
-		13rl6p7KCHnpneW4LuNgErkOK+Q=
+		AmWIEBdJK/dGMxQMs1bgCdHOkHQ=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/objects-13.0+.nib</key>
 		<data>
-		1UCyvkcxRI0boNa+YZzvOoFAsTg=
+		tB/PKqf70xv/0iotpYaVPYap7Ms=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/runtime.nib</key>
 		<data>
-		Lk8hyWs8IOR5Okot4Bpi5D5HjoY=
+		+vK8BULFtVmLPppcrYinnHDOFjo=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/objects-11.0+.nib</key>
 		<data>
-		a97VihwzpR1n0arXEWTwu3IQEtc=
+		CcE/Niy4ZLRH/EtPo0JcOG+dnLE=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/objects-13.0+.nib</key>
 		<data>
-		/UFL9mQZEmSzFGGg8uuaplNfa0E=
+		MFjh48w5rD3+ycRKDaxry6i1LnM=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/runtime.nib</key>
 		<data>
-		0WiPRvy+AEr/i8xdmTp778q71FI=
+		hkkMNXV56X5VZMxllvfHFRFwOMw=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/objects-11.0+.nib</key>
 		<data>
-		W+Jf0q56cVxaG9L5UobUmFMgSQs=
+		Gcyurux5QL0ZzA+/5902MwrLTA4=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/objects-13.0+.nib</key>
 		<data>
-		JFUwnyVNBM09DlUeVjxU1++c1Oo=
+		1j9ZI4hSOiAJBASITEpc0yl5oYM=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/runtime.nib</key>
 		<data>
-		fwQ9Jb5UHbkO/vW4kpizKQRRM6k=
+		bxraCzgc6CWCbP3J9VW5fjROAks=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/objects-11.0+.nib</key>
 		<data>
-		7lAyqLHwtR1x+SjCzJgaDrVVn9s=
+		nNDyWE/D/fE1NkxtGhxfZIKF3eI=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/objects-13.0+.nib</key>
 		<data>
-		WP+qCFmD71sQFDXxTQnsmU+ZrOY=
+		CfCOAf8kk/pTzJuU6M3EWnX3Ogs=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/runtime.nib</key>
 		<data>
-		+D1nlIIfwhb8b/ZYavuFZDOom/U=
+		PiwbejDiYP5FQhpZRy2aoPduvdk=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/objects-11.0+.nib</key>
 		<data>
-		g6XhWYz/dV6fBZsBwcQ6TnMdhkQ=
+		VKLUVzEIjbaIcvUTJ+cFyoZaFPI=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/objects-13.0+.nib</key>
 		<data>
-		0mfS2IAJ7JDYUj3sPzpS83gVse4=
+		4HJJ0Z+plE1OwAEhRsawxNNP1dU=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/runtime.nib</key>
 		<data>
-		ZbaN9mSmmEuuws+VndZTPRQu3lw=
+		DGJQFCQIazbzxEKPA40OmE6G66M=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/objects-11.0+.nib</key>
 		<data>
-		eqdEakHS+If5zoyzqZCKRuhau0Q=
+		wmOKOlAUGrdUytOfOXCuqz3z+yI=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/objects-13.0+.nib</key>
 		<data>
-		XKIBJpylcs/om/kVhmObl/F3qvw=
+		FaBa/Ab8dDfdtYWtYWZV/SdH030=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/runtime.nib</key>
 		<data>
-		hdGxSn15YWGIbjoVOD1/UA3GJlA=
+		VH5AgQnVJAEO5jXSHQ1sOqvDuOo=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/objects-11.0+.nib</key>
 		<data>
-		saHTi7saGRtkoMuEvmUxhvdyZfw=
+		TuZ58M535Fp+27zBBJG7x0fLMcs=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/objects-13.0+.nib</key>
 		<data>
-		bIQB/8XCYXYAheqZOofg2PWMMUU=
+		2Mcoqp8l1ozU5Osvjele3J5qZhQ=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/runtime.nib</key>
 		<data>
-		Kq8olGCjwXzU1siKFQ9E30ihDN4=
+		aP5j97+n+p9zMtuz7G7fMJ+mgGo=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/objects-11.0+.nib</key>
 		<data>
-		DVPlzpAyKw6e16eGcvOlk8RLkxE=
+		r+RYwsm28eNaa3D2U4TgKtnKsPs=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/objects-13.0+.nib</key>
 		<data>
-		vdV17V6qmO9aZImNZzqZ7KYqRbQ=
+		s9JYrbFsWgsFLWcv33jsn59eG98=
 		</data>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/runtime.nib</key>
 		<data>
-		8CSUm4Lqhs2NL6PIn0BsQD9oUSc=
+		G8I7hxhtj8uF3AxOF/rmZzczWuI=
 		</data>
 		<key>WDePOSUIResources.bundle/scanSwitchCameraWhite.png</key>
 		<data>
@@ -411,11 +411,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i3AVdSZGHPePsENasNm67QPdqvw=
+			5tAzhRpdQ2BcUdhnOxcOGV8YiUo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zCwOMxSWKw5sKGAYA2Dyluu3pKJnU0NqYOTKho0bPIo=
+			wn4w7u7PpvMNC3+dT6bR4DFVSTmANxGw9C/KXgb2WTI=
 			</data>
 		</dict>
 		<key>Headers/WDePOSUI-Swift.h</key>
@@ -433,11 +433,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F/Hn5uiwqWdOKZchzSWw8cbInkQ=
+			J83l5EsCnhNqW612Xq+roQ2+VKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			yq0PJYdhKCgVmFk2Hl9D8Vy8hryrnBcBPe4m24q0LdI=
+			rIQUkI+AtTsLCsMYiaUFsY+uop3O/jeWE+MjChf81sE=
 			</data>
 		</dict>
 		<key>Modules/WDePOSUI.swiftmodule/arm.swiftdoc</key>
@@ -466,11 +466,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GrQiW0slD1a32Pxg5pMxTlQq3YA=
+			GNcyYnTkcqWvqz9NAItfpqWhwBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			hCaV2UfJtAEVoJiUJ0HCM4pTlWCSPlhpA/ya4aKlm/k=
+			pvzaTd+lVn6kgQMBcZ3i+cuqB82m1wRn6lbQaUIFVsw=
 			</data>
 		</dict>
 		<key>Modules/WDePOSUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -499,11 +499,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OVr9ldcP6lcc/ZTz7H/Imz+/5lA=
+			zeZr249an7CqmHltIOuOu0G+9T4=
 			</data>
 			<key>hash2</key>
 			<data>
-			AGVVxALADPemI+MgbOs+xfCt3TzydtwNb7xO33fbUaQ=
+			CB6tzlEPzhvdZoYAXacFhUPZd6qqNXHJfuLAJ7EYDR8=
 			</data>
 		</dict>
 		<key>Modules/WDePOSUI.swiftmodule/arm64.swiftdoc</key>
@@ -532,11 +532,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OVr9ldcP6lcc/ZTz7H/Imz+/5lA=
+			zeZr249an7CqmHltIOuOu0G+9T4=
 			</data>
 			<key>hash2</key>
 			<data>
-			AGVVxALADPemI+MgbOs+xfCt3TzydtwNb7xO33fbUaQ=
+			CB6tzlEPzhvdZoYAXacFhUPZd6qqNXHJfuLAJ7EYDR8=
 			</data>
 		</dict>
 		<key>Modules/WDePOSUI.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -565,11 +565,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GrQiW0slD1a32Pxg5pMxTlQq3YA=
+			GNcyYnTkcqWvqz9NAItfpqWhwBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			hCaV2UfJtAEVoJiUJ0HCM4pTlWCSPlhpA/ya4aKlm/k=
+			pvzaTd+lVn6kgQMBcZ3i+cuqB82m1wRn6lbQaUIFVsw=
 			</data>
 		</dict>
 		<key>Modules/WDePOSUI.swiftmodule/armv7.swiftdoc</key>
@@ -598,33 +598,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GrQiW0slD1a32Pxg5pMxTlQq3YA=
+			GNcyYnTkcqWvqz9NAItfpqWhwBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			hCaV2UfJtAEVoJiUJ0HCM4pTlWCSPlhpA/ya4aKlm/k=
+			pvzaTd+lVn6kgQMBcZ3i+cuqB82m1wRn6lbQaUIFVsw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AriibRfb0TFUeGCs433V7DxGd+A=
+			0hMyZdwuFCQKP0CFaqq8ZH9nNDA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/tVJSzcVJHFNU7sdvJbI+SQpwV820uIRTTkq+uN60Uc=
+			zn9KOw22w0GPd0XF+HOIp4c3Gf7gkzzv2JNaFWZ9tNU=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			36vzA9Np2jUKlhMy5Bel4TxG854=
+			6jLCqNjpiWPfM/135yY+FpxQQus=
 			</data>
 			<key>hash2</key>
 			<data>
-			2YICgvd79E4soZVTrbWsWrXEIhEQK0i6rGHUynCBMuk=
+			qvb+5vu/uIDAV8XJPuR+gNCKHlrmCVY4WfJ6Fp8mrcQ=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/ScanFrameCenter.png</key>
@@ -697,704 +697,704 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5709sQci9tF9evXiaApGWFzuCKA=
+			FAuNqoxg8kZSpkYQ6vVLlfDk9X8=
 			</data>
 			<key>hash2</key>
 			<data>
-			/wd57EmJASuGdssUl6maNTmxm9pE5yS/g3grfyy/4O4=
+			SUG7FbCnhHzhoX0uLJ7AT49RYlXKwUKrfqwW3kWjEQ0=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Eh5-Uf-JDa-view-Kcw-4o-5Vg.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8MK9psPoEk16ZvuJZrBlyogbOoY=
+			fHYG/vr+uVGdNhFhh9erGxIv9/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			NVDfq4qQro9BLgYNDhP/oCSH2/pwCIKtpUfo61BxrqU=
+			Wmwbk+gkicUGFpJHCtstW33/FfuwlVv4ovkoSV9yOH0=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Eh5-Uf-JDa-view-Kcw-4o-5Vg.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l4LKoFGumQBXIB9VIK9gWpqQR+0=
+			KKtQQQ0lsuMX1bFIYxj/8xJR6SM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Snmz+E6tpSml3qCr8glSK6bjWugMlb2Reu1TLy1nCqc=
+			Lgw8sAF9OGZI3ITagNPUDCBrJA0dTwAjpQ1z8O3G7ug=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lmhbPCEaTZxW2I72aXKIbWTlFmg=
+			LEPNdQ2SiB9vcF+ngJjewL5MnXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			t8m85HacawIzk6nwwSNqglXSIvlY7KGD7Eer93XSuqs=
+			8M3lEO15WlizaFcIFIuQiYGpNXZDjY/hDIamlCTH+Cc=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d/CAcKk9r/wPTSJQ3KFvPHWLE+k=
+			3KIppQgcGAFKj92nxjYNpD+pjsY=
 			</data>
 			<key>hash2</key>
 			<data>
-			9FXX6WUC8IFRjVL7ay5ruWi73NaaMvrWghJGBs3AGQc=
+			X0t5Z1d75qbz9rPUUcqUkgYpeNMtdSG0BCs7ddmaEvg=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Z+ZWv3vtzaDzlnnkEsao0sgzB8A=
+			KUKi6gIZ8Q34WQvdLIfMnRd2uIc=
 			</data>
 			<key>hash2</key>
 			<data>
-			uWpiB4lODKAyb9tsMukrKBGikISL8ynwgi4tJKtrkRk=
+			5MafaF2b8M9omlzEPlb8bhgjJ3ubdLDYKJDE+cQmBPc=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/JAy-jX-e6v-view-olt-9M-oyZ.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K+bGT0KFX593hEqZiuzO0x5QnY8=
+			Os08NRfrpDPQ16g5xZkm6bW2MKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			2AZXhebOzOere1CTmPUhPAA+R3LJh0hBpzUmV4yAsN0=
+			+hFliX1mVip9uPiRFcm2l6xdPLtMCmCtwFMfv40/KEE=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vUDhWJey94BKX2LoTpyccTdS6As=
+			a322xrF0iGJsRwTAJWxpUhq83BY=
 			</data>
 			<key>hash2</key>
 			<data>
-			XsC0a5GT8dWIY2k+Rn7l5CUsHH99Q47H1vqOfXgHDkw=
+			5qAWckvzmoZClNhvLhIbjZhQCa/v/tEEF0/IW1S4shA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FI/l5hNTa7xk5e6VcRpOZ20frbQ=
+			NxIlWy/qLMy4gmfUqN4JVRvDhNY=
 			</data>
 			<key>hash2</key>
 			<data>
-			pSTxWfGhc/y+Hb86NtxMsUbQk0W1f066rYNMYM99s8Q=
+			px6AVL2y4I6wCH6gqZ4xnwLQNcmFJwqTU4QgA39iEjQ=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/Jgq-bH-7Tf-view-ep8-wD-gG9.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/fxN8yZpd4Ktn/cB0g2QlZX628g=
+			Ceiwx5VDwl3w4XUqx8uTdGOQSTo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vX09rPuBMtCjTXQpn4CbNeRfsPNY+iFjUjpmNhCMj/M=
+			JmyOPO6TLY+QEhsxnZVmh8BjK10uFLha0WVB0nQMrWY=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AQK+csVmnoovEKoY4ibJmHEfwQU=
+			SSMoLbLrS5MVmi/y1eBmIfxcR38=
 			</data>
 			<key>hash2</key>
 			<data>
-			OM1umuwtmqqfGTX9R5ckD2MF02QeZj/Z8aL55qEreDE=
+			ST6XF8qJBsYE0fED4sAW30xvgDsWIvcfihpEZ32oTfA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3v/DTU0VUr2ulncqn3W/XClvX6Y=
+			sOFumEI5Vz0rr4Hfb+BHUmNDX9g=
 			</data>
 			<key>hash2</key>
 			<data>
-			R7cgsRzs97HFWUS1h4OhjDIrzh6hIt7J+9lTF/5wPm4=
+			EWfTiNkYhygMF3tLvk8ZHJ36rF2jx62oWlul1vwgnQk=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/P7W-Ls-CRl-view-2BW-5e-l23.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6JMQmJPrMfG3NIcS0cxCTyKq9L8=
+			G0bXw5ZQcQTUeU5k7lrIrQRP/F0=
 			</data>
 			<key>hash2</key>
 			<data>
-			x7/kqK/tMR0Rc8T/8cUgJdqtJeWHp3GFAuXD9Kam9as=
+			Iwid6cjePnwflOozzrHq0O0LeCSR0UPhCSgFX6UpVEw=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ro6dgE+XCCYPoP6rF793+2lZyfw=
+			EZCcJ5FdVtx2OWRZqBBKFmpqIJk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JzFUoM+U5zYaVoBKIK6eUWVbfKwx1yaO3lZqPKmF30s=
+			NN9z3BnhBSMJkCtfDLMpcTRoplIHQvIenn6CRNwyWV8=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vYAR5ENyGnrnKwh8uFzrxB8d40A=
+			H/KdHkeC4Btu1MUV4LkpcWpwI5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			SX38+TgJNBpZTxMzYClAvfwgOq6BVb9HcoRe8dPdKkg=
+			4bPhqsiJvoXUFlkMX6FjQEp3ZYSn0JtuwARwM6fmO5A=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/PU1-ck-GbY-view-g7m-gr-3rT.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A94MvtiVBIXDit7utlqZIUSEKU8=
+			hIZdNbJ8Dy9eerdRkebTkGTbpqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			E9/23GKvBi8BACNueyhdkieTEaeit5uWgbisqtHZeJA=
+			5TONTn/9gfiTZsFSFw/sncRbVrHNeu0rAIo3Z2Uiq2A=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fu5ygs3vzerE0k0x13SwSJjLgs0=
+			3wr6K+yaV+F3smiWsIqFN5pnVYM=
 			</data>
 			<key>hash2</key>
 			<data>
-			4RJy+ADMUqoz20LRuWoEMcxwVHrEESHhndNjtcWJZ3E=
+			BNpcgVnk7BaJ5OfACsNZ8AYr+9BuOurEjf9/GMCAWNA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cp0gWzXfZ4GbwKfq0rUPHg+ujA4=
+			S+FPvuo72Rc8BGemPjdch5UZEWE=
 			</data>
 			<key>hash2</key>
 			<data>
-			CHzOIvqac1+yyDyCMshiSYoht9YSjd9v9b08gxsWEHw=
+			v5iG0AWdMA9R4fwVPGjzzw8ZjpEjuTiCUCqGxeGDJ6s=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/W6Y-IM-4NH-view-xyf-IJ-TxN.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UxeHd72SRzINsfUSH+S37DsbEOE=
+			6HWUE3Ry+fV7D+Kmerp/jzIZPJ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			0VIZyM8jno83q65XuedSSxADUNiU0tTns4whEQOAD7w=
+			fzth1SMB7W8r/wxgkf3HBujNVAdlB/noVlcSjkNO4Y8=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U+so/knAhG/2Vx7iXe0WRMVjkg4=
+			lZ1qNABPW2aJC+atiW3WF5uxklY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fMPFpm4R4j8i/9J/kosjAytxsH7BvWj8JZgkt6KDUgY=
+			M8rOyGUsG/llrXxXkrBJyF33ISc7hdNvtnHm9zH9frc=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kp6R2BsJzZF6i/3p49n9xsTY448=
+			YXoyCeM0tHjVK0eb9XIBk6ZGnKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			0VeHiwa1w5NVekrfZg7h8+XT0jcVeYATHwAH+lgQWZw=
+			wK+Ra039WGfgKP0y/vSw7PQ5QbN5dq4RQLm5vh2IWSU=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBarcodeReaderVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p27Izzgo//xVYjA0aX+5pMz9Vm4=
+			hHIHm9oGspYPw4EPBcW4d8058L8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pdmi1rR9TysYOrw+u7nRnVlRyNYw0bJ2Ehk6e3jev8E=
+			LzFmbAV1JAprt0QGjwpj/6udl8QDVk59joUw8axIvho=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1xb6127+zR6HjqDPCCJMTq3kYso=
+			KDO8Uj3SHQleZ8DjflRUxMLeGUc=
 			</data>
 			<key>hash2</key>
 			<data>
-			eXCJan4jaXwfsIET8xjdlEU8mQXK/ozekPrh6dHTBBE=
+			zXlDUdmA0Eo2Q7vqnQseDIXnnoWjQRvK2eC5NBowk34=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+GZOm3kksicoUPY+dGtVUY9gos=
+			k7tnP5l3o3Xt+yA6DP1AzUca0Nc=
 			</data>
 			<key>hash2</key>
 			<data>
-			AznKG6dFJSs1Tib7EoBAM/VrzP+bN2JyGNPg1FzfoZM=
+			SS1W6bMYxH9CRRpEm39lXTcXcbibFmg6P7ukddfAKsU=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDBasePopupVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ibj0Jd4nI1ZEAouJQwYtPdvfxL8=
+			vj/ql6bex4IxQsIxIpEHkvgGtZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NZiLJWKT6c6EikxJ8Q1ffgh3A17NgGo+UEoBxDWD0VQ=
+			i2V04/USFjHFl2JeC9pfzJd31/rT05CzmIyPUfqYGSU=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zrfCbA4ke5OJb1nbzThHRgTXuEs=
+			SuvRKN2DslEoUMf9DM6U6M7d+GI=
 			</data>
 			<key>hash2</key>
 			<data>
-			r5DQjHjY3KLj6478UkSDJT7IGpWLFZre2bUC7SW7Ie4=
+			gup+whqoaD3NTmSoWfwXkuoCqj5za0h/D+h/LMxv9KA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bAa7mb0RGaPTZlfewpJEq6kIWL0=
+			ZDbVqS7t3LSI24bFMlCKLloutEo=
 			</data>
 			<key>hash2</key>
 			<data>
-			cefOl9gxEhM9NZFYtLD+LdhCbU868ttnJk1Bk7cIfGc=
+			RJff/XqY1WljnTVQSLHNmw98SHVyTr6yZ+385J0HfV8=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDCalculatorVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Oqbv8+/uBTmHwHDMGn7egY9m+Xg=
+			kqmaMRue2c/MOz5zPfmcIONwwU8=
 			</data>
 			<key>hash2</key>
 			<data>
-			WXROl1GSPycFXFsthxeUnAEwMOP/ftBpway9FlhsqX4=
+			EUt5XByLqIovHomhPoeNGfV2Q5LwXrAUGg26BIT2AIE=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5Cna2jQS+3SV1mr5qVelD93rBJs=
+			C3UGsJTVP4641R9nWenKz9z0iOs=
 			</data>
 			<key>hash2</key>
 			<data>
-			kMG8We5pAQO5ylfwRzm5HWmQFROX2k/jt2lXuOT6TsQ=
+			V1w09YemFPWSbwHmDXSuPDV2/SbSHlrPENCvt+10RRA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wVWh3XJ3nmUt4noZkz3/gKWqIvE=
+			dhm/89aGDtpjnFpg2Ill28Hr5Ps=
 			</data>
 			<key>hash2</key>
 			<data>
-			6e45AYWiFlAD5HjRnNaUX+ZeYhlF23y98lnQxG8E2ac=
+			0gp+N4LWZ0n2II3cHi77iMLq3S+GgJwapRcQdtG5BM8=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentMethodsVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			39u4qVIkC7e5+Q0GURu6qpZgP7w=
+			2+iGNU+pTt5JiDACSpZwm9jBDSU=
 			</data>
 			<key>hash2</key>
 			<data>
-			JUHAEmto/7g6kIxKvgFv5U5Bjrerwd68gkbH9P17/+8=
+			nfntxXV72FccsuVRdkM0zayHr0nrgBlxG8OkaR/SXnQ=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XS2zHF7SE+vDvjlbrqnffD3O6vM=
+			OKDOcu3i57Q1a3Utd0xSjAhjrbE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Of56mSyCMp3b+R3IIq2a2szRPlls61EfsOxoon7Qb/s=
+			AiorklemCR7r9+GYtX5GFssHeZbjfYe7UTfPLWyxq2M=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BrTKxYtuh5qUTyFpA3MbFbNdtUM=
+			V00RSQh00hE/nChUope5PAyxhC4=
 			</data>
 			<key>hash2</key>
 			<data>
-			n6FHseyiGea0HPJ8IiIzT/U+fs3/i6CQuji18D3g/AQ=
+			PxWmz1b7eonPJMvCyL7o+8ZKhbVd4Zaa1r5hY3j2qV4=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDPaymentNavigationVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H5H2FMCsAPRs1QLvF9lbvZDWf/o=
+			JRdNoLMF3GvA8gam9nAtCkxPgyY=
 			</data>
 			<key>hash2</key>
 			<data>
-			iWrrAeQUGDlm5pE3Dfi2IjmFQUdYm79R8aCgtnI6eMM=
+			1hHnEReN6pObypMHtzE8+IVBBV4BXZU5shUFcRJkKCU=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xRFyTVbq6ywhfEM9ZqFCZ8UR8fg=
+			PNG9IGcV4woLm9NFwgnMGeKbPj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			K6o6+mb6fQAIvTcNow3ZhNwM/wn9HomVDOLw9kFxhcA=
+			cvvUBt/Y5FQCXFU9v335NAb+lXvDH6h5akaPB7LyoKw=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DuJIvN7JmS+ffBEkrJWWsV7cyeo=
+			2ZyNiLi0WzRCq/sZI1yYg4FgnUw=
 			</data>
 			<key>hash2</key>
 			<data>
-			87OtWBpWTwdxFiPqM6SMZdCornOgEpCimqJa/DUkmqw=
+			mn9TGk2xdgL7HBJg/nH+LZZMlDSTS+Zd7vbth1tq6J8=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCardApplicationVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			op089SkLXNjnDvsK6qcCc7/gBcE=
+			DrQxBKLRW1iji/S9rnucL36Z17c=
 			</data>
 			<key>hash2</key>
 			<data>
-			izMcEGdB28WLgRv+HiwBFPjvB+yUaejVS6kQQXmDJ2M=
+			OwzFnjvllP12KzxlgFZO/RQlY9GR7mcpjoCqML7HFnc=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2CfJ7Ecs0+RatQPmH8JiznWKVik=
+			d8VHYGJoeFgOjC2OFq/A3zIwWaQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			5kjKnXlvQ4c6sOmo4vYOEqNuXN05hNRafceiP+Y4U7E=
+			Hl4iO90yo2NUUaunVh8ldVIaSGNjlc6wXHKoMYtg+Ac=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ULheSPbJ+Jhmm2a4bDStE3LtpIM=
+			f/3mNtvU5A2ZAzx5RTWzsNT4ogI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PHKtxf1xtpvbWpkwWNFe7ZwOVqdUerTpp9nVbf42zwA=
+			7S04oAlPw4KFRmoXt/OZTKZ1fcn8g9r0BRLNWxyxAQk=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectCashRegisterVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CwtIpoWpLqMlsmsQLUuw9qhCbmE=
+			eUobz83j5E3Dczmt8Tv2E5ac7/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z9AIHQXpY5EC7tQ3IAEc3cCP8aE/o3xUeRUv+ue5U4c=
+			rCoixgO7kS5F21ifX/rKtYEMwLMMmwRVW/EyMaL4Yxs=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			13rl6p7KCHnpneW4LuNgErkOK+Q=
+			AmWIEBdJK/dGMxQMs1bgCdHOkHQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LMRn56B9OWsp/iVvOowqG8S5OSrL3FiAwc19JDA3ggU=
+			PyLkGeYo6YnkO8AuPDl2XWWswC869gZ6uWzmp+lGv2U=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1UCyvkcxRI0boNa+YZzvOoFAsTg=
+			tB/PKqf70xv/0iotpYaVPYap7Ms=
 			</data>
 			<key>hash2</key>
 			<data>
-			9MOGp4+AlRBSNyVmwo1RQNPD6WztD/S3jnk9YlDgbfs=
+			NhunrASq2FPFkRiQjWyZJqWAp7+pYRl71lRG+ANia3M=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSelectShopVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Lk8hyWs8IOR5Okot4Bpi5D5HjoY=
+			+vK8BULFtVmLPppcrYinnHDOFjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			hhrVFUzb64N9RKLp8zlnYUBSfwunkO16XKh2Q1iq448=
+			XLeORH7wMhQEQY7I66sAucz40BNc0pqv61D+hGcT6ng=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a97VihwzpR1n0arXEWTwu3IQEtc=
+			CcE/Niy4ZLRH/EtPo0JcOG+dnLE=
 			</data>
 			<key>hash2</key>
 			<data>
-			jm6LOcSD7jDLhF8+dMi9dV0mbyBlIdpVPu5F4hXcQXo=
+			yhYVFafrbuGebnEP+Or4F1x978L1PWCsh8tng9fdMq0=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/UFL9mQZEmSzFGGg8uuaplNfa0E=
+			MFjh48w5rD3+ycRKDaxry6i1LnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			eRrBjU/jVXD90yC/vMjK5/5+oDwbsgMKD7BTGcwQeYw=
+			KAqRXH1sEYsTe72FkGBbsmTSAEI7XT8O7EMt9X81YmA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDShiftVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0WiPRvy+AEr/i8xdmTp778q71FI=
+			hkkMNXV56X5VZMxllvfHFRFwOMw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y23KmYF1SLUfsz4oXFghbD4pMraElAk+CggBpfzYBKc=
+			ZSHecK5fLddLhY3NHlsfc9TIPg7RUfocOH1nPg7NMPA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W+Jf0q56cVxaG9L5UobUmFMgSQs=
+			Gcyurux5QL0ZzA+/5902MwrLTA4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uCwBVR6QNWcp/33nGTR2K5k5otCbr52gcKMJoWmQ+3k=
+			Xa6U7fgQ6MO9C6EL1cwY1hyHSjTuQATiYh/wmuhtbIM=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JFUwnyVNBM09DlUeVjxU1++c1Oo=
+			1j9ZI4hSOiAJBASITEpc0yl5oYM=
 			</data>
 			<key>hash2</key>
 			<data>
-			NLLgEaspIoGp2jzMqVAbmxiBc/FcIm21ec21ioVAmFw=
+			fOEY4D0G1Tt5uNYL493xONfHGgTCnuNJOwMMFXtwO9Q=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureConfirmationVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fwQ9Jb5UHbkO/vW4kpizKQRRM6k=
+			bxraCzgc6CWCbP3J9VW5fjROAks=
 			</data>
 			<key>hash2</key>
 			<data>
-			84NmUtJXBhtlE/vW14eQxVolrJERMsBCQqipwmPeWSs=
+			m53imrHx2ULpNgqgt5bHM9bUezB694KfedyiV74G4fw=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7lAyqLHwtR1x+SjCzJgaDrVVn9s=
+			nNDyWE/D/fE1NkxtGhxfZIKF3eI=
 			</data>
 			<key>hash2</key>
 			<data>
-			1aiWNWwKZjacS/I/ROAXLkHYMVMppYtBdbsWERbJ3zc=
+			XV2Cq2UvHOEd15gczSXp9bt6mlqYbs2puVVp9GY+22I=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WP+qCFmD71sQFDXxTQnsmU+ZrOY=
+			CfCOAf8kk/pTzJuU6M3EWnX3Ogs=
 			</data>
 			<key>hash2</key>
 			<data>
-			yF6Qxmuk6zRWpJtzd6Ffc23f0haCpQcUY2YaA/jPBkQ=
+			FAFOsd5IUmL4OriJmF/05L8aoIg/4CgAAGRqxITHElk=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/WDSignatureRequestVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+D1nlIIfwhb8b/ZYavuFZDOom/U=
+			PiwbejDiYP5FQhpZRy2aoPduvdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			DscSCbLHAok8xgEK8I2A5QrJq9+qUAYhlzXq65gmzk4=
+			g3pT6BvY19u14iT8wa1jbiFqwpyfjFZGCV3qLb5aWA4=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g6XhWYz/dV6fBZsBwcQ6TnMdhkQ=
+			VKLUVzEIjbaIcvUTJ+cFyoZaFPI=
 			</data>
 			<key>hash2</key>
 			<data>
-			HYsTuVeIykroojWEMo41nhVq6s9On9rbipJGmH64EZ0=
+			GXY/r+SG9z5YyYEGUFeZOTk2VlwU0ZhjHn82kdBl6No=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0mfS2IAJ7JDYUj3sPzpS83gVse4=
+			4HJJ0Z+plE1OwAEhRsawxNNP1dU=
 			</data>
 			<key>hash2</key>
 			<data>
-			p7taPInaVsbhFkYnj4whG3zYANhnZ2LxT5pmOD1hr28=
+			0nlF5lRpRmMQ/e7sUvEGJd3sgtk9i7elEjPUdD5IXPM=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/gcf-KU-lVC-view-09C-qW-aas.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZbaN9mSmmEuuws+VndZTPRQu3lw=
+			DGJQFCQIazbzxEKPA40OmE6G66M=
 			</data>
 			<key>hash2</key>
 			<data>
-			dfTwjamV8fc83hnGf9HU9RpkccFpExbU4oVZrvqpSzk=
+			XJr1X4tkyN5GJ8OtkUFb/JfddxXZTly78ea0n5mf874=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eqdEakHS+If5zoyzqZCKRuhau0Q=
+			wmOKOlAUGrdUytOfOXCuqz3z+yI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XPzC/0UhewMRyZShRNUxtf71kCG8nKc0gOkWE+8uu64=
+			jslIYYpqw8DVKQUavXSzzT0VXUpJ8xBSuS98B3x4sTQ=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XKIBJpylcs/om/kVhmObl/F3qvw=
+			FaBa/Ab8dDfdtYWtYWZV/SdH030=
 			</data>
 			<key>hash2</key>
 			<data>
-			1wf/9minAdGZuQHbiu9hA9+z+hl34BLIgGTJZ/uW3bA=
+			yIPQMBQJ4UG2UppJnxi0F0nXiLJ29chIENQdzp57qzw=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/lfo-RO-TBU-view-1dl-de-Teu.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hdGxSn15YWGIbjoVOD1/UA3GJlA=
+			VH5AgQnVJAEO5jXSHQ1sOqvDuOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			1jeFk9WuQTVVkxQ6/RbG35MZw88ftHv2cMBSF2cbRIM=
+			vYUlzfcNVy1paa84Ht9wZC68w1KsQaIqDbZ89+FwhJQ=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			saHTi7saGRtkoMuEvmUxhvdyZfw=
+			TuZ58M535Fp+27zBBJG7x0fLMcs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PRq3yLMGIlHtZ2rzb5pEXBl3C8NcGoxRJSLkJgvI9Nc=
+			vHkE9+w+XlHV6v8b7PtS4v6EjHFyIZIRvSbYvZCOw6k=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bIQB/8XCYXYAheqZOofg2PWMMUU=
+			2Mcoqp8l1ozU5Osvjele3J5qZhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			s4iAejHXWzFQFbrP4xnVK6+bKCbwUuLCfSus8i9UC+E=
+			lEe5Fx+boFaqxWo3IqmnAhkcv71cRWxpxPAybHrXL5k=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/rR2-Sb-aai-view-xb4-RX-2NH.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kq8olGCjwXzU1siKFQ9E30ihDN4=
+			aP5j97+n+p9zMtuz7G7fMJ+mgGo=
 			</data>
 			<key>hash2</key>
 			<data>
-			f2k2kdO7SL6p2tXRfwEeyWfQ7WkB0wEBgwuz48rvZbs=
+			uufJ/nB41g5//34yKjlPm0uNQybF385dYMaKMZUKzjo=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DVPlzpAyKw6e16eGcvOlk8RLkxE=
+			r+RYwsm28eNaa3D2U4TgKtnKsPs=
 			</data>
 			<key>hash2</key>
 			<data>
-			D66MIQp5EooSuniPywN2VYqUKEwHcbyQUejdXItXSEk=
+			XeFbD+FP6gPIhARHxO7FEEEj+T9WzwiflhZXOw9DRfI=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vdV17V6qmO9aZImNZzqZ7KYqRbQ=
+			s9JYrbFsWgsFLWcv33jsn59eG98=
 			</data>
 			<key>hash2</key>
 			<data>
-			WW2m/pjXC9xck7PTis4O5TwJ7FgF9GVn5ZhT1y1Wtug=
+			xe2ATnhLfUf0yp5xlCPVVnJoFe3nSE/aS9iT4A/2OXA=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/WDSaleManagerUI.storyboardc/scE-Br-GUi-view-D66-wA-z3d.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8CSUm4Lqhs2NL6PIn0BsQD9oUSc=
+			G8I7hxhtj8uF3AxOF/rmZzczWuI=
 			</data>
 			<key>hash2</key>
 			<data>
-			VFQGptyNZOh+kwBLJIOlxuy4IQafRTFL1WQpqrqkpho=
+			jJsjHMECTBMSWPKxyBmRv/1YoPB7lo3txxczX+YjxHM=
 			</data>
 		</dict>
 		<key>WDePOSUIResources.bundle/scanSwitchCameraWhite.png</key>

@@ -3,7 +3,7 @@
 //  acceptSDK
 //
 //  Created by Pulik, Jaroslav on 22/08/2019.
-//  Copyright © 2019 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

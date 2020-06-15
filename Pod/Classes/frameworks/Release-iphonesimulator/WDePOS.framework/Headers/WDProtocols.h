@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  *   @discussion Implement Payment flow Delegate methods to receive events from Payment Flow
  */
 @protocol WDPaymentDelegate <NSObject>
-@optional
+@required
 /**
  * @brief Information about the payment process progress
  * @param paymentProgress progress enumerator
@@ -87,17 +87,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)confirm:(WDPaymentConfirmationType )confirmationType
 paymentConfirmationResult:(PaymentConfirmationResult   _Nullable )paymentConfirmationResult;
 /**
- * @brief In case of Card payment which requires customer selection of Card application
- * @param appSelectionRequest is sent to caller and requires sending of selected card application in selectCardApplication callback
- **/
--(void)cardApplication:(WDAppSelectionRequest * _Nonnull )appSelectionRequest;
-@required
-/**
  * @brief The event sent at the end of the payment flow
  * @param saleResponse contains the completed Sale
  * @param saleResponseError contains the error occured during the payment flow
  **/
 -(void)completion:(WDSaleResponse* _Nullable) saleResponse
 saleResponseError:(NSError* _Nullable) saleResponseError;
+@optional
+/**
+ * @brief In case of Card payment which requires customer selection of Card application
+ * @param appSelectionRequest is sent to caller and requires sending of selected card application in selectCardApplication callback
+ **/
+-(void)cardApplication:(WDAppSelectionRequest * _Nonnull )appSelectionRequest;
 @end
 NS_ASSUME_NONNULL_END

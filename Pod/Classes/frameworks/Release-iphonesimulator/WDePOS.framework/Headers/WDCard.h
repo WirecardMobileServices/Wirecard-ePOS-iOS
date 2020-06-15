@@ -3,7 +3,7 @@
 //   WDePOS
 //
 //  Created by Danko, Radoslav on 07/10/16.
-//  Copyright © 2018 Wirecard. All rights reserved.
+//  Copyright © 2020 Wirecard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -146,6 +146,8 @@ NS_ASSUME_NONNULL_BEGIN
  **/
 @interface WDCardEmvPassThroughDUKPT : WDCardPassThroughDUKPT
 @property (nullable, nonatomic, readonly, getter = emvData)    NSString *emvData;
+@property (nullable, nonatomic, readonly)     NSString *singleTap;
+@property (nullable, nonatomic, readonly)     NSString *duplicatedATC;
 
 /**
  * @brief Create Card data with the card details obtained from the card IC - PassThrough DUKPT

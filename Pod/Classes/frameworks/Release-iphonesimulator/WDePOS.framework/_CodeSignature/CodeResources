@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NSArray+Extension.h</key>
 		<data>
-		/wTTfnPm7R62CCS+UbVMbbLK+jw=
+		eYy0zxeXPkAncCxMzAF66BqUly8=
 		</data>
 		<key>Headers/NSDate+Utils.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/NSFileManager+Helpers.h</key>
 		<data>
-		0cl6SS69lQWRdk6RzKxvRlqm4LI=
+		72LlyydVQ2wuFBvQvSPDmNnpLhs=
 		</data>
 		<key>Headers/NSString+WDExtras.h</key>
 		<data>
@@ -22,43 +22,43 @@
 		</data>
 		<key>Headers/WDAError.h</key>
 		<data>
-		eXPGrjkA5M9N8sY45Ls8cBP3C1M=
+		KpjNsuQiGgsSrLarw4tCvGQE2jI=
 		</data>
 		<key>Headers/WDCard.h</key>
 		<data>
-		ztKJY3t6HyWZors7j7v3fDywSnA=
+		y5kMHIx1Wki6mV1F8MlDOw0qTv8=
 		</data>
 		<key>Headers/WDCashManager.h</key>
 		<data>
-		XOmLgJS2pE0gzBKYGEtkyf+PXWQ=
+		rEIjuqbF19whrIAXPeufncQLNQo=
 		</data>
 		<key>Headers/WDConstants.h</key>
 		<data>
-		BOYEVkHppv13odXShs4EJ00ridk=
+		nwFy9UXc3Skl5dcd4UcXS92hmaY=
 		</data>
 		<key>Headers/WDCustomerManager.h</key>
 		<data>
-		HZIoujMRSxWtv/q0lMLXiRM7ZJ4=
+		9oO+3ZY1CahdBmK3Grh2quH3wgI=
 		</data>
 		<key>Headers/WDDataTypes.h</key>
 		<data>
-		Xtzs7AKx6eIx0Inyp9q+CAwjTCY=
+		rkvp0JPLB25tZsi4KwkZGW/bkBA=
 		</data>
 		<key>Headers/WDEnvironment.h</key>
 		<data>
-		T2Ft9Ijl2WOmUQGc4kR7kDqbkhg=
+		BasdFkDybP08Q+XENPAnUU90ru0=
 		</data>
 		<key>Headers/WDExtensionManager.h</key>
 		<data>
-		vNqPdcAou3W6Rgje4pewcGOSKVw=
+		m3QtspYAzqQaQuo1X21b+fCmAQQ=
 		</data>
 		<key>Headers/WDFile.h</key>
 		<data>
-		fyOGkRZUdD6qkMi23usBw11iA5w=
+		xcN3k71OvAap+Omtd3Wkfpyv1S0=
 		</data>
 		<key>Headers/WDFileManager.h</key>
 		<data>
-		4UCIJbudYE5uTmP+/Xn95TXRUII=
+		897hxKa+XiOV6xl/PbrEUXinlUI=
 		</data>
 		<key>Headers/WDHtmlReceipt.h</key>
 		<data>
@@ -66,103 +66,103 @@
 		</data>
 		<key>Headers/WDHtmlZReport.h</key>
 		<data>
-		XEL5MnyoWSb5bxSNcqiruX2T8Hk=
+		kAhS/VBWrMF7pVpf4E+Q20bDG/U=
 		</data>
 		<key>Headers/WDLocalizationManager.h</key>
 		<data>
-		wr083D7jGVnTg4Tpqd5sPRk+rpc=
+		0mnc0lJru71slNySeIFY8qXzxJw=
 		</data>
 		<key>Headers/WDObject.h</key>
 		<data>
-		gdbmm8UecMuaYwa+6YhE19OnUZM=
+		7UleHmhgvMKW8bFg6xYSqTyMl8U=
 		</data>
 		<key>Headers/WDPayment.h</key>
 		<data>
-		i321UFi+7uxkWA8PFtSLamTNYBo=
+		GVe2qRT3wZZvZhMvOJddxNePOKA=
 		</data>
 		<key>Headers/WDPaymentCore+Extension.h</key>
 		<data>
-		tnE7XNNR3ugh9XL5Mqu9s+7U1UY=
+		7IZbhnlY1/c7HtpV0/34lGdhUHU=
 		</data>
 		<key>Headers/WDPaymentDetail.h</key>
 		<data>
-		9x9ws/vkhf8y7DJf9hBxSODX+rw=
+		UV/RpW9K6GRnqqzRvRRQ8hqOvnM=
 		</data>
 		<key>Headers/WDPaymentDetailAlipay.h</key>
 		<data>
-		rKwYliQv4ctOJTsFVSS2PXcgbJA=
+		v4fj68qbIpZLZT3tmXo3mlZ3mOk=
 		</data>
 		<key>Headers/WDPaymentDetailCard.h</key>
 		<data>
-		SaCQkwecOx0CfDZE8jxKU1cWtgY=
+		LMuUA83Cn6Jt+P4574/KW69Pte4=
 		</data>
 		<key>Headers/WDPaymentDetailCash.h</key>
 		<data>
-		qgTrGgmXDSH4DBt8Hmb4Yvczc4c=
+		7hFdPgv3copfyttwoVoBNQtTwcA=
 		</data>
 		<key>Headers/WDPaymentDetailCoupon.h</key>
 		<data>
-		kZ76Ic3WOY9fSvbK8iwvZ/dZoCE=
+		GkIYaX1YnRnFJWxmPOjLqrK0IpI=
 		</data>
 		<key>Headers/WDPaymentDetailWeChat.h</key>
 		<data>
-		mZYpWxe8FXAz5p+D1otU4KjtWKs=
+		A14V2P/pIOy1lhueZy0a9SXTJis=
 		</data>
 		<key>Headers/WDPaymentRequestAlipay.h</key>
 		<data>
-		+EgwbnjMWPz0W+8eLPJqCRlDrt4=
+		77+URPDnAHDJwJgz4S5mKVznIeY=
 		</data>
 		<key>Headers/WDPaymentRequestCard.h</key>
 		<data>
-		cDJ3+bJEGLiBQId0TVcB4FrjWjE=
+		XX6loGfhvKGcsY031+nLcx4K2uQ=
 		</data>
 		<key>Headers/WDPaymentRequestCash.h</key>
 		<data>
-		Cws7MwmNtsYmCHgXP+6puuVSocU=
+		9Eld3aheV2k4mkIFcLPeztk/tJY=
 		</data>
 		<key>Headers/WDPaymentRequestCoupon.h</key>
 		<data>
-		T9sB7nUUqWmzwEg5Q4qbpSQYgsI=
+		VIiF+8yeDHf6Q6OvnDQ9X1r4gXA=
 		</data>
 		<key>Headers/WDPaymentRequestWeChat.h</key>
 		<data>
-		Ftg7bvtt+MrHjZPCDB2bkIT5Qpk=
+		YNRNR8ikjwqHlkdOqAFRxBgpxAU=
 		</data>
 		<key>Headers/WDProductCatalogue.h</key>
 		<data>
-		kmkE0YxQfshP8dRmqVY9ZHP6St8=
+		f+zTfF7Ko4CeGHbTkbfyKUV3c/0=
 		</data>
 		<key>Headers/WDProductCatalogueManager.h</key>
 		<data>
-		MiJnmkFDnMEj/o3rGVyeMRE92KM=
+		8oDtse4Xv5EaE+EB9BUs+5gMf4U=
 		</data>
 		<key>Headers/WDProtocols.h</key>
 		<data>
-		4SYSpsR5uuScGt73hlZ4duky5+k=
+		EIogsFexkrBXl/U5LsFQBlwslfQ=
 		</data>
 		<key>Headers/WDSale.h</key>
 		<data>
-		ih26F+xfMQhMRuvezIGj6TmKLkA=
+		/ay8pk8984N5Lz9nSWXQxdKsCrA=
 		</data>
 		<key>Headers/WDSaleItem.h</key>
 		<data>
-		K63VIf/VULuzrxtl19qeBZDMZ4k=
+		HM4avl97XpcF73shO3x06KYfk3c=
 		</data>
 		<key>Headers/WDSaleManager.h</key>
 		<data>
-		64PEbesuFdiaewVd28xtd2/jHpQ=
+		yFJefmHBU8sLtOpORBEaq8G7uWs=
 		</data>
 		<key>Headers/WDSaleProcessing.h</key>
 		<data>
-		9OztrA9iotaES96usYR3blmLBOo=
+		CPfRChN/zd16AM3tsCLg52MG0d4=
 		</data>
 		<key>Headers/WDUserManager.h</key>
 		<data>
-		2WOLSzJpXo3EUikD51aGLz+jva0=
+		etZGZWmzXeUUdocYtFAiDKJRJQY=
 		</data>
 		<key>Headers/WDUtils.h</key>
 		<data>
-		zvnlUNP3TtJBrqocIniUmXdC5Fw=
+		drZ1q3BLqMzD74ddP+PYP47wcuw=
 		</data>
 		<key>Headers/WDePOS-Swift.h</key>
 		<data>
@@ -170,11 +170,11 @@
 		</data>
 		<key>Headers/WDePOS.h</key>
 		<data>
-		q3HXpVR7sLIKc32vyhxw526Noxs=
+		DvqThzac3H176E8hOGJgPHlut0o=
 		</data>
 		<key>Headers/WDePOSSDK.h</key>
 		<data>
-		XoLmgbT201ALaEAtts7JpOhRulY=
+		xfEgmhcUmf+sDup19ysp7yJCamo=
 		</data>
 		<key>Headers/WDePOSVersion.h</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RQXFNx55og6nu2QyvUK9a05ZEpg=
+		2gKWJq+GW1l0a4fd+F47EvnFmGE=
 		</data>
 		<key>Modules/WDePOS.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -238,7 +238,7 @@
 		</data>
 		<key>PrivateHeaders/MTLJSONAdapter+WDJSONSerializing.h</key>
 		<data>
-		hNhERKQ57vvF7JgZyImnGpRFMR0=
+		d7H+1Ls4LQ7MlT9QgGNYajjBFR0=
 		</data>
 		<key>PrivateHeaders/MulticastDelegate.h</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>PrivateHeaders/WDALogger.h</key>
 		<data>
-		L9b8fA33vey3KVU7G46dKWf2ZZY=
+		Ju9XsBn2KKLxZLp0HvdiHWhujmM=
 		</data>
 		<key>PrivateHeaders/WDAirPrintExtension.h</key>
 		<data>
@@ -262,11 +262,11 @@
 		</data>
 		<key>PrivateHeaders/WDExtendedProcessingInfo.h</key>
 		<data>
-		+305ppiGlQsCumUoSy/EAgFJMEE=
+		WZoBH9t9xlZIxRTR+BHRgpIFGT4=
 		</data>
 		<key>PrivateHeaders/WDExtension.h</key>
 		<data>
-		CDPOhZuCi+CkLOiIWL0QmqPldWw=
+		aEnx/K1UFEnbyN20Qc+mhBEbXgM=
 		</data>
 		<key>PrivateHeaders/WDExtensionInformation.h</key>
 		<data>
@@ -274,23 +274,23 @@
 		</data>
 		<key>PrivateHeaders/WDExtensionProtocols.h</key>
 		<data>
-		6yhfJZJi8xpwHBYzh7HuVLPsTNo=
+		GZ2hKMMliGCDn+12xl38iSuCwhg=
 		</data>
 		<key>PrivateHeaders/WDPayment+Private.h</key>
 		<data>
-		c6PVDPbK3dOBytkdd6nvO7194wQ=
+		v0EXjhdKSIzsvA50XT/gldGQDSQ=
 		</data>
 		<key>PrivateHeaders/WDPayment+Protocol.h</key>
 		<data>
-		NyPyf7O6qDT1tf3Hh/+py5SVS08=
+		3jx7PiUvP0gjTxC8YhedN3VhZ84=
 		</data>
 		<key>PrivateHeaders/WDSSessionManagerCredentials.h</key>
 		<data>
-		Y5VcVyoF2qI/e31ViBkBW6zlIVo=
+		ifdjF148MMBLnMp/3+JfTUFO+ZE=
 		</data>
 		<key>PrivateHeaders/WDSTerminalConfiguration.h</key>
 		<data>
-		pCcEDqF/F+AIVSZwOEQDJ+yyDIY=
+		sFmDZFKjyhRCtu3bmkPz1M1GNT4=
 		</data>
 		<key>PrivateHeaders/WDTimer.h</key>
 		<data>
@@ -298,19 +298,19 @@
 		</data>
 		<key>PrivateHeaders/WDePOSUtils.h</key>
 		<data>
-		vF0QYREAvoGceoAvA3vqk9pNp/o=
+		YTqkDICdVLMB64iReCK0nfqFYno=
 		</data>
 		<key>PrivateHeaders/WKWebView+Image.h</key>
 		<data>
-		ER+m3sONb5ZW6lximmi0VWWdiuI=
+		qmUy5y4O1pzTr5E2Zz+QD0jN5Jg=
 		</data>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<data>
-		OWdnICAyFlWdJ900EGvYFxMKnzc=
+		fUKJFDxcB2Ycm6lZo7cE4iwl940=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		+3erZWRsyWAJpzyhdDIJr92fFX4=
+		H2DKCvHJj/dUmawlHtudmLcDtFE=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -318,11 +318,11 @@
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		d6iMUNw7sr4K7CD6flYKM419E+A=
+		/ifmIvydzWpFto+OdpU0mA5BfnE=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		hdTUXjsxeJz9b02BwfKg+gyVTiA=
+		4WOybWoDM5dRH/pOf14Ipz0+jXY=
 		</data>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -612,7 +612,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tRpghsIt1HOxwYDPgXYDgCeXA1I=
+			rcVuLaCDPR+Z0+ONSct4y+Zhdqs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -621,7 +621,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3VVd47zwrFeq+UwDy+LVTba84GQ=
+			EgTTgQ4MqqwC9AizWe1ynbRYfZI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -630,7 +630,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x1tyMnYTsV/CFIS8p6lnyHBRoK4=
+			rPVHhb75z37HMMK10fkb/tLPT0o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -639,7 +639,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Sl+K7WUPvPtbsE+OjbyB+TptM38=
+			px/FI60KwAtGTDzxfbzFSHpX/OI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -648,7 +648,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			siZwdrDIDgorK8Onlzo3EqtaNWs=
+			BtZCQMYE05oVfvMFwT2qFMHT0ZU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -661,7 +661,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lV6IpZm96zaPhB+fhx2yK8FKX7U=
+			yCi29ONjSQWaKMU03315/cBILiw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -674,7 +674,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3a3LBBkN0SQc16gFAoqq1raqNBg=
+			S2hAN9gNp50h8jRtxqKf6kJHArE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -687,7 +687,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4V6B/yznDbOpEbC1IhyYQJb1hcA=
+			xGbLRmeiECUcxUS1iQDAghp2ZSw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -764,7 +764,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DR/FnSZ8UzTf26IxIspXmUwgEI0=
+			hZXcVbHIVujCic+QYIFJ/vlLAkU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -776,11 +776,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/wTTfnPm7R62CCS+UbVMbbLK+jw=
+			eYy0zxeXPkAncCxMzAF66BqUly8=
 			</data>
 			<key>hash2</key>
 			<data>
-			A+dDRhwNwyuXKGVPIkrpaFedE47Y8pVwRIs7wxUUBVA=
+			rZrSwmSky4SpXRO7yzMidBF4hqfcceZ8RpZNL8mI75I=
 			</data>
 		</dict>
 		<key>Headers/NSDate+Utils.h</key>
@@ -798,11 +798,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0cl6SS69lQWRdk6RzKxvRlqm4LI=
+			72LlyydVQ2wuFBvQvSPDmNnpLhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7x0HM0D7T+skniEmnY/Zmuu86GmmL3Gaom9wPjRBEz4=
+			F7U9npoVbQC4PE6HF2P8OG6PjPjUSvwCYzkugwb0bZ0=
 			</data>
 		</dict>
 		<key>Headers/NSString+WDExtras.h</key>
@@ -820,110 +820,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eXPGrjkA5M9N8sY45Ls8cBP3C1M=
+			KpjNsuQiGgsSrLarw4tCvGQE2jI=
 			</data>
 			<key>hash2</key>
 			<data>
-			7RXAn/3rsAja5Uzxq1QeL/SG/vXDiUGYC5YLcfUq4Z0=
+			Ljt2RJSiZc2SFUpuKRYOXBUJBuE2ugJF7kupMFYYht0=
 			</data>
 		</dict>
 		<key>Headers/WDCard.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ztKJY3t6HyWZors7j7v3fDywSnA=
+			y5kMHIx1Wki6mV1F8MlDOw0qTv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			1hqlFYJl2YUtojfgwQBPprIT/145QXxs6PV+5dLYBCM=
+			Jy65pf0ejERPgFi09n02o3x9F4CzIh4LeFoHhddjeXY=
 			</data>
 		</dict>
 		<key>Headers/WDCashManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XOmLgJS2pE0gzBKYGEtkyf+PXWQ=
+			rEIjuqbF19whrIAXPeufncQLNQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			0NlB2mTegPsWl19/qpI0xl3NRZsSjEt3R15bVbeZKis=
+			7H1WL4fvfm+asAhRj7kRNtURhZVhji6ygeDyoivaNPU=
 			</data>
 		</dict>
 		<key>Headers/WDConstants.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BOYEVkHppv13odXShs4EJ00ridk=
+			nwFy9UXc3Skl5dcd4UcXS92hmaY=
 			</data>
 			<key>hash2</key>
 			<data>
-			1NME1mXiNC8idm2JHsgl2t3mutwNOvrZPLjcVEKGv2Y=
+			AFjUUO7MuFYbx9bBs4vUuIa3cs5ZKYiu27TQPN/umIM=
 			</data>
 		</dict>
 		<key>Headers/WDCustomerManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HZIoujMRSxWtv/q0lMLXiRM7ZJ4=
+			9oO+3ZY1CahdBmK3Grh2quH3wgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			gv6D0jsfdRFsmu1G0HyE+fkRw3r2UL6H6jnqKt+hRIw=
+			7xgFC1URQY9m+SP8hmAaa2g7Ybn5hZLolYQzoOKRo2s=
 			</data>
 		</dict>
 		<key>Headers/WDDataTypes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xtzs7AKx6eIx0Inyp9q+CAwjTCY=
+			rkvp0JPLB25tZsi4KwkZGW/bkBA=
 			</data>
 			<key>hash2</key>
 			<data>
-			cyvgNrRzYrSUKcUeXjWOWLwWHcgI4jWU95bW2qoEGCo=
+			Y2qaEwp/oI4Suj2N3XLZR0AKnP3vPeMrrm+p8ZanPOM=
 			</data>
 		</dict>
 		<key>Headers/WDEnvironment.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			T2Ft9Ijl2WOmUQGc4kR7kDqbkhg=
+			BasdFkDybP08Q+XENPAnUU90ru0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xP6RlvMmeJcGJlgvu/8w7I8vE955+iEop7i8poJkrBU=
+			n19EkviEhoQlq5znuoV0tnUKwQVPYN1nt/P51Jeijnw=
 			</data>
 		</dict>
 		<key>Headers/WDExtensionManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vNqPdcAou3W6Rgje4pewcGOSKVw=
+			m3QtspYAzqQaQuo1X21b+fCmAQQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LkFoaoMvMSrsOJjw2SNs/VX/92Mt52eoNqAKsWmSU7Y=
+			7ThWmDBzJwHK4Y4pwIXFAeluVqozKOhKoEOt66IKgBU=
 			</data>
 		</dict>
 		<key>Headers/WDFile.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fyOGkRZUdD6qkMi23usBw11iA5w=
+			xcN3k71OvAap+Omtd3Wkfpyv1S0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kqUSPIfMRZuamnuHgg8cuGZ0EnCpCj1VOu9TjFQ6lLg=
+			kWfCqmCZyX1z3qIAAyHLTP6auQjqJ1znOB3XTcUYBDI=
 			</data>
 		</dict>
 		<key>Headers/WDFileManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4UCIJbudYE5uTmP+/Xn95TXRUII=
+			897hxKa+XiOV6xl/PbrEUXinlUI=
 			</data>
 			<key>hash2</key>
 			<data>
-			/SJDcetfzI7DJJWlkengKWhP6923EcmxVZvVbb5ksmY=
+			zWSuAL5M1nRUGMKReEe4PoMX0rZFmVETQwxtMqolbkE=
 			</data>
 		</dict>
 		<key>Headers/WDHtmlReceipt.h</key>
@@ -941,275 +941,275 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XEL5MnyoWSb5bxSNcqiruX2T8Hk=
+			kAhS/VBWrMF7pVpf4E+Q20bDG/U=
 			</data>
 			<key>hash2</key>
 			<data>
-			v7ZukLjMse4/D+AjXvX/NBmgx94K/D2RaA67aSbkbIQ=
+			eJLyHdPSorRzR51q+1wvsrMAhYn27dbl9aMCTQ8Lh7k=
 			</data>
 		</dict>
 		<key>Headers/WDLocalizationManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wr083D7jGVnTg4Tpqd5sPRk+rpc=
+			0mnc0lJru71slNySeIFY8qXzxJw=
 			</data>
 			<key>hash2</key>
 			<data>
-			1r5MSrP4M5MJJx6vghmlYWhD9+VQJ5rk7PxfgaYP6P4=
+			m5MM+iBozpnbLBjTDvDqRBwoQEjtb3k/FPTC/uR5nSA=
 			</data>
 		</dict>
 		<key>Headers/WDObject.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gdbmm8UecMuaYwa+6YhE19OnUZM=
+			7UleHmhgvMKW8bFg6xYSqTyMl8U=
 			</data>
 			<key>hash2</key>
 			<data>
-			EXQdEQKTlgkdHJyRnRniCVrJWVziS9j2B2JgbjIVUUg=
+			nHa1tDCcoGRQfPbHAQalk+g0l9psutBHhQEDi6gmdDA=
 			</data>
 		</dict>
 		<key>Headers/WDPayment.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i321UFi+7uxkWA8PFtSLamTNYBo=
+			GVe2qRT3wZZvZhMvOJddxNePOKA=
 			</data>
 			<key>hash2</key>
 			<data>
-			nHaYRhimz+XIK1vD6Qga85z58vJZf/5B+ToJGOrPBgs=
+			7XNscL/HR2vTpOaHAcqt6lsI7DBD9kdbHmtFLfRgin0=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentCore+Extension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tnE7XNNR3ugh9XL5Mqu9s+7U1UY=
+			7IZbhnlY1/c7HtpV0/34lGdhUHU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/5Owm9l7xbx5vRIJqv1mqtGS/sONwooATjf0jxHMB5A=
+			vyP9mHEurve3vgEFZ8krI/5MC9K+oaWwOWNfNKxhvko=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetail.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9x9ws/vkhf8y7DJf9hBxSODX+rw=
+			UV/RpW9K6GRnqqzRvRRQ8hqOvnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			KkEL95Q70a/QNoYLzwpZG/Oi/PfZrExkkZ5MEw6hPVc=
+			hZhkVGYolt15dm2lBVuv/afEYllhGmQhuEyetMh28Q0=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetailAlipay.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rKwYliQv4ctOJTsFVSS2PXcgbJA=
+			v4fj68qbIpZLZT3tmXo3mlZ3mOk=
 			</data>
 			<key>hash2</key>
 			<data>
-			aml2LMc/Fx1VQASY05lFMKu9GFDvFPFyM3wp4+h5214=
+			/6sBbB0Aid6cSdxTJgRV5FUGf9TRf6SQZ/FeqKNQMUk=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetailCard.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SaCQkwecOx0CfDZE8jxKU1cWtgY=
+			LMuUA83Cn6Jt+P4574/KW69Pte4=
 			</data>
 			<key>hash2</key>
 			<data>
-			z1iH/sRHmph/ws9AjfMbeGi1OziGvjiyQaedpk2tHaw=
+			BQe54tmadCK0Hj25vqexiq+v6E0WaPC/kE35V8UKKr8=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetailCash.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qgTrGgmXDSH4DBt8Hmb4Yvczc4c=
+			7hFdPgv3copfyttwoVoBNQtTwcA=
 			</data>
 			<key>hash2</key>
 			<data>
-			yUW+kOirjVZ9vdinrgr/hXjSkVJE7NwSHdlfwJ3fUXU=
+			7f9swtEqOuEnIvx0BBDKS3WCfJKni8rFyv/7p60vGG0=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetailCoupon.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kZ76Ic3WOY9fSvbK8iwvZ/dZoCE=
+			GkIYaX1YnRnFJWxmPOjLqrK0IpI=
 			</data>
 			<key>hash2</key>
 			<data>
-			1QX4N58FFKKi46Q7Sxjwgj+V9CS7a6xWzrqmzVewXE0=
+			qUR0rFmKsOISy27zquzNtxSq4g1OgdptqtGxn3rlNS8=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentDetailWeChat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mZYpWxe8FXAz5p+D1otU4KjtWKs=
+			A14V2P/pIOy1lhueZy0a9SXTJis=
 			</data>
 			<key>hash2</key>
 			<data>
-			ohaSviYdlF7WSmBL7T28SPup1WuIl+Imi6TEXbBwnLs=
+			oAz4s96RI11ywq2xdpZI7BJpR6g0OqFPx7zUN4FWAiA=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentRequestAlipay.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+EgwbnjMWPz0W+8eLPJqCRlDrt4=
+			77+URPDnAHDJwJgz4S5mKVznIeY=
 			</data>
 			<key>hash2</key>
 			<data>
-			37YEYlDkazAhcTWVynDHOIEn9zI79dNiKc0RVpSQT14=
+			LGG7JJY+ecCuuugzvjuaBpDo8vY/48RblFfJQobm4JY=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentRequestCard.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cDJ3+bJEGLiBQId0TVcB4FrjWjE=
+			XX6loGfhvKGcsY031+nLcx4K2uQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			J0M6xJgSe3xCxtGi6cZuzEvac9aIDfy6yqooz4cExtc=
+			ym+5MUVyPi8j70uXjiHIynFmWyAtAwwUkbtFGo4k3GY=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentRequestCash.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cws7MwmNtsYmCHgXP+6puuVSocU=
+			9Eld3aheV2k4mkIFcLPeztk/tJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			feLJAhQ91KUsT9RItuAqhy4fC+LArefyuzNUSRaQSFk=
+			XqKhSsg3VByz2ROC5GxyvvU92IGFtkChhSAmT7b0SWU=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentRequestCoupon.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			T9sB7nUUqWmzwEg5Q4qbpSQYgsI=
+			VIiF+8yeDHf6Q6OvnDQ9X1r4gXA=
 			</data>
 			<key>hash2</key>
 			<data>
-			z/+qm451rC0X5gvn4fG2ybZtc1JWe4LTEy5YazyLiwE=
+			isEWmgEJiI8WlZK4rU/NGXKtiFnWGcSXv59UsWOUevQ=
 			</data>
 		</dict>
 		<key>Headers/WDPaymentRequestWeChat.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ftg7bvtt+MrHjZPCDB2bkIT5Qpk=
+			YNRNR8ikjwqHlkdOqAFRxBgpxAU=
 			</data>
 			<key>hash2</key>
 			<data>
-			RYBfzJYBunB2lEBreNOXC3yfMnDFtm6f2aeo+iCuzcY=
+			fCL1HzfENEi8jpvNIgFb8udoA1M6hY2vw4rvodz4o8Q=
 			</data>
 		</dict>
 		<key>Headers/WDProductCatalogue.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kmkE0YxQfshP8dRmqVY9ZHP6St8=
+			f+zTfF7Ko4CeGHbTkbfyKUV3c/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zn337N4uNDuCzgah8U4JOEIE6imAknVhNUdsr9l230k=
+			mxSczlOoBeiIUoqK2RKtAwpezAmsZnGvWDLTNYYcvvk=
 			</data>
 		</dict>
 		<key>Headers/WDProductCatalogueManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MiJnmkFDnMEj/o3rGVyeMRE92KM=
+			8oDtse4Xv5EaE+EB9BUs+5gMf4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			yDRoxc/UpmAXY+fK68yk+2WUW9HB5kMI8grm2rhBNGk=
+			IJ+ThcW6nx03DOnLsT5llLekH9QeXnmtsbO3fZJs7vs=
 			</data>
 		</dict>
 		<key>Headers/WDProtocols.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4SYSpsR5uuScGt73hlZ4duky5+k=
+			EIogsFexkrBXl/U5LsFQBlwslfQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			WqoPfoWp5ZwxFLDOYgnytd6XENxf4c/wy72BF5MTkHo=
+			f7XE0A9lWLD+6Be/BH3/BOYCRxQGIIRxdhjLplQxP8g=
 			</data>
 		</dict>
 		<key>Headers/WDSale.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ih26F+xfMQhMRuvezIGj6TmKLkA=
+			/ay8pk8984N5Lz9nSWXQxdKsCrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			d7ddEqHuLd5ER7XXQTBaT9AXggtf8d0rKAx1TAAAH1Q=
+			XRGJ4+jN5BAu8fdPMnIk1Rw/lm0ECOy6GjsYapbgzag=
 			</data>
 		</dict>
 		<key>Headers/WDSaleItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K63VIf/VULuzrxtl19qeBZDMZ4k=
+			HM4avl97XpcF73shO3x06KYfk3c=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q9UrnbudX7H74bqiZ4Tp4XKIepnA2gXbb+34RDyeJR4=
+			j4KXnvCsJRWnd7IAZhotVUCuRGNIiVOf1FkluIIs+aU=
 			</data>
 		</dict>
 		<key>Headers/WDSaleManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			64PEbesuFdiaewVd28xtd2/jHpQ=
+			yFJefmHBU8sLtOpORBEaq8G7uWs=
 			</data>
 			<key>hash2</key>
 			<data>
-			BrjjMb4tbs3Zg0fBa/bVAjI7ti8XUtDcASGfrfQ0MZQ=
+			OOY61WQ1PgLOPbCiC4KUva8ueK9OWTWwu2Dv+ZErNC0=
 			</data>
 		</dict>
 		<key>Headers/WDSaleProcessing.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9OztrA9iotaES96usYR3blmLBOo=
+			CPfRChN/zd16AM3tsCLg52MG0d4=
 			</data>
 			<key>hash2</key>
 			<data>
-			d10Fpe0eqwGFaUocyFBEcuFeiTtfcSe3OIoI1uGPouY=
+			aO7pDuz40G55rnIa9u32NLjmay3sIhtEUr9sMzkxElk=
 			</data>
 		</dict>
 		<key>Headers/WDUserManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2WOLSzJpXo3EUikD51aGLz+jva0=
+			etZGZWmzXeUUdocYtFAiDKJRJQY=
 			</data>
 			<key>hash2</key>
 			<data>
-			qQIM5z8obcRDD/opl2I48lEN78gMll5+iObV7HAS4IM=
+			+mfjGTP2uX0rgUz5Na7nhup3AG8t0ycxzeCMixbC1Gg=
 			</data>
 		</dict>
 		<key>Headers/WDUtils.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zvnlUNP3TtJBrqocIniUmXdC5Fw=
+			drZ1q3BLqMzD74ddP+PYP47wcuw=
 			</data>
 			<key>hash2</key>
 			<data>
-			uHYuHpK+Y7FT7Ovkn/3JOSA0uXRwJHd4wpVTIP973sw=
+			gIhhysFZp/e+0QslPssbLWA6qm5Nb9ylMNVRUkkn/D8=
 			</data>
 		</dict>
 		<key>Headers/WDePOS-Swift.h</key>
@@ -1227,22 +1227,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q3HXpVR7sLIKc32vyhxw526Noxs=
+			DvqThzac3H176E8hOGJgPHlut0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			vSCmV2h/PR7CDZcKODNwmuQJnPDJtjTtPtW1pBD5Its=
+			iuyxcrjtJWAuuBJqlENmbs0HVxVhfYm80Su7APhXi6I=
 			</data>
 		</dict>
 		<key>Headers/WDePOSSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XoLmgbT201ALaEAtts7JpOhRulY=
+			xfEgmhcUmf+sDup19ysp7yJCamo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ziiXpyPaWXu/hpL1eN4zgK/FdvyJZqWJ0H4CiP9GzeQ=
+			BVJYXzihtTS58y5aGMSJ6XdZDvw42JXbSROhF9sVlns=
 			</data>
 		</dict>
 		<key>Headers/WDePOSVersion.h</key>
@@ -1403,11 +1403,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hNhERKQ57vvF7JgZyImnGpRFMR0=
+			d7H+1Ls4LQ7MlT9QgGNYajjBFR0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Mq3wRum3w476LcIycolNWWVZho+PFzm/JBA33Tc1Ltw=
+			Gqd4U1s+v/lpK3mTXMx/V1cK11N4aOTS5dj7BdCj8H0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MulticastDelegate.h</key>
@@ -1447,11 +1447,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L9b8fA33vey3KVU7G46dKWf2ZZY=
+			Ju9XsBn2KKLxZLp0HvdiHWhujmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			eeuEfSD6nIW0T6zVW+5u3KXfUKxKbNfPiWenImtnMnc=
+			299STg0I+v6do8t4/EjayEqJ1IGxC9soBTp4mRMOB/4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDAirPrintExtension.h</key>
@@ -1469,22 +1469,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+305ppiGlQsCumUoSy/EAgFJMEE=
+			WZoBH9t9xlZIxRTR+BHRgpIFGT4=
 			</data>
 			<key>hash2</key>
 			<data>
-			jX6p6aIdoID/J2zprwXCXhkZY47+lMspq3TI3x9x7Es=
+			Vfu1OcY3yn04eeyOiom/Z4gkyXELhWEXIAo9tZtEuGE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDExtension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CDPOhZuCi+CkLOiIWL0QmqPldWw=
+			aEnx/K1UFEnbyN20Qc+mhBEbXgM=
 			</data>
 			<key>hash2</key>
 			<data>
-			V3YorQdXK9QH5WDCRvLXP3vNlFn8H/ZJdbtgwKWmAbo=
+			fbmwEyi03+0IbJPXcMahybkrTpPSW1PhLkA12qW/pK0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDExtensionInformation.h</key>
@@ -1502,55 +1502,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6yhfJZJi8xpwHBYzh7HuVLPsTNo=
+			GZ2hKMMliGCDn+12xl38iSuCwhg=
 			</data>
 			<key>hash2</key>
 			<data>
-			pkrtc4xzTq9A4bJ48wbNvbUhs25ymBz9r2UL7ybZj9s=
+			rMtlJb4eJphJdZkMxq+Y8HVyrFFF3kx+bcLpuMcM0nw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDPayment+Private.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c6PVDPbK3dOBytkdd6nvO7194wQ=
+			v0EXjhdKSIzsvA50XT/gldGQDSQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			wc9dhkK7SmCAjUjFGdhZb/yU3TqhZKncd1bW4sG5RSk=
+			iWST1qkgzp+ezHRL6i4eZWgmH1EynSakGhQqW3Uo/RE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDPayment+Protocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NyPyf7O6qDT1tf3Hh/+py5SVS08=
+			3jx7PiUvP0gjTxC8YhedN3VhZ84=
 			</data>
 			<key>hash2</key>
 			<data>
-			OWdGJmNQ3/6l1on90hGwBzkmef7hQK+IeftJT2nYBUE=
+			AI0j/XV12rUinZsYSeKSVOhT+uVaRz9E/mi2JXSVqXA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDSSessionManagerCredentials.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y5VcVyoF2qI/e31ViBkBW6zlIVo=
+			ifdjF148MMBLnMp/3+JfTUFO+ZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			E4XgJWF/tM+8pjZYRuJsB8Yjght4kWNg9pBx0VoVnjI=
+			r/fdnYIi1hIhrojGv0+RsjT+tKbiLqSc8ZhdDIvzCt4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDSTerminalConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pCcEDqF/F+AIVSZwOEQDJ+yyDIY=
+			sFmDZFKjyhRCtu3bmkPz1M1GNT4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uZ8dR/I18zqsvO7vBG7oLay7qvkKbAmbKNuuckLJuC0=
+			Mh8bZL+zSO6COcgLldIe8dsrrI6s3jFE8Q7gNznho7c=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WDTimer.h</key>
@@ -1568,44 +1568,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vF0QYREAvoGceoAvA3vqk9pNp/o=
+			YTqkDICdVLMB64iReCK0nfqFYno=
 			</data>
 			<key>hash2</key>
 			<data>
-			3ymbZLjSWJft3Vq8Kbr6gs7TpHPrAYhcXBo1rzaO1a8=
+			ncyHj7cUH+i0QyrXyHmjZCTRLG+du/ND4aRkSRxGwWk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WKWebView+Image.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ER+m3sONb5ZW6lximmi0VWWdiuI=
+			qmUy5y4O1pzTr5E2Zz+QD0jN5Jg=
 			</data>
 			<key>hash2</key>
 			<data>
-			HNBo9YP6LqvjDGM6jI5/IZQZiRgC9crvg9cIa8j3hBo=
+			Hwn/IpeYn58A7+nFeMGb9v7fwUzetUOjpoyWp2uVxXw=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OWdnICAyFlWdJ900EGvYFxMKnzc=
+			fUKJFDxcB2Ycm6lZo7cE4iwl940=
 			</data>
 			<key>hash2</key>
 			<data>
-			iK3sTaHLT3bF+cBlvaMS8v5pO52YjRiqurRW0TRvUuU=
+			r0wppkDW0r3uv8XdE2lnjrnOiUigwzk2B1JSTvdP/CA=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+3erZWRsyWAJpzyhdDIJr92fFX4=
+			H2DKCvHJj/dUmawlHtudmLcDtFE=
 			</data>
 			<key>hash2</key>
 			<data>
-			XaQ+XKMiMJcqNsAJ/yAjnkYadGMpxB4LC7/pJREkPrU=
+			zQIZlibsSKoD78HvUTQNUSNr31fW/OFn/NsyASvfEKw=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -1623,22 +1623,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d6iMUNw7sr4K7CD6flYKM419E+A=
+			/ifmIvydzWpFto+OdpU0mA5BfnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			WAs4H5fpeSMy4DugpBkakxleiXBNl0GkupR/iRXgcYc=
+			01FJ8U7JA8dl6YBtEP2HAia5RDwF9Kt9ThK73kPNtww=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hdTUXjsxeJz9b02BwfKg+gyVTiA=
+			4WOybWoDM5dRH/pOf14Ipz0+jXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			HP/7RCP7t9KngmEbnbm5EXB0EHbMdA/UiqCk9n9FQ80=
+			Why931IM+g+fzdFC2O5XHbNDb1FzI6wvjuGx+rfzUT4=
 			</data>
 		</dict>
 		<key>WDePOSResources.bundle/_CodeSignature/CodeSignature</key>
@@ -2426,11 +2426,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tRpghsIt1HOxwYDPgXYDgCeXA1I=
+			rcVuLaCDPR+Z0+ONSct4y+Zhdqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			mxZaOkST034fqjfvgNtGeJ+IVSw0UDLgPKeTwGH8KdY=
+			ypqL8WPnjblSsCiYs73ufAUdwEj50QJVSbzYqJV6i78=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2439,11 +2439,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3VVd47zwrFeq+UwDy+LVTba84GQ=
+			EgTTgQ4MqqwC9AizWe1ynbRYfZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			9q/k7KFALdeqfBwh2BVqgWQ1SX8Ia+bx3vo8tq8fNEk=
+			xeMJAf80YGMoZyUEP/wrYqVwQMDKfiU8LCREGHKR1nc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2452,11 +2452,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x1tyMnYTsV/CFIS8p6lnyHBRoK4=
+			rPVHhb75z37HMMK10fkb/tLPT0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			bL3rFs+Xsvr89G6P+4kBY9F3U4nyTNSJEtCQGBwUjIw=
+			cT95mKvRx13iuj4eTqhoQuDxY/z1HFRqFOwKBBCSP5Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2465,11 +2465,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Sl+K7WUPvPtbsE+OjbyB+TptM38=
+			px/FI60KwAtGTDzxfbzFSHpX/OI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DfRduvMC+sOQH2VdYEWxBzoz2FM4UOOv4AoDuaW0GC8=
+			UwYumxa5sKrLZ32PEDt0p/N81SS3/PnpJb8eV/IX2yQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2478,11 +2478,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			siZwdrDIDgorK8Onlzo3EqtaNWs=
+			BtZCQMYE05oVfvMFwT2qFMHT0ZU=
 			</data>
 			<key>hash2</key>
 			<data>
-			xGamTCstagrf7JvmDF8HgHLZpXTaSn0uG6j4Fhz6KWo=
+			Xp+jG++MuQrZwPJTEb1hV3UaKa7+/1S/0XLR6muYP9Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2502,11 +2502,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lV6IpZm96zaPhB+fhx2yK8FKX7U=
+			yCi29ONjSQWaKMU03315/cBILiw=
 			</data>
 			<key>hash2</key>
 			<data>
-			usnO7TZL5tlF7ZT45pXH4deib4ymxpLjJ/yt0hGbva0=
+			t/o+B6DwVPs0Ulxxi4maS+HDoIGa/hib6dtg0HGngRw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2526,11 +2526,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3a3LBBkN0SQc16gFAoqq1raqNBg=
+			S2hAN9gNp50h8jRtxqKf6kJHArE=
 			</data>
 			<key>hash2</key>
 			<data>
-			NUA1DN/TpFmx75g8bsuYoRl+aLJHvlrwl1Ah0J8eabM=
+			czBEViirVnA8yzvcTYeNE2B+70Qsq/PID47IzMN/1HM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2550,11 +2550,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4V6B/yznDbOpEbC1IhyYQJb1hcA=
+			xGbLRmeiECUcxUS1iQDAghp2ZSw=
 			</data>
 			<key>hash2</key>
 			<data>
-			GMiTd6Q1VfEhjMuqLHnY91kJP/obcaF4FJNC188NDr4=
+			ukdg+zVLqeIF+YblDFjqHxXBmJ6OI6nGTbx6iaY3X58=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2750,11 +2750,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DR/FnSZ8UzTf26IxIspXmUwgEI0=
+			hZXcVbHIVujCic+QYIFJ/vlLAkU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wVvCYykAVWBuixBym3KJb3Mf9sH53V58S7I+XR1d0sY=
+			L277UTWoeg4YKR7deuv+bsvyXVudBdQReRIKcjXzX1A=
 			</data>
 			<key>optional</key>
 			<true/>

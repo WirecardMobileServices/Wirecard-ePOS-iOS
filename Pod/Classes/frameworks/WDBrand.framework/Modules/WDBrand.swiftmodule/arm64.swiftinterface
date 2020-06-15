@@ -558,7 +558,7 @@ extension UITextFieldStyled : UIKit.UITextFieldDelegate {
   @objc public var clearListButtonLocalisedName: Swift.String? {
     get
     }
-  @objc public var supportAppName: Swift.String, owningCompanyName: Swift.String, registrationUrl: Swift.String
+  @objc public var supportAppName: Swift.String, owningCompanyName: Swift.String, registrationUrl: Swift.String?
   @objc public var legalText: [WDBrandLegalText] {
     get
     }

@@ -61,7 +61,6 @@ class CatalogueTestsSwift: BaseTestsSwift
                 if arrCatalogues.count == 0
                 {
                     //No catalogues, so we finish the test. But for fully testing, please create a catalogue with categories and products in backend
-                    self?.expectation.fulfill()
                 }
                 else
                 {

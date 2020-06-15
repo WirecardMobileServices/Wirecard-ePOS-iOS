@@ -572,7 +572,7 @@ SWIFT_CLASS("_TtC7WDBrand13WDBrandConfig")
 @property (nonatomic, readonly, copy) NSString * _Nullable clearListButtonLocalisedName;
 @property (nonatomic, readonly, copy) NSString * _Nonnull supportAppName;
 @property (nonatomic, readonly, copy) NSString * _Nonnull owningCompanyName;
-@property (nonatomic, readonly, copy) NSString * _Nonnull registrationUrl;
+@property (nonatomic, readonly, copy) NSString * _Nullable registrationUrl;
 @property (nonatomic, readonly, copy) NSArray<WDBrandLegalText *> * _Nonnull legalText;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull languageList;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull languageListDev;
@@ -1262,7 +1262,7 @@ SWIFT_CLASS("_TtC7WDBrand13WDBrandConfig")
 @property (nonatomic, readonly, copy) NSString * _Nullable clearListButtonLocalisedName;
 @property (nonatomic, readonly, copy) NSString * _Nonnull supportAppName;
 @property (nonatomic, readonly, copy) NSString * _Nonnull owningCompanyName;
-@property (nonatomic, readonly, copy) NSString * _Nonnull registrationUrl;
+@property (nonatomic, readonly, copy) NSString * _Nullable registrationUrl;
 @property (nonatomic, readonly, copy) NSArray<WDBrandLegalText *> * _Nonnull legalText;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull languageList;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull languageListDev;
